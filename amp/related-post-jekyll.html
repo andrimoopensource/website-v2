@@ -6,15 +6,8 @@
     <title>How to Add Related or Previous Next Pagination in Jekyll?</title>
     <link rel="canonical" href="https://blog.webjeda.com/related-post-jekyll/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-custom>
-        
-          .container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7);line-height:1.5}.main-content{margin:0 10px}amp-img{max-width:100%}footer{text-align:center;padding:1em;background:#000;color:#eee;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}.text-center{text-align:center}a .btn{background-color:transparent;border:1px solid #0a5;border-radius:2px;padding:10px 25px;cursor:pointer}a .btn:hover{background-color:#0a5;color:#eee}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7)}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}table{margin:15px 0;border-collapse:collapse;width:100%;padding:0}table tr{border-top:1px solid #777;background-color:white;margin:0;padding:0}table tr:nth-child(2n){background-color:#f8f8f8}table tr th{font-weight:bold;border:1px solid #777;text-align:left;margin:0;padding:6px 13px}table tr td{border:1px solid #777;text-align:left;margin:0;padding:6px 13px}table tr th :first-child,table tr td :first-child{margin:0}table tr th :last-child,table tr td :last-child{margin:0}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#4747f5}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#4747f5}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#5e5ee6}.highlight .nv{color:#4747f5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#4747f5}.highlight .vg{color:#4747f5}.highlight .vi{color:#4747f5}.highlight .il{color:#099}
-
-          
-    </style>
-    
-    
-    
+    <style amp-custom>.container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7);line-height:1.5}.main-content{margin:0 10px}amp-img{max-width:100%}footer{text-align:center;padding:1em;background:#000;color:#eee;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}.text-center{text-align:center}a .btn{background-color:transparent;border:1px solid #0a5;border-radius:2px;padding:10px 25px;cursor:pointer}a .btn:hover{background-color:#0a5;color:#eee}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7)}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}table{margin:15px 0;border-collapse:collapse;width:100%;padding:0}table tr{border-top:1px solid #777;background-color:white;margin:0;padding:0}table tr:nth-child(2n){background-color:#f8f8f8}table tr th{font-weight:bold;border:1px solid #777;text-align:left;margin:0;padding:6px 13px}table tr td{border:1px solid #777;text-align:left;margin:0;padding:6px 13px}table tr th :first-child,table tr td :first-child{margin:0}table tr th :last-child,table tr td :last-child{margin:0}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#4747f5}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#4747f5}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#5e5ee6}.highlight .nv{color:#4747f5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#4747f5}.highlight .vg{color:#4747f5}.highlight .vi{color:#4747f5}.highlight .il{color:#099}
+</style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -24,7 +17,7 @@
     <meta property="fb:app_id" content="549480635219583">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="How to Add Related or Previous Next Pagination in Jekyll?">
-    <meta property="og:url" content="https://blog.webjeda.comamp/related-post-jekyll">
+    <meta property="og:url" content="https://blog.webjeda.com/related-post-jekyll/">
     <meta property="og:site_name" content="WebJeda Blog">
     <meta property="og:description" content="Giving a link to next and previous posts at the bottom of the article helps to keep your users hooked to checkout more content on your website. If they like your current article, then there is a good chance that they would like to browse more articles.">
     <meta property="og:type" content="article">
@@ -52,7 +45,7 @@
         "headline": "How to Add Related or Previous Next Pagination in Jekyll?",
         "image": "https://blog.webjeda.com/thumbs/adding-related-previous-next-link-to-jekyll.png",
         "description": "Giving a link to next and previous posts at the bottom of the article helps to keep your users hooked to checkout more content on your website. If they like your current article, then there is a good chance that they would like to browse more articles.",
-        "url": "https://blog.webjeda.comamp/related-post-jekyll",
+        "url": "https://blog.webjeda.com/related-post-jekyll/",
         "datePublished": "2016-02-26",
          "author": {
           "@type": "Person",
@@ -65,6 +58,7 @@
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    
   </head>
   
 <body>
@@ -76,99 +70,8 @@
 
 <p class="intro">Giving a link to next and previous posts at the bottom of the article helps to keep your users hooked to checkout more content on your website. If they like your current article, then there is a good chance that they would like to browse more articles.</p>
 
-<p>A long time ago I was writing 4 posts on WordPress installation tutorial. At the end of every article, I had to leave the next or previous article link. I used to do it manually in this way “To read my previous article on WordPress basics read <a href="#">part 1</a>” and “for useful WordPress plugins read <a href="#">part 3</a>”</p>
-
-<ul id="markdown-toc">
-  <li><a href="#why-use-related-prev-next-navigation-in-jekyll" id="markdown-toc-why-use-related-prev-next-navigation-in-jekyll">Why use Related Prev-Next Navigation in Jekyll?</a></li>
-  <li><a href="#how-to-add-related-posts-link-in-jekyll" id="markdown-toc-how-to-add-related-posts-link-in-jekyll">How to add Related Posts link in Jekyll?</a></li>
-  <li><a href="#how-to-add-prev-next-post-links-in-jekyll" id="markdown-toc-how-to-add-prev-next-post-links-in-jekyll">How to add Prev-Next Post links in Jekyll?</a></li>
-</ul>
-
-<p>Manually linking articles was a tedious job if I had more articles. May be there was a plugin for that, but I was fed up with too many plugins! In Jekyll, it is wasy to implement navigation because we have nice little variables <code class="highlighter-rouge">page.previous</code>and <code class="highlighter-rouge">page.next</code> which can handle navigation without breaking a sweat.</p>
-
-<h2 class="clear" id="why-use-related-prev-next-navigation-in-jekyll">Why use Related Prev-Next Navigation in Jekyll?</h2>
-
-<p>Finding content on your blog should be easy. Let’s say a new visitor is checking out an article on your website about <strong>How to begin with Angular JS</strong>. Maybe your article is really helpful and many users have a high success rate trying it. Then users will look for more articles from you.</p>
-
-<p>So there is a <strong>83%</strong>(yes this is from How I Met Your Mother) chance that a user is going to check more of your content if he/she likes the current one. You should give him/her an easy access to other content of yours right after the current article!</p>
-
-<p>Adding next-previous post link or related post link is a good way to engage your audience with more posts and if the posts are good then the audiens may turn into subscribers.</p>
-
-<h2 id="how-to-add-related-posts-link-in-jekyll">How to add Related Posts link in Jekyll?</h2>
-
-<p>Jekyll has a variable to show the related posts (up to 10). But the problem is that they are just a list of your latest posts that’s all. I have no idea why they chose to call it <strong>related posts</strong>. It must be called <strong>recent posts</strong>.</p>
-
-<p>But anyway it is a great way to let users know about your latest articles. It can be improved with some complex process of category wise matching. But I will write a detailed post in the update. For now refer to this <a href="http://stackoverflow.com/questions/10906574/filter-site-related-posts-in-jekyll" rel="nofollow" target="_blank">thread</a>.</p>
-
-<p>Here is the code I have used on my <a href="https://kidschessworld.com" target="_blank">chess blog</a>.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"related"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h2&gt;</span>Related Posts<span class="nt">&lt;/h2&gt;</span>
-          <span class="nt">&lt;ul&gt;</span>
-            {% for post in site.related_posts limit:3 %}
-              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;</span>
-                  <span class="nt">&lt;li&gt;</span>
-                  <span class="nt">&lt;h3&gt;</span>{{ post.title }}<span class="ni">&amp;nbsp;&amp;nbsp;</span>{{ post.date | date_to_string }}<span class="nt">&lt;/h3&gt;</span>
-                  <span class="nt">&lt;/li&gt;</span>
-              <span class="nt">&lt;/a&gt;</span>
-            {% endfor %}
-          <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<p>The output should look like the screenshot below</p>
-
-<p><amp-img src="/images/related-posts-jekyll.jpg" alt="Related posts jekyll" width="613" height="274" layout="responsive"><noscript><img src="/images/related-posts-jekyll.jpg" alt="Related posts jekyll" width="613" height="274"></noscript></amp-img></p>
-
-<p>When you implementing this, make sure you tell Jekyll to paginate your posts by changing the parameters in <strong>_config.yml</strong>.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">paginate: 6
-paginate_path: /page:num/</code></pre></figure>
-<p>This way you are asking Jekyll to load 6 posts per page. First 6 will be loaded in the index(or wherever you call it), next 6 will be loaded in the url <code class="highlighter-rouge">/page-1/</code>, next 6 in <code class="highlighter-rouge">/page-2/</code> and so on.</p>
-
-<p>Also make sure you do the following change while loading posts.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for post in site.posts %} </code></pre></figure>
-<p>should be changed to</p>
-<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for post in paginator.posts %}</code></pre></figure>
-
-<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
-
-<h2 id="how-to-add-prev-next-post-links-in-jekyll">How to add Prev-Next Post links in Jekyll?</h2>
-
-<p>I think it is a better thing to insert <strong>Previous-Next Post link</strong> after an article than <strong>related post link</strong>. If you are writing articles around only one topic then this is ideal since you always write related articles.</p>
-
-<p>If there is a big article which has many parts in it and you are writing those parts in consecutive articles even then next and previous post links is the best choice.</p>
-
-<p>Here is the code how I have implemented previous next links in my Jekyll blog.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Previous-next"</span><span class="nt">&gt;</span>
-  {% if page.previous.url %}
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"previous"</span> <span class="na">href=</span><span class="s">"{{page.previous.url}}"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span> {{page.previous.title}}<span class="nt">&lt;/a&gt;</span>
-  {% endif %}
-  {% if page.next.url %}
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"next"</span> <span class="na">href=</span><span class="s">"{{page.next.url}}"</span><span class="nt">&gt;</span>{{page.next.title}} <span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
-  {% endif %}
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-<p>That should look some what like the below screenshot.</p>
-
-<p><amp-img src="/images/how-to-add-related-next-previous-post-to-jekyll.jpg" alt="Related Previous-Next Navigation in Jekyll" width="740" height="29" layout="responsive"><noscript><img src="/images/how-to-add-related-next-previous-post-to-jekyll.jpg" alt="Related Previous-Next Navigation in Jekyll" width="740" height="29"></noscript></amp-img></p>
-
-<p>Remember, the latest post will not have <code class="highlighter-rouge">page.next</code> since it is the last post and likewise the first post will not have <code class="highlighter-rouge">page.previous</code>.</p>
-
-<p>May be you have to style the links so that they appear in two directions or at least a little apart.</p>
-
-<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="nc">.next</span> <span class="p">{</span>
-        <span class="nl">float</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
-    <span class="p">}</span></code></pre></figure>
-
-<p>Change your code accordingly to make it responsive.</p>
-
-<p class="g">You can also use the code as a template that can be called anywhere on your blog. Read Step 4 of <a href="/jekyll-comments/#step4" target="_blank"><strong>How to add Comments on Jekyll</strong></a> to implement related post as a template.</p>
-
-<p>I hope this article has helped you to make a navigation link of your own in your Jekyll blog. Let me know if you have any doubts. Subscribe for updates on upcoming articles.</p>
-
-<p>Thanks for reading!</p>
-
+<p>A long time ago I was writing 4 posts on WordPress installation tutorial. At the end of every article, I had to leave the next or previous article link. I used to do it manually in this way “To read my previous article on WordPress basics read <a href="#">part 1</a>” and “for useful WordPress plugins read <a href="#">part 3</a>”</p><ul id="markdown-toc"> <li><a href="#why-use-related-prev-next-navigation-in-jekyll" id="markdown-toc-why-use-related-prev-next-navigation-in-jekyll">Why use Related Prev-Next Navigation in Jekyll?</a></li> <li><a href="#how-to-add-related-posts-link-in-jekyll" id="markdown-toc-how-to-add-related-posts-link-in-jekyll">How to add Related Posts link in Jekyll?</a></li> <li><a href="#how-to-add-prev-next-post-links-in-jekyll" id="markdown-toc-how-to-add-prev-next-post-links-in-jekyll">How to add Prev-Next Post links in Jekyll?</a></li>
+</ul><p>Manually linking articles was a tedious job if I had more articles. May be there was a plugin for that, but I was fed up with too many plugins! In Jekyll, it is wasy to implement navigation because we have nice little variables <code class="highlighter-rouge">page.previous</code>and <code class="highlighter-rouge">page.next</code> which can handle navigation without breaking a sweat.</p><h2 class="clear" id="why-use-related-prev-next-navigation-in-jekyll">Why use Related Prev-Next Navigation in Jekyll?</h2><p>Finding content on your blog should be easy. Let’s say a new visitor is checking out an article on your website about <strong>How to begin with Angular JS</strong>. Maybe your article is really helpful and many users have a high success rate trying it. Then users will look for more articles from you.</p><p>So there is a <strong>83%</strong>(yes this is from How I Met Your Mother) chance that a user is going to check more of your content if he/she likes the current one. You should give him/her an easy access to other content of yours right after the current article!</p><p>Adding next-previous post link or related post link is a good way to engage your audience with more posts and if the posts are good then the audiens may turn into subscribers.</p><h2 id="how-to-add-related-posts-link-in-jekyll">How to add Related Posts link in Jekyll?</h2><p>Jekyll has a variable to show the related posts (up to 10). But the problem is that they are just a list of your latest posts that’s all. I have no idea why they chose to call it <strong>related posts</strong>. It must be called <strong>recent posts</strong>.</p><p>But anyway it is a great way to let users know about your latest articles. It can be improved with some complex process of category wise matching. But I will write a detailed post in the update. For now refer to this <a href="http://stackoverflow.com/questions/10906574/filter-site-related-posts-in-jekyll" rel="nofollow" target="_blank">thread</a>.</p><p>Here is the code I have used on my <a href="https://kidschessworld.com" target="_blank">chess blog</a>.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"related"</span><span class="nt">&gt;</span> <span class="nt">&lt;h2&gt;</span>Related Posts<span class="nt">&lt;/h2&gt;</span> <span class="nt">&lt;ul&gt;</span>{% for post in site.related_posts limit:3 %} <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;</span> <span class="nt">&lt;li&gt;</span> <span class="nt">&lt;h3&gt;</span>{{ post.title }}<span class="ni">&amp;nbsp;&amp;nbsp;</span>{{ post.date | date_to_string }}<span class="nt">&lt;/h3&gt;</span> <span class="nt">&lt;/li&gt;</span> <span class="nt">&lt;/a&gt;</span>{% endfor %} <span class="nt">&lt;/ul&gt;</span><span class="nt">&lt;/div&gt;</span></code></pre></figure><p>The output should look like the screenshot below</p><p><amp-img src="/images/related-posts-jekyll.jpg" alt="Related posts jekyll" width="613" height="274" layout="responsive"><noscript><img src="/images/related-posts-jekyll.jpg" alt="Related posts jekyll" width="613" height="274"></noscript></amp-img></p><p>When you implementing this, make sure you tell Jekyll to paginate your posts by changing the parameters in <strong>_config.yml</strong>.</p><figure class="highlight"><pre><code class="language-html" data-lang="html">paginate: 6paginate_path: /page:num/</code></pre></figure><p>This way you are asking Jekyll to load 6 posts per page. First 6 will be loaded in the index(or wherever you call it), next 6 will be loaded in the url <code class="highlighter-rouge">/page-1/</code>, next 6 in <code class="highlighter-rouge">/page-2/</code> and so on.</p><p>Also make sure you do the following change while loading posts.</p><figure class="highlight"><pre><code class="language-html" data-lang="html">{% for post in site.posts %} </code></pre></figure><p>should be changed to</p><figure class="highlight"><pre><code class="language-html" data-lang="html">{% for post in paginator.posts %}</code></pre></figure><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="how-to-add-prev-next-post-links-in-jekyll">How to add Prev-Next Post links in Jekyll?</h2><p>I think it is a better thing to insert <strong>Previous-Next Post link</strong> after an article than <strong>related post link</strong>. If you are writing articles around only one topic then this is ideal since you always write related articles.</p><p>If there is a big article which has many parts in it and you are writing those parts in consecutive articles even then next and previous post links is the best choice.</p><p>Here is the code how I have implemented previous next links in my Jekyll blog.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"Previous-next"</span><span class="nt">&gt;</span> {% if page.previous.url %}<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"previous"</span> <span class="na">href=</span><span class="s">"{{page.previous.url}}"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span> {{page.previous.title}}<span class="nt">&lt;/a&gt;</span> {% endif %} {% if page.next.url %}<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"next"</span> <span class="na">href=</span><span class="s">"{{page.next.url}}"</span><span class="nt">&gt;</span>{{page.next.title}} <span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span> {% endif %}<span class="nt">&lt;/div&gt;</span></code></pre></figure><p>That should look some what like the below screenshot.</p><p><amp-img src="/images/how-to-add-related-next-previous-post-to-jekyll.jpg" alt="Related Previous-Next Navigation in Jekyll" width="740" height="29" layout="responsive"><noscript><img src="/images/how-to-add-related-next-previous-post-to-jekyll.jpg" alt="Related Previous-Next Navigation in Jekyll" width="740" height="29"></noscript></amp-img></p><p>Remember, the latest post will not have <code class="highlighter-rouge">page.next</code> since it is the last post and likewise the first post will not have <code class="highlighter-rouge">page.previous</code>.</p><p>May be you have to style the links so that they appear in two directions or at least a little apart.</p><figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.next</span> <span class="p">{</span><span class="nl">float</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span><span class="p">}</span></code></pre></figure><p>Change your code accordingly to make it responsive.</p><p class="g">You can also use the code as a template that can be called anywhere on your blog. Read Step 4 of <a href="/jekyll-comments/#step4" target="_blank"><strong>How to add Comments on Jekyll</strong></a> to implement related post as a template.</p><p>I hope this article has helped you to make a navigation link of your own in your Jekyll blog. Let me know if you have any doubts. Subscribe for updates on upcoming articles.</p><p>Thanks for reading!</p>
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/related-post-jekyll/#disqus_thread"><button class="btn">View/Add comments</button></a>

@@ -6,15 +6,8 @@
     <title>How to use Liquid Syntax in Jekyll?</title>
     <link rel="canonical" href="https://blog.webjeda.com/jekyll-liquid/" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-custom>
-        
-          .container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7);line-height:1.5}.main-content{margin:0 10px}amp-img{max-width:100%}footer{text-align:center;padding:1em;background:#000;color:#eee;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}.text-center{text-align:center}a .btn{background-color:transparent;border:1px solid #0a5;border-radius:2px;padding:10px 25px;cursor:pointer}a .btn:hover{background-color:#0a5;color:#eee}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7)}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}table{margin:15px 0;border-collapse:collapse;width:100%;padding:0}table tr{border-top:1px solid #777;background-color:white;margin:0;padding:0}table tr:nth-child(2n){background-color:#f8f8f8}table tr th{font-weight:bold;border:1px solid #777;text-align:left;margin:0;padding:6px 13px}table tr td{border:1px solid #777;text-align:left;margin:0;padding:6px 13px}table tr th :first-child,table tr td :first-child{margin:0}table tr th :last-child,table tr td :last-child{margin:0}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#4747f5}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#4747f5}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#5e5ee6}.highlight .nv{color:#4747f5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#4747f5}.highlight .vg{color:#4747f5}.highlight .vi{color:#4747f5}.highlight .il{color:#099}
-
-          
-    </style>
-    
-    
-    
+    <style amp-custom>.container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7);line-height:1.5}.main-content{margin:0 10px}amp-img{max-width:100%}footer{text-align:center;padding:1em;background:#000;color:#eee;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}.text-center{text-align:center}a .btn{background-color:transparent;border:1px solid #0a5;border-radius:2px;padding:10px 25px;cursor:pointer}a .btn:hover{background-color:#0a5;color:#eee}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7)}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}table{margin:15px 0;border-collapse:collapse;width:100%;padding:0}table tr{border-top:1px solid #777;background-color:white;margin:0;padding:0}table tr:nth-child(2n){background-color:#f8f8f8}table tr th{font-weight:bold;border:1px solid #777;text-align:left;margin:0;padding:6px 13px}table tr td{border:1px solid #777;text-align:left;margin:0;padding:6px 13px}table tr th :first-child,table tr td :first-child{margin:0}table tr th :last-child,table tr td :last-child{margin:0}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#4747f5}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#4747f5}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#5e5ee6}.highlight .nv{color:#4747f5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#4747f5}.highlight .vg{color:#4747f5}.highlight .vi{color:#4747f5}.highlight .il{color:#099}
+</style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -24,7 +17,7 @@
     <meta property="fb:app_id" content="549480635219583">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="How to use Liquid Syntax in Jekyll?">
-    <meta property="og:url" content="https://blog.webjeda.comamp/jekyll-liquid">
+    <meta property="og:url" content="https://blog.webjeda.com/jekyll-liquid/">
     <meta property="og:site_name" content="WebJeda Blog">
     <meta property="og:description" content="Liquid is an open-source templating language. Jekyll makes the best use of Liquid to implement conditional logics, outputs and filters. It may look weird for first timers but it is one of the reasons I'm still using Jekyll. I have discussed how to use Liquid in Jekyll.">
     <meta property="og:type" content="article">
@@ -52,7 +45,7 @@
         "headline": "How to use Liquid Syntax in Jekyll?",
         "image": "https://blog.webjeda.com/thumbs/jekyll-liquid.png",
         "description": "Liquid is an open-source templating language. Jekyll makes the best use of Liquid to implement conditional logics, outputs and filters. It may look weird for first timers but it is one of the reasons I'm still using Jekyll. I have discussed how to use Liquid in Jekyll.",
-        "url": "https://blog.webjeda.comamp/jekyll-liquid",
+        "url": "https://blog.webjeda.com/jekyll-liquid/",
         "datePublished": "2016-11-06",
          "author": {
           "@type": "Person",
@@ -65,6 +58,7 @@
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    
   </head>
   
 <body>
@@ -76,304 +70,39 @@
 
 <p class="intro">Liquid is an open-source templating language. Jekyll makes the best use of Liquid to implement conditional logics, outputs and filters. It may look weird for first timers but it is one of the reasons I'm still using Jekyll. I have discussed how to use Liquid in Jekyll.</p>
 
-<p>Liquid Syntax is an open-source template language created by Shopify. Jekyll uses it to load data dynamically, access data across the site, implement conditional logics like <strong>if</strong>, <strong>for</strong>, <strong>case</strong> etc.,</p>
-
-<p>For a beginner, this might look like an alien programming which doesn’t resemble any of the programming languages that he/she may have seen before.</p>
-
-<ul id="markdown-toc">
-  <li><a href="#tags" id="markdown-toc-tags">Tags</a></li>
-  <li><a href="#objects" id="markdown-toc-objects">Objects</a></li>
-  <li><a href="#filters" id="markdown-toc-filters">Filters</a></li>
-  <li><a href="#site-variables" id="markdown-toc-site-variables">Site Variables</a></li>
-  <li><a href="#page-variables" id="markdown-toc-page-variables">Page variables</a></li>
-  <li>
-<a href="#usage" id="markdown-toc-usage">Usage</a>    <ul>
-      <li><a href="#for-loop" id="markdown-toc-for-loop">For Loop</a></li>
-      <li><a href="#if-else-condition" id="markdown-toc-if-else-condition">If else condition</a></li>
-    </ul>
-  </li>
-  <li><a href="#also-refer" id="markdown-toc-also-refer">Also refer:</a></li>
-</ul>
-
-<p>But I assure you that it is probably the simplest and comprehensive language that I have seen so far. Take this snippet for example,</p>
-
-<div class="clear"></div>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="p">%}</span>
-  You're allowed to drink beer!
-<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
-  You are a minor!
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
-
-<p>So simple isn’t it. I wish other programs were also this easy and did not make a fuss whenever I miss a semicolon.</p>
-
-<p>Let’s begin learning Liquid keeping Jekyll in mind. There are 3 things that we should know before we jump right in.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tags</th>
-      <th>Objects</th>
-      <th>Filters</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{% %}</td>
-      <td>{{ }}</td>
-      <td>{{  | }}</td>
-    </tr>
-    <tr>
-      <td>Conditions</td>
-      <td>Output</td>
-      <td>Modify Output</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="tags">Tags</h3>
-
-<p>Tags are functional. They usually tell what to do and how to do something. They are used to implement control flows, iterations etc., The best example for this would be the one I have mentioned above - <strong>legal age for drinking beer</strong>.</p>
-
-<p>Along with conditional statements, tags are also used for special purposes like including a file from <code class="highlighter-rouge">_includes</code> folders. I have also discussed it <a href="https://blog.webjeda.com/jekyll-guide/#folders-inside-a-jekyll-site" target="_blank">here</a>.</p>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">head</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="na">%}
-{% include header</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="na">%}
-{% include footer</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
-
-<p>These statements will look for the files <code class="highlighter-rouge">head.html</code>, <code class="highlighter-rouge">header.html</code> and <code class="highlighter-rouge">footer.html</code> and insert them in the places where the tags are defined. I have discussed this here as well.</p>
-
-<p class="r">
-Liquid tags and objects may not work on a page if you have not defined front matter in it. At least blank front matter like this <br>
----   <br>
----
-</p>
-
-<h3 id="objects">Objects</h3>
-<p>Objects are used to output dynamic data on a page. In Jekyll, we have front matter <code class="highlighter-rouge">title</code> for almost all pages and posts. This can be accessed inside that page or post using the following object,</p>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span></code></pre></figure>
-
-<p>Here is the output of the same object for this page.</p>
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">How to use Liquid Syntax in Jekyll?</code></pre></figure>
-
-<h3 id="filters">Filters</h3>
-<p>Filters are used to modify outputs. It is used along with objects. A simple example is shown below.</p>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">upcase</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
-
-<p>Here is the output for this post</p>
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">HOW TO USE LIQUID SYNTAX IN JEKYLL?</code></pre></figure>
-
-<p>Here the output string will be converted into uppercase letters.</p>
-
-<p>I hope by now you have a basic idea of how liquid syntax works. But these are very simple examples. There can be complex liquid code blocks as well. Let’s discuss some variables that we can use in Jekyll.</p>
-
-<p>Here is a link for all the filters that you can use: <a href="https://help.shopify.com/themes/liquid/filters" target="_blank">Liquid Filters</a></p>
-
-<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
-
-<h2 id="site-variables">Site Variables</h2>
-<p>These are sitewide objects. They can be used anywhere on the website to fetch data either something related to the site or data from <code class="highlighter-rouge">_config.yml</code> file.</p>
-
-<p>Some examples here.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ site.time }}</td>
-      <td>Fetches current time - Ex: 2017-09-19 19:08:51 +0530</td>
-    </tr>
-    <tr>
-      <td>{{ site.pages }}</td>
-      <td>Fetches a list of all the pages</td>
-    </tr>
-    <tr>
-      <td>{{ site.posts }}</td>
-      <td>Fetches a list of all the posts</td>
-    </tr>
-    <tr>
-      <td>{{ site.data }}</td>
-      <td>Fetches a list containing the data loaded from the YAML files located in the _data directory</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Site variables defined in <code class="highlighter-rouge">_config.yml</code> are very useful and can be used to change things globally. Imagine you define your facebook username in the configuration file. You can access this from anywhere on the site.</p>
-
-<p>Let’s say this is how you define all the social media accounts in <code class="highlighter-rouge">_config.yml</code>,</p>
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">facebook</span><span class="pi">:</span> <span class="s">webjeda</span>
-<span class="s">twitter</span><span class="pi">:</span> <span class="s">webjeda</span>
-<span class="s">github</span><span class="pi">:</span> <span class="s">sharu725</span></code></pre></figure>
-
-<p>Let’s say you create an author section with follow buttons,</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">Follow me on: 
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://facebook.com/{{site.facebook}}"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="nt">&gt;</span>
-      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"footer-icon fa fa-facebook-official"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/{{site.twitter}}"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="nt">&gt;</span>
-      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"footer-icon fa fa-twitter"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/a&gt;</span>
-  
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/{{site.github}}"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="nt">&gt;</span>
-      <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"footer-icon fa fa-github-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
-  <span class="nt">&lt;/a&gt;</span></code></pre></figure>
-
-<p>This comes in very handy if you want to use these variables very often or change them altogether. I have used this feature while creating themes. Defining accent colors in configuration helps change the color globally.</p>
-
-<h2 id="page-variables">Page variables</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ page.title }}</td>
-      <td>Fetches title of the page. Ex: - How to use Liquid Syntax in Jekyll?</td>
-    </tr>
-    <tr>
-      <td>{{ page.content }}</td>
-      <td>Fetches anything after frontmatter of the page</td>
-    </tr>
-    <tr>
-      <td>{{ page.excerpt }}</td>
-      <td>Fetches the excerpt or first paragraph of the page</td>
-    </tr>
-    <tr>
-      <td>{{ page.url }}</td>
-      <td>Fetches the url of the page. Ex: for this page - amp/jekyll-liquid</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Page variables are page specific. They can only fetch data with respect to the page they are declared in.</p>
-
-<h2 id="usage">Usage</h2>
-<p>These variables are very easy to implement but using them within a loop is a little tricky. I will give you some examples,</p>
-
-<h3 id="for-loop">For Loop</h3>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>pot<span class="w"> </span>in<span class="w"> </span>site.posts<span class="w"> </span><span class="p">%}</span>
-<span class="p">{{</span><span class="nv">pot</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
-
-<p>The output is here</p>
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">Let's Design Mobile First
-
-Jekyll Snippets - Just Copy Paste!
-
-Lightweight CSS Grid Framework</code></pre></figure>
-
-<p>I’m limiting the outputs to 3. If not, the whole page will be filled with titles. Here, <code class="highlighter-rouge">pot</code> is just a variable. We generally use <code class="highlighter-rouge">post</code> in its place. You can use any word that you fancy.</p>
-
-<p>You can also fetch titles manually (not recommended!)</p>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
-<span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
-<span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
-.
-.
-.
-<span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="p">[</span><span class="nv">n</span><span class="p">].</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span></code></pre></figure>
-
-<p>Here <code class="highlighter-rouge">n</code> should be an integer. This method is not practical. You can use it if you’re willing to fetch the titles of first few posts.</p>
-
-<p>For numbering a loop, you can use <code class="highlighter-rouge">forloop.index</code>. This can also be used to provide different ids for consecutive elements in a for loop.</p>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>pot<span class="w"> </span>in<span class="w"> </span>site.posts<span class="w"> </span><span class="p">%}</span>
-<span class="p">{{</span><span class="nv">forloop</span><span class="p">.</span><span class="nv">index</span><span class="p">}}</span>. <span class="p">{{</span><span class="nv">pot</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
-
-<p>I have intentionally used <code class="highlighter-rouge">pot</code> instead of <code class="highlighter-rouge">post</code> because we can use any variable there.</p>
-
-<p>The output looks like this,</p>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">1. How to use Liquid Syntax in Jekyll!
-
-2. 14 Ways to Customize your Company Website
-
-3. Jekyll's got a new GUI for local editing!
-.
-.
-.
-n. Nth post title</code></pre></figure>
-
-<h3 id="if-else-condition">If else condition</h3>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s1">'Jekyll'</span><span class="w"> </span><span class="p">%}</span>
-  This is a Jekyll related article.
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s1">'Liquid'</span><span class="w"> </span><span class="p">%}</span>
-  This is a Liquid related article.
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s1">'Jekyll'</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="s1">'Liquid'</span><span class="w"> </span><span class="p">%}</span>
-  This is a Jekyll Liquid article!
-<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
-  This is neither Jekyll nor a Liquid article.
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
-
-<p>The output is here</p>
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">  This is a Jekyll related article.
-
-
-
-  This is a Liquid related article.
-
-
-
-  This is a Jekyll Liquid article!</code></pre></figure>
-
-<p>Since this page has a title that contains both Jekyll and Liquid, the output is as shown above.</p>
-
-<p>Else if in Jekyll Liquid Syntax is implemented this way,</p>
-
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'/liquid/'</span><span class="w"> </span><span class="p">%}</span>
-  The page URL for this page is /liquid/
-<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'/jekyll-liquid/'</span><span class="w"> </span><span class="p">%}</span>
-  The page URL for this page is /jekyll-liquid/
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure>
-
-<p>The output will be,</p>
-<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"></code></pre></figure>
-
-<p>This is exactly how I have implemented active menu highlight for this blog. Navigate to <strong>About</strong> or <strong>Contact</strong> page and see how the colored-underline gets highlighted.</p>
-
-<p class="g"><code class="highlighter-rouge">For loops</code> will usually have more than one output but <code class="highlighter-rouge">if conditions</code> will have only one output.</p>
-
-<p>Please go through this <a href="https://help.shopify.com/themes/liquid/tags/control-flow-tags" target="_blank">document</a> to get familiar with other types of condtional flows.</p>
-
-<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
-
-<h2 id="also-refer">Also refer:</h2>
-
-<p>Liquid: <a href="https://help.shopify.com/themes/liquid">https://help.shopify.com/themes/liquid</a></p>
-
-<p>Front Matter: <a href="http://jekyllrb.com/docs/frontmatter/">http://jekyllrb.com/docs/frontmatter/</a></p>
-
-<p>Templates: <a href="http://jekyllrb.com/docs/templates/">http://jekyllrb.com/docs/templates/</a></p>
-
-<amp-youtube data-videoid="q0OP81HDQzE" layout="responsive" width="600" height="300">
-    </amp-youtube>
-
-<p>A video guide here</p>
-
-<div class="clear"></div>
-
-
+<p>Liquid Syntax is an open-source template language created by Shopify. Jekyll uses it to load data dynamically, access data across the site, implement conditional logics like <strong>if</strong>, <strong>for</strong>, <strong>case</strong> etc.,</p><p>For a beginner, this might look like an alien programming which doesn’t resemble any of the programming languages that he/she may have seen before.</p><ul id="markdown-toc"> <li><a href="#tags" id="markdown-toc-tags">Tags</a></li> <li><a href="#objects" id="markdown-toc-objects">Objects</a></li> <li><a href="#filters" id="markdown-toc-filters">Filters</a></li> <li><a href="#site-variables" id="markdown-toc-site-variables">Site Variables</a></li> <li><a href="#page-variables" id="markdown-toc-page-variables">Page variables</a></li> <li>
+<a href="#usage" id="markdown-toc-usage">Usage</a><ul> <li><a href="#for-loop" id="markdown-toc-for-loop">For Loop</a></li> <li><a href="#if-else-condition" id="markdown-toc-if-else-condition">If else condition</a></li>
+</ul> </li> <li><a href="#also-refer" id="markdown-toc-also-refer">Also refer:</a></li>
+</ul><p>But I assure you that it is probably the simplest and comprehensive language that I have seen so far. Take this snippet for example,</p><div class="clear"></div><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="p">%}</span> You're allowed to drink beer!<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span> You are a minor!<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure><p>So simple isn’t it. I wish other programs were also this easy and did not make a fuss whenever I miss a semicolon.</p><p>Let’s begin learning Liquid keeping Jekyll in mind. There are 3 things that we should know before we jump right in.</p><table> <thead>
+<tr> <th>Tags</th> <th>Objects</th> <th>Filters</th>
+</tr> </thead> <tbody>
+<tr> <td>{% %}</td> <td>{{ }}</td> <td>{{  | }}</td>
+</tr>
+<tr> <td>Conditions</td> <td>Output</td> <td>Modify Output</td>
+</tr> </tbody>
+</table><h3 id="tags">Tags</h3><p>Tags are functional. They usually tell what to do and how to do something. They are used to implement control flows, iterations etc., The best example for this would be the one I have mentioned above - <strong>legal age for drinking beer</strong>.</p><p>Along with conditional statements, tags are also used for special purposes like including a file from <code class="highlighter-rouge">_includes</code> folders. I have also discussed it <a href="https://blog.webjeda.com/jekyll-guide/#folders-inside-a-jekyll-site" target="_blank">here</a>.</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">head</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="na">%}{% include header</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="na">%}{% include footer</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span></code></pre></figure><p>These statements will look for the files <code class="highlighter-rouge">head.html</code>, <code class="highlighter-rouge">header.html</code> and <code class="highlighter-rouge">footer.html</code> and insert them in the places where the tags are defined. I have discussed this here as well.</p><p class="r">Liquid tags and objects may not work on a page if you have not defined front matter in it. At least blank front matter like this <br>---  <br>---</p><h3 id="objects">Objects</h3><p>Objects are used to output dynamic data on a page. In Jekyll, we have front matter <code class="highlighter-rouge">title</code> for almost all pages and posts. This can be accessed inside that page or post using the following object,</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span></code></pre></figure><p>Here is the output of the same object for this page.</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">How to use Liquid Syntax in Jekyll?</code></pre></figure><h3 id="filters">Filters</h3><p>Filters are used to modify outputs. It is used along with objects. A simple example is shown below.</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">upcase</span><span class="w"> </span><span class="p">}}</span></code></pre></figure><p>Here is the output for this post</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">HOW TO USE LIQUID SYNTAX IN JEKYLL?</code></pre></figure><p>Here the output string will be converted into uppercase letters.</p><p>I hope by now you have a basic idea of how liquid syntax works. But these are very simple examples. There can be complex liquid code blocks as well. Let’s discuss some variables that we can use in Jekyll.</p><p>Here is a link for all the filters that you can use: <a href="https://help.shopify.com/themes/liquid/filters" target="_blank">Liquid Filters</a></p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="site-variables">Site Variables</h2><p>These are sitewide objects. They can be used anywhere on the website to fetch data either something related to the site or data from <code class="highlighter-rouge">_config.yml</code> file.</p><p>Some examples here.</p><table> <thead>
+<tr> <th>Variable</th> <th>Description</th>
+</tr> </thead> <tbody>
+<tr> <td>{{ site.time }}</td> <td>Fetches current time - Ex: 2017-09-19 19:25:38 +0530</td>
+</tr>
+<tr> <td>{{ site.pages }}</td> <td>Fetches a list of all the pages</td>
+</tr>
+<tr> <td>{{ site.posts }}</td> <td>Fetches a list of all the posts</td>
+</tr>
+<tr> <td>{{ site.data }}</td> <td>Fetches a list containing the data loaded from the YAML files located in the _data directory</td>
+</tr> </tbody>
+</table><p>Site variables defined in <code class="highlighter-rouge">_config.yml</code> are very useful and can be used to change things globally. Imagine you define your facebook username in the configuration file. You can access this from anywhere on the site.</p><p>Let’s say this is how you define all the social media accounts in <code class="highlighter-rouge">_config.yml</code>,</p><figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">facebook</span><span class="pi">:</span> <span class="s">webjeda</span><span class="s">twitter</span><span class="pi">:</span> <span class="s">webjeda</span><span class="s">github</span><span class="pi">:</span> <span class="s">sharu725</span></code></pre></figure><p>Let’s say you create an author section with follow buttons,</p><figure class="highlight"><pre><code class="language-html" data-lang="html">Follow me on:  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://facebook.com/{{site.facebook}}"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="nt">&gt;</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"footer-icon fa fa-facebook-official"</span><span class="nt">&gt;&lt;/i&gt;</span> <span class="nt">&lt;/a&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/{{site.twitter}}"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="nt">&gt;</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"footer-icon fa fa-twitter"</span><span class="nt">&gt;&lt;/i&gt;</span> <span class="nt">&lt;/a&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/{{site.github}}"</span> <span class="na">target=</span><span class="s">"_blank"</span> <span class="nt">&gt;</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"footer-icon fa fa-github-alt"</span><span class="nt">&gt;&lt;/i&gt;</span> <span class="nt">&lt;/a&gt;</span></code></pre></figure><p>This comes in very handy if you want to use these variables very often or change them altogether. I have used this feature while creating themes. Defining accent colors in configuration helps change the color globally.</p><h2 id="page-variables">Page variables</h2><table> <thead>
+<tr> <th>Variable</th> <th>Description</th>
+</tr> </thead> <tbody>
+<tr> <td>{{ page.title }}</td> <td>Fetches title of the page. Ex: - How to use Liquid Syntax in Jekyll?</td>
+</tr>
+<tr> <td>{{ page.content }}</td> <td>Fetches anything after frontmatter of the page</td>
+</tr>
+<tr> <td>{{ page.excerpt }}</td> <td>Fetches the excerpt or first paragraph of the page</td>
+</tr>
+<tr> <td>{{ page.url }}</td> <td>Fetches the url of the page. Ex: for this page - amp/jekyll-liquid</td>
+</tr> </tbody>
+</table><p>Page variables are page specific. They can only fetch data with respect to the page they are declared in.</p><h2 id="usage">Usage</h2><p>These variables are very easy to implement but using them within a loop is a little tricky. I will give you some examples,</p><h3 id="for-loop">For Loop</h3><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>pot<span class="w"> </span>in<span class="w"> </span>site.posts<span class="w"> </span><span class="p">%}</span><span class="p">{{</span><span class="nv">pot</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span><span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></figure><p>The output is here</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">Let's Design Mobile FirstJekyll Snippets - Just Copy Paste!Lightweight CSS Grid Framework</code></pre></figure><p>I’m limiting the outputs to 3. If not, the whole page will be filled with titles. Here, <code class="highlighter-rouge">pot</code> is just a variable. We generally use <code class="highlighter-rouge">post</code> in its place. You can use any word that you fancy.</p><p>You can also fetch titles manually (not recommended!)</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>...<span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">posts</span><span class="p">[</span><span class="nv">n</span><span class="p">].</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span></code></pre></figure><p>Here <code class="highlighter-rouge">n</code> should be an integer. This method is not practical. You can use it if you’re willing to fetch the titles of first few posts.</p><p>For numbering a loop, you can use <code class="highlighter-rouge">forloop.index</code>. This can also be used to provide different ids for consecutive elements in a for loop.</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>pot<span class="w"> </span>in<span class="w"> </span>site.posts<span class="w"> </span><span class="p">%}</span><span class="p">{{</span><span class="nv">forloop</span><span class="p">.</span><span class="nv">index</span><span class="p">}}</span>. <span class="p">{{</span><span class="nv">pot</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span><span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></figure><p>I have intentionally used <code class="highlighter-rouge">pot</code> instead of <code class="highlighter-rouge">post</code> because we can use any variable there.</p><p>The output looks like this,</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">1. How to use Liquid Syntax in Jekyll!2. 14 Ways to Customize your Company Website3. Jekyll's got a new GUI for local editing!...n. Nth post title</code></pre></figure><h3 id="if-else-condition">If else condition</h3><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s1">'Jekyll'</span><span class="w"> </span><span class="p">%}</span> This is a Jekyll related article.<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s1">'Liquid'</span><span class="w"> </span><span class="p">%}</span> This is a Liquid related article.<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="s1">'Jekyll'</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="s1">'Liquid'</span><span class="w"> </span><span class="p">%}</span> This is a Jekyll Liquid article!<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span> This is neither Jekyll nor a Liquid article.<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure><p>The output is here</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"> This is a Jekyll related article. This is a Liquid related article. This is a Jekyll Liquid article!</code></pre></figure><p>Since this page has a title that contains both Jekyll and Liquid, the output is as shown above.</p><p>Else if in Jekyll Liquid Syntax is implemented this way,</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'/liquid/'</span><span class="w"> </span><span class="p">%}</span> The page URL for this page is /liquid/<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'/jekyll-liquid/'</span><span class="w"> </span><span class="p">%}</span> The page URL for this page is /jekyll-liquid/<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span></code></pre></figure><p>The output will be,</p><figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"></code></pre></figure><p>This is exactly how I have implemented active menu highlight for this blog. Navigate to <strong>About</strong> or <strong>Contact</strong> page and see how the colored-underline gets highlighted.</p><p class="g"><code class="highlighter-rouge">For loops</code> will usually have more than one output but <code class="highlighter-rouge">if conditions</code> will have only one output.</p><p>Please go through this <a href="https://help.shopify.com/themes/liquid/tags/control-flow-tags" target="_blank">document</a> to get familiar with other types of condtional flows.</p><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><h2 id="also-refer">Also refer:</h2><p>Liquid: <a href="https://help.shopify.com/themes/liquid">https://help.shopify.com/themes/liquid</a></p><p>Front Matter: <a href="http://jekyllrb.com/docs/frontmatter/">http://jekyllrb.com/docs/frontmatter/</a></p><p>Templates: <a href="http://jekyllrb.com/docs/templates/">http://jekyllrb.com/docs/templates/</a></p><amp-youtube data-videoid="q0OP81HDQzE" layout="responsive" width="600" height="300"></amp-youtube><p>A video guide here</p><div class="clear"></div>
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/jekyll-liquid/#disqus_thread"><button class="btn">View/Add comments</button></a>
