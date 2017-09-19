@@ -70,10 +70,85 @@
 
 <p class="intro">Jekyll minify html using liquid! Minifying CSS and JS is already in practice but compressing html is not practiced by everyone. Since Jekyll posts and pages are in markdown and you may not be able to minify all of them using a task runner. Learn how to minify Jekyll html using this method.</p>
 
-<h2 id="why-do-we-have-to-minify-html">Why do we have to minify HTML?</h2><p>Speed is a factor to rank high in Google search page. Minifying HTML can lead to an increase in speeds around 5% or more. Lighter the website easier to load even on a slow connection. Usually, html file consists of a lot of empty spaces, comments in between <!-- and -->, new lines, blank spaces etc., It is good to keep what really matters and omit the rest.</p><ul id="markdown-toc"> <li><a href="#why-do-we-have-to-minify-html" id="markdown-toc-why-do-we-have-to-minify-html">Why do we have to minify HTML?</a></li> <li>
-<a href="#how-to-minify-jekyll-html" id="markdown-toc-how-to-minify-jekyll-html">How to minify Jekyll html?</a><ul> <li><a href="#step-1-download-compress-html" id="markdown-toc-step-1-download-compress-html">Step 1: Download Compress html</a></li> <li><a href="#step-2-place-compress-in-layouts" id="markdown-toc-step-2-place-compress-in-layouts">Step 2: Place Compress in layouts</a></li> <li><a href="#step-3-add-front-matter-to-default-layout" id="markdown-toc-step-3-add-front-matter-to-default-layout">Step 3: Add front matter to default layout</a></li> <li><a href="#step-4-save-changes" id="markdown-toc-step-4-save-changes">Step 4: Save changes</a></li>
-</ul> </li>
-</ul><p>Though minifying CSS and JS is largely practiced, minifying HTML is not given such an importance. Maybe because there is not much to minify compared to static files like CSS and JS. But it does help loading your website at a better speed even on 2G connections. Moreover, <a href="https://developers.google.com/speed/pagespeed/insights/" rel="nofollow" target="_blank">PageSpeed</a> recommends minifying HTML.</p><p>I have seen huge benefits by minifying my Jekyll blog. What if I tell you that minifying reduces the file size by more than 20%! May be because I have a lot of blank spaces and new lines in the un-minified version. And that’s an improvement I shouldn’t be missing.</p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="how-to-minify-jekyll-html">How to minify Jekyll html?</h2><p>So far in my tutorials, I have never used command line interface. Not that I hate it but I think it’s difficult for beginners to comprehend. Likewise, you can minify html using <code class="highlighter-rouge">Grunt</code> or <code class="highlighter-rouge">Gulp</code> task runners but for a beginner they might seem alien technologies. And when we are using an automatic minifier that takes care of everything then why do we need a task runner?! And also I prefer solutions that does not involve plugins.</p><p>Now to minify Jekyll blog,</p><h3 id="step-1-download-compress-html">Step 1: Download Compress html</h3><p>Go to <a href="http://jch.penibelst.de/" rel="nofollow" target="_blank">this link</a> and download the <code class="highlighter-rouge">compress.html</code> file. It should be under the <strong>Installation</strong> heading.</p><h3 id="step-2-place-compress-in-layouts">Step 2: Place Compress in layouts</h3><p>Place this html file inside your <code class="highlighter-rouge">_layout</code> folder.</p><h3 id="step-3-add-front-matter-to-default-layout">Step 3: Add front matter to default layout</h3><p>Open <code class="highlighter-rouge">default.html</code> in <code class="highlighter-rouge">_layouts</code> folder and copy the below front matter at the top of the page. If you do not have <code class="highlighter-rouge">default.html</code> then use a top level layout which is used in all pages.</p><figure class="highlight"><pre><code class="language-html" data-lang="html">---layout: compress---</code></pre></figure><p>The <code class="highlighter-rouge">default.html</code> should look something like this after copying the code</p><figure class="highlight"><pre><code class="language-html" data-lang="html">---layout: compress---<span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html&gt;</span>...<span class="nt">&lt;/html&gt;</span></code></pre></figure><h3 id="step-4-save-changes">Step 4: Save changes</h3><p>Save and commit the changes. By default the <code class="highlighter-rouge">compress</code> layout replaces contiguous whitespace with a single whitespace character. But if you want additional options then you can use this snippet inside your <code class="highlighter-rouge">_config.yml</code> file.</p><figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">compress_html</span><span class="pi">:</span><span class="s">clippings</span><span class="pi">:</span> <span class="pi">[]</span><span class="s">comments</span><span class="pi">:</span> <span class="pi">[]</span><span class="s">endings</span><span class="pi">:</span> <span class="pi">[]</span><span class="s">ignore</span><span class="pi">:</span><span class="s">envs</span><span class="pi">:</span> <span class="pi">[]</span><span class="s">blanklines</span><span class="pi">:</span> <span class="s">false</span><span class="s">profile</span><span class="pi">:</span> <span class="s">false</span><span class="s">startings</span><span class="pi">:</span> <span class="pi">[]</span></code></pre></figure><p>Read all about these settings in the <a href="http://jch.penibelst.de/" rel="nofollow" target="_blank">documentation</a>.</p><p>Now all your web-pages that directly or indirectly uses the layout <code class="highlighter-rouge">default</code> will be minified. You can exclusively mention for certain pages to minify by adding the front matter given above.</p><p>So I hope this tutorial helped you minify your Jekyll blog. If there is a better way to do this, then please let me know in the comment section.</p><p class="r">My disqus comment stopped loading after using this method. So for the time being I’m not using it. If you are using disqus then do not use this method (for now).</p><p class="g">Disqus started to work after cleaning up unnecessary comments inside disqus.html. Here is the <a href="https://raw.githubusercontent.com/sharu725/emerald/gh-pages/_includes/disqus.html">raw file</a></p><p>Thanks for reading!</p>
+<h2 id="why-do-we-have-to-minify-html">Why do we have to minify HTML?</h2>
+<p>Speed is a factor to rank high in Google search page. Minifying HTML can lead to an increase in speeds around 5% or more. Lighter the website easier to load even on a slow connection. Usually, html file consists of a lot of empty spaces, comments in between <!-- and -->, new lines, blank spaces etc., It is good to keep what really matters and omit the rest.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-do-we-have-to-minify-html" id="markdown-toc-why-do-we-have-to-minify-html">Why do we have to minify HTML?</a></li>
+  <li>
+<a href="#how-to-minify-jekyll-html" id="markdown-toc-how-to-minify-jekyll-html">How to minify Jekyll html?</a>    <ul>
+      <li><a href="#step-1-download-compress-html" id="markdown-toc-step-1-download-compress-html">Step 1: Download Compress html</a></li>
+      <li><a href="#step-2-place-compress-in-layouts" id="markdown-toc-step-2-place-compress-in-layouts">Step 2: Place Compress in layouts</a></li>
+      <li><a href="#step-3-add-front-matter-to-default-layout" id="markdown-toc-step-3-add-front-matter-to-default-layout">Step 3: Add front matter to default layout</a></li>
+      <li><a href="#step-4-save-changes" id="markdown-toc-step-4-save-changes">Step 4: Save changes</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Though minifying CSS and JS is largely practiced, minifying HTML is not given such an importance. Maybe because there is not much to minify compared to static files like CSS and JS. But it does help loading your website at a better speed even on 2G connections. Moreover, <a href="https://developers.google.com/speed/pagespeed/insights/" rel="nofollow" target="_blank">PageSpeed</a> recommends minifying HTML.</p>
+
+<p>I have seen huge benefits by minifying my Jekyll blog. What if I tell you that minifying reduces the file size by more than 20%! May be because I have a lot of blank spaces and new lines in the un-minified version. And that’s an improvement I shouldn’t be missing.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<h2 id="how-to-minify-jekyll-html">How to minify Jekyll html?</h2>
+
+<p>So far in my tutorials, I have never used command line interface. Not that I hate it but I think it’s difficult for beginners to comprehend. Likewise, you can minify html using <code class="highlighter-rouge">Grunt</code> or <code class="highlighter-rouge">Gulp</code> task runners but for a beginner they might seem alien technologies. And when we are using an automatic minifier that takes care of everything then why do we need a task runner?! And also I prefer solutions that does not involve plugins.</p>
+
+<p>Now to minify Jekyll blog,</p>
+
+<h3 id="step-1-download-compress-html">Step 1: Download Compress html</h3>
+<p>Go to <a href="http://jch.penibelst.de/" rel="nofollow" target="_blank">this link</a> and download the <code class="highlighter-rouge">compress.html</code> file. It should be under the <strong>Installation</strong> heading.</p>
+
+<h3 id="step-2-place-compress-in-layouts">Step 2: Place Compress in layouts</h3>
+<p>Place this html file inside your <code class="highlighter-rouge">_layout</code> folder.</p>
+
+<h3 id="step-3-add-front-matter-to-default-layout">Step 3: Add front matter to default layout</h3>
+<p>Open <code class="highlighter-rouge">default.html</code> in <code class="highlighter-rouge">_layouts</code> folder and copy the below front matter at the top of the page. If you do not have <code class="highlighter-rouge">default.html</code> then use a top level layout which is used in all pages.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: compress
+---</code></pre></figure>
+
+<p>The <code class="highlighter-rouge">default.html</code> should look something like this after copying the code</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: compress
+---
+
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+.
+.
+.
+
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<h3 id="step-4-save-changes">Step 4: Save changes</h3>
+<p>Save and commit the changes. By default the <code class="highlighter-rouge">compress</code> layout replaces contiguous whitespace with a single whitespace character. But if you want additional options then you can use this snippet inside your <code class="highlighter-rouge">_config.yml</code> file.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">compress_html</span><span class="pi">:</span>
+    <span class="s">clippings</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="s">comments</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="s">endings</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="s">ignore</span><span class="pi">:</span>
+    <span class="s">envs</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="s">blanklines</span><span class="pi">:</span> <span class="s">false</span>
+    <span class="s">profile</span><span class="pi">:</span> <span class="s">false</span>
+    <span class="s">startings</span><span class="pi">:</span> <span class="pi">[]</span></code></pre></figure>
+
+<p>Read all about these settings in the <a href="http://jch.penibelst.de/" rel="nofollow" target="_blank">documentation</a>.</p>
+
+<p>Now all your web-pages that directly or indirectly uses the layout <code class="highlighter-rouge">default</code> will be minified. You can exclusively mention for certain pages to minify by adding the front matter given above.</p>
+
+<p>So I hope this tutorial helped you minify your Jekyll blog. If there is a better way to do this, then please let me know in the comment section.</p>
+
+<p class="r">My disqus comment stopped loading after using this method. So for the time being I’m not using it. If you are using disqus then do not use this method (for now).</p>
+
+<p class="g">Disqus started to work after cleaning up unnecessary comments inside disqus.html. Here is the <a href="https://raw.githubusercontent.com/sharu725/emerald/gh-pages/_includes/disqus.html">raw file</a></p>
+
+<p>Thanks for reading!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/compress-html-jekyll/#disqus_thread"><button class="btn">View/Add comments</button></a>

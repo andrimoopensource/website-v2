@@ -70,14 +70,166 @@
 
 <p class="intro">Https has an advantage in SEO over http. It is easy to set up SSL for Jekyll using CloudFlare. Learn how to get a free SSL certificate for your Jekyll blog. Also, find out the advantages and disadvantages of using SSL on your website.</p>
 
-<h2 class="clear" id="why-should-anyone-use-ssl">Why should anyone use SSL?</h2><p>SSL (Secure Socket Layer) basically provides a secure connection between the client(web browser) and server(website). It avoids eavesdropping, man-in-the-middle attack etc., Bottom line is - A user can browse your website without worrying about someone stealing personal information.</p><ul id="markdown-toc"> <li><a href="#why-should-anyone-use-ssl" id="markdown-toc-why-should-anyone-use-ssl">Why should anyone use SSL?</a></li> <li>
-<a href="#why-im-not-using-ssl-on-this-jekyll-blog" id="markdown-toc-why-im-not-using-ssl-on-this-jekyll-blog">Why I’m not using SSL on this Jekyll blog?</a><ul> <li><a href="#adsense" id="markdown-toc-adsense">Adsense</a></li> <li><a href="#performance" id="markdown-toc-performance">Performance</a></li> <li><a href="#update-aug-2016" id="markdown-toc-update-aug-2016">Update Aug 2016</a></li>
-</ul> </li> <li>
-<a href="#how-to-get-ssl-on-jekyll" id="markdown-toc-how-to-get-ssl-on-jekyll">How to get SSL on Jekyll?</a><ul> <li><a href="#enforce-https" id="markdown-toc-enforce-https">Enforce https</a></li> <li><a href="#change-canonical-url-to-https" id="markdown-toc-change-canonical-url-to-https">Change Canonical URL to https</a></li>
-</ul> </li> <li>
-<a href="#ssl-on-custom-domain" id="markdown-toc-ssl-on-custom-domain">SSL on custom domain</a><ul> <li><a href="#step-1-migrate-dns-to-cloudflare" id="markdown-toc-step-1-migrate-dns-to-cloudflare">Step 1: Migrate DNS to CloudFlare</a></li> <li><a href="#step-2-use-flexible-ssl" id="markdown-toc-step-2-use-flexible-ssl">Step 2: Use ‘Flexible SSL’</a></li> <li><a href="#step-3-changes-to-be-made-in-cloudflare" id="markdown-toc-step-3-changes-to-be-made-in-cloudflare">Step 3: Changes to be made in CloudFlare</a></li> <li><a href="#step-4-changes-to-be-made-in-the-website" id="markdown-toc-step-4-changes-to-be-made-in-the-website">Step 4: Changes to be made in the website</a></li>
-</ul> </li> <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-</ul><p>On August 06 2014 Google announced that <a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html" rel="nofollow" target="_blank">https will be considered for ranking signal</a>. They took this measure to keep everybody safe over the web. So by using SSL you can improve your website ranking and your users will feel safe and trust the product or service you are providing.</p><h2 class="clear" id="why-im-not-using-ssl-on-this-jekyll-blog">Why I’m not using SSL on this Jekyll blog?</h2><p class="right"><amp-img src="/images/nallikayi-articles-github-pages-ssl.jpg" alt="Jekyll and GitHub pages https" width="381" height="75" layout="responsive"><noscript><img src="/images/nallikayi-articles-github-pages-ssl.jpg" alt="Jekyll and GitHub pages https" width="381" height="75"></noscript></amp-img></p><p><strong>Update: I did not use SSL for some reasons that I have mentioned below. Currently I’m using SSL.</strong></p><p>I’m using SSL on <a href="https://articles.nallikayi.com" target="_blank">Nallikayi Articles</a> but not on other websites. Why did I do so? If SSL is good for SEO, why didn’t I use it on all my websites? Especially, why didn’t I use it on this blog?! The reasons are as follows,</p><h3 class="clear" id="adsense">Adsense</h3><p>I use Adsense for monetizing this blog. If I were to secure this blog with SSL, I should not request any data from a http server. Everything should be https! But, most of the ads on Adsense are from a http source which is not acceptable for an SSL certified website.</p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><p>Google detects whether your website has an SSL certificate or not and serves ads accordingly. If I activate SSL in my Jekyll blog, Google will filter only https ads and serve it on my website. This way I may miss some high paying ads.</p><h3 id="performance">Performance</h3><p>Website loading speed is my main concern. I want it to be fast; really fast. Activating SSL would slow down my Jekyll blog a little due to TLS handshaking which is a process that the browser and server follow to decide how to communicate and create a secured connection.</p><p>Google also announced that they were using page load time as a factor in search engine rankings. SSL and page-load time conflict with each other(a little bit). Anyway, the load time will be a little more than what it used to be. So if speed is not your priority then you can always go ahead and use SSL.</p><h3 id="update-aug-2016">Update Aug 2016</h3><p class="r">After considering all the advantages and disadvantages of SSL, I’m going with secure SSL. Google is trying hard to push web developers to move to <code class="highlighter-rouge">https</code>. That makes sense because everyone wants their information to be safe on the internet.</p><h2 id="how-to-get-ssl-on-jekyll">How to get SSL on Jekyll?</h2><p>If your website or Jekyll blog URL is in the format <code class="highlighter-rouge">username.github.io</code> then you can use https right away just by enforcing it. But before you do that, verify if <code class="highlighter-rouge">https://username.github.io</code> renders the same thing and you see a green padlock before the URL.</p><p>If it works but you do not see a green padlock then the reason must be that your website is requesting something from a non-secure (http) server. Read <a href="#warning-1">warning</a> to solve this.</p><h3 id="enforce-https">Enforce https</h3><p>If you are not using a custom domain name then you can use the <strong>Enforce HTTPS</strong> option found in settings page. It redirects the website to https from server side which is better than doing it from client side.</p><p><amp-img src="/images/github-pages-enforce-https.png" alt="Github Pages enforce https" width="742" height="108" layout="responsive"><noscript><img src="/images/github-pages-enforce-https.png" alt="Github Pages enforce https" width="742" height="108"></noscript></amp-img></p><p>If you are using a custom doamin then this option will not be available. You have to skip to this <a href="#ssl-on-custom-domain">step</a>.</p><p>If you want to do it from the client side(not recommended) then use this JavaScript code at the top of your website to redirect to https. Change <strong>username</strong> to your GitHub username.</p><figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">host</span> <span class="o">=</span> <span class="s2">"username.github.io"</span><span class="p">;</span><span class="k">if</span> <span class="p">((</span><span class="nx">host</span> <span class="o">==</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">!=</span> <span class="s2">"https:"</span><span class="p">))</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">=</span> <span class="s2">"https"</span><span class="p">;</span></code></pre></figure><h3 id="change-canonical-url-to-https">Change Canonical URL to https</h3><p>You should let search engines read your content only in https site. Use canonical URL in the head section.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"https://username.github.io"</span> <span class="nt">/&gt;</span></code></pre></figure><p>for Jekyll, it should be</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"{{ site.url }}{{site.baseurl}}{{ page.url }}"</span> <span class="nt">/&gt;</span></code></pre></figure><p>Make sure that the <strong>url</strong> is https in <strong>_config.yml</strong>. Also use <code class="highlighter-rouge">enforce_ssl</code> parameter.</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">url</span><span class="pi">:</span> <span class="s">https://username.github.io</span><span class="s">enforce_ssl</span><span class="pi">:</span> <span class="s">username.github.io</span></code></pre></figure><p>This way, there will be no trace of your <strong>http</strong> website anywhere on the internet even though it works.</p><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><h2 id="ssl-on-custom-domain">SSL on custom domain</h2><p>If you are using a custom domain, say <code class="highlighter-rouge">yoursite.com</code> then you may have to use a different approach. If enforcing works then great! Otherwise follow the procedure given below.</p><h3 id="step-1-migrate-dns-to-cloudflare">Step 1: Migrate DNS to CloudFlare</h3><p><a href="https://www.cloudflare.com/" rel="nofollow" target="_blank">CloudFlare</a> is a CDN service which offers pretty decent service on free account. I’m using CloudFlare for all my websites. CDN provides local copies of the website through a nearby server so that there is no delay in website loading.</p><p>It also has other advantages like handling DNS, analytics, providing SSL certificate - flexible and paid, firewall, speed optimization, caching etc., Watch the video on their website to know how it works. And it doesn’t matter where you have bought your domain and where you are hosting your website.</p><p><amp-img src="/images/add-site-cloudflare-jekyll-ssl.jpg" alt="Add a site cloudflare jekyll ssl" width="700" height="236" layout="responsive"><noscript><img src="/images/add-site-cloudflare-jekyll-ssl.jpg" alt="Add a site cloudflare jekyll ssl" width="700" height="236"></noscript></amp-img></p><p>Among these, we are concentrating only on DNS handling. So create an account in CloudFlare. Now select <strong>Add site</strong> option, enter your domain and click on <strong>Begin scan</strong>.</p><p>Once the scanning is done, click on <strong>Continue to setup</strong> where you will see an option to verify all your DNS records. You don’t have to change anything here. click on <strong>Continue</strong>.</p><p class="clear">Now select a package that suits your requirement. I would suggest you to try the free version first and then upgrade if you like their service.</p><p class="right half"><amp-img src="/images/change-dns-cloudflare-jekyll-github-ssl.jpg" alt="change DNS CloudFlare Jekyll GitHub ssl" width="399" height="422" layout="responsive"><noscript><img src="/images/change-dns-cloudflare-jekyll-github-ssl.jpg" alt="change DNS CloudFlare Jekyll GitHub ssl" width="399" height="422"></noscript></amp-img></p><p>Now is the crucial part where you have to change the name servers (NS31.DOMAINCONTROL.COM) in your domain registrar to the following or whichever is provided to you by CloudFlare.</p><figure class="highlight clear"><pre><code class="language-css" data-lang="css"><span class="nt">dan</span><span class="nc">.ns.cloudflare.com</span><span class="nt">may</span><span class="nc">.ns.cloudflare.com</span></code></pre></figure><p>You have to login to your domain registrar and add these custom name servers. Once it is done, click on <strong>Continue</strong>. It may take a while to reflect the changes but once it is successfully done, you will see a <strong>Status: Active</strong> message on CloudFlare.</p><h3 class="clear" id="step-2-use-flexible-ssl">Step 2: Use ‘Flexible SSL’</h3><p><amp-img src="/images/cloudflare-flexible-ssl-jekyll.jpg" alt="cloudflare flexible ssl jekyll" width="700" height="320" layout="responsive"><noscript><img src="/images/cloudflare-flexible-ssl-jekyll.jpg" alt="cloudflare flexible ssl jekyll" width="700" height="320"></noscript></amp-img></p><p>Now navigate to <strong>Crypto</strong> option in CloudFlare. You should see an option called <strong>SSL</strong>. In the drop-down menu select <strong>Flexible</strong>. This is all the changes we need to do in the server end.</p><h3 class="clear" id="step-3-changes-to-be-made-in-cloudflare">Step 3: Changes to be made in CloudFlare</h3><p><amp-img src="/images/cloudflare-https-redirect-page-rule-jekyll-ssl.png" alt="cloudflare https redirect page rule jekyll ssl" width="600" height="346" layout="responsive"><noscript><img src="/images/cloudflare-https-redirect-page-rule-jekyll-ssl.png" alt="cloudflare https redirect page rule jekyll ssl" width="600" height="346"></noscript></amp-img></p><p>Use <strong>Page-rule</strong> to redirect http to https. Use * symbol to create dynamic patterns that match many URLs.</p><div class="clear"></div><p>If you prefer to redirect in the website then use the below JavaScript code. I would recommend using CloudFlare Page-rule instead of this.</p><p>Follow the enforcing procedure.</p><p>Use this JavaScript at the top of the default template. Replace <strong>yoursite</strong> with your domain name.</p><figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">host</span> <span class="o">=</span> <span class="s2">"yoursite.com"</span><span class="p">;</span><span class="k">if</span> <span class="p">((</span><span class="nx">host</span> <span class="o">==</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">!=</span> <span class="s2">"https:"</span><span class="p">))</span>  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">=</span> <span class="s2">"https"</span><span class="p">;</span></code></pre></figure><h3 id="step-4-changes-to-be-made-in-the-website">Step 4: Changes to be made in the website</h3><p>As I mentioned earlier now your website is ready for SSL. Check again if the https link is working(all pages of the website). If not troubleshoot using the <a href="#warning-1">warning</a>.</p><p class="clear">Use canonical URL in the head section to let search engines know that you are using https.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"{{ site.url }}{{ page.url }}"</span> <span class="nt">/&gt;</span></code></pre></figure><p>Make sure that the <strong>url</strong> is https in <strong>_config.yml</strong> and use <code class="highlighter-rouge">enforce_ssl</code> parameter</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">url</span><span class="pi">:</span> <span class="s">https://yoursite.com</span><span class="s">enforce_ssl</span><span class="pi">:</span> <span class="s">yoursite.com</span></code></pre></figure><div id="warning-1"></div><p class="r">All the resources that are requested by a <strong>ssl</strong> activated website should also be secured. That is, if you request any file with a <strong>http</strong> link then the green padlock will not appear. In order to avoid that use relative url. For example, instead of <code class="highlighter-rouge">http://yoursite.com/css/webjeda.css</code> use <code class="highlighter-rouge">//yoursite.com/css/webjeda.css</code></p><h2 id="conclusion">Conclusion</h2><p>Flexible SSL is not a complete solution for security since it is provided by CloudFlare. If someone can hack into CloudFlare then they can steal information from your users! Let’s hope that doesn’t happen. Since we are just using it for SEO ranking, we are good. If you are looking for complete security then you can buy SSL certificate from trusted SSL providers. It is good to buy SSL certificate if you are selling something on your website which has a payment-gateway integrated.</p><p>I hope that the article helped you set up SSL on your website. Ask any doubts in the comments section.</p><p>Thanks for reading!</p>
+<h2 class="clear" id="why-should-anyone-use-ssl">Why should anyone use SSL?</h2>
+<p>SSL (Secure Socket Layer) basically provides a secure connection between the client(web browser) and server(website). It avoids eavesdropping, man-in-the-middle attack etc., Bottom line is - A user can browse your website without worrying about someone stealing personal information.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-should-anyone-use-ssl" id="markdown-toc-why-should-anyone-use-ssl">Why should anyone use SSL?</a></li>
+  <li>
+<a href="#why-im-not-using-ssl-on-this-jekyll-blog" id="markdown-toc-why-im-not-using-ssl-on-this-jekyll-blog">Why I’m not using SSL on this Jekyll blog?</a>    <ul>
+      <li><a href="#adsense" id="markdown-toc-adsense">Adsense</a></li>
+      <li><a href="#performance" id="markdown-toc-performance">Performance</a></li>
+      <li><a href="#update-aug-2016" id="markdown-toc-update-aug-2016">Update Aug 2016</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#how-to-get-ssl-on-jekyll" id="markdown-toc-how-to-get-ssl-on-jekyll">How to get SSL on Jekyll?</a>    <ul>
+      <li><a href="#enforce-https" id="markdown-toc-enforce-https">Enforce https</a></li>
+      <li><a href="#change-canonical-url-to-https" id="markdown-toc-change-canonical-url-to-https">Change Canonical URL to https</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#ssl-on-custom-domain" id="markdown-toc-ssl-on-custom-domain">SSL on custom domain</a>    <ul>
+      <li><a href="#step-1-migrate-dns-to-cloudflare" id="markdown-toc-step-1-migrate-dns-to-cloudflare">Step 1: Migrate DNS to CloudFlare</a></li>
+      <li><a href="#step-2-use-flexible-ssl" id="markdown-toc-step-2-use-flexible-ssl">Step 2: Use ‘Flexible SSL’</a></li>
+      <li><a href="#step-3-changes-to-be-made-in-cloudflare" id="markdown-toc-step-3-changes-to-be-made-in-cloudflare">Step 3: Changes to be made in CloudFlare</a></li>
+      <li><a href="#step-4-changes-to-be-made-in-the-website" id="markdown-toc-step-4-changes-to-be-made-in-the-website">Step 4: Changes to be made in the website</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<p>On August 06 2014 Google announced that <a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html" rel="nofollow" target="_blank">https will be considered for ranking signal</a>. They took this measure to keep everybody safe over the web. So by using SSL you can improve your website ranking and your users will feel safe and trust the product or service you are providing.</p>
+
+<h2 class="clear" id="why-im-not-using-ssl-on-this-jekyll-blog">Why I’m not using SSL on this Jekyll blog?</h2>
+<p class="right"><amp-img src="/images/nallikayi-articles-github-pages-ssl.jpg" alt="Jekyll and GitHub pages https" width="381" height="75" layout="responsive"><noscript><img src="/images/nallikayi-articles-github-pages-ssl.jpg" alt="Jekyll and GitHub pages https" width="381" height="75"></noscript></amp-img></p>
+
+<p><strong>Update: I did not use SSL for some reasons that I have mentioned below. Currently I’m using SSL.</strong></p>
+
+<p>I’m using SSL on <a href="https://articles.nallikayi.com" target="_blank">Nallikayi Articles</a> but not on other websites. Why did I do so? If SSL is good for SEO, why didn’t I use it on all my websites? Especially, why didn’t I use it on this blog?! The reasons are as follows,</p>
+
+<h3 class="clear" id="adsense">Adsense</h3>
+<p>I use Adsense for monetizing this blog. If I were to secure this blog with SSL, I should not request any data from a http server. Everything should be https! But, most of the ads on Adsense are from a http source which is not acceptable for an SSL certified website.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<p>Google detects whether your website has an SSL certificate or not and serves ads accordingly. If I activate SSL in my Jekyll blog, Google will filter only https ads and serve it on my website. This way I may miss some high paying ads.</p>
+
+<h3 id="performance">Performance</h3>
+<p>Website loading speed is my main concern. I want it to be fast; really fast. Activating SSL would slow down my Jekyll blog a little due to TLS handshaking which is a process that the browser and server follow to decide how to communicate and create a secured connection.</p>
+
+<p>Google also announced that they were using page load time as a factor in search engine rankings. SSL and page-load time conflict with each other(a little bit). Anyway, the load time will be a little more than what it used to be. So if speed is not your priority then you can always go ahead and use SSL.</p>
+
+<h3 id="update-aug-2016">Update Aug 2016</h3>
+<p class="r">After considering all the advantages and disadvantages of SSL, I’m going with secure SSL. Google is trying hard to push web developers to move to <code class="highlighter-rouge">https</code>. That makes sense because everyone wants their information to be safe on the internet.</p>
+
+<h2 id="how-to-get-ssl-on-jekyll">How to get SSL on Jekyll?</h2>
+
+<p>If your website or Jekyll blog URL is in the format <code class="highlighter-rouge">username.github.io</code> then you can use https right away just by enforcing it. But before you do that, verify if <code class="highlighter-rouge">https://username.github.io</code> renders the same thing and you see a green padlock before the URL.</p>
+
+<p>If it works but you do not see a green padlock then the reason must be that your website is requesting something from a non-secure (http) server. Read <a href="#warning-1">warning</a> to solve this.</p>
+
+<h3 id="enforce-https">Enforce https</h3>
+<p>If you are not using a custom domain name then you can use the <strong>Enforce HTTPS</strong> option found in settings page. It redirects the website to https from server side which is better than doing it from client side.</p>
+
+<p><amp-img src="/images/github-pages-enforce-https.png" alt="Github Pages enforce https" width="742" height="108" layout="responsive"><noscript><img src="/images/github-pages-enforce-https.png" alt="Github Pages enforce https" width="742" height="108"></noscript></amp-img></p>
+
+<p>If you are using a custom doamin then this option will not be available. You have to skip to this <a href="#ssl-on-custom-domain">step</a>.</p>
+
+<p>If you want to do it from the client side(not recommended) then use this JavaScript code at the top of your website to redirect to https. Change <strong>username</strong> to your GitHub username.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">host</span> <span class="o">=</span> <span class="s2">"username.github.io"</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">((</span><span class="nx">host</span> <span class="o">==</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">!=</span> <span class="s2">"https:"</span><span class="p">))</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">=</span> <span class="s2">"https"</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="change-canonical-url-to-https">Change Canonical URL to https</h3>
+<p>You should let search engines read your content only in https site. Use canonical URL in the head section.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"https://username.github.io"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>for Jekyll, it should be</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"{{ site.url }}{{site.baseurl}}{{ page.url }}"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>Make sure that the <strong>url</strong> is https in <strong>_config.yml</strong>. Also use <code class="highlighter-rouge">enforce_ssl</code> parameter.</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">url</span><span class="pi">:</span> <span class="s">https://username.github.io</span>
+<span class="s">enforce_ssl</span><span class="pi">:</span> <span class="s">username.github.io</span></code></pre></figure>
+
+<p>This way, there will be no trace of your <strong>http</strong> website anywhere on the internet even though it works.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
+
+<h2 id="ssl-on-custom-domain">SSL on custom domain</h2>
+<p>If you are using a custom domain, say <code class="highlighter-rouge">yoursite.com</code> then you may have to use a different approach. If enforcing works then great! Otherwise follow the procedure given below.</p>
+
+<h3 id="step-1-migrate-dns-to-cloudflare">Step 1: Migrate DNS to CloudFlare</h3>
+<p><a href="https://www.cloudflare.com/" rel="nofollow" target="_blank">CloudFlare</a> is a CDN service which offers pretty decent service on free account. I’m using CloudFlare for all my websites. CDN provides local copies of the website through a nearby server so that there is no delay in website loading.</p>
+
+<p>It also has other advantages like handling DNS, analytics, providing SSL certificate - flexible and paid, firewall, speed optimization, caching etc., Watch the video on their website to know how it works. And it doesn’t matter where you have bought your domain and where you are hosting your website.</p>
+
+<p><amp-img src="/images/add-site-cloudflare-jekyll-ssl.jpg" alt="Add a site cloudflare jekyll ssl" width="700" height="236" layout="responsive"><noscript><img src="/images/add-site-cloudflare-jekyll-ssl.jpg" alt="Add a site cloudflare jekyll ssl" width="700" height="236"></noscript></amp-img></p>
+
+<p>Among these, we are concentrating only on DNS handling. So create an account in CloudFlare. Now select <strong>Add site</strong> option, enter your domain and click on <strong>Begin scan</strong>.</p>
+
+<p>Once the scanning is done, click on <strong>Continue to setup</strong> where you will see an option to verify all your DNS records. You don’t have to change anything here. click on <strong>Continue</strong>.</p>
+
+<p class="clear">Now select a package that suits your requirement. I would suggest you to try the free version first and then upgrade if you like their service.</p>
+
+<p class="right half"><amp-img src="/images/change-dns-cloudflare-jekyll-github-ssl.jpg" alt="change DNS CloudFlare Jekyll GitHub ssl" width="399" height="422" layout="responsive"><noscript><img src="/images/change-dns-cloudflare-jekyll-github-ssl.jpg" alt="change DNS CloudFlare Jekyll GitHub ssl" width="399" height="422"></noscript></amp-img></p>
+
+<p>Now is the crucial part where you have to change the name servers (NS31.DOMAINCONTROL.COM) in your domain registrar to the following or whichever is provided to you by CloudFlare.</p>
+
+<figure class="highlight clear"><pre><code class="language-css" data-lang="css"><span class="nt">dan</span><span class="nc">.ns.cloudflare.com</span>
+
+<span class="nt">may</span><span class="nc">.ns.cloudflare.com</span></code></pre></figure>
+
+<p>You have to login to your domain registrar and add these custom name servers. Once it is done, click on <strong>Continue</strong>. It may take a while to reflect the changes but once it is successfully done, you will see a <strong>Status: Active</strong> message on CloudFlare.</p>
+
+<h3 class="clear" id="step-2-use-flexible-ssl">Step 2: Use ‘Flexible SSL’</h3>
+
+<p><amp-img src="/images/cloudflare-flexible-ssl-jekyll.jpg" alt="cloudflare flexible ssl jekyll" width="700" height="320" layout="responsive"><noscript><img src="/images/cloudflare-flexible-ssl-jekyll.jpg" alt="cloudflare flexible ssl jekyll" width="700" height="320"></noscript></amp-img></p>
+
+<p>Now navigate to <strong>Crypto</strong> option in CloudFlare. You should see an option called <strong>SSL</strong>. In the drop-down menu select <strong>Flexible</strong>. This is all the changes we need to do in the server end.</p>
+
+<h3 class="clear" id="step-3-changes-to-be-made-in-cloudflare">Step 3: Changes to be made in CloudFlare</h3>
+
+<p><amp-img src="/images/cloudflare-https-redirect-page-rule-jekyll-ssl.png" alt="cloudflare https redirect page rule jekyll ssl" width="600" height="346" layout="responsive"><noscript><img src="/images/cloudflare-https-redirect-page-rule-jekyll-ssl.png" alt="cloudflare https redirect page rule jekyll ssl" width="600" height="346"></noscript></amp-img></p>
+
+<p>Use <strong>Page-rule</strong> to redirect http to https. Use * symbol to create dynamic patterns that match many URLs.</p>
+<div class="clear"></div>
+
+<p>If you prefer to redirect in the website then use the below JavaScript code. I would recommend using CloudFlare Page-rule instead of this.</p>
+
+<p>Follow the enforcing procedure.</p>
+
+<p>Use this JavaScript at the top of the default template. Replace <strong>yoursite</strong> with your domain name.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">host</span> <span class="o">=</span> <span class="s2">"yoursite.com"</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">((</span><span class="nx">host</span> <span class="o">==</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">!=</span> <span class="s2">"https:"</span><span class="p">))</span>
+   <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span> <span class="o">=</span> <span class="s2">"https"</span><span class="p">;</span></code></pre></figure>
+
+<h3 id="step-4-changes-to-be-made-in-the-website">Step 4: Changes to be made in the website</h3>
+
+<p>As I mentioned earlier now your website is ready for SSL. Check again if the https link is working(all pages of the website). If not troubleshoot using the <a href="#warning-1">warning</a>.</p>
+
+<p class="clear">Use canonical URL in the head section to let search engines know that you are using https.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"canonical"</span> <span class="na">href=</span><span class="s">"{{ site.url }}{{ page.url }}"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>Make sure that the <strong>url</strong> is https in <strong>_config.yml</strong> and use <code class="highlighter-rouge">enforce_ssl</code> parameter</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">url</span><span class="pi">:</span> <span class="s">https://yoursite.com</span>
+<span class="s">enforce_ssl</span><span class="pi">:</span> <span class="s">yoursite.com</span></code></pre></figure>
+
+<div id="warning-1"></div>
+
+<p class="r">All the resources that are requested by a <strong>ssl</strong> activated website should also be secured. That is, if you request any file with a  <strong>http</strong> link then the green padlock will not appear. In order to avoid that use relative url. For example, instead of <code class="highlighter-rouge">http://yoursite.com/css/webjeda.css</code> use <code class="highlighter-rouge">//yoursite.com/css/webjeda.css</code></p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Flexible SSL is not a complete solution for security since it is provided by CloudFlare. If someone can hack into CloudFlare then they can steal information from your users! Let’s hope that doesn’t happen. Since we are just using it for SEO ranking, we are good. If you are looking for complete security then you can buy SSL certificate from trusted SSL providers. It is good to buy SSL certificate if you are selling something on your website which has a payment-gateway integrated.</p>
+
+<p>I hope that the article helped you set up SSL on your website. Ask any doubts in the comments section.</p>
+
+<p>Thanks for reading!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/jekyll-ssl/#disqus_thread"><button class="btn">View/Add comments</button></a>

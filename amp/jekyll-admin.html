@@ -70,11 +70,115 @@
 
 <p class="intro">Jekyll-admin is a GUI for editing Jekyll website or blog. It has its ups and downs. It is still in the early stages of its development. I have tried the initial release and here is my review.</p>
 
-<h2 id="what-is-jekyll-admin">What is jekyll-admin</h2><p><a href="https://github.com/jekyll/jekyll-admin" target="_blank">Jekyll admin</a> is a Ruby gem for Jekyll which provides a local user interface for editing posts and pages. By the time of writing this article, the version is 0.1.0.</p><p>If you have <a href="/why-jekyll-over-wordpress/" target="_blank">ever used WordPress</a> then you may have noticed that editing post was a little easier than Jekyll because of the user interface(UI). You can drop in images, html code blocks, you see the changes right away with preview option etc.. WYSIWYG kind of editors are good for a non-coder because he/she knows what will be the output.</p><ul id="markdown-toc"> <li><a href="#what-is-jekyll-admin" id="markdown-toc-what-is-jekyll-admin">What is jekyll-admin</a></li> <li><a href="#why-jekyll-admin" id="markdown-toc-why-jekyll-admin">Why Jekyll-admin?</a></li> <li><a href="#usage" id="markdown-toc-usage">Usage</a></li> <li><a href="#features" id="markdown-toc-features">Features</a></li> <li>
-<a href="#what-is-missing" id="markdown-toc-what-is-missing">What is missing?</a><ul> <li><a href="#autosave" id="markdown-toc-autosave">Autosave</a></li> <li><a href="#drag-and-drop-image-upload" id="markdown-toc-drag-and-drop-image-upload">Drag and drop image upload</a></li> <li><a href="#multiple-options-in-metadata" id="markdown-toc-multiple-options-in-metadata">Multiple options in metadata</a></li> <li><a href="#default-metadata-for-new-posts-and-pages" id="markdown-toc-default-metadata-for-new-posts-and-pages">Default metadata for new posts and pages</a></li> <li><a href="#code-insert-option" id="markdown-toc-code-insert-option">Code insert option</a></li>
-</ul> </li> <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-</ul><p>Jekyll is trying to fill that gap of not having a UI by jekyll-admin. But it has a long way to go. With the current build, it is nowhere close to usable.</p><h2 class="clear" id="why-jekyll-admin">Why Jekyll-admin?</h2><p>Jekyll was considered to be not so non-coder friendly. Because to take advantage of the features of a Jekyll blog, one should have some basic coding knowledge or at least knows how to manipulate the present code.</p><p>I think Jekyll is trying to solve this problem. But to run Jekyll locally you need to install Ruby and then install Jekyll. For a non-coder, even this process could be tough. Making things simpler is important to reach more people. That’s what worked out for Apple in the case of iPhones.</p><p>In <a href="https://www.youtube.com/c/webjeda?sub_confirmation=1" target="_blank">my videos</a>, so far I haven’t discussed anything about CLI. If you do not want use Jekyll locally then you can make use of these videos and use an online editor like <a href="http://prose.io">Prose</a> to edit your posts and pages.</p><p>But if you are already using Jekyll locally and pushing changes to remote host(Github Pages or another service) then this could be a better option to edit your posts.</p><p>An added advantage is that when I edit posts using jekyll-admin, I can make use of browser add-ons like Grammarly to check my spelling which is not possible while editing posts on an IDE.</p><h2 id="usage">Usage</h2><p>The first thing you should be doing is to install the jekyll-admin gem in your project. Open command line interface, navigate to your project and then enter these commands.</p><p>Install jekyll-admin. This will take a while.</p><figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span><span class="o">-</span><span class="n">admin</span></code></pre></figure><p>Mention the gem in your configuration file <strong>_config.yml</strong>.</p><figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">gem: </span><span class="p">[</span><span class="n">jekyll</span><span class="o">-</span><span class="n">admin</span><span class="p">]</span></code></pre></figure><p>Now serve Jekyll locally as usual.</p><figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">jekyll</span> <span class="n">serve</span></code></pre></figure><p>Now, your admin page should be available at the below URL</p><p><code class="highlighter-rouge">http://127.0.0.1:4000/admin</code></p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><p>You should see something like this.</p><p><amp-img src="/images/jekyll-admin.png" alt="jekyll admin" class="noborder" width="816" height="435" layout="responsive"><noscript><img src="/images/jekyll-admin.png" alt="jekyll admin" class="noborder" width="816" height="435"></noscript></amp-img></p><h2 id="features">Features</h2><p>Most of the basic features are available in this initial release. I’m hoping to see more in the next versions.</p><ol> <li>Post</li> <li>Page</li> <li>Collections</li> <li>Data files</li> <li>Static files</li> <li>Configuration</li>
-</ol><p>All these things can be edited. That means you can edit post and pages directly here without opening the whole project with an IDE like Brackets.</p><p>Posts and pages can be edited and previewed while editing. This is very handy for new Jekyll users.</p><p><amp-img src="/images/jekyll-admin-edit-post.png" alt="jekyll admin edit post page" class="noborder" width="816" height="416" layout="responsive"><noscript><img src="/images/jekyll-admin-edit-post.png" alt="jekyll admin edit post page" class="noborder" width="816" height="416"></noscript></amp-img></p><p>Here you can write the post, style it, insert images, links, blockquotes etc.. You can also add Front Matter using metadata field. There is an option to split the screen while editing to see the preview.</p><p><amp-img src="/images/jekyll-admin-preview-post.png" alt="jekyll admin preview post page" width="800" height="320" layout="responsive"><noscript><img src="/images/jekyll-admin-preview-post.png" alt="jekyll admin preview post page" width="800" height="320"></noscript></amp-img></p><p>Along with posts and pages, you can also edit collections. I wasn’t expecting it to detect the collection I had but it did which is really cool. The <strong>static files</strong> directory will have all the images, css, and js. The <strong>configuration</strong> option is nothing but your _config.yml file.</p><h2 id="what-is-missing">What is missing?</h2><h3 id="autosave">Autosave</h3><p>I tried to edit this post using jekyll-admin but I got frustrated because when I navigate to some other tab and come back to the particular post I was editing, all I wrote is gone! This happened twice and I gave up. An auto-save option is a must at least for me to use it.</p><h3 id="drag-and-drop-image-upload">Drag and drop image upload</h3><p>This feature will appear sooner or later. Currently, when I click on image icon it shows markdown code where I can enter the image path. But what I(and most users) want is an option where I can drop an image from anywhere on my local drive to the post and it should automatically upload it to images folder of my project and insert it into the post.</p><p>I like how WordPress handles image upload. You can drag and drop an image anywhere inside a post and it will take care of the rest.</p><h3 id="multiple-options-in-metadata">Multiple options in metadata</h3><p>Currently, metadata is an empty field where we have to fill ‘title’, ‘layout’ and other front matter and give it a value. It would be great if Jekyll can offer some basic metadata options by default which can be edited.</p><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><h3 id="default-metadata-for-new-posts-and-pages">Default metadata for new posts and pages</h3><p>Here metadata is nothing but front matter. I have so many of them. Title, description, layout, tags, permalink etc.. So I want to see an option where I can choose the default metadata values that automatically appear in every new post.</p><p class="g">Even better if it can detect the metadata fields from previous posts!</p><h3 id="code-insert-option">Code insert option</h3><p>I don’t know why they haven’t included code insert option. I want an option similar to the one in StackOverflow. Maybe in the future versions, it can have an options to let me choose which programming language I want to highlight.</p><p>One last thing I want to mention is that when I upload a static file, say an image, it says that it was uploaded successfully but when I check inside the project the file is nowhere to be found. This probably is a bug which will be fixed in the coming release.</p><h2 id="conclusion">Conclusion</h2><p>Even though the initial version lacks so many things, I really appreciate the initiative from Jekyll team. Contributors will definitely improve its performance and usability. I will definitely suggest my clients to use it once it is stable and can be run from a desktop icon instead of a command line!</p>
+<h2 id="what-is-jekyll-admin">What is jekyll-admin</h2>
+<p><a href="https://github.com/jekyll/jekyll-admin" target="_blank">Jekyll admin</a> is a Ruby gem for Jekyll which provides a local user interface for editing posts and pages. By the time of writing this article, the version is 0.1.0.</p>
+
+<p>If you have <a href="/why-jekyll-over-wordpress/" target="_blank">ever used WordPress</a> then you may have noticed that editing post was a little easier than Jekyll because of the user interface(UI). You can drop in images, html code blocks, you see the changes right away with preview option etc.. WYSIWYG kind of editors are good for a non-coder because he/she knows what will be the output.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#what-is-jekyll-admin" id="markdown-toc-what-is-jekyll-admin">What is jekyll-admin</a></li>
+  <li><a href="#why-jekyll-admin" id="markdown-toc-why-jekyll-admin">Why Jekyll-admin?</a></li>
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#features" id="markdown-toc-features">Features</a></li>
+  <li>
+<a href="#what-is-missing" id="markdown-toc-what-is-missing">What is missing?</a>    <ul>
+      <li><a href="#autosave" id="markdown-toc-autosave">Autosave</a></li>
+      <li><a href="#drag-and-drop-image-upload" id="markdown-toc-drag-and-drop-image-upload">Drag and drop image upload</a></li>
+      <li><a href="#multiple-options-in-metadata" id="markdown-toc-multiple-options-in-metadata">Multiple options in metadata</a></li>
+      <li><a href="#default-metadata-for-new-posts-and-pages" id="markdown-toc-default-metadata-for-new-posts-and-pages">Default metadata for new posts and pages</a></li>
+      <li><a href="#code-insert-option" id="markdown-toc-code-insert-option">Code insert option</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<p>Jekyll is trying to fill that gap of not having a UI by jekyll-admin. But it has a long way to go. With the current build, it is nowhere close to usable.</p>
+
+<h2 class="clear" id="why-jekyll-admin">Why Jekyll-admin?</h2>
+<p>Jekyll was considered to be not so non-coder friendly. Because to take advantage of the features of a Jekyll blog, one should have some basic coding knowledge or at least knows how to manipulate the present code.</p>
+
+<p>I think Jekyll is trying to solve this problem. But to run Jekyll locally you need to install Ruby and then install Jekyll. For a non-coder, even this process could be tough. Making things simpler is important to reach more people. That’s what worked out for Apple in the case of iPhones.</p>
+
+<p>In <a href="https://www.youtube.com/c/webjeda?sub_confirmation=1" target="_blank">my videos</a>, so far I haven’t discussed anything about CLI. If you do not want use Jekyll locally then you can make use of these videos and use an online editor like <a href="http://prose.io">Prose</a> to edit your posts and pages.</p>
+
+<p>But if you are already using Jekyll locally and pushing changes to remote host(Github Pages or another service) then this could be a better option to edit your posts.</p>
+
+<p>An added advantage is that when I edit posts using jekyll-admin, I can make use of browser add-ons like Grammarly to check my spelling which is not possible while editing posts on an IDE.</p>
+
+<h2 id="usage">Usage</h2>
+<p>The first thing you should be doing is to install the jekyll-admin gem in your project. Open command line interface, navigate to your project and then enter these commands.</p>
+
+<p>Install jekyll-admin. This will take a while.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span><span class="o">-</span><span class="n">admin</span></code></pre></figure>
+
+<p>Mention the gem in your configuration file <strong>_config.yml</strong>.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">gem: </span><span class="p">[</span><span class="n">jekyll</span><span class="o">-</span><span class="n">admin</span><span class="p">]</span></code></pre></figure>
+
+<p>Now serve Jekyll locally as usual.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">jekyll</span> <span class="n">serve</span></code></pre></figure>
+
+<p>Now, your admin page should be available at the below URL</p>
+
+<p><code class="highlighter-rouge">http://127.0.0.1:4000/admin</code></p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<p>You should see something like this.</p>
+
+<p><amp-img src="/images/jekyll-admin.png" alt="jekyll admin" class="noborder" width="816" height="435" layout="responsive"><noscript><img src="/images/jekyll-admin.png" alt="jekyll admin" class="noborder" width="816" height="435"></noscript></amp-img></p>
+
+<h2 id="features">Features</h2>
+<p>Most of the basic features are available in this initial release. I’m hoping to see more in the next versions.</p>
+
+<ol>
+  <li>Post</li>
+  <li>Page</li>
+  <li>Collections</li>
+  <li>Data files</li>
+  <li>Static files</li>
+  <li>Configuration</li>
+</ol>
+
+<p>All these things can be edited. That means you can edit post and pages directly here without opening the whole project with an IDE like Brackets.</p>
+
+<p>Posts and pages can be edited and previewed while editing. This is very handy for new Jekyll users.</p>
+
+<p><amp-img src="/images/jekyll-admin-edit-post.png" alt="jekyll admin edit post page" class="noborder" width="816" height="416" layout="responsive"><noscript><img src="/images/jekyll-admin-edit-post.png" alt="jekyll admin edit post page" class="noborder" width="816" height="416"></noscript></amp-img></p>
+
+<p>Here you can write the post, style it, insert images, links, blockquotes etc.. You can also add Front Matter using metadata field. There is an option to split the screen while editing to see the preview.</p>
+
+<p><amp-img src="/images/jekyll-admin-preview-post.png" alt="jekyll admin preview post page" width="800" height="320" layout="responsive"><noscript><img src="/images/jekyll-admin-preview-post.png" alt="jekyll admin preview post page" width="800" height="320"></noscript></amp-img></p>
+
+<p>Along with posts and pages, you can also edit collections. I wasn’t expecting it to detect the collection I had but it did which is really cool. The <strong>static files</strong> directory will have all the images, css, and js. The <strong>configuration</strong> option is nothing but your _config.yml file.</p>
+
+<h2 id="what-is-missing">What is missing?</h2>
+
+<h3 id="autosave">Autosave</h3>
+<p>I tried to edit this post using jekyll-admin but I got frustrated because when I navigate to some other tab and come back to the particular post I was editing, all I wrote is gone! This happened twice and I gave up. An auto-save option is a must at least for me to use it.</p>
+
+<h3 id="drag-and-drop-image-upload">Drag and drop image upload</h3>
+<p>This feature will appear sooner or later. Currently, when I click on image icon it shows markdown code where I can enter the image path. But what I(and most users) want is an option where I can drop an image from anywhere on my local drive to the post and it should automatically upload it to images folder of my project and insert it into the post.</p>
+
+<p>I like how WordPress handles image upload. You can drag and drop an image anywhere inside a post and it will take care of the rest.</p>
+
+<h3 id="multiple-options-in-metadata">Multiple options in metadata</h3>
+<p>Currently, metadata is an empty field where we have to fill ‘title’, ‘layout’ and other front matter and give it a value. It would be great if Jekyll can offer some basic metadata options by default which can be edited.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
+
+<h3 id="default-metadata-for-new-posts-and-pages">Default metadata for new posts and pages</h3>
+<p>Here metadata is nothing but front matter. I have so many of them. Title, description, layout, tags, permalink etc.. So I want to see an option where I can choose the default metadata values that automatically appear in every new post.</p>
+
+<p class="g">Even better if it can detect the metadata fields from previous posts!</p>
+
+<h3 id="code-insert-option">Code insert option</h3>
+<p>I don’t know why they haven’t included code insert option. I want an option similar to the one in StackOverflow. Maybe in the future versions, it can have an options to let me choose which programming language I want to highlight.</p>
+
+<p>One last thing I want to mention is that when I upload a static file, say an image, it says that it was uploaded successfully but when I check inside the project the file is nowhere to be found. This probably is a bug which will be fixed in the coming release.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Even though the initial version lacks so many things, I really appreciate the initiative from Jekyll team. Contributors will definitely improve its performance and usability. I will definitely suggest my clients to use it once it is stable and can be run from a desktop icon instead of a command line!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/jekyll-admin/#disqus_thread"><button class="btn">View/Add comments</button></a>

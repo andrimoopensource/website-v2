@@ -70,24 +70,145 @@
 
 <p class="intro">A robust search bar can be installed for a Jekyll site using many ways. But I'm discussing the easiest one here. We are using Google's custom search engine which doesn't add any overhead to our website.</p>
 
-<h2 id="why-do-we-need-a-search-option">Why do we need a search option?</h2><p>Having a search bar in your Jekyll blog helps users to find the data using keywords. You may think that having an <strong>archive</strong> page would suffice but it is not enough. For example, if a user of my blog wants to know <strong>how to setup CloudFlare with his website</strong>. He will not find anything remotely close in my archive page but if he types <strong>CloudFlare</strong> in the search page then he will get <a href="https://www.google.com/url?q=http://blog.webjeda.com/jekyll-ssl/" target="_blank">SSL certificate (https) for Jekyll</a> as the first result. I have mentioned the required steps inside that post.</p><p>This is just an example in the case of a blog. Websites can be of different kinds. Sometimes websites may offer location search, image search or any type of media search. The search bar is like a personal search engine for the website.</p><ul id="markdown-toc"> <li><a href="#why-do-we-need-a-search-option" id="markdown-toc-why-do-we-need-a-search-option">Why do we need a search option?</a></li> <li>
-<a href="#how-to-implement-a-search-bar-on-jekyll" id="markdown-toc-how-to-implement-a-search-bar-on-jekyll">How to implement a search bar on Jekyll</a><ul> <li>
+<h2 id="why-do-we-need-a-search-option">Why do we need a search option?</h2>
+<p>Having a search bar in your Jekyll blog helps users to find the data using keywords. You may think that having an <strong>archive</strong> page would suffice but it is not enough. For example, if a user of my blog wants to know <strong>how to setup CloudFlare with his website</strong>. He will not find anything remotely close in my archive page but if he types <strong>CloudFlare</strong> in the search page then he will get <a href="https://www.google.com/url?q=http://blog.webjeda.com/jekyll-ssl/" target="_blank">SSL certificate (https) for Jekyll</a> as the first result. I have mentioned the required steps inside that post.</p>
+
+<p>This is just an example in the case of a blog. Websites can be of different kinds. Sometimes websites may offer location search, image search or any type of media search. The search bar is like a personal search engine for the website.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-do-we-need-a-search-option" id="markdown-toc-why-do-we-need-a-search-option">Why do we need a search option?</a></li>
+  <li>
+<a href="#how-to-implement-a-search-bar-on-jekyll" id="markdown-toc-how-to-implement-a-search-bar-on-jekyll">How to implement a search bar on Jekyll</a>    <ul>
+      <li>
 <a href="#lunrjs-free---demo" id="markdown-toc-lunrjs-free---demo">Lunr.js (free) - </a><a href="https://olivernn.github.io/moonwalkers/" target="_blank" rel="nofollow">Demo</a>
-</li> <li>
+</li>
+      <li>
 <a href="#algolia-freemium---demo" id="markdown-toc-algolia-freemium---demo">Algolia (freemium) - </a><a href="http://fontawesome.io/icons//" target="_blank" rel="nofollow">Demo</a>
-</li> <li>
+</li>
+      <li>
 <a href="#swiftype-paid---demo" id="markdown-toc-swiftype-paid---demo">Swiftype (paid) - </a><a href="http://wholebodyresearch.com/" target="_blank" rel="nofollow">Demo</a>
-</li> <li>
+</li>
+      <li>
 <a href="#google-cse-free---demo" id="markdown-toc-google-cse-free---demo">Google CSE (free) - </a><a href="/search" target="_blank">Demo</a>
 </li>
-</ul> </li> <li>
-<a href="#installing-google-custom-search-on-jekyll" id="markdown-toc-installing-google-custom-search-on-jekyll">Installing Google custom search on Jekyll</a><ul> <li><a href="#create-a-custom-search-engine" id="markdown-toc-create-a-custom-search-engine">Create a custom search engine</a></li> <li><a href="#get-code" id="markdown-toc-get-code">Get code</a></li> <li><a href="#paste-the-code-in-your-website" id="markdown-toc-paste-the-code-in-your-website">Paste the code in your website</a></li>
-</ul> </li> <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-</ul><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="how-to-implement-a-search-bar-on-jekyll">How to implement a search bar on Jekyll</h2><p>As per the title, I should be discussing the easiest one but I will introduce other search options as well. You may be expecting a search engine with instant results or auto complete capability. That depends on the website. It is good if a website with location search bar has an auto-complete option because users may enter all kinds of spelling mistakes. Auto-complete avoids all those mistakes from happening.</p><p>So without further ado let’s get into the types.</p><h3 id="lunrjs-free---demo">Lunr.js (free) - <a href="https://olivernn.github.io/moonwalkers/" target="_blank" rel="nofollow">Demo</a>
-</h3><h3 id="algolia-freemium---demo">Algolia (freemium) - <a href="http://fontawesome.io/icons//" target="_blank" rel="nofollow">Demo</a>
-</h3><h3 id="swiftype-paid---demo">Swiftype (paid) - <a href="http://wholebodyresearch.com/" target="_blank" rel="nofollow">Demo</a>
-</h3><h3 id="google-cse-free---demo">Google CSE (free) - <a href="/search" target="_blank">Demo</a>
-</h3><p>All are good and may fulfill most of your ‘search’ needs. But installation is a little tricky for some of them. You may have to include a <code class="highlighter-rouge">JavaScript</code> file, create a <code class="highlighter-rouge">JSON</code> file, style your own search box etc.</p><p><strong>Google Custom Search Engine</strong> has the least number of steps. Also, it doesn’t add any overhead to your server as google handles everything from its end. It is more like a google search result on your website but only with your site-links in the search result.</p><p><amp-img src="/images/google-custom-search-engine-jekyll.png" alt="Google custom search engine Jekyll" width="884" height="485" layout="responsive"><noscript><img src="/images/google-custom-search-engine-jekyll.png" alt="Google custom search engine Jekyll" width="884" height="485"></noscript></amp-img></p><h2 id="installing-google-custom-search-on-jekyll">Installing Google custom search on Jekyll</h2><h3 id="create-a-custom-search-engine">Create a custom search engine</h3><p class="right half"><amp-img src="/images/sign-up-google-cse-jekyll.png" alt="Sign up google cse Jekyll" width="383" height="593" layout="responsive"><noscript><img src="/images/sign-up-google-cse-jekyll.png" alt="Sign up google cse Jekyll" width="383" height="593"></noscript></amp-img></p><p>You will need a Gmail account for this. Login and go to <a href="https://cse.google.com" target="_blank" rel="nofollow">Google CSE</a>. Fill up the necessary fields and click on <strong>Create</strong>.</p><p>The best part here is that it allows us to add more websites! If you have a bunch of websites then you can add them all to the Google CSE. When a user searches for a keyword, CSE will look for pages in all the websites and show results from them.</p><p>If you have many subdomains then use <code class="highlighter-rouge">*.yourdomain.com</code> which will include all the subdomains. And as usual, read the complete <strong>Terms of Service</strong> before hitting create :)</p><h3 class="clear" id="get-code">Get code</h3><p>Once you create a custom search engine, click on <strong>Get code</strong>. You should see a code block like this. This is your search bar.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">cx</span> <span class="o">=</span> <span class="s1">'000124122121016203706:yoijr22b2m8'</span><span class="p">;</span><span class="kd">var</span> <span class="nx">gcse</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span><span class="nx">gcse</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">'text/javascript'</span><span class="p">;</span><span class="nx">gcse</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span><span class="nx">gcse</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://cse.google.com/cse.js?cx='</span> <span class="o">+</span> <span class="nx">cx</span><span class="p">;</span><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'script'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">gcse</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span> <span class="p">})();</span><span class="nt">&lt;/script&gt;</span><span class="nt">&lt;gcse:search&gt;&lt;/gcse:search&gt;</span></code></pre></figure><h3 id="paste-the-code-in-your-website">Paste the code in your website</h3><p>Copy the code and paste it wherever you want the search bar to appear. You can customize the look and feel of the search bar as well as the layout for search results.</p><p><amp-img src="/images/jekyll-search-google-custom-search-engine-design.png" alt="Jekyll search google custom search engine design" width="800" height="275" layout="responsive"><noscript><img src="/images/jekyll-search-google-custom-search-engine-design.png" alt="Jekyll search google custom search engine design" width="800" height="275"></noscript></amp-img></p><p>That was simple, isn’t it? I’m using Google custom search engine on my Jekyll blog because even the famous <a href="https://moz.com/pages/search_results" target="_blank" rel="nofollow">moz.com</a> is using it. I’m not sure if it is helpful for SEO but I’m pretty happy with it.</p><p>The search results look very much like google search results but you can customize it however you want to. I like the feature where the search result shows a small thumbnail along with title and description.</p><p>With an approved AdSense account, you can also earn when someone uses your custom search engine. If you look at the first screenshot, you will notice that the first result is from CloudFlare. It is an ad!</p><p>Another advantage is that the users will feel comfortable using it because it is so much like Google search. When I was new to web designing I used to think that the website owners have some kind of tie up with Google and so Google has offered them a personal search!</p><p>Though Google has an option to design your own custom search bar, you can further change the look of the search bar using some CSS. One thing I wanted was to remove the default Google logo on Google CSE search bar. I don’t think it is legal to do so. But I will keep it this way until google tells me not to. So if you want a cleaner and blank search bar then find its <strong>id</strong> and <strong>classes</strong> of your search-bar <code class="highlighter-rouge">&lt;input&gt;</code> tag and use this CSS</p><figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">input</span><span class="nf">#gsc-i-id1</span><span class="nc">.gsc-input</span> <span class="p">{</span><span class="nl">background</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span><span class="p">}</span></code></pre></figure><p>Check out my Jekyll blog’s search page. I haven’t enabled auto-complete yet. I will do it once I have enough content. There is a reason why I have search bar in a different page instead of having it on all the pages. I do not want one extra script loading on all of my pages. Users who actually use search will find it somehow but for a user who’s on my website for one little thing shouldn’t feel that the site loads very slow. So Google CSE script loads only on my <a href="/search/" target="_blank"><strong>Search</strong></a> page.</p><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><p>There is a significant delay in loading the script. Maybe because it loads all the assets through the script. So whenever someone visited the search page, they used to see nothing initially. Then after a second or two, the search bar would appear. This time-frame is crucial. many users may leave right after they see a blank page. I had to keep them waiting.</p><p>A good way to tackle this problem is by asking them to wait! I made some changes to the code in my Jekyll blog so that when the search bar is still downloading its assets, I will show a message saying <strong>“Loading… please wait”</strong> or something similar and when the search bar loads, the message goes away.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="kd">var</span> <span class="nx">cx</span> <span class="o">=</span> <span class="s1">'000124122121016203706:yoijr22b2m8'</span><span class="p">;</span><span class="kd">var</span> <span class="nx">gcse</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span><span class="nx">gcse</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">'text/javascript'</span><span class="p">;</span><span class="nx">gcse</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span><span class="nx">gcse</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://cse.google.com/cse.js?cx='</span> <span class="o">+</span> <span class="nx">cx</span><span class="p">;</span><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'script'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span><span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">gcse</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span> <span class="p">})();</span><span class="nt">&lt;/script&gt;</span><span class="nt">&lt;gcse:search&gt;</span>Loading. . Please wait<span class="nt">&lt;/gcse:search&gt;</span></code></pre></figure><p>That is it!</p><p>I prefer showing results on the same page below the search bar just how google does it. You have many options on how to show the search results. Most WordPress bloggers use layover layout as it shows results on a pop-up kind of layout which doesn’t make any change to the website layout. You can also have a search bar on the sidebar and results on the main page. Choose the one that suits your needs.</p><p>What I find lacking in Google CSE is instant search. Let’s hope google does that for us. Then it won’t be any less than lunrjs search option.</p><h2 id="conclusion">Conclusion</h2><p>Google CSE is a wise choice for those who want a simple robust and clean search option with no extra script loading on their website(if they’re are using it on a new page). I suggest this search for bloggers who are new to Jekyll or web designing in particular.</p><p>Let me know if you face any issue isntalling Google CSE on your Jekyll blog. If I have missed something, please suggest on the comment section.</p><p>Thanks for reading!</p>
+    </ul>
+  </li>
+  <li>
+<a href="#installing-google-custom-search-on-jekyll" id="markdown-toc-installing-google-custom-search-on-jekyll">Installing Google custom search on Jekyll</a>    <ul>
+      <li><a href="#create-a-custom-search-engine" id="markdown-toc-create-a-custom-search-engine">Create a custom search engine</a></li>
+      <li><a href="#get-code" id="markdown-toc-get-code">Get code</a></li>
+      <li><a href="#paste-the-code-in-your-website" id="markdown-toc-paste-the-code-in-your-website">Paste the code in your website</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<h2 id="how-to-implement-a-search-bar-on-jekyll">How to implement a search bar on Jekyll</h2>
+<p>As per the title, I should be discussing the easiest one but I will introduce other search options as well. You may be expecting a search engine with instant results or auto complete capability. That depends on the website. It is good if a website with location search bar has an auto-complete option because users may enter all kinds of spelling mistakes. Auto-complete avoids all those mistakes from happening.</p>
+
+<p>So without further ado let’s get into the types.</p>
+
+<h3 id="lunrjs-free---demo">Lunr.js (free) - <a href="https://olivernn.github.io/moonwalkers/" target="_blank" rel="nofollow">Demo</a>
+</h3>
+
+<h3 id="algolia-freemium---demo">Algolia (freemium) - <a href="http://fontawesome.io/icons//" target="_blank" rel="nofollow">Demo</a>
+</h3>
+
+<h3 id="swiftype-paid---demo">Swiftype (paid) - <a href="http://wholebodyresearch.com/" target="_blank" rel="nofollow">Demo</a>
+</h3>
+
+<h3 id="google-cse-free---demo">Google CSE (free) - <a href="/search" target="_blank">Demo</a>
+</h3>
+
+<p>All are good and may fulfill most of your ‘search’ needs. But installation is a little tricky for some of them. You may have to include a <code class="highlighter-rouge">JavaScript</code> file, create a <code class="highlighter-rouge">JSON</code> file, style your own search box etc.</p>
+
+<p><strong>Google Custom Search Engine</strong> has the least number of steps. Also, it doesn’t add any overhead to your server as google handles everything from its end. It is more like a google search result on your website but only with your site-links in the search result.</p>
+
+<p><amp-img src="/images/google-custom-search-engine-jekyll.png" alt="Google custom search engine Jekyll" width="884" height="485" layout="responsive"><noscript><img src="/images/google-custom-search-engine-jekyll.png" alt="Google custom search engine Jekyll" width="884" height="485"></noscript></amp-img></p>
+
+<h2 id="installing-google-custom-search-on-jekyll">Installing Google custom search on Jekyll</h2>
+
+<h3 id="create-a-custom-search-engine">Create a custom search engine</h3>
+
+<p class="right half"><amp-img src="/images/sign-up-google-cse-jekyll.png" alt="Sign up google cse Jekyll" width="383" height="593" layout="responsive"><noscript><img src="/images/sign-up-google-cse-jekyll.png" alt="Sign up google cse Jekyll" width="383" height="593"></noscript></amp-img></p>
+
+<p>You will need a Gmail account for this. Login and go to <a href="https://cse.google.com" target="_blank" rel="nofollow">Google CSE</a>. Fill up the necessary fields and click on <strong>Create</strong>.</p>
+
+<p>The best part here is that it allows us to add more websites! If you have a bunch of websites then you can add them all to the Google CSE. When a user searches for a keyword, CSE will look for pages in all the websites and show results from them.</p>
+
+<p>If you have many subdomains then use <code class="highlighter-rouge">*.yourdomain.com</code> which will include all the subdomains. And as usual, read the complete <strong>Terms of Service</strong> before hitting create :)</p>
+
+<h3 class="clear" id="get-code">Get code</h3>
+<p>Once you create a custom search engine, click on <strong>Get code</strong>. You should see a code block like this. This is your search bar.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">cx</span> <span class="o">=</span> <span class="s1">'000124122121016203706:yoijr22b2m8'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">gcse</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">'text/javascript'</span><span class="p">;</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://cse.google.com/cse.js?cx='</span> <span class="o">+</span> <span class="nx">cx</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'script'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">gcse</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span>
+  <span class="p">})();</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;gcse:search&gt;&lt;/gcse:search&gt;</span></code></pre></figure>
+
+<h3 id="paste-the-code-in-your-website">Paste the code in your website</h3>
+<p>Copy the code and paste it wherever you want the search bar to appear. You can customize the look and feel of the search bar as well as the layout for search results.</p>
+
+<p><amp-img src="/images/jekyll-search-google-custom-search-engine-design.png" alt="Jekyll search google custom search engine design" width="800" height="275" layout="responsive"><noscript><img src="/images/jekyll-search-google-custom-search-engine-design.png" alt="Jekyll search google custom search engine design" width="800" height="275"></noscript></amp-img></p>
+
+<p>That was simple, isn’t it? I’m using Google custom search engine on my Jekyll blog because even the famous <a href="https://moz.com/pages/search_results" target="_blank" rel="nofollow">moz.com</a> is using it. I’m not sure if it is helpful for SEO but I’m pretty happy with it.</p>
+
+<p>The search results look very much like google search results but you can customize it however you want to. I like the feature where the search result shows a small thumbnail along with title and description.</p>
+
+<p>With an approved AdSense account, you can also earn when someone uses your custom search engine. If you look at the first screenshot, you will notice that the first result is from CloudFlare. It is an ad!</p>
+
+<p>Another advantage is that the users will feel comfortable using it because it is so much like Google search. When I was new to web designing I used to think that the website owners have some kind of tie up with Google and so Google has offered them a personal search!</p>
+
+<p>Though Google has an option to design your own custom search bar, you can further change the look of the search bar using some CSS. One thing I wanted was to remove the default Google logo on Google CSE search bar. I don’t think it is legal to do so. But I will keep it this way until google tells me not to. So if you want a cleaner and blank search bar then find its <strong>id</strong> and <strong>classes</strong> of your search-bar <code class="highlighter-rouge">&lt;input&gt;</code> tag and use this CSS</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">input</span><span class="nf">#gsc-i-id1</span><span class="nc">.gsc-input</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="nb">none</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Check out my Jekyll blog’s search page. I haven’t enabled auto-complete yet. I will do it once I have enough content. There is a reason why I have search bar in a different page instead of having it on all the pages. I do not want one extra script loading on all of my pages. Users who actually use search will find it somehow but for a user who’s on my website for one little thing shouldn’t feel that the site loads very slow. So Google CSE script loads only on my <a href="/search/" target="_blank"><strong>Search</strong></a> page.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
+
+<p>There is a significant delay in loading the script. Maybe because it loads all the assets through the script. So whenever someone visited the search page, they used to see nothing initially. Then after a second or two, the search bar would appear. This time-frame is crucial. many users may leave right after they see a blank page. I had to keep them waiting.</p>
+
+<p>A good way to tackle this problem is by asking them to wait! I made some changes to the code in my Jekyll blog so that when the search bar is still downloading its assets, I will show a message saying <strong>“Loading… please wait”</strong> or something similar and when the search bar loads, the message goes away.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">cx</span> <span class="o">=</span> <span class="s1">'000124122121016203706:yoijr22b2m8'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">gcse</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">'text/javascript'</span><span class="p">;</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">gcse</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://cse.google.com/cse.js?cx='</span> <span class="o">+</span> <span class="nx">cx</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'script'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">gcse</span><span class="p">,</span> <span class="nx">s</span><span class="p">);</span>
+  <span class="p">})();</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;gcse:search&gt;</span>Loading. . Please wait<span class="nt">&lt;/gcse:search&gt;</span></code></pre></figure>
+
+<p>That is it!</p>
+
+<p>I prefer showing results on the same page below the search bar just how google does it. You have many options on how to show the search results. Most WordPress bloggers use layover layout as it shows results on a pop-up kind of layout which doesn’t make any change to the website layout. You can also have a search bar on the sidebar and results on the main page. Choose the one that suits your needs.</p>
+
+<p>What I find lacking in Google CSE is instant search. Let’s hope google does that for us. Then it won’t be any less than lunrjs search option.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Google CSE is a wise choice for those who want a simple robust and clean search option with no extra script loading on their website(if they’re are using it on a new page). I suggest this search for bloggers who are new to Jekyll or web designing in particular.</p>
+
+<p>Let me know if you face any issue isntalling Google CSE on your Jekyll blog. If I have missed something, please suggest on the comment section.</p>
+
+<p>Thanks for reading!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/jekyll-search/#disqus_thread"><button class="btn">View/Add comments</button></a>

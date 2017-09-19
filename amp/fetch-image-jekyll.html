@@ -70,8 +70,92 @@
 
 <p class="intro">Featured images in WordPress is something I always wanted for my Jekyll blog. I liked how images to show up on the index page automatically. But I had no idea how to fetch images from Jekyll posts. Jekyll post images can be fetched using this tutorial.</p>
 
-<p class="clear">If you observe this blog’s homepage, you’ll see that I have used a card-style container to fit in everything. It looks better with a proper shadow. Now my index page grabs the first image(now it uses a different way to fetch images) from my post and shows it in the list along with its title. The best part is that the images are grabbed automatically from every post of my Jekyll blog.</p><ul id="markdown-toc"> <li><a href="#why-fetch-an-image-from-jekyll-post" id="markdown-toc-why-fetch-an-image-from-jekyll-post">Why fetch an image from Jekyll post?</a></li> <li><a href="#how-to-grab-the-first-image-in-jekyll" id="markdown-toc-how-to-grab-the-first-image-in-jekyll">How to grab the first image in Jekyll?</a></li> <li><a href="#love-for-jekyll-no-offense-wordpress" id="markdown-toc-love-for-jekyll-no-offense-wordpress">Love for Jekyll (no offense WordPress)</a></li>
-</ul><h2 class="clear clear" id="why-fetch-an-image-from-jekyll-post">Why fetch an image from Jekyll post?</h2><p>I always wanted to have a homepage with a list of posts with their respective images. Just like a WordPress blog page. This seemed almost impossible in Jekyll. But I had hope.</p><p>Finally I stumbled across a <a href="http://stackoverflow.com/questions/25463865/in-jekyll-how-do-i-grab-a-posts-first-image" rel="nofollow" target="_blank">stackoverflow answer</a> that helped me achieve this. Now my post index includes tiny images fetched from the particular blog post. So here is how I made this possible.</p><h2 id="how-to-grab-the-first-image-in-jekyll">How to grab the first image in Jekyll?</h2><p>Here is the exact code mentioned in the answer. This will just give you a list of all the first images from all your posts. Make sure you do not have any other embedded video or flash(which has <code class="highlighter-rouge">src</code> attribute) file before your first image. This might result in a wrong behavior of the code. It may grab the video or some other file instead of the image.</p><p>What I suggest is to have an image at the very beginning of the post like I have in my posts or at least after a paragraph. Make sure it is not too wide or way too tall. I keep most of my featured images in <strong>800x500</strong> ratio.</p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><p>Copy this code to your index page but keep a backup of your index file if the changes you make doesn’t work out. Make edits on this code in any way so as to get a list of posts along with <strong>post title</strong>, <strong>published date</strong>, <strong>post image</strong> and <strong>post author</strong>(if you have different authors writing for you). Present them the way you feel like.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span> {% for post in site.posts %}<span class="nt">&lt;li&gt;</span> {% assign foundImage = 0 %} {% assign images = post.content | split:"<span class="nt">&lt;img</span> <span class="err">"</span> <span class="err">%}</span> <span class="err">{%</span> <span class="na">for</span> <span class="na">image</span> <span class="na">in</span> <span class="na">images</span> <span class="err">%}</span><span class="err">{%</span> <span class="na">if</span> <span class="na">image</span> <span class="na">contains</span> <span class="err">'</span><span class="na">src</span><span class="err">'</span> <span class="err">%}</span><span class="err">{%</span> <span class="na">if</span> <span class="na">foundImage =</span><span class="s">=</span> <span class="na">0</span> <span class="err">%}</span><span class="err">{%</span> <span class="na">assign</span> <span class="na">html =</span><span class="err"> </span><span class="s">image</span> <span class="err">|</span> <span class="na">split:</span><span class="err">"</span><span class="nt">/&gt;</span>" | first %}<span class="nt">&lt;img</span> <span class="err">{{</span> <span class="na">html</span> <span class="err">}}</span> <span class="nt">/&gt;</span>{% assign foundImage = 1 %}{% endif %}{% endif %} {% endfor %} <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span> {% endfor %}<span class="nt">&lt;/ul&gt;</span></code></pre></figure><p>I have made changes to the above code to get a nice index of posts with title, date, image, and description. Here is the raw code that I have used.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"posts"</span><span class="nt">&gt;</span>{% for post in paginator.posts %} <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;</span><span class="nt">&lt;li&gt;</span> <span class="nt">&lt;div&gt;</span>{% assign foundImage = 0 %} {% assign images = post.content | split:"<span class="nt">&lt;img</span> <span class="err">"</span> <span class="err">%}</span> <span class="err">{%</span> <span class="na">for</span> <span class="na">image</span> <span class="na">in</span> <span class="na">images</span> <span class="err">%}</span><span class="err">{%</span> <span class="na">if</span> <span class="na">image</span> <span class="na">contains</span> <span class="err">'</span><span class="na">src</span><span class="err">'</span> <span class="err">%}</span><span class="err">{%</span> <span class="na">if</span> <span class="na">foundImage =</span><span class="s">=</span> <span class="na">0</span> <span class="err">%}</span><span class="err">{%</span> <span class="na">assign</span> <span class="na">html =</span><span class="err"> </span><span class="s">image</span> <span class="err">|</span> <span class="na">split:</span><span class="err">"</span><span class="nt">/&gt;</span>" | first %}<span class="nt">&lt;time&gt;</span>{{ post.date | date:"%d %b %Y" }}<span class="nt">&lt;/time&gt;</span><span class="nt">&lt;h3&gt;</span>{{ post.title }}<span class="nt">&lt;/h3&gt;</span><span class="nt">&lt;hr&gt;</span><span class="nt">&lt;div&gt;&lt;img</span> <span class="na">width=</span><span class="s">"250"</span> <span class="err">{{</span> <span class="na">html</span> <span class="err">}}</span> <span class="nt">/&gt;</span>{{ post.desc }}<span class="nt">&lt;/div&gt;</span> {% assign foundImage = 1 %}{% endif %} {% endfor %}<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;/li&gt;</span> <span class="nt">&lt;/a&gt;</span>{% endif %} {% endfor %}<span class="nt">&lt;/ul&gt;</span></code></pre></figure><p>You may have to style it the way you want. I’m not providing the styling details but I hope you can figure that out. You can use w3-css for the card layout. It is also available from Bootstrap and Polymer. You can make your own raised box style by fiddling with box-shadow a little bit.</p><p><amp-img src="/images/how-to-grab-image-from-jekyll-post.jpg" alt="How to fetch image from jekyll" width="800" height="434" layout="responsive"><noscript><img src="/images/how-to-grab-image-from-jekyll-post.jpg" alt="How to fetch image from jekyll" width="800" height="434"></noscript></amp-img></p><h2 id="love-for-jekyll-no-offense-wordpress">Love for Jekyll (no offense WordPress)</h2><p>This feature gave me a hope that things are indeed possible with Jekyll. I see people migrating from Jekyll to WordPress for certain features. For instance <a href="https://codingtips.kanishkkunal.in/jekyll-to-wordpress/" rel="nofollow" target="_blank">kanishkkunal</a> who writes real good articles on Jekyll moved from Jekyll to WordPress. He has his reasons. But some writers(including myself) find Jekyll to be easier and comfortable than WordPress.</p><p>Writing a post in WordPress itself is a mess. I like to use a text editor like Brackets or Sublime to write my posts. I can always write in an editor and copy paste it to the WordPress editor page but it is not practical. On the bright side, Jekyll supports Markdown. I love it. It’s easy and editor-friendly. So I think I’m sticking with Jekyll for a long time. But again it depends on one’s priorities. There are not many plugins available for Jekyll.</p><p>If you have any feature that you think is only available in WordPress and cannot be implemented in Jekyll, please leave a comment. Maybe there is a solution that you are not aware of.</p><p>PS: Let me know if you have successfully implemented fetching images from Jekyll posts on your blog index.</p><p>Thanks for reading!</p>
+<p class="clear">If you observe this blog’s homepage, you’ll see that I have used a card-style container to fit in everything. It looks better with a proper shadow. Now my index page grabs the first image(now it uses a different way to fetch images) from my post and shows it in the list along with its title. The best part is that the images are grabbed automatically from every post of my Jekyll blog.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-fetch-an-image-from-jekyll-post" id="markdown-toc-why-fetch-an-image-from-jekyll-post">Why fetch an image from Jekyll post?</a></li>
+  <li><a href="#how-to-grab-the-first-image-in-jekyll" id="markdown-toc-how-to-grab-the-first-image-in-jekyll">How to grab the first image in Jekyll?</a></li>
+  <li><a href="#love-for-jekyll-no-offense-wordpress" id="markdown-toc-love-for-jekyll-no-offense-wordpress">Love for Jekyll (no offense WordPress)</a></li>
+</ul>
+
+<h2 class="clear clear" id="why-fetch-an-image-from-jekyll-post">Why fetch an image from Jekyll post?</h2>
+<p>I always wanted to have a homepage with a list of posts with their respective images. Just like a WordPress blog page. This seemed almost impossible in Jekyll. But I had hope.</p>
+
+<p>Finally I stumbled across a <a href="http://stackoverflow.com/questions/25463865/in-jekyll-how-do-i-grab-a-posts-first-image" rel="nofollow" target="_blank">stackoverflow answer</a> that helped me achieve this. Now my post index includes tiny images fetched from the particular blog post. So here is how I made this possible.</p>
+
+<h2 id="how-to-grab-the-first-image-in-jekyll">How to grab the first image in Jekyll?</h2>
+
+<p>Here is the exact code mentioned in the answer. This will just give you a list of all the first images from all your posts. Make sure you do not have any other embedded video or flash(which has <code class="highlighter-rouge">src</code> attribute) file before your first image. This might result in a wrong behavior of the code. It may grab the video or some other file instead of the image.</p>
+
+<p>What I suggest is to have an image at the very beginning of the post like I have in my posts or at least after a paragraph. Make sure it is not too wide or way too tall. I keep most of my featured images in <strong>800x500</strong> ratio.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<p>Copy this code to your index page but keep a backup of your index file if the changes you make doesn’t work out. Make edits on this code in any way so as to get a list of posts along with <strong>post title</strong>, <strong>published date</strong>, <strong>post image</strong> and <strong>post author</strong>(if you have different authors writing for you). Present them the way you feel like.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  {% for post in site.posts %}
+    <span class="nt">&lt;li&gt;</span>
+      {% assign foundImage = 0 %}
+      {% assign images = post.content | split:"<span class="nt">&lt;img</span> <span class="err">"</span> <span class="err">%}</span>
+      <span class="err">{%</span> <span class="na">for</span> <span class="na">image</span> <span class="na">in</span> <span class="na">images</span> <span class="err">%}</span>
+        <span class="err">{%</span> <span class="na">if</span> <span class="na">image</span> <span class="na">contains</span> <span class="err">'</span><span class="na">src</span><span class="err">'</span> <span class="err">%}</span>
+
+            <span class="err">{%</span> <span class="na">if</span> <span class="na">foundImage =</span><span class="s">=</span> <span class="na">0</span> <span class="err">%}</span>
+                <span class="err">{%</span> <span class="na">assign</span> <span class="na">html =</span><span class="err"> </span><span class="s">image</span> <span class="err">|</span> <span class="na">split:</span><span class="err">"</span><span class="nt">/&gt;</span>" | first %}
+                <span class="nt">&lt;img</span> <span class="err">{{</span> <span class="na">html</span> <span class="err">}}</span> <span class="nt">/&gt;</span>
+                {% assign foundImage = 1 %}
+            {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  {% endfor %}
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<p>I have made changes to the above code to get a nice index of posts with title, date, image, and description. Here is the raw code that I have used.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"posts"</span><span class="nt">&gt;</span>
+    {% for post in paginator.posts %}
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;div&gt;</span>
+        {% assign foundImage = 0 %}
+          {% assign images = post.content | split:"<span class="nt">&lt;img</span> <span class="err">"</span> <span class="err">%}</span>
+              <span class="err">{%</span> <span class="na">for</span> <span class="na">image</span> <span class="na">in</span> <span class="na">images</span> <span class="err">%}</span>
+                <span class="err">{%</span> <span class="na">if</span> <span class="na">image</span> <span class="na">contains</span> <span class="err">'</span><span class="na">src</span><span class="err">'</span> <span class="err">%}</span>
+                    <span class="err">{%</span> <span class="na">if</span> <span class="na">foundImage =</span><span class="s">=</span> <span class="na">0</span> <span class="err">%}</span>
+                    <span class="err">{%</span> <span class="na">assign</span> <span class="na">html =</span><span class="err"> </span><span class="s">image</span> <span class="err">|</span> <span class="na">split:</span><span class="err">"</span><span class="nt">/&gt;</span>" | first %}
+                    <span class="nt">&lt;time&gt;</span>{{ post.date | date:"%d %b %Y" }}<span class="nt">&lt;/time&gt;</span>
+                    <span class="nt">&lt;h3&gt;</span>{{ post.title }}<span class="nt">&lt;/h3&gt;</span>
+                    <span class="nt">&lt;hr&gt;</span>
+                    <span class="nt">&lt;div&gt;&lt;img</span> <span class="na">width=</span><span class="s">"250"</span> <span class="err">{{</span> <span class="na">html</span> <span class="err">}}</span> <span class="nt">/&gt;</span>{{ post.desc }}<span class="nt">&lt;/div&gt;</span>
+                     {% assign foundImage = 1 %}
+                    {% endif %}
+             {% endfor %}
+        <span class="nt">&lt;/div&gt;</span>
+     <span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;/a&gt;</span>
+    {% endif %} 
+    {% endfor %}
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<p>You may have to style it the way you want. I’m not providing the styling details but I hope you can figure that out. You can use w3-css for the card layout. It is also available from Bootstrap and Polymer. You can make your own raised box style by fiddling with box-shadow a little bit.</p>
+
+<p><amp-img src="/images/how-to-grab-image-from-jekyll-post.jpg" alt="How to fetch image from jekyll" width="800" height="434" layout="responsive"><noscript><img src="/images/how-to-grab-image-from-jekyll-post.jpg" alt="How to fetch image from jekyll" width="800" height="434"></noscript></amp-img></p>
+
+<h2 id="love-for-jekyll-no-offense-wordpress">Love for Jekyll (no offense WordPress)</h2>
+<p>This feature gave me a hope that things are indeed possible with Jekyll. I see people migrating from Jekyll to WordPress for certain features. For instance <a href="https://codingtips.kanishkkunal.in/jekyll-to-wordpress/" rel="nofollow" target="_blank">kanishkkunal</a> who writes real good articles on Jekyll moved from Jekyll to WordPress. He has his reasons. But some writers(including myself) find Jekyll to be easier and comfortable than WordPress.</p>
+
+<p>Writing a post in WordPress itself is a mess. I like to use a text editor like Brackets or Sublime to write my posts. I can always write in an editor and copy paste it to the WordPress editor page but it is not practical. On the bright side, Jekyll supports Markdown. I love it. It’s easy and editor-friendly. So I think I’m sticking with Jekyll for a long time. But again it depends on one’s priorities. There are not many plugins available for Jekyll.</p>
+
+<p>If you have any feature that you think is only available in WordPress and cannot be implemented in Jekyll, please leave a comment. Maybe there is a solution that you are not aware of.</p>
+
+<p>PS: Let me know if you have successfully implemented fetching images from Jekyll posts on your blog index.</p>
+
+<p>Thanks for reading!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/fetch-image-jekyll/#disqus_thread"><button class="btn">View/Add comments</button></a>

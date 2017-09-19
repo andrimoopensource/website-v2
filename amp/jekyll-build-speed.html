@@ -70,8 +70,103 @@
 
 <p class="intro">Jekyll build speed slows down with the increase in the number of files, posts, images etc.. Jekyll community is trying hard to mitigate the high build time. I will be discussing a few methods on how to increase jekyll build speed.</p>
 
-<p>Jekyll build speed is an important aspect in my blog because, after publishing some 20 articles, Jekyll used to take around 30 seconds to build this website! That is more than what it takes to make an omelette. Build time started to grow gradually as and when I started adding new features and I got really fed up once it reached 8 minutes!</p><p>Jekyll is super fast when it comes to sites with a few pages. It tends to slow down when the number of files increases and when complex Liquid conditions are executed frequently. The files usually cause this delay are posts, images, collections etc..</p><ul id="markdown-toc"> <li><a href="#exclude-files-that-are-not-required" id="markdown-toc-exclude-files-that-are-not-required">Exclude files that are not required</a></li> <li><a href="#keep_files-that-are-required-as-is" id="markdown-toc-keep_files-that-are-required-as-is">Keep_files that are required as-is</a></li> <li><a href="#test-jekyll-build-speed" id="markdown-toc-test-jekyll-build-speed">Test Jekyll Build Speed</a></li> <li><a href="#use-jekyll-incremental-build" id="markdown-toc-use-jekyll-incremental-build">Use Jekyll incremental build</a></li> <li><a href="#let-jekyll-build-only-the-necessary-posts" id="markdown-toc-let-jekyll-build-only-the-necessary-posts">Let Jekyll build only the necessary posts</a></li> <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-</ul><p>Jekyll is trying hard to decrease the build time since the inception. One of those measures was using incremental build. In <strong>incremental build</strong>, Jekyll watches only for the files which are changed, not everything. This works well if a site is simple. Imagine you change something on the <code class="highlighter-rouge">default.html</code> layout, then the build time again increases because that layout is used for every single post and every single page.</p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><p>Before we jump right into the methods, let’s discuss some precautions that may reduce the build time drastically.</p><h2 id="exclude-files-that-are-not-required">Exclude files that are not required</h2><p>I see that some people use task runners like grunt, gulp or others which make use of <code class="highlighter-rouge">node-modules</code>. Node will create a folder in the repository with the same name and this folder is a mess. I think the movie Inception was simpler than this folder nest.</p><p>This folder is important for task-runners but not required for Jekyll to build the site. So exclude anything that isn’t important. Use <code class="highlighter-rouge">exclude</code> in <code class="highlighter-rouge">_config.yml</code>.</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">exclude</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">node_modules</span><span class="pi">,</span> <span class="nv">README.md</span><span class="pi">]</span></code></pre></figure><h2 id="keep_files-that-are-required-as-is">Keep_files that are required as-is</h2><p>Your site maybe using some static files and they should be copied as-is while building the site. For example <code class="highlighter-rouge">images</code> folder. Jekyll has nothing to do with those images. Static files that do not need any Jekyll intervention can be kept as-is using these parameters in the configuration.</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">keep_files</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">images</span><span class="pi">]</span></code></pre></figure><h2 id="test-jekyll-build-speed">Test Jekyll Build Speed</h2><p>Now that we have retained only the required files for Jekyll to render, we should check if there is a slowdown in the speed while Jekyll is performing the conversion.</p><p>If you have too many nested liquid tags then the build time will increase drastically. Jekyll slows down while building if you are using too many includes.</p><p>What I suggest is to reduce the usage of <strong>includes</strong>. If any included file has a liquid condition, then the jekyll build speed increases.</p><p>Consider my website for example. I have too many files inside <code class="highlighter-rouge">_includes</code>(but not using all of them) and I also use <code class="highlighter-rouge">compress html</code>. This is a layout used to minify HTML. It has too many liquid tags in it. This takes a considerable amount of time (around a second) for the completion.</p><p>Run below Liquid Profiler command to check which liquid syntax execution is taking too much time.</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve --profile</span></code></pre></figure><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><p>It should output a table as shown below. This will give you a fair idea on what might be going wrong. If a file is taking too many seconds to execute then you should try to carefully examine that file for any nesting of liquid syntax.</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">Filename  | Count |Bytes | Time</span><span class="s">---------------------------------------------- +-------+----------+------</span><span class="s">_posts/2016-05-27-jekyll-collections.md| 1 |  13.63K | 0.008</span><span class="s">_posts/2016-07-21-better-related-posts.md | 1 |  13.70K | 0.008</span><span class="s">_posts/2017-03-15-speed-up-jekyll-build.md | 1 |7.28K | 0.007</span><span class="s">_posts/2016-01-20-how-to-add-share-buttons-to- | 1 |  13.02K | 0.007</span><span class="s">_posts/2016-11-12-dark-theme-switch.md | 1 |  11.99K | 0.007</span><span class="s">_posts/2016-04-27-jekyll-speed.md | 1 |  28.40K | 0.007</span><span class="s">_posts/2016-07-18-jekyll-search.md | 1 |  11.81K | 0.006</span><span class="s">_pages/jekyll-themes.md| 1 |8.12K | 0.006</span><span class="s">_posts/2016-08-10-common-jekyll-issues.md | 1 |  12.83K | 0.006</span><span class="s">_includes/google-tag-manager-head.html |75 |  31.49K | 0.006</span><span class="s">_posts/2016-12-20-jekyll-liquid-common-tags.md | 1 |  12.84K | 0.005</span><span class="s">_posts/2016-01-25-an-easy-way-to-edit-posts-in | 1 |7.48K | 0.005</span><span class="s">_posts/2016-08-30-jekyll-admin.md | 1 |6.92K | 0.005</span></code></pre></figure><h2 id="use-jekyll-incremental-build">Use Jekyll incremental build</h2><p>Building the site from the scratch everytime is not practical. This is why Jekyll provides an option for an incremental build which converts only the files that are changed. This way the jekyll build speed can be increased in multiple folds.</p><p><a href="https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/">Incremental build</a></p><p>The initial release of the incremental build was not so efficient, but recent releases work fairly good. Jekyll is making a lot of improvements. Maybe some day it can compete with the build speeds of Hugo(very optimistic!)</p><p>Use the command below for incremental build</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve -I</span></code></pre></figure><p>or</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve --incremental</span></code></pre></figure><p>Compare the incremental build speed with normal build speed check if it has improved anything. Many times, I had no luck with this method. If none of that works then follow the last method.</p><h2 id="let-jekyll-build-only-the-necessary-posts">Let Jekyll build only the necessary posts</h2><p>If your site has too many articles, you may find this method very useful. Some people with 100s of posts have a hard time building their Jekyll site locally. In those situations, you can build only the last post! This can be used even while editing the site layout or pages.</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve --watch --limit_posts 1</span></code></pre></figure><h2 id="conclusion">Conclusion</h2><p>When compared to Hugo or Gatsby, Jekyll build speed is really slow. But it is changing. Jekyll is making leaps in decreasing build time. Until then I hope these hotfixes will help you stick to Jekyll and not switch to other platforms.</p><p>If you have a better way to increase jekyll build speed, then please suggest it in the comment section. Also, watch this video of Parker explaining the new features in Jekyll 3.4, Incremental build, Liquid Profiler etc..</p><amp-youtube data-videoid="sPZK8w55cBQ" layout="responsive" width="600" height="300"></amp-youtube>
+<p>Jekyll build speed is an important aspect in my blog because, after publishing some 20 articles, Jekyll used to take around 30 seconds to build this website! That is more than what it takes to make an omelette. Build time started to grow gradually as and when I started adding new features and I got really fed up once it reached 8 minutes!</p>
+
+<p>Jekyll is super fast when it comes to sites with a few pages. It tends to slow down when the number of files increases and when complex Liquid conditions are executed frequently. The files usually cause this delay are posts, images, collections etc..</p>
+
+<ul id="markdown-toc">
+  <li><a href="#exclude-files-that-are-not-required" id="markdown-toc-exclude-files-that-are-not-required">Exclude files that are not required</a></li>
+  <li><a href="#keep_files-that-are-required-as-is" id="markdown-toc-keep_files-that-are-required-as-is">Keep_files that are required as-is</a></li>
+  <li><a href="#test-jekyll-build-speed" id="markdown-toc-test-jekyll-build-speed">Test Jekyll Build Speed</a></li>
+  <li><a href="#use-jekyll-incremental-build" id="markdown-toc-use-jekyll-incremental-build">Use Jekyll incremental build</a></li>
+  <li><a href="#let-jekyll-build-only-the-necessary-posts" id="markdown-toc-let-jekyll-build-only-the-necessary-posts">Let Jekyll build only the necessary posts</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<p>Jekyll is trying hard to decrease the build time since the inception. One of those measures was using incremental build. In <strong>incremental build</strong>, Jekyll watches only for the files which are changed, not everything. This works well if a site is simple. Imagine you change something on the <code class="highlighter-rouge">default.html</code> layout, then the build time again increases because that layout is used for every single post and every single page.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<p>Before we jump right into the methods, let’s discuss some precautions that may reduce the build time drastically.</p>
+
+<h2 id="exclude-files-that-are-not-required">Exclude files that are not required</h2>
+<p>I see that some people use task runners like grunt, gulp or others which make use of <code class="highlighter-rouge">node-modules</code>. Node will create a folder in the repository with the same name and this folder is a mess. I think the movie Inception was simpler than this folder nest.</p>
+
+<p>This folder is important for task-runners but not required for Jekyll to build the site. So exclude anything that isn’t important. Use <code class="highlighter-rouge">exclude</code> in <code class="highlighter-rouge">_config.yml</code>.</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">exclude</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">node_modules</span><span class="pi">,</span> <span class="nv">README.md</span><span class="pi">]</span></code></pre></figure>
+
+<h2 id="keep_files-that-are-required-as-is">Keep_files that are required as-is</h2>
+<p>Your site maybe using some static files and they should be copied as-is while building the site. For example <code class="highlighter-rouge">images</code> folder. Jekyll has nothing to do with those images. Static files that do not need any Jekyll intervention can be kept as-is using these parameters in the configuration.</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">keep_files</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">images</span><span class="pi">]</span></code></pre></figure>
+
+<h2 id="test-jekyll-build-speed">Test Jekyll Build Speed</h2>
+
+<p>Now that we have retained only the required files for Jekyll to render, we should check if there is a slowdown in the speed while Jekyll is performing the conversion.</p>
+
+<p>If you have too many nested liquid tags then the build time will increase drastically. Jekyll slows down while building if you are using too many includes.</p>
+
+<p>What I suggest is to reduce the usage of <strong>includes</strong>. If any included file has a liquid condition, then the jekyll build speed increases.</p>
+
+<p>Consider my website for example. I have too many files inside <code class="highlighter-rouge">_includes</code>(but not using all of them) and I also use <code class="highlighter-rouge">compress html</code>. This is a layout used to minify HTML. It has too many liquid tags in it. This takes a considerable amount of time (around a second) for the completion.</p>
+
+<p>Run below Liquid Profiler command to check which liquid syntax execution is taking too much time.</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve --profile</span></code></pre></figure>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
+
+<p>It should output a table as shown below. This will give you a fair idea on what might be going wrong. If a file is taking too many seconds to execute then you should try to carefully examine that file for any nesting of liquid syntax.</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">Filename                                       | Count |    Bytes |  Time</span>
+<span class="s">---------------------------------------------- +-------+----------+------</span>
+
+<span class="s">_posts/2016-05-27-jekyll-collections.md        |     1 |   13.63K | 0.008</span>
+<span class="s">_posts/2016-07-21-better-related-posts.md      |     1 |   13.70K | 0.008</span>
+<span class="s">_posts/2017-03-15-speed-up-jekyll-build.md     |     1 |    7.28K | 0.007</span>
+<span class="s">_posts/2016-01-20-how-to-add-share-buttons-to- |     1 |   13.02K | 0.007</span>
+<span class="s">_posts/2016-11-12-dark-theme-switch.md         |     1 |   11.99K | 0.007</span>
+<span class="s">_posts/2016-04-27-jekyll-speed.md              |     1 |   28.40K | 0.007</span>
+<span class="s">_posts/2016-07-18-jekyll-search.md             |     1 |   11.81K | 0.006</span>
+<span class="s">_pages/jekyll-themes.md                        |     1 |    8.12K | 0.006</span>
+<span class="s">_posts/2016-08-10-common-jekyll-issues.md      |     1 |   12.83K | 0.006</span>
+<span class="s">_includes/google-tag-manager-head.html         |    75 |   31.49K | 0.006</span>
+<span class="s">_posts/2016-12-20-jekyll-liquid-common-tags.md |     1 |   12.84K | 0.005</span>
+<span class="s">_posts/2016-01-25-an-easy-way-to-edit-posts-in |     1 |    7.48K | 0.005</span>
+<span class="s">_posts/2016-08-30-jekyll-admin.md              |     1 |    6.92K | 0.005</span></code></pre></figure>
+
+<h2 id="use-jekyll-incremental-build">Use Jekyll incremental build</h2>
+<p>Building the site from the scratch everytime is not practical. This is why Jekyll provides an option for an incremental build which converts only the files that are changed. This way the jekyll build speed can be increased in multiple folds.</p>
+
+<p><a href="https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/">Incremental build</a></p>
+
+<p>The initial release of the incremental build was not so efficient, but recent releases work fairly good. Jekyll is making a lot of improvements. Maybe some day it can compete with the build speeds of Hugo(very optimistic!)</p>
+
+<p>Use the command below for incremental build</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve -I</span></code></pre></figure>
+
+<p>or</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve --incremental</span></code></pre></figure>
+
+<p>Compare the incremental build speed with normal build speed check if it has improved anything. Many times, I had no luck with this method. If none of that works then follow the last method.</p>
+
+<h2 id="let-jekyll-build-only-the-necessary-posts">Let Jekyll build only the necessary posts</h2>
+<p>If your site has too many articles, you may find this method very useful. Some people with 100s of posts have a hard time building their Jekyll site locally. In those situations, you can build only the last post! This can be used even while editing the site layout or pages.</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve --watch --limit_posts 1</span></code></pre></figure>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>When compared to Hugo or Gatsby, Jekyll build speed is really slow. But it is changing. Jekyll is making leaps in decreasing build time. Until then I hope these hotfixes will help you stick to Jekyll and not switch to other platforms.</p>
+
+<p>If you have a better way to increase jekyll build speed, then please suggest it in the comment section. Also, watch this video of Parker explaining the new features in Jekyll 3.4, Incremental build, Liquid Profiler etc..</p>
+
+<amp-youtube data-videoid="sPZK8w55cBQ" layout="responsive" width="600" height="300">
+    </amp-youtube>
+
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/jekyll-build-speed/#disqus_thread"><button class="btn">View/Add comments</button></a>

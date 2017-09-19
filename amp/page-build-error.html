@@ -70,10 +70,171 @@
 
 <p class="intro">Page build errors are very common even for an experienced developer because there are many things that can go wrong with Jekyll or Github Pages. I have discussed a better way to deal with those errors here.</p>
 
-<p>This post is a summary of years of my experience using Jekyll and Github Pages. I have seen too many errors in these years. I had to face one just yesterday. I thought maybe others are facing this kind if issues as well. So I’m writing this article on how to deal with it.</p><h2 id="why-page-build-errors-happen">Why page build errors happen?</h2><p>Page build error happens for a number of reasons. A missing HTML tag, missing CSS curly brackets, missing endfor or endif liquid syntax, markdown syntax error and sometimes even for using a tab instead of space in _config.yml file!</p><ul id="markdown-toc"> <li><a href="#why-page-build-errors-happen" id="markdown-toc-why-page-build-errors-happen">Why page build errors happen?</a></li> <li><a href="#the-first-thing-to-do-when-an-error-happens" id="markdown-toc-the-first-thing-to-do-when-an-error-happens">The first thing to do when an error happens.</a></li> <li><a href="#how-to-identify-the-error" id="markdown-toc-how-to-identify-the-error">How to identify the error</a></li> <li><a href="#initial-check-for-page-build-error" id="markdown-toc-initial-check-for-page-build-error">Initial check for page build error</a></li> <li>
-<a href="#exclusion-method" id="markdown-toc-exclusion-method">Exclusion method</a><ul> <li><a href="#backup" id="markdown-toc-backup">Backup</a></li>
-</ul> </li> <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-</ul><p>Usually, page build error happens when you push a new post or you change the design of your blog. Sometimes page build error happens just after a simple change and you have no idea what went wrong.</p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="the-first-thing-to-do-when-an-error-happens">The first thing to do when an error happens.</h2><p>There is nothing to panic over a <strong>page build error</strong> because your site will retain its last push but will not allow any more change to happen until you solve the error.</p><p>This is where people mess things up. They assume that the last commit was the reason and they may reset the branch to the previous commit. This will solve the problem if your last commit had error but what if your last one isn’t the culprit?!</p><p class="r">What if you are using something that is deprecated? So in such cases, it is a little hard to figure out what went wrong. But do not try to change too many things like I did one time which caused this downtime.</p><p><amp-img src="/images/jekyll-pagebuild-error-downtime.png" alt="jekyll page build error downtime" width="733" height="125" layout="responsive"><noscript><img src="/images/jekyll-pagebuild-error-downtime.png" alt="jekyll page build error downtime" width="733" height="125"></noscript></amp-img></p><h2 id="how-to-identify-the-error">How to identify the error</h2><p>Github sends you an email in most cases when a page build error happens. Most of the times it will have the details on what went wrong. If you do not receive one then you can check the settings page in your website repository for any error messages.</p><p><amp-img src="/images/jekyll-page-build-error-screenshot.PNG" alt="Jekyll page build error" class="noborder" width="749" height="116" layout="responsive"><noscript><img src="/images/jekyll-page-build-error-screenshot.PNG" alt="Jekyll page build error" class="noborder" width="749" height="116"></noscript></amp-img></p><p>I’m posting some of the emails I have received over the years</p><p>Markdown syntax error:</p><figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:The file `_posts/2012-02-06-whats-jekyll.md/#excerpt` contains syntax errors. For more information, see https://help.github.com/articles/page-build-failed-markdown-errors.If you have any questions please contact us at https://github.com/contact.</code></pre></figure><p>CSS error:</p><figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:The file `style.scss` contains syntax errors. For more information, see https://help.github.com/articles/page-build-failed-markdown-errors.If you have any questions please contact us at https://github.com/contact.</code></pre></figure><p>Liquid syntax error:</p><figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:The tag `{%` in `_posts/2014-10-13-CCNA.md` was not properly closed with `%}`. For more information, see https://help.github.com/articles/page-build-failed-tag-not-properly-terminated.If you have any questions please contact us at https://github.com/contact.</code></pre></figure><p>Symlink error:</p><figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:A file was included in `_layouts/post.html` that is a symlink or does not exist in your `_includes` directory. For more information, see https://help.github.com/articles/page-build-failed-file-is-a-symlink.If you have any questions you can contact us by replying to this email.</code></pre></figure><p>Config error after Jekyll 3.0 update:</p><figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:You have an error on line 24 of your `_config.yml` file. For more information, see https://help.github.com/articles/page-build-failed-config-file-error.GitHub Pages was recently upgraded to Jekyll 3.0. It may help to confirm you're using the correct dependencies: https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0If you have any questions you can contact us by replying to this email.</code></pre></figure><p>If tag error:</p><figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:The tag `if` on line 15 in `_includes/head.html,` was not properly closed. For more information, see https://help.github.com/articles/page-build-failed-tag-not-properly-closed.</code></pre></figure><p>Syntax highlighter error:</p><figure class="highlight"><pre><code class="language-html" data-lang="html">The page build completed successfully, but returned the following warning:You are attempting to use the 'pygments' highlighter, which is currently unsupported on GitHub Pages. Your site will use 'rouge' for highlighting instead. To suppress this warning, change the 'highlighter' value to 'rouge' in your '_config.yml' and ensure the 'pygments' key is unset. For more information, see https://help.github.com/articles/page-build-failed-config-file-error/#fixing-highlighting-errors.For information on troubleshooting Jekyll see: https://help.github.com/articles/troubleshooting-jekyll-buildsIf you have any questions you can contact us by replying to this email.</code></pre></figure><p>Finally the most frustrating error,</p><p>Generic Jekyll build failures:</p><figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:Page build failed. For more information, see https://help.github.com/articles/troubleshooting-github-pages-build-failures.For information on troubleshooting Jekyll see: https://help.github.com/articles/troubleshooting-jekyll-buildsIf you have any questions you can contact us by replying to this email.</code></pre></figure><p>If the email does not specify the error then you are on your own! This is what I received last time. It doesn’t have much information.</p><p>I thought it was because I pushed a new post. But even after removing that post, the error existed. While pushing that article, I also changed few design elements. I changed all of them back to normal, but there was no success.</p><h2 id="initial-check-for-page-build-error">Initial check for page build error</h2><p><strong>Step 1:</strong> Check if the last post has any markdown syntax error.</p><p><strong>Step2:</strong> If you have made any recent CSS changes then check whether you have any curly braces or semicolons missing.</p><p><strong>Step3:</strong>If you have edited html or liquid syntax then check whether any tag is missing. Many times we forget to add <code class="highlighter-rouge">&lt;/div&gt;</code>, <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endfor</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>, <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endif</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>. Check <a href="https://help.github.com/articles/troubleshooting-jekyll-builds/" target="_blank" rel="nofollow">this article</a> for all kinds of errors possible.</p><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><p><strong>Step 4:</strong>Check if a new version of Jekyll is released. Last time when Jekyll 3.0 was released, many jekyll sites using <code class="highlighter-rouge">realtive_permalink</code> got such page build errors because it was deprecated. Even for people using <code class="highlighter-rouge">highlighter</code> other than <strong>rouge</strong> got an error.</p><p>If none of these work for you then you should try the next method called exclusion method(or I call it so).</p><h2 id="exclusion-method">Exclusion method</h2><p>Jekyll site is basically divided into <strong>Homepage</strong>, <strong>Pages</strong>, <strong>Posts</strong> and sometimes <strong>Collections</strong>. We exclude one by one in order to check which part is throwing an error. As long as the error goes away, Github will not make any changes to your site.</p><h3 id="backup">Backup</h3><p class="r">While performing exclusion method, you may mess up the content of your local repository. It is better to keep a backup of the whole repository in a different location.</p><p><strong>Step 1:</strong>Remove all the content from <code class="highlighter-rouge">index.html</code> or <code class="highlighter-rouge">index.md</code> in the root directory. Push changes to check if you see any error. If no error then you can easily find it inside <code class="highlighter-rouge">index.html</code> file.</p><p><strong>Step :2:</strong> Remove all the content from <code class="highlighter-rouge">page.html</code> in <strong>_layouts</strong> folder. Now push the changes to see the errors are solved.</p><p><strong>Step 3:</strong>Do the same for <code class="highlighter-rouge">post.html</code>. If you observe an error then move to step 4. If the error is gone then revert the changes and target <code class="highlighter-rouge">posts.html</code>. Now remove <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">contents</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code> from <code class="highlighter-rouge">post.html</code> and push changes. If you get no error then the problem is with posts. You should check individual posts. If you receive an error then posts are alright but something in the post layout is not right.</p><p>Do similar process for all the content in your post layout till you get no error and then once you come down to an element which is wrong, see why that is happening.</p><p>By using this method I cornered this piece of code causing the problem</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;time&gt;</span>{{ page.date | date_to_string }}<span class="nt">&lt;/time&gt;</span></code></pre></figure><p>I’m not sure why the error happened for a code which seems to be valid. But anyway, I changed it to</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;time&gt;</span>{{ page.date | date: '%B %d, %Y' }}<span class="nt">&lt;/time&gt;</span></code></pre></figure><p>That solved the error!</p><h2 id="conclusion">Conclusion</h2><p>Page build errors are pretty common for beginners. When you get those, you should try to find the root cause. That’s how we learn to code better. I wish Github had more targeted ways to find the error and inform its users. That might take long but for now, we have to solve such problems on our own. Also, keep an eye on the latest releases by Jekyll.</p><p>If you have any suggestion, then please leave it in the comment section.</p><p>Thanks for reading!</p>
+<p>This post is a summary of years of my experience using Jekyll and Github Pages. I have seen too many errors in these years. I had to face one just yesterday. I thought maybe others are facing this kind if issues as well. So I’m writing this article on how to deal with it.</p>
+
+<h2 id="why-page-build-errors-happen">Why page build errors happen?</h2>
+<p>Page build error happens for a number of reasons. A missing HTML tag, missing CSS curly brackets, missing endfor or endif liquid syntax, markdown syntax error and sometimes even for using a tab instead of space in _config.yml file!</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-page-build-errors-happen" id="markdown-toc-why-page-build-errors-happen">Why page build errors happen?</a></li>
+  <li><a href="#the-first-thing-to-do-when-an-error-happens" id="markdown-toc-the-first-thing-to-do-when-an-error-happens">The first thing to do when an error happens.</a></li>
+  <li><a href="#how-to-identify-the-error" id="markdown-toc-how-to-identify-the-error">How to identify the error</a></li>
+  <li><a href="#initial-check-for-page-build-error" id="markdown-toc-initial-check-for-page-build-error">Initial check for page build error</a></li>
+  <li>
+<a href="#exclusion-method" id="markdown-toc-exclusion-method">Exclusion method</a>    <ul>
+      <li><a href="#backup" id="markdown-toc-backup">Backup</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<p>Usually, page build error happens when you push a new post or you change the design of your blog. Sometimes page build error happens just after a simple change and you have no idea what went wrong.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<h2 id="the-first-thing-to-do-when-an-error-happens">The first thing to do when an error happens.</h2>
+<p>There is nothing to panic over a <strong>page build error</strong> because your site will retain its last push but will not allow any more change to happen until you solve the error.</p>
+
+<p>This is where people mess things up. They assume that the last commit was the reason and they may reset the branch to the previous commit. This will solve the problem if your last commit had error but what if your last one isn’t the culprit?!</p>
+
+<p class="r">What if you are using something that is deprecated? So in such cases, it is a little hard to figure out what went wrong. But do not try to change too many things like I did one time which caused this downtime.</p>
+
+<p><amp-img src="/images/jekyll-pagebuild-error-downtime.png" alt="jekyll page build error downtime" width="733" height="125" layout="responsive"><noscript><img src="/images/jekyll-pagebuild-error-downtime.png" alt="jekyll page build error downtime" width="733" height="125"></noscript></amp-img></p>
+
+<h2 id="how-to-identify-the-error">How to identify the error</h2>
+<p>Github sends you an email in most cases when a page build error happens. Most of the times it will have the details on what went wrong. If you do not receive one then you can check the settings page in your website repository for any error messages.</p>
+
+<p><amp-img src="/images/jekyll-page-build-error-screenshot.PNG" alt="Jekyll page build error" class="noborder" width="749" height="116" layout="responsive"><noscript><img src="/images/jekyll-page-build-error-screenshot.PNG" alt="Jekyll page build error" class="noborder" width="749" height="116"></noscript></amp-img></p>
+
+<p>I’m posting some of the emails I have received over the years</p>
+
+<p>Markdown syntax error:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:
+
+The file `_posts/2012-02-06-whats-jekyll.md/#excerpt` contains syntax errors. For more information, see https://help.github.com/articles/page-build-failed-markdown-errors.
+
+If you have any questions please contact us at https://github.com/contact.</code></pre></figure>
+
+<p>CSS error:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:
+
+The file `style.scss` contains syntax errors. For more information, see https://help.github.com/articles/page-build-failed-markdown-errors.
+
+If you have any questions please contact us at https://github.com/contact.</code></pre></figure>
+
+<p>Liquid syntax error:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:
+
+The tag `{%` in `_posts/2014-10-13-CCNA.md` was not properly closed with `%}`. For more information, see https://help.github.com/articles/page-build-failed-tag-not-properly-terminated.
+
+If you have any questions please contact us at https://github.com/contact.</code></pre></figure>
+
+<p>Symlink error:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:
+
+A file was included in `_layouts/post.html` that is a symlink or does not exist in your `_includes` directory. For more information, see https://help.github.com/articles/page-build-failed-file-is-a-symlink.
+
+If you have any questions you can contact us by replying to this email.</code></pre></figure>
+
+<p>Config error after Jekyll 3.0 update:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:
+
+You have an error on line 24 of your `_config.yml` file. For more information, see https://help.github.com/articles/page-build-failed-config-file-error.
+
+GitHub Pages was recently upgraded to Jekyll 3.0. It may help to confirm you're using the correct dependencies:
+
+  https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+
+If you have any questions you can contact us by replying to this email.</code></pre></figure>
+
+<p>If tag error:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:
+
+The tag `if` on line 15 in `_includes/head.html,` was not properly closed. For more information, see https://help.github.com/articles/page-build-failed-tag-not-properly-closed.</code></pre></figure>
+
+<p>Syntax highlighter error:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">The page build completed successfully, but returned the following warning:
+
+You are attempting to use the 'pygments' highlighter, which is currently unsupported on GitHub Pages. Your site will use 'rouge' for highlighting instead. To suppress this warning, change the 'highlighter' value to 'rouge' in your '_config.yml' and ensure the 'pygments' key is unset. For more information, see https://help.github.com/articles/page-build-failed-config-file-error/#fixing-highlighting-errors.
+
+For information on troubleshooting Jekyll see:
+
+  https://help.github.com/articles/troubleshooting-jekyll-builds
+
+If you have any questions you can contact us by replying to this email.</code></pre></figure>
+
+<p>Finally the most frustrating error,</p>
+
+<p>Generic Jekyll build failures:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">The page build failed with the following error:
+
+Page build failed. For more information, see https://help.github.com/articles/troubleshooting-github-pages-build-failures.
+
+For information on troubleshooting Jekyll see:
+
+  https://help.github.com/articles/troubleshooting-jekyll-builds
+
+If you have any questions you can contact us by replying to this email.</code></pre></figure>
+
+<p>If the email does not specify the error then you are on your own! This is what I received last time. It doesn’t have much information.</p>
+
+<p>I thought it was because I pushed a new post. But even after removing that post, the error existed. While pushing that article, I also changed few design elements. I changed all of them back to normal, but there was no success.</p>
+
+<h2 id="initial-check-for-page-build-error">Initial check for page build error</h2>
+<p><strong>Step 1:</strong>
+ Check if the last post has any markdown syntax error.</p>
+
+<p><strong>Step2:</strong> 
+ If you have made any recent CSS changes then check whether you have any curly braces or semicolons missing.</p>
+
+<p><strong>Step3:</strong>
+If you have edited html or liquid syntax then check whether any tag is missing. Many times we forget to add <code class="highlighter-rouge">&lt;/div&gt;</code>, <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endfor</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>, <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">endif</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>.  Check <a href="https://help.github.com/articles/troubleshooting-jekyll-builds/" target="_blank" rel="nofollow">this article</a> for all kinds of errors possible.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
+
+<p><strong>Step 4:</strong>
+Check if a new version of Jekyll is released. Last time when Jekyll 3.0 was released, many jekyll sites using <code class="highlighter-rouge">realtive_permalink</code> got such page build errors because it was deprecated. Even for people using <code class="highlighter-rouge">highlighter</code> other than <strong>rouge</strong> got an error.</p>
+
+<p>If none of these work for you then you should try the next method called exclusion method(or I call it so).</p>
+
+<h2 id="exclusion-method">Exclusion method</h2>
+<p>Jekyll site is basically divided into <strong>Homepage</strong>, <strong>Pages</strong>, <strong>Posts</strong> and sometimes <strong>Collections</strong>. We exclude one by one in order to check which part is throwing an error. As long as the error goes away, Github will not make any changes to your site.</p>
+
+<h3 id="backup">Backup</h3>
+<p class="r">While performing exclusion method, you may mess up the content of your local repository. It is better to keep a backup of the whole repository in a different location.</p>
+
+<p><strong>Step 1:</strong>
+Remove all the content from <code class="highlighter-rouge">index.html</code> or <code class="highlighter-rouge">index.md</code> in the root directory. Push changes to check if you see any error. If no error then you can easily find it inside <code class="highlighter-rouge">index.html</code> file.</p>
+
+<p><strong>Step :2:</strong> 
+Remove all the content from <code class="highlighter-rouge">page.html</code> in <strong>_layouts</strong> folder. Now push the changes to see the errors are solved.</p>
+
+<p><strong>Step 3:</strong>
+Do the same for <code class="highlighter-rouge">post.html</code>. If you observe an error then move to step 4. If the error is gone then revert the changes and target <code class="highlighter-rouge">posts.html</code>. Now remove <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">contents</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code> from <code class="highlighter-rouge">post.html</code> and push changes. If you get no error then the problem is with posts. You should check individual posts. If you receive an error then posts are alright but something in the post layout is not right.</p>
+
+<p>Do similar process for all the content in your post layout till you get no error and then once you come down to an element which is wrong, see why that is happening.</p>
+
+<p>By using this method I cornered this piece of code causing the problem</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;time&gt;</span>{{ page.date | date_to_string }}<span class="nt">&lt;/time&gt;</span></code></pre></figure>
+
+<p>I’m not sure why the error happened for a code which seems to be valid. But anyway, I changed it to</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;time&gt;</span>{{ page.date | date: '%B %d, %Y' }}<span class="nt">&lt;/time&gt;</span></code></pre></figure>
+
+<p>That solved the error!</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Page build errors are pretty common for beginners. When you get those, you should try to find the root cause. That’s how we learn to code better. I wish Github had more targeted ways to find the error and inform its users. That might take long but for now, we have to solve such problems on our own. Also, keep an eye on the latest releases by Jekyll.</p>
+
+<p>If you have any suggestion, then please leave it in the comment section.</p>
+
+<p>Thanks for reading!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/page-build-error/#disqus_thread"><button class="btn">View/Add comments</button></a>

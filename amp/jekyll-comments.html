@@ -70,12 +70,277 @@
 
 <p class="intro">Jekyll comments is not available by default. Unlike WordPress, We have to integrate third party commenting tools like disqus, facebook, google to Jekyll blog.</p>
 
-<p>When you write an opinion in your blog, there can be mixed reactions from your readers. There are people who agree with you, there are some who may not agree with you and there are few who may have a different opinion all together. But how will you know what their opinion is if you don’t give them the option to express!?</p><ul id="markdown-toc"> <li><a href="#wordpress-has-an-upper-hand" id="markdown-toc-wordpress-has-an-upper-hand">WordPress has an upper hand</a></li> <li>
-<a href="#1-disqus" id="markdown-toc-1-disqus">1. Disqus</a><ul> <li><a href="#step-1-sign-up" id="markdown-toc-step-1-sign-up">Step 1: Sign up</a></li> <li><a href="#step-2-set-up-disqus" id="markdown-toc-step-2-set-up-disqus">Step 2: Set up Disqus</a></li> <li><a href="#step-3-get-the-disqus-code" id="markdown-toc-step-3-get-the-disqus-code">Step 3: Get the Disqus code</a></li> <li><a href="#update" id="markdown-toc-update">Update</a></li> <li><a href="#step-4-making-use-of-jekyll-templates" id="markdown-toc-step-4-making-use-of-jekyll-templates">Step 4: Making use of Jekyll templates</a></li>
-</ul> </li> <li><a href="#2-google-plus" id="markdown-toc-2-google-plus">2. Google Plus</a></li> <li><a href="#3-facebook-comments" id="markdown-toc-3-facebook-comments">3. Facebook Comments</a></li>
-</ul><p>There comes our comment box to the rescue. But there are a lot of them. You have to choose the one that suits your website. Suppose if you are active only on facebook, you can choose facebook comment box. If you have Google users as your readers then it would be a wise option to put a Google comment box.</p><p>It depends on your requirements. What kind of users you have. Suppose if you don’t care about user reactions then there is no need to keep a comment box!</p><h2 id="wordpress-has-an-upper-hand">WordPress has an upper hand</h2><p>WordPress comes with a nice default comment box and you can get other ones through plugins if you don’t like the default one. But if you want to place the comment box a little above than the position it is already in then you are in trouble!</p><p>Editing plugins in WordPress are really hard unless you are an expert in <code class="highlighter-rouge">php</code> and know where to look for the changes. I have tried it and I can tell you that it is not a good experience.</p><p>WordPress comments otherwise work great, you have nothing to code and most of the bloggers use it. But if you have made a choice to move from WordPress to Jekyll (which I would really appreciate) then you can install one of these comment boxes on your blog.</p><p>I can guarantee you that they are easy to implement. And you will have the full control of how they look and behave (for the most parts). So let’s dive right in.</p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><p>There are many ways to add a comment box to Jekyll. I will be discussing only the major ones.</p><p><strong>1. Disqus</strong></p><p><strong>2. Google</strong></p><p><strong>3. Facebook</strong></p><h2 id="1-disqus">1. Disqus</h2><p>Disqus has been my favorite so far. It is simple, minimal and robust. I haven’t faced any problem with this one so far. I recommend Disqus than any other Jekyll blog comments tool.</p><p><amp-img src="/images/how-to-add-comments-to-jekyll-blog.jpg" alt="adding disqus comments box Jekyll blog" width="600" height="142" layout="responsive"><noscript><img src="/images/how-to-add-comments-to-jekyll-blog.jpg" alt="adding disqus comments box Jekyll blog" width="600" height="142"></noscript></amp-img></p><p>The best part of Disqus is that it allows users to comment using facebook, twitter, Google plus or just using an email address! Moreover, if you have a bunch of blogs, you can have different comment boxes for them and manage it from a single account!</p><p><amp-img src="/images/how-add-disqus-to-jekyll-blog.jpg" alt="adding disqus jekyll blog comments" width="600" height="337" layout="responsive"><noscript><img src="/images/how-add-disqus-to-jekyll-blog.jpg" alt="adding disqus jekyll blog comments" width="600" height="337"></noscript></amp-img></p><p>Here are the steps to implement Disqus comment box in your Jekyll blog.</p><h3 id="step-1-sign-up">Step 1: Sign up</h3><p>This step is pretty common for all the comment boxes. You can <a href="https://disqus.com/profile/signup/" rel="nofollow" target="_blank">sign up for Disqus</a> with your email, facebook, twitter or Google plus. After signing up, you may have to verify your email address if you have signed up with an email.</p><h3 id="step-2-set-up-disqus">Step 2: Set up Disqus</h3><p class="right small"><amp-img src="/images/how-add-disqus-comments-to-jekyll-blog-2.jpg" alt="adding disqus comments to Jekyll blog" width="157" height="266" layout="responsive"><noscript><img src="/images/how-add-disqus-comments-to-jekyll-blog-2.jpg" alt="adding disqus comments to Jekyll blog" width="157" height="266"></noscript></amp-img></p><p>Once you login, you should see a gear icon on the top-right corner. Click on it and you’ll get a drop-down with one of the options saying <strong>Add Disqus to Site</strong>.</p><p>If it shows you a page with the heading “Engage” then click on ‘start using engage’. Now you should see a screen as shown below.</p><div class="clear"></div><p class="left half"><amp-img src="/images/how-add-disqus-comments-to-jekyll-blog-3.jpg" alt="adding disqus comments to Jekyll blog" width="600" height="425" layout="responsive"><noscript><img src="/images/how-add-disqus-comments-to-jekyll-blog-3.jpg" alt="adding disqus comments to Jekyll blog" width="600" height="425"></noscript></amp-img></p><p>This is where you can choose a <strong>shortname</strong> for your comment box which we will be using in the next step. I’m giving my shortname as <strong>webjeda-sample</strong></p><h3 class="clear" id="step-3-get-the-disqus-code">Step 3: Get the Disqus code</h3><p class="right half"><amp-img src="/images/how-add-disqus-comments-to-jekyll-blog-4.jpg" alt="adding disqus comments to jekyll blog" width="470" height="452" layout="responsive"><noscript><img src="/images/how-add-disqus-comments-to-jekyll-blog-4.jpg" alt="adding disqus comments to jekyll blog" width="470" height="452"></noscript></amp-img></p><p>Now select the platform as <a href="https://webjeda-sample.disqus.com/admin/settings/universalcode/" rel="nofollow" target="_blank"><strong>Universal code</strong></a> and you should be redirected to the page having the actual code.</p><div class="clear"></div><p>Here is a sample Universal code (script) that can be inserted into any html page.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"disqus_thread"</span><span class="nt">&gt;&lt;/div&gt;</span><span class="nt">&lt;script </span><span class="na">defer</span><span class="nt">&gt;</span><span class="cm">/*** RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/</span><span class="cm">/*var disqus_config = function () {this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variablethis.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable};*/</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// DON'T EDIT BELOW THIS LINE</span><span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span><span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'//webjeda-sample.disqus.com/embed.js'</span><span class="p">;</span><span class="nx">s</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'data-timestamp'</span><span class="p">,</span> <span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">d</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span><span class="p">})();</span><span class="nt">&lt;/script&gt;</span><span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to view the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://disqus.com/?ref_noscript"</span> <span class="na">rel=</span><span class="s">"nofollow"</span><span class="nt">&gt;</span>comments powered by Disqus.<span class="nt">&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></figure><p>Insert this code wherever you want the comment box to appear.</p><p>If you want to show the number of comments anywhere on the website then you can use this code.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">id=</span><span class="s">"dsq-count-scr"</span> <span class="na">src=</span><span class="s">"//webjeda-sample.disqus.com/count.js"</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure><p>Disqus may not work as expected if you have compress.html active to [compress jekyll html](/compress-html-jekyll/).{: .r}And also, Google does not index Disqus blog many times. If you are very serious about your comments to be indexed then you may have to look for other options or follow <a href="https://help.disqus.com/customer/en/portal/articles/762307-why-isn-t-google-indexing-my-comments-" rel="nofollow" target="_blank">this question</a>.But Matt Cutts from Google tweeted that the Google-bot (crawler) can now index <strong>some</strong> dynamic comments!</p><blockquote class="twitter-tweet" data-lang="en">
+<p>When you write an opinion in your blog, there can be mixed reactions from your readers. There are people who agree with you, there are some who may not agree with you and there are few who may have a different opinion all together. But how will you know what their opinion is if you don’t give them the option to express!?</p>
+
+<ul id="markdown-toc">
+  <li><a href="#wordpress-has-an-upper-hand" id="markdown-toc-wordpress-has-an-upper-hand">WordPress has an upper hand</a></li>
+  <li>
+<a href="#1-disqus" id="markdown-toc-1-disqus">1. Disqus</a>    <ul>
+      <li><a href="#step-1-sign-up" id="markdown-toc-step-1-sign-up">Step 1: Sign up</a></li>
+      <li><a href="#step-2-set-up-disqus" id="markdown-toc-step-2-set-up-disqus">Step 2: Set up Disqus</a></li>
+      <li><a href="#step-3-get-the-disqus-code" id="markdown-toc-step-3-get-the-disqus-code">Step 3: Get the Disqus code</a></li>
+      <li><a href="#update" id="markdown-toc-update">Update</a></li>
+      <li><a href="#step-4-making-use-of-jekyll-templates" id="markdown-toc-step-4-making-use-of-jekyll-templates">Step 4: Making use of Jekyll templates</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-google-plus" id="markdown-toc-2-google-plus">2. Google Plus</a></li>
+  <li><a href="#3-facebook-comments" id="markdown-toc-3-facebook-comments">3. Facebook Comments</a></li>
+</ul>
+
+<p>There comes our comment box to the rescue. But there are a lot of them. You have to choose the one that suits your website. Suppose if you are active only on facebook, you can choose facebook comment box. If you have Google users as your readers then it would be a wise option to put a Google comment box.</p>
+
+<p>It depends on your requirements. What kind of users you have. Suppose if you don’t care about user reactions then there is no need to keep a comment box!</p>
+
+<h2 id="wordpress-has-an-upper-hand">WordPress has an upper hand</h2>
+
+<p>WordPress comes with a nice default comment box and you can get other ones through plugins if you don’t like the default one. But if you want to place the comment box a little above than the position it is already in then you are in trouble!</p>
+
+<p>Editing plugins in WordPress are really hard unless you are an expert in <code class="highlighter-rouge">php</code> and know where to look for the changes. I have tried it and I can tell you that it is not a good experience.</p>
+
+<p>WordPress comments otherwise work great, you have nothing to code and most of the bloggers use it. But if you have made a choice to move from WordPress to Jekyll (which I would really appreciate) then you can install one of these comment boxes on your blog.</p>
+
+<p>I can guarantee you that they are easy to implement. And you will have the full control of how they look and behave (for the most parts). So let’s dive right in.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<p>There are many ways to add a comment box to Jekyll. I will be discussing only the major ones.</p>
+
+<p><strong>1. Disqus</strong></p>
+
+<p><strong>2. Google</strong></p>
+
+<p><strong>3. Facebook</strong></p>
+
+<h2 id="1-disqus">1. Disqus</h2>
+<p>Disqus has been my favorite so far. It is simple, minimal and robust. I haven’t faced any problem with this one so far. I recommend Disqus than any other Jekyll blog comments tool.</p>
+
+<p><amp-img src="/images/how-to-add-comments-to-jekyll-blog.jpg" alt="adding disqus comments box Jekyll blog" width="600" height="142" layout="responsive"><noscript><img src="/images/how-to-add-comments-to-jekyll-blog.jpg" alt="adding disqus comments box Jekyll blog" width="600" height="142"></noscript></amp-img></p>
+
+<p>The best part of Disqus is that it allows users to comment using facebook, twitter, Google plus or just using an email address! Moreover, if you have a bunch of blogs, you can have different comment boxes for them and manage it from a single account!</p>
+
+<p><amp-img src="/images/how-add-disqus-to-jekyll-blog.jpg" alt="adding disqus jekyll blog comments" width="600" height="337" layout="responsive"><noscript><img src="/images/how-add-disqus-to-jekyll-blog.jpg" alt="adding disqus jekyll blog comments" width="600" height="337"></noscript></amp-img></p>
+
+<p>Here are the steps to implement Disqus comment box in your Jekyll blog.</p>
+
+<h3 id="step-1-sign-up">Step 1: Sign up</h3>
+<p>This step is pretty common for all the comment boxes. You can <a href="https://disqus.com/profile/signup/" rel="nofollow" target="_blank">sign up for Disqus</a> with your email, facebook, twitter or Google plus. After signing up, you may have to verify your email address if you have signed up with an email.</p>
+
+<h3 id="step-2-set-up-disqus">Step 2: Set up Disqus</h3>
+<p class="right small"><amp-img src="/images/how-add-disqus-comments-to-jekyll-blog-2.jpg" alt="adding disqus comments to Jekyll blog" width="157" height="266" layout="responsive"><noscript><img src="/images/how-add-disqus-comments-to-jekyll-blog-2.jpg" alt="adding disqus comments to Jekyll blog" width="157" height="266"></noscript></amp-img></p>
+<p>Once you login, you should see a gear icon on the top-right corner. Click on it and you’ll get a drop-down with one of the options saying <strong>Add Disqus to Site</strong>.</p>
+
+<p>If it shows you a page with the heading “Engage” then click on ‘start using engage’. Now you should see a screen as shown below.</p>
+
+<div class="clear"></div>
+
+<p class="left half"><amp-img src="/images/how-add-disqus-comments-to-jekyll-blog-3.jpg" alt="adding disqus comments to Jekyll blog" width="600" height="425" layout="responsive"><noscript><img src="/images/how-add-disqus-comments-to-jekyll-blog-3.jpg" alt="adding disqus comments to Jekyll blog" width="600" height="425"></noscript></amp-img></p>
+<p>This is where you can choose a <strong>shortname</strong> for your comment box which we will be using in the next step. I’m giving my shortname as <strong>webjeda-sample</strong></p>
+
+<h3 class="clear" id="step-3-get-the-disqus-code">Step 3: Get the Disqus code</h3>
+
+<p class="right half"><amp-img src="/images/how-add-disqus-comments-to-jekyll-blog-4.jpg" alt="adding disqus comments to jekyll blog" width="470" height="452" layout="responsive"><noscript><img src="/images/how-add-disqus-comments-to-jekyll-blog-4.jpg" alt="adding disqus comments to jekyll blog" width="470" height="452"></noscript></amp-img></p>
+<p>Now select the platform as <a href="https://webjeda-sample.disqus.com/admin/settings/universalcode/" rel="nofollow" target="_blank"><strong>Universal code</strong></a> and you should be redirected to the page having the actual code.</p>
+
+<div class="clear"></div>
+
+<p>Here is a sample Universal code (script) that can be inserted into any html page.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"disqus_thread"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script </span><span class="na">defer</span><span class="nt">&gt;</span>
+<span class="cm">/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/</span>
+<span class="cm">/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// DON'T EDIT BELOW THIS LINE</span>
+<span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+
+<span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'//webjeda-sample.disqus.com/embed.js'</span><span class="p">;</span>
+
+<span class="nx">s</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'data-timestamp'</span><span class="p">,</span> <span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+<span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">d</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<span class="p">})();</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to view the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://disqus.com/?ref_noscript"</span> <span class="na">rel=</span><span class="s">"nofollow"</span><span class="nt">&gt;</span>comments powered by Disqus.<span class="nt">&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></figure>
+
+<p>Insert this code wherever you want the comment box to appear.</p>
+
+<p>If you want to show the number of comments anywhere on the website then you can use this code.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">defer</span> <span class="na">id=</span><span class="s">"dsq-count-scr"</span> <span class="na">src=</span><span class="s">"//webjeda-sample.disqus.com/count.js"</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>Disqus may not work as expected if you have compress.html active to [compress jekyll html](/compress-html-jekyll/).
+{: .r}
+And also, Google does not index Disqus blog many times. If you are very serious about your comments to be indexed then you may have to look for other options or follow <a href="https://help.disqus.com/customer/en/portal/articles/762307-why-isn-t-google-indexing-my-comments-" rel="nofollow" target="_blank">this question</a>.
+
+But Matt Cutts from Google tweeted that the Google-bot (crawler) can now index <strong>some</strong> dynamic comments!</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
 <p lang="en" dir="ltr">Googlebot keeps getting smarter. Now has the ability to execute AJAX/JS to index some dynamic comments <a href="http://t.co/NsTvJExd">http://t.co/NsTvJExd</a></p>— Matt Cutts (@mattcutts) <a href="https://twitter.com/mattcutts/status/131425949597179904">November 1, 2011</a>
-</blockquote><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script><p>So there is still hope for Disqus comments to get indexed by Google.</p><h3 id="update">Update</h3><p class="y">Disqus comments are now indexed by Google! Try searching a unique comment(found on any article of this blog) on google and you should get the post link on search results.</p><div id="step4"></div><p><br></p><h3 id="step-4-making-use-of-jekyll-templates">Step 4: Making use of Jekyll templates</h3><p>It is not feasible to copy this code to every other blog post. That is the reason why we are creating a template. Create a new <code class="highlighter-rouge">html</code> file inside <strong>_includes</strong> folder, name it <strong>disqus.html</strong> paste the above code inside it and save. Now you can call this file anywhere in your Jekyll website with the following liquid tag to show Jekyll blog comments.</p><pre>{% include disqus.html %}</pre><p>If you want the comment box to appear at the bottom of all my posts, you should add the above include liquid tag to post layout which will be inside <strong>_layouts</strong> folder.</p><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><p>A sample post layout with Disqus would look like this</p><figure class="highlight"><pre><code class="language-html" data-lang="html">---layout: default---<span class="nt">&lt;article</span> <span class="na">id=</span><span class="s">"post-page"</span> <span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;h2&gt;</span>{{ page.title }}<span class="nt">&lt;/h2&gt;&lt;/a&gt;</span><span class="nt">&lt;time&gt;</span>{{ page.date | date_to_string }}<span class="nt">&lt;/time&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span> <span class="nt">&gt;</span>{{ content }}<span class="nt">&lt;/div&gt;</span><span class="nt">&lt;/article&gt;</span>{% include disqus.html %}</code></pre></figure><p>And now you should have a comment box below every single blog post. But what if you don’t want comments on certain blog posts?!</p><p>Front matter and liquid tags can help us solve this problem.</p><p>Add this front matter to the blog posts on which you do not want comments.</p><figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">---</span><span class="nt">layout</span><span class="o">:</span> <span class="nt">post</span><span class="nt">title</span><span class="o">:</span> <span class="nt">some</span> <span class="nt">title</span><span class="nt">comments</span><span class="o">:</span> <span class="nt">0</span><span class="nt">---</span></code></pre></figure><p>Now in the <strong>post</strong> layout, add the following code</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article</span> <span class="na">id=</span><span class="s">"post-page"</span> <span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;h2&gt;</span>{{ page.title }}<span class="nt">&lt;/h2&gt;&lt;/a&gt;</span><span class="nt">&lt;time&gt;</span>{{ page.date | date_to_string }}<span class="nt">&lt;/time&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span> <span class="nt">&gt;</span>{{ content }}<span class="nt">&lt;/div&gt;</span> {% if post.comments != 0 %}{% include disqus.html %} {% endif %} <span class="nt">&lt;/article&gt;</span></code></pre></figure><p>Add the below front-matter to all the posts where you do not want to display the comment box. You can use this for other comment boxes as well.</p><figure class="highlight"><pre><code class="language-css" data-lang="css"> <span class="nt">comments</span><span class="o">:</span> <span class="nt">0</span> </code></pre></figure><p class="g">If you want to implement Disqus using site variable which replaces Disqus shortname then use the code given below inside <strong>disqus.html</strong>. And inside <strong>_config.yml</strong> add an attribute called disqus_shortname which defines your disqus shortname.</p><p><strong>disqus.html</strong></p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"disqus_thread"</span><span class="nt">&gt;&lt;/div&gt;</span><span class="nt">&lt;script </span><span class="na">defer</span><span class="nt">&gt;</span><span class="cm">/*** RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/</span><span class="cm">/*var disqus_config = function () {this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variablethis.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable};*/</span><span class="kd">var</span> <span class="nx">shortname</span> <span class="o">=</span> <span class="p">{{</span> <span class="nx">site</span><span class="p">.</span><span class="nx">disqus_shortname</span> <span class="p">}}</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// DON'T EDIT BELOW THIS LINE</span><span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span><span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'//'</span> <span class="o">+</span> <span class="nx">disqus_shortname</span> <span class="o">+</span> <span class="s1">'.disqus.com/embed.js'</span><span class="p">;</span><span class="nx">s</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'data-timestamp'</span><span class="p">,</span> <span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">d</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span><span class="p">})();</span><span class="nt">&lt;/script&gt;</span><span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to view the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://disqus.com/?ref_noscript"</span> <span class="na">rel=</span><span class="s">"nofollow"</span><span class="nt">&gt;</span>comments powered by Disqus.<span class="nt">&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></figure><p><strong>_config.yml</strong></p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">.</span><span class="s">.</span><span class="s">disqus_shortname</span><span class="pi">:</span> <span class="s">webjeda-sample</span><span class="s">.</span><span class="s">.</span></code></pre></figure><p></p><iframe class="right video" src="https://www.youtube.com/embed/etvHFmVCvj8?rel=0" frameborder="0" allowfullscreen=""></iframe><div class="clear"></div><h2 id="2-google-plus">2. Google Plus</h2><p>Google has a very minimal and elegant comment box. I have no doubt that it looks better than Disqus but it is just for Google users. One must have Google plus account to comment.</p><p><amp-img src="/images/how-to-add-google-comment-box-to-jekyll.jpg" alt="how to add Google jekyll blog comments" width="739" height="261" layout="responsive"><noscript><img src="/images/how-to-add-google-comment-box-to-jekyll.jpg" alt="how to add Google jekyll blog comments" width="739" height="261"></noscript></amp-img></p><p>Here is the code to implement Google comments on Jekyll posts. Follow the same procedure we followed in step 4 od adding Disqus to Jekyll blog.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://apis.google.com/js/plusone.js"</span><span class="nt">&gt;</span><span class="nt">&lt;/script&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-comments"</span> <span class="na">data-href=</span><span class="s">"{{ site.url }}{{ page.url }}"</span> <span class="na">data-width=</span><span class="s">"600"</span> <span class="na">data-first_party_property=</span><span class="s">"BLOGGER"</span> <span class="na">data-view_type=</span><span class="s">"FILTERED_POSTMOD"</span><span class="nt">&gt;</span><span class="nt">&lt;/div&gt;</span></code></pre></figure><p>Here variables should be in this format</p><p><code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">site.</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="p">}</span><span class="err">}</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">http://blog.webjeda.com</span></code></p><p><code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">page.url</span><span class="w"> </span><span class="p">}</span><span class="err">}</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">/how-to-add-comments-to-jekyll/</span></code></p><h2 id="3-facebook-comments">3. Facebook Comments</h2><p class="right large"><amp-img src="/images/how-add-facebook-comments-to-jekyll-blog.jpg" alt="How to add facebook jekyll blog comments" width="600" height="182" layout="responsive"><noscript><img src="/images/how-add-facebook-comments-to-jekyll-blog.jpg" alt="How to add facebook jekyll blog comments" width="600" height="182"></noscript></amp-img></p><p>Before adding facebook comments, you may have to create an app in facebook. I have explained the steps in <a href="/facebook-like-button-jekyll/" rel="dofollow" target="_blank">How to add facebook like button to Jekyll</a>.</p><div class="clear"></div><p>After creating an app log on to <a href="https://developers.facebook.com/docs/plugins/comments" rel="nofollow" target="_blank">comments plugin page</a>.</p><p>Here you can specify your requirements like width, number of posts to appear, color-scheme etc., and hit <strong>Get code</strong>.</p><p>You should get a code similar to the below one.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"fb-root"</span><span class="nt">&gt;&lt;/div&gt;</span><span class="nt">&lt;script&gt;</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">s</span><span class="p">,</span> <span class="nx">id</span><span class="p">)</span> <span class="p">{</span> <span class="kd">var</span> <span class="nx">js</span><span class="p">,</span> <span class="nx">fjs</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">s</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span> <span class="k">if</span> <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span> <span class="nx">js</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span> <span class="nx">js</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span> <span class="nx">js</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">"//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5&amp;appId=YOUR-APP-ID"</span><span class="p">;</span> <span class="nx">fjs</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">js</span><span class="p">,</span> <span class="nx">fjs</span><span class="p">);</span><span class="p">}(</span><span class="nb">document</span><span class="p">,</span> <span class="s1">'script'</span><span class="p">,</span> <span class="s1">'facebook-jssdk'</span><span class="p">));</span><span class="nt">&lt;/script&gt;</span></code></pre></figure><p>The above code is just the script which doesn’t display anything. The below code is responsible for the comment box to display. You have to change the <code class="highlighter-rouge">data-href</code> to the following because it has to change for every single post.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fb-comments"</span> <span class="na">data-href=</span><span class="s">"{{ site.url }}{{ page.url }}"</span> <span class="na">data-numposts=</span><span class="s">"5"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure><p>Use the same method I discussed in <a href="#step4"><strong>step 4</strong></a> of Disqus comments.</p><p>Finally, adding a comment box to Jekyll is easy and it can be useful for a good SEO signal if you are using a social-network comment box like facebook or Google plus.</p><p>Let me know if you were able to set up Jekyll blog comments successfully. Comment if you have any suggestions.</p><p>Thanks for reading!</p>
+</blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>So there is still hope for Disqus comments to get indexed by Google.</p>
+
+<h3 id="update">Update</h3>
+<p class="y">Disqus comments are now indexed by Google! Try searching a unique comment(found on any article of this blog) on google and you should get the post link on search results.</p>
+
+<div id="step4"></div>
+<p><br></p>
+
+<h3 id="step-4-making-use-of-jekyll-templates">Step 4: Making use of Jekyll templates</h3>
+
+<p>It is not feasible to copy this code to every other blog post. That is the reason why we are creating a template. Create a new <code class="highlighter-rouge">html</code> file inside <strong>_includes</strong> folder, name it <strong>disqus.html</strong> paste the above code inside it and save. Now you can call this file anywhere in your Jekyll website with the following liquid tag to show Jekyll blog comments.</p>
+
+<pre>{% include disqus.html %}</pre>
+
+<p>If you want the comment box to appear at the bottom of all my posts, you should add the above include liquid tag to post layout which will be inside <strong>_layouts</strong> folder.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
+
+<p>A sample post layout with Disqus would look like this</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: default
+---
+<span class="nt">&lt;article</span> <span class="na">id=</span><span class="s">"post-page"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;h2&gt;</span>{{ page.title }}<span class="nt">&lt;/h2&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;time&gt;</span>{{ page.date | date_to_string }}<span class="nt">&lt;/time&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span> <span class="nt">&gt;</span>
+            {{ content }}
+    <span class="nt">&lt;/div&gt;</span>    
+<span class="nt">&lt;/article&gt;</span>
+    {% include  disqus.html %}</code></pre></figure>
+
+<p>And now you should have a comment box below every single blog post. But what if you don’t want comments on certain blog posts?!</p>
+
+<p>Front matter and liquid tags can help us solve this problem.</p>
+
+<p>Add this front matter to the blog posts on which you do not want comments.</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">---</span>
+<span class="nt">layout</span><span class="o">:</span> <span class="nt">post</span>
+<span class="nt">title</span><span class="o">:</span> <span class="nt">some</span> <span class="nt">title</span>
+<span class="nt">comments</span><span class="o">:</span> <span class="nt">0</span>
+<span class="nt">---</span></code></pre></figure>
+<p>Now in the <strong>post</strong> layout, add the following code</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;article</span> <span class="na">id=</span><span class="s">"post-page"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;h2&gt;</span>{{ page.title }}<span class="nt">&lt;/h2&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;time&gt;</span>{{ page.date | date_to_string }}<span class="nt">&lt;/time&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span> <span class="nt">&gt;</span>
+            {{ content }}
+    <span class="nt">&lt;/div&gt;</span>    
+
+ {% if post.comments != 0 %}
+    {% include  disqus.html %}
+ {% endif %}
+ 
+<span class="nt">&lt;/article&gt;</span></code></pre></figure>
+
+<p>Add the below front-matter to all the posts where you do not want to display the comment box. You can use this for other comment boxes as well.</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"> <span class="nt">comments</span><span class="o">:</span> <span class="nt">0</span> </code></pre></figure>
+
+<p class="g">If you want to implement Disqus using site variable which replaces Disqus shortname then use the code given below inside <strong>disqus.html</strong>. And inside <strong>_config.yml</strong> add an attribute called disqus_shortname which defines your disqus shortname.</p>
+
+<p><strong>disqus.html</strong></p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"disqus_thread"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script </span><span class="na">defer</span><span class="nt">&gt;</span>
+<span class="cm">/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/</span>
+<span class="cm">/*
+
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/</span>
+<span class="kd">var</span> <span class="nx">shortname</span> <span class="o">=</span> <span class="p">{{</span> <span class="nx">site</span><span class="p">.</span><span class="nx">disqus_shortname</span> <span class="p">}}</span>
+<span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// DON'T EDIT BELOW THIS LINE</span>
+<span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+
+<span class="nx">s</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'//'</span> <span class="o">+</span> <span class="nx">disqus_shortname</span> <span class="o">+</span> <span class="s1">'.disqus.com/embed.js'</span><span class="p">;</span>
+
+<span class="nx">s</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'data-timestamp'</span><span class="p">,</span> <span class="o">+</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+<span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">head</span> <span class="o">||</span> <span class="nx">d</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<span class="p">})();</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to view the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://disqus.com/?ref_noscript"</span> <span class="na">rel=</span><span class="s">"nofollow"</span><span class="nt">&gt;</span>comments powered by Disqus.<span class="nt">&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></figure>
+
+<p><strong>_config.yml</strong></p>
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">.</span>
+<span class="s">.</span>
+<span class="s">disqus_shortname</span><span class="pi">:</span> <span class="s">webjeda-sample</span>
+<span class="s">.</span>
+<span class="s">.</span></code></pre></figure>
+
+<p></p>
+
+<iframe class="right video" src="https://www.youtube.com/embed/etvHFmVCvj8?rel=0" frameborder="0" allowfullscreen=""></iframe>
+
+<div class="clear"></div>
+
+<h2 id="2-google-plus">2. Google Plus</h2>
+<p>Google has a very minimal and elegant comment box. I have no doubt that it looks better than Disqus but it is just for Google users. One must have Google plus account to comment.</p>
+
+<p><amp-img src="/images/how-to-add-google-comment-box-to-jekyll.jpg" alt="how to add Google jekyll blog comments" width="739" height="261" layout="responsive"><noscript><img src="/images/how-to-add-google-comment-box-to-jekyll.jpg" alt="how to add Google jekyll blog comments" width="739" height="261"></noscript></amp-img></p>
+
+<p>Here is the code to implement Google comments on Jekyll posts. Follow the same procedure we followed in step 4 od adding Disqus to Jekyll blog.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://apis.google.com/js/plusone.js"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"g-comments"</span>
+  <span class="na">data-href=</span><span class="s">"{{ site.url }}{{ page.url }}"</span>
+  <span class="na">data-width=</span><span class="s">"600"</span>
+  <span class="na">data-first_party_property=</span><span class="s">"BLOGGER"</span>
+  <span class="na">data-view_type=</span><span class="s">"FILTERED_POSTMOD"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Here variables should be in this format</p>
+
+<p><code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">site.</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="p">}</span><span class="err">}</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">http://blog.webjeda.com</span></code></p>
+
+<p><code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">page.url</span><span class="w"> </span><span class="p">}</span><span class="err">}</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">/how-to-add-comments-to-jekyll/</span></code></p>
+
+<h2 id="3-facebook-comments">3. Facebook Comments</h2>
+
+<p class="right large"><amp-img src="/images/how-add-facebook-comments-to-jekyll-blog.jpg" alt="How to add facebook jekyll blog comments" width="600" height="182" layout="responsive"><noscript><img src="/images/how-add-facebook-comments-to-jekyll-blog.jpg" alt="How to add facebook jekyll blog comments" width="600" height="182"></noscript></amp-img></p>
+<p>Before adding facebook comments, you may have to create an app in facebook. I have explained the steps in <a href="/facebook-like-button-jekyll/" rel="dofollow" target="_blank">How to add facebook like button to Jekyll</a>.</p>
+
+<div class="clear"></div>
+
+<p>After creating an app log on to <a href="https://developers.facebook.com/docs/plugins/comments" rel="nofollow" target="_blank">comments plugin page</a>.</p>
+
+<p>Here you can specify your requirements like width, number of posts to appear, color-scheme etc., and hit <strong>Get code</strong>.</p>
+
+<p>You should get a code similar to the below one.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"fb-root"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">s</span><span class="p">,</span> <span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">js</span><span class="p">,</span> <span class="nx">fjs</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="nx">s</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">))</span> <span class="k">return</span><span class="p">;</span>
+  <span class="nx">js</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span> <span class="nx">js</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+  <span class="nx">js</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s2">"//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5&amp;appId=YOUR-APP-ID"</span><span class="p">;</span>
+  <span class="nx">fjs</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">js</span><span class="p">,</span> <span class="nx">fjs</span><span class="p">);</span>
+<span class="p">}(</span><span class="nb">document</span><span class="p">,</span> <span class="s1">'script'</span><span class="p">,</span> <span class="s1">'facebook-jssdk'</span><span class="p">));</span><span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>The above code is just the script which doesn’t display anything. The below code is responsible for the comment box to display. You have to change the <code class="highlighter-rouge">data-href</code> to the following because it has to change for every single post.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"fb-comments"</span> <span class="na">data-href=</span><span class="s">"{{ site.url }}{{ page.url }}"</span> <span class="na">data-numposts=</span><span class="s">"5"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
+
+<p>Use the same method I discussed in <a href="#step4"><strong>step 4</strong></a> of Disqus comments.</p>
+
+<p>Finally, adding a comment box to Jekyll is easy and it can be useful for a good SEO signal if you are using a social-network comment box like facebook or Google plus.</p>
+
+<p>Let me know if you were able to set up Jekyll blog comments successfully. Comment if you have any suggestions.</p>
+
+<p>Thanks for reading!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/jekyll-comments/#disqus_thread"><button class="btn">View/Add comments</button></a>

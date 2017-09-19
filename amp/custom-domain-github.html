@@ -70,10 +70,131 @@
 
 <p class="intro">By using a custom domain, you can change ugly looking username.github.io URL into your own yourdomain.com URL. Learn how to add a custom domain to github pages. You can also use this method for Jekyll blogs.</p>
 
-<h2 id="why-should-we-use-a-custom-domain">Why should we use a custom domain?</h2><p class="clear">Having a third-party domain like <code class="highlighter-rouge">username.github.io</code> is fine. But having a unique domain name adds credibility to your product or service. It is also important for SEO. Search engines always a domain name rather a free subdomain obtained from a third-party website. So buy a domain name, it doesn’t cost much and it can help you build a brand in the long run.</p><ul id="markdown-toc"> <li><a href="#why-should-we-use-a-custom-domain" id="markdown-toc-why-should-we-use-a-custom-domain">Why should we use a custom domain?</a></li> <li>
-<a href="#prerequisites" id="markdown-toc-prerequisites">Prerequisites</a><ul> <li><a href="#a-website-hosted-on-github-pages" id="markdown-toc-a-website-hosted-on-github-pages">A website hosted on Github Pages</a></li> <li><a href="#a-domain-bought-from-any-registrar" id="markdown-toc-a-domain-bought-from-any-registrar">A domain bought from any registrar</a></li>
-</ul> </li> <li><a href="#step-1-adding-cname-file-to-the-gh-pages-branch" id="markdown-toc-step-1-adding-cname-file-to-the-gh-pages-branch">Step 1: Adding CNAME file to the gh-pages branch.</a></li> <li><a href="#step-2-adding-a-record-in-the-dns-zone-records" id="markdown-toc-step-2-adding-a-record-in-the-dns-zone-records">Step 2: Adding A record in the DNS Zone Records</a></li> <li><a href="#step-3-waiting" id="markdown-toc-step-3-waiting">Step 3: Waiting!</a></li>
-</ul><p>I own 12 domains by the time of writing this article. If you have a good domain name in hand, you can always sell it to somebody who wants it. Maybe you can recover more than what you have spent on it.</p><p>Adding a custom domain to a GitHub hosted website is fairly easy . I will explain in simple steps, how to add a custom domain name to Github Pages website.</p><p>You may have a website hosted on Github Pages which has a URL that looks similar to <code class="highlighter-rouge">http://sharu725.github.io/index.html</code>. But what you want is something like <code class="highlighter-rouge">http://webjeda.com</code>. So how perform this change?</p><h2 id="prerequisites">Prerequisites</h2><h3 id="a-website-hosted-on-github-pages">A website hosted on Github Pages</h3><p>Creating a website or uploading a pre-built website to github pages has become very easy after GIthub released drag and drop upload option to its repositories.</p><p>If you do not have a website yet, then refer to my post on <a href="/create-jekyll-blog/" target="_blank">How to create a website and host it on github pages</a> to learn how you can create a simple website on Github Pages.</p><h3 id="a-domain-bought-from-any-registrar">A domain bought from any registrar</h3><p>You have to purchase a domain from any registrar like GoDaddy, NamesCheap etc. It would cost you around $10 a year by the time this article being written.</p><p>Choose a short, easy-to-remember domain which may not have a number in it. A unique name is a good candidate for better ranking.</p><p>It is a good idea to stay away from dictionary words because almost all of them are either taken or hard to rank in search engines. Once you have purchased a domain name, go on to the next steps.</p><p>I have a website to which I want to configure custom domain using GitHub. It is accessible through this <a href="https://github.com/Redgadget/test/blob/master/index.html" rel="nofollow" target="_blank">link</a>. Keep this <a href="https://github.com/Redgadget/test" rel="nofollow" target="_blank">test repository</a> open because I will be discussing other aspects of the repository.</p><p>The website looks like this</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span> <span class="nt">&lt;title&gt;</span>First website <span class="nt">&lt;/title&gt;</span><span class="nt">&lt;body&gt;</span><span class="nt">&lt;h1&gt;</span>This is my first github page<span class="nt">&lt;/h1&gt;</span> <span class="nt">&lt;/body&gt;</span><span class="nt">&lt;style&gt;</span><span class="nt">body</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span><span class="no">green</span><span class="p">;</span> <span class="nl">color</span><span class="p">:</span><span class="m">#fff</span><span class="p">;</span> <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span><span class="p">}</span> <span class="nt">&lt;/style&gt;</span> <span class="nt">&lt;/html&gt;</span></code></pre></figure><p>This is a test website that has nothing but a heading and background color. Since I thought of making this tutorial as simple as possible, I have kept the website to a bare minimum.</p><p>I own <code class="highlighter-rouge">truejewels.in</code>. I will be using this domain for the test website whose current URL is <code class="highlighter-rouge">http://redgadget.github.io/test/</code>. I have already configured custom domain which you can access using this link: <a href="http://truejewels.in" rel="nofollow" target="_blank"><strong>truejewels.in</strong></a></p><p>Let’s see how I did it.</p><h2 id="step-1-adding-cname-file-to-the-gh-pages-branch">Step 1: Adding CNAME file to the gh-pages branch.</h2><p class="right small"><amp-img src="/images/adding-CNAME-file-to-github-repository.JPG" alt="Adding a CNAME file to github screenshot" title="Adding a CNAME file to github screenshot" width="261" height="252" layout="responsive"><noscript><img src="/images/adding-CNAME-file-to-github-repository.JPG" alt="Adding a CNAME file to github screenshot" title="Adding a CNAME file to github screenshot" width="261" height="252"></noscript></amp-img></p><p>Go to the repository where you have hosted your website and click on <strong>New File</strong>. You will see a blank space where you can type in anything. Name the file as <strong>CNAME</strong> without any extension.</p><p>Here is my repository for reference: <a href="https://github.com/Redgadget/test" rel="nofollow" target="_blank">sample Repository</a></p><p class="clear"></p><p class="left small"><amp-img src="/images/adding-domain-name-in-CNAME-file-github.JPG" alt="Adding domain name in CNAME file - github screenshot" title="Adding domain name in CNAME file - github screenshot" width="214" height="237" layout="responsive"><noscript><img src="/images/adding-domain-name-in-CNAME-file-github.JPG" alt="Adding domain name in CNAME file - github screenshot" title="Adding domain name in CNAME file - github screenshot" width="214" height="237"></noscript></amp-img></p><p>Now, inside the CNAME file write your domain name you want to use(that you already own). I have written <code class="highlighter-rouge">truejewls.in</code> because that is what I will be using. Commit your file to the repository. Make sure you are still in the gh-pages branch while hitting commit.</p><div class="clear"></div><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="step-2-adding-a-record-in-the-dns-zone-records">Step 2: Adding A record in the DNS Zone Records</h2><p>Login to the website where you purchased your domain name (Domain Name Registrar). Mine is GoDaddy, but I think the procedure is similar to other registrars as well.</p><p>Go to your domain and click on something similar to <strong>Manage Domain</strong></p><p><amp-img src="/images/Adding-A-record-to-DNS-github.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="800" height="275" layout="responsive"><noscript><img src="/images/Adding-A-record-to-DNS-github.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="800" height="275"></noscript></amp-img></p><p class="right half"><amp-img src="/images/Adding-A-record-to-DNS-github-2.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="411" height="442" layout="responsive"><noscript><img src="/images/Adding-A-record-to-DNS-github-2.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="411" height="442"></noscript></amp-img></p><p>Now, go to <strong>DNS Zone File</strong> option. This is where all your records reside. Click on <strong>Add Record</strong> and add an <strong>A</strong> record with the following configuration</p><p><strong>Host:</strong> @</p><p><strong>Points to:</strong> <code class="highlighter-rouge">192.30.252.153</code> or <code class="highlighter-rouge">192.30.252.154</code></p><p class="clear">These IPs belong to Github using which your website will be served on your domain name. They will not change anytime soon (at least that’s what I believe). If that is the case then many websites hosted using Github Pages will go down all of a sudden.You can find these IPs <a href="https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/" rel="nofollow" target="_blank">here</a>. You can use any or both of them . I guess there are two IPs for redundancy. For 100% availability, use both. In order to use both IPs, you have to add another <strong>A</strong> record with the second IP address.</p><p class="left half"><amp-img src="/images/Adding-A-record-to-DNS-github-3.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="653" height="533" layout="responsive"><noscript><img src="/images/Adding-A-record-to-DNS-github-3.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="653" height="533"></noscript></amp-img></p><p>Click on <strong>Finish</strong> and <strong>Save</strong>.</p><h2 class="clear" id="step-3-waiting">Step 3: Waiting!</h2><p>And that’s about it. You have successfully set up a custom domain for a github website. But do not rush. It will take a while to propagate.</p><p>Propagation can take a long time and it can be at different speeds in different geo-locations. So try using a <a href="https://www.proxysite.com/" rel="nofollow">proxy site</a> to see if it has propagated in different countries. Try servers from different countries.</p><p>A better option is to grab a cup of coffee. Once you are done, hit the URL.</p><p class="r">If your website has external <strong>css</strong> and <strong>js</strong> files, then watch out for the links you have used in the head tag. Make sure it links to proper files.</p><amp-youtube data-videoid="hUChaN-VRIc" layout="responsive" width="600" height="300"></amp-youtube><p>Here is a video demonstration</p><p>Let me know if you were successful in using a custom domain name. Put your link in the comment section.</p><p class="clear">Thanks for reading!</p>
+<h2 id="why-should-we-use-a-custom-domain">Why should we use a custom domain?</h2>
+
+<p class="clear">Having a third-party domain like <code class="highlighter-rouge">username.github.io</code> is fine. But having a unique domain name adds credibility to your product or service. It is also important for SEO. Search engines always a domain name rather a free subdomain obtained from a third-party website. So buy a domain name, it doesn’t cost much and it can help you build a brand in the long run.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-should-we-use-a-custom-domain" id="markdown-toc-why-should-we-use-a-custom-domain">Why should we use a custom domain?</a></li>
+  <li>
+<a href="#prerequisites" id="markdown-toc-prerequisites">Prerequisites</a>    <ul>
+      <li><a href="#a-website-hosted-on-github-pages" id="markdown-toc-a-website-hosted-on-github-pages">A website hosted on Github Pages</a></li>
+      <li><a href="#a-domain-bought-from-any-registrar" id="markdown-toc-a-domain-bought-from-any-registrar">A domain bought from any registrar</a></li>
+    </ul>
+  </li>
+  <li><a href="#step-1-adding-cname-file-to-the-gh-pages-branch" id="markdown-toc-step-1-adding-cname-file-to-the-gh-pages-branch">Step 1: Adding CNAME file to the gh-pages branch.</a></li>
+  <li><a href="#step-2-adding-a-record-in-the-dns-zone-records" id="markdown-toc-step-2-adding-a-record-in-the-dns-zone-records">Step 2: Adding A record in the DNS Zone Records</a></li>
+  <li><a href="#step-3-waiting" id="markdown-toc-step-3-waiting">Step 3: Waiting!</a></li>
+</ul>
+
+<p>I own 12 domains by the time of writing this article. If you have a good domain name in hand, you can always sell it to somebody who wants it. Maybe you can recover more than what you have spent on it.</p>
+
+<p>Adding a custom domain to a GitHub hosted website is fairly easy . I will explain in simple steps, how to add a custom domain name to Github Pages website.</p>
+
+<p>You may have a website hosted on Github Pages which has a URL that looks similar to <code class="highlighter-rouge">http://sharu725.github.io/index.html</code>. But what you want is something like <code class="highlighter-rouge">http://webjeda.com</code>. So how perform this change?</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<h3 id="a-website-hosted-on-github-pages">A website hosted on Github Pages</h3>
+<p>Creating a website or uploading a pre-built website to github pages has become very easy after GIthub released drag and drop upload option to its repositories.</p>
+
+<p>If you do not have a website yet, then refer to my post on <a href="/create-jekyll-blog/" target="_blank">How to create a website and host it on github pages</a> to learn how you can create a simple website on Github Pages.</p>
+
+<h3 id="a-domain-bought-from-any-registrar">A domain bought from any registrar</h3>
+<p>You have to purchase a domain from any registrar like GoDaddy, NamesCheap etc. It would cost you around $10 a year by the time this article being written.</p>
+
+<p>Choose a short, easy-to-remember domain which may not have a number in it. A unique name is a good candidate for better ranking.</p>
+
+<p>It is a good idea to stay away from dictionary words because almost all of them are either taken or hard to rank in search engines. Once you have purchased a domain name, go on to the next steps.</p>
+
+<p>I have a website to which I want to configure custom domain using GitHub. It is accessible through this <a href="https://github.com/Redgadget/test/blob/master/index.html" rel="nofollow" target="_blank">link</a>. Keep this <a href="https://github.com/Redgadget/test" rel="nofollow" target="_blank">test repository</a> open because I will be discussing other aspects of the repository.</p>
+
+<p>The website looks like this</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;title&gt;</span>
+    First website
+  <span class="nt">&lt;/title&gt;</span>
+  
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>This is my first github page<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+  
+  <span class="nt">&lt;style&gt;</span>
+    <span class="nt">body</span> <span class="p">{</span>
+      <span class="nl">background-color</span><span class="p">:</span><span class="no">green</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span><span class="m">#fff</span><span class="p">;</span>
+      <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="nt">&lt;/style&gt;</span>
+  
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>This is a test website that has nothing but a heading and background color. Since I thought of making this tutorial as simple as possible, I have kept the website to a bare minimum.</p>
+
+<p>I own <code class="highlighter-rouge">truejewels.in</code>. I will be using this domain for the test website whose current URL is <code class="highlighter-rouge">http://redgadget.github.io/test/</code>. I have already configured custom domain which you can access using this link: <a href="http://truejewels.in" rel="nofollow" target="_blank"><strong>truejewels.in</strong></a></p>
+
+<p>Let’s see how I did it.</p>
+
+<h2 id="step-1-adding-cname-file-to-the-gh-pages-branch">Step 1: Adding CNAME file to the gh-pages branch.</h2>
+
+<p class="right small"><amp-img src="/images/adding-CNAME-file-to-github-repository.JPG" alt="Adding a CNAME file to github screenshot" title="Adding a CNAME file to github screenshot" width="261" height="252" layout="responsive"><noscript><img src="/images/adding-CNAME-file-to-github-repository.JPG" alt="Adding a CNAME file to github screenshot" title="Adding a CNAME file to github screenshot" width="261" height="252"></noscript></amp-img></p>
+
+<p>Go to the repository where you have hosted your website and click on <strong>New File</strong>. You will see a blank space where you can type in anything. Name the file as <strong>CNAME</strong> without any extension.</p>
+
+<p>Here is my repository for reference: <a href="https://github.com/Redgadget/test" rel="nofollow" target="_blank">sample Repository</a></p>
+
+<p class="clear"></p>
+
+<p class="left small"><amp-img src="/images/adding-domain-name-in-CNAME-file-github.JPG" alt="Adding domain name in CNAME file - github screenshot" title="Adding domain name in CNAME file - github screenshot" width="214" height="237" layout="responsive"><noscript><img src="/images/adding-domain-name-in-CNAME-file-github.JPG" alt="Adding domain name in CNAME file - github screenshot" title="Adding domain name in CNAME file - github screenshot" width="214" height="237"></noscript></amp-img></p>
+
+<p>Now, inside the CNAME file write your domain name you want to use(that you already own). I have written <code class="highlighter-rouge">truejewls.in</code> because that is what I will be using. Commit your file to the repository. Make sure you are still in the gh-pages branch while hitting commit.</p>
+
+<div class="clear"></div>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<h2 id="step-2-adding-a-record-in-the-dns-zone-records">Step 2: Adding A record in the DNS Zone Records</h2>
+
+<p>Login to the website where you purchased your domain name (Domain Name Registrar). Mine is GoDaddy, but I think the procedure is similar to other registrars as well.</p>
+
+<p>Go to your domain and click on something similar to <strong>Manage Domain</strong></p>
+
+<p><amp-img src="/images/Adding-A-record-to-DNS-github.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="800" height="275" layout="responsive"><noscript><img src="/images/Adding-A-record-to-DNS-github.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="800" height="275"></noscript></amp-img></p>
+
+<p class="right half"><amp-img src="/images/Adding-A-record-to-DNS-github-2.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="411" height="442" layout="responsive"><noscript><img src="/images/Adding-A-record-to-DNS-github-2.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="411" height="442"></noscript></amp-img></p>
+
+<p>Now, go to <strong>DNS Zone File</strong> option. This is where all your records reside. Click on <strong>Add Record</strong> and add an <strong>A</strong> record with the following configuration</p>
+
+<p><strong>Host:</strong> @</p>
+
+<p><strong>Points to:</strong> <code class="highlighter-rouge">192.30.252.153</code> or <code class="highlighter-rouge">192.30.252.154</code></p>
+
+<p class="clear">These IPs belong to Github using which your website will be served on your domain name. They will not change anytime soon (at least that’s what I believe). If that is the case then many websites hosted using Github Pages will go down all of a sudden.
+You can find these IPs <a href="https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/" rel="nofollow" target="_blank">here</a>. You can use any or both of them . I guess there are two IPs for redundancy. For 100% availability, use both. In order to use both IPs, you have to add another <strong>A</strong> record with the second IP address.</p>
+
+<p class="left half"><amp-img src="/images/Adding-A-record-to-DNS-github-3.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="653" height="533" layout="responsive"><noscript><img src="/images/Adding-A-record-to-DNS-github-3.JPG" alt="Adding A record to DNS Zone Records - github screenshot" title="Adding A record to DNS Zone Records - github screenshot" width="653" height="533"></noscript></amp-img></p>
+
+<p>Click on <strong>Finish</strong> and <strong>Save</strong>.</p>
+
+<h2 class="clear" id="step-3-waiting">Step 3: Waiting!</h2>
+<p>And that’s about it. You have successfully set up a custom domain for a github website. But do not rush. It will take a while to propagate.</p>
+
+<p>Propagation can take a long time and it can be at different speeds in different geo-locations. So try using a <a href="https://www.proxysite.com/" rel="nofollow">proxy site</a> to see if it has propagated in different countries. Try servers from different countries.</p>
+
+<p>A better option is to grab a cup of coffee. Once you are done, hit the URL.</p>
+
+<p class="r">If your website has external <strong>css</strong> and <strong>js</strong> files, then watch out for the links you have used in the head tag. Make sure it links to proper files.</p>
+
+<amp-youtube data-videoid="hUChaN-VRIc" layout="responsive" width="600" height="300">
+    </amp-youtube>
+
+<p>Here is a video demonstration</p>
+
+<p>Let me know if you were successful in using a custom domain name. Put your link in the comment section.</p>
+
+<p class="clear">Thanks for reading!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/custom-domain-github/#disqus_thread"><button class="btn">View/Add comments</button></a>

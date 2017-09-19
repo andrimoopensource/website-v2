@@ -70,13 +70,125 @@
 
 <p class="intro">Adding a new page in Jekyll is really easy. You can use HTML or Markdown for markup. Learn how to create a page in Jekyll and how to manipulate the URL. We will be creating a blank layout for plain html pages. Create contact page, about page, archive page and more on Jekyll using this method.</p>
 
-<h2 id="why-should-we-create-a-new-page-on-jekyll">Why should we create a new page on Jekyll?</h2><p>Jekyll themes do not come with all the bells and rings. You have to add whatever you want and take out whatever you do not need. I wanted a <a href="/contact/" rel="dofollow" target="_blank">contact page</a> for my blog and Jekyll did not have one by default. So I had to create one. Same thing with my <a href="/about/" rel="dofollow" target="_blank">about</a> page.</p><ul id="markdown-toc"> <li><a href="#why-should-we-create-a-new-page-on-jekyll" id="markdown-toc-why-should-we-create-a-new-page-on-jekyll">Why should we create a new page on Jekyll?</a></li> <li>
-<a href="#lets-create-a-html-page-in-jekyll" id="markdown-toc-lets-create-a-html-page-in-jekyll">Let’s create a html page in Jekyll</a><ul> <li><a href="#step-1-create-a-html-page" id="markdown-toc-step-1-create-a-html-page">Step 1: Create a html page</a></li> <li><a href="#step-2-add-yaml-front-matter" id="markdown-toc-step-2-add-yaml-front-matter">Step 2: Add YAML front matter</a></li> <li><a href="#step-3-create-a-plain-html-page-in-jekyll" id="markdown-toc-step-3-create-a-plain-html-page-in-jekyll">Step 3: Create a plain HTML page in Jekyll</a></li>
-</ul> </li> <li><a href="#custom-layouts" id="markdown-toc-custom-layouts">Custom layouts</a></li>
-</ul><p>Many times you may want a home page which do not show list of posts. You may want to show off your projects in the home page. In such cases, you can make your custom pages in Jekyll and use them.</p><h2 class="clear" id="lets-create-a-html-page-in-jekyll">Let’s create a html page in Jekyll</h2><p>Before creating one, you have to decide how it should be. Because you already have layouts which you can use. Usually you will have a <code class="highlighter-rouge">default</code> layout, <code class="highlighter-rouge">page</code> layout and a <code class="highlighter-rouge">post</code> layout files inside <code class="highlighter-rouge">_layouts</code> folder.</p><p>They are all different from one another. But <code class="highlighter-rouge">default</code> is generally used in other layouts (recursive) since <code class="highlighter-rouge">default</code> has all the meta, header and footer tags.</p><h3 id="step-1-create-a-html-page">Step 1: Create a html page</h3><p>You can do this in the root of the repository or inside a custom folder, but do not use the folders whose names start with an <code class="highlighter-rouge">_underscore</code> as they are treated special by Jekyll.</p><p>Let’s make an about page for our Jekyll blog.</p><ul> <li>
-<p>Layout can be <code class="highlighter-rouge">page</code></p> </li> <li>
-<p>Markup can be html, markdown or <strike>textile</strike> (not supported anymore after Jekyll 3.0)</p> </li>
-</ul><p>I will be using markdown since it is easy to write.</p><p>create a new file in the root of repository and call it <strong>about.md</strong></p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h3 id="step-2-add-yaml-front-matter">Step 2: Add YAML front matter</h3><p>YAML(Yet Another Markup Language) lies at the top of the page inside three dashes.</p><figure class="highlight"><pre><code class="language-html" data-lang="html">---YAML front matter---</code></pre></figure><p>Inside it you can define few properties for your page like which layout it should use, which permalink to use, which title to use etc.,Here is my about page. You can copy the same code below but change the content as per your needs.</p><figure class="highlight"><pre><code class="language-html" data-lang="html">---layout: pagetitle: Aboutpermalink: /about/---## AboutWebJeda is a web designing company ...**Disclaimer:** This website is under constant modification. If you find something isn't right then,I might be doing some change in the back-end.</code></pre></figure><p>This <code class="highlighter-rouge">about.md</code> page will be rendered as <code class="highlighter-rouge">about.html</code> by the time it builds the site out of your repo. So the link would be<code class="highlighter-rouge">http://blog.webjeda.com/about.html</code>.</p><p>I don’t want my web pages to have any file extension in the URL. So to remove that, I have used <code class="highlighter-rouge">permalink</code> attribution in the front matter. Now my link will change into <code class="highlighter-rouge">http://blog.webjeda.com/about/</code> which is pretty neat.</p><p>You can visit <a href="/about/" rel="dofollow" target="_blank">my about page</a> here.</p><p>You can also achieve this without permalinks. Just create a folder in the root with the name <code class="highlighter-rouge">about</code> and create a <code class="highlighter-rouge">index.md</code> file inside it with all the above content. Even now the link will show up as <code class="highlighter-rouge">http://blog.webjeda.com/about</code>. This is just like how for my blog jekyll will not show the URL as <code class="highlighter-rouge">http://blog.webjeda.com/index.html</code> because it is understood that <code class="highlighter-rouge">index.html</code> is the default file to show when the URL <code class="highlighter-rouge">http://blog.webjeda.com</code> is hit.</p><h3 id="step-3-create-a-plain-html-page-in-jekyll">Step 3: Create a plain HTML page in Jekyll</h3><p>A plain HTML inside Jekyll can have a front matter as shown below which defines not to use any layout or you can use no front matter at all.</p><figure class="highlight"><pre><code class="language-html" data-lang="html">---layout: null---</code></pre></figure><p>If you have visited my <a href="/feed.xml" rel="dofollow" target="_blank">feed page</a>, you will see that it is different from all other pages. I just have plain HTML inside it.</p><p><a href="https://raw.githubusercontent.com/sharu725/blog-v3/gh-pages/feed.xml" rel="nofollow" target="_blank">Feed.xml file</a></p><h2 id="custom-layouts">Custom layouts</h2><p>The fun part about layouts is that you can have your own layout and you can use it in any page you create. Even for plain HTML, you can create a template called <code class="highlighter-rouge">blank</code>like this one below inside <code class="highlighter-rouge">_layouts</code> folder.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span><span class="nt">&lt;head&gt;</span><span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span><span class="nt">&lt;title&gt;</span>Some Title<span class="nt">&lt;/title&gt;</span><span class="nt">&lt;/head&gt;</span><span class="nt">&lt;body&gt;</span> {{ content }}<span class="nt">&lt;/body&gt;</span><span class="nt">&lt;/html&gt;</span></code></pre></figure><p>So whenever you create a new plain HTML page, you don’t have to include title, head and body. Just write the code and use</p><figure class="highlight"><pre><code class="language-html" data-lang="html">---layout: blank---</code></pre></figure><p>and Jekyll will keep the HTML code inside the <code class="highlighter-rouge">blank</code> template where {{ content }} is defined!</p><p>These are the ways you can create a new page in Jekyll blog. There can be other ways as well. Let me know if you find a better way to do it. Subscribe for more cool stuff!</p><p>Thanks for reading!</p>
+<h2 id="why-should-we-create-a-new-page-on-jekyll">Why should we create a new page on Jekyll?</h2>
+<p>Jekyll themes do not come with all the bells and rings. You have to add whatever you want and take out whatever you do not need. I wanted a <a href="/contact/" rel="dofollow" target="_blank">contact page</a> for my blog and Jekyll did not have one by default. So I had to create one. Same thing with my <a href="/about/" rel="dofollow" target="_blank">about</a> page.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-should-we-create-a-new-page-on-jekyll" id="markdown-toc-why-should-we-create-a-new-page-on-jekyll">Why should we create a new page on Jekyll?</a></li>
+  <li>
+<a href="#lets-create-a-html-page-in-jekyll" id="markdown-toc-lets-create-a-html-page-in-jekyll">Let’s create a html page in Jekyll</a>    <ul>
+      <li><a href="#step-1-create-a-html-page" id="markdown-toc-step-1-create-a-html-page">Step 1: Create a html page</a></li>
+      <li><a href="#step-2-add-yaml-front-matter" id="markdown-toc-step-2-add-yaml-front-matter">Step 2: Add YAML front matter</a></li>
+      <li><a href="#step-3-create-a-plain-html-page-in-jekyll" id="markdown-toc-step-3-create-a-plain-html-page-in-jekyll">Step 3: Create a plain HTML page in Jekyll</a></li>
+    </ul>
+  </li>
+  <li><a href="#custom-layouts" id="markdown-toc-custom-layouts">Custom layouts</a></li>
+</ul>
+
+<p>Many times you may want a home page which do not show list of posts. You may want to show off your projects in the home page. In such cases, you can make your custom pages in Jekyll and use them.</p>
+
+<h2 class="clear" id="lets-create-a-html-page-in-jekyll">Let’s create a html page in Jekyll</h2>
+
+<p>Before creating one, you have to decide how it should be. Because you already have layouts which you can use. Usually you will have a <code class="highlighter-rouge">default</code> layout, <code class="highlighter-rouge">page</code> layout and a <code class="highlighter-rouge">post</code> layout files inside <code class="highlighter-rouge">_layouts</code> folder.</p>
+
+<p>They are all different from one another. But <code class="highlighter-rouge">default</code> is generally used in other layouts (recursive) since <code class="highlighter-rouge">default</code> has all the meta, header and footer tags.</p>
+
+<h3 id="step-1-create-a-html-page">Step 1: Create a html page</h3>
+
+<p>You can do this in the root of the repository or inside a custom folder, but do not use the folders whose names start with an <code class="highlighter-rouge">_underscore</code> as they are treated special by Jekyll.</p>
+
+<p>Let’s make an about page for our Jekyll blog.</p>
+
+<ul>
+  <li>
+    <p>Layout can be <code class="highlighter-rouge">page</code></p>
+  </li>
+  <li>
+    <p>Markup can be html, markdown or <strike>textile</strike> (not supported anymore after Jekyll 3.0)</p>
+  </li>
+</ul>
+
+<p>I will be using markdown since it is easy to write.</p>
+
+<p>create a new file in the root of repository and call it <strong>about.md</strong></p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<h3 id="step-2-add-yaml-front-matter">Step 2: Add YAML front matter</h3>
+<p>YAML(Yet Another Markup Language) lies at the top of the page inside three dashes.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+YAML front matter
+---</code></pre></figure>
+<p>Inside it you can define few properties for your page like which layout it should use, which permalink to use, which title to use etc.,
+Here is my about page. You can copy the same code below but change the content as per your needs.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: page
+title: About
+permalink: /about/
+---
+
+## About
+
+WebJeda is a web designing company 
+.
+.
+.
+
+**Disclaimer:** This website is under constant modification. 
+If you find something isn't right then,
+I might be doing some change in the back-end.</code></pre></figure>
+
+<p>This <code class="highlighter-rouge">about.md</code> page will be rendered as <code class="highlighter-rouge">about.html</code> by the time it builds the site out of your repo. So the link would be
+<code class="highlighter-rouge">http://blog.webjeda.com/about.html</code>.</p>
+
+<p>I don’t want my web pages to have any file extension in the URL. So to remove that, I have used <code class="highlighter-rouge">permalink</code> attribution in the front matter. Now my link will change into <code class="highlighter-rouge">http://blog.webjeda.com/about/</code> which is pretty neat.</p>
+
+<p>You can visit <a href="/about/" rel="dofollow" target="_blank">my about page</a> here.</p>
+
+<p>You can also achieve this without permalinks. Just create a folder in the root with the name <code class="highlighter-rouge">about</code> and create a <code class="highlighter-rouge">index.md</code> file inside it with all the above content. Even now the link will show up as <code class="highlighter-rouge">http://blog.webjeda.com/about</code>. This is just like how for my blog jekyll will not show the URL as <code class="highlighter-rouge">http://blog.webjeda.com/index.html</code> because it is understood that <code class="highlighter-rouge">index.html</code> is the default file to show when the URL <code class="highlighter-rouge">http://blog.webjeda.com</code> is hit.</p>
+
+<h3 id="step-3-create-a-plain-html-page-in-jekyll">Step 3: Create a plain HTML page in Jekyll</h3>
+
+<p>A plain HTML inside Jekyll can have a front matter as shown below which defines not to use any layout or you can use no front matter at all.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: null
+---</code></pre></figure>
+
+<p>If you have visited my <a href="/feed.xml" rel="dofollow" target="_blank">feed page</a>, you will see that it is different from all other pages. I just have plain HTML inside it.</p>
+
+<p><a href="https://raw.githubusercontent.com/sharu725/blog-v3/gh-pages/feed.xml" rel="nofollow" target="_blank">Feed.xml file</a></p>
+
+<h2 id="custom-layouts">Custom layouts</h2>
+
+<p>The fun part about layouts is that you can have your own layout and you can use it in any page you create. Even for plain HTML, you can create a template called <code class="highlighter-rouge">blank</code>like this one below inside <code class="highlighter-rouge">_layouts</code> folder.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Some Title<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    
+      {{ content }}
+    
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>So whenever you create a new plain HTML page, you don’t have to include title, head and body. Just write the code and use</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: blank
+---</code></pre></figure>
+
+<p>and Jekyll will keep the HTML code inside the <code class="highlighter-rouge">blank</code> template where {{ content }} is defined!</p>
+
+<p>These are the ways you can create a new page in Jekyll blog. There can be other ways as well. Let me know if you find a better way to do it. Subscribe for more cool stuff!</p>
+
+<p>Thanks for reading!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/new-page-jekyll/#disqus_thread"><button class="btn">View/Add comments</button></a>

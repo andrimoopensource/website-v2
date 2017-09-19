@@ -70,13 +70,171 @@
 
 <p class="intro">Mobile First is the best approach for web designing because of ever increasing number of smartphone users. What are the advantages and drawbacks of this approach? Is this the future of web design?</p>
 
-<p>Mobile First Web Design is fairly new trend in responsive web designing. Unlike covfefe, <strong>mobile first</strong> is a meaningful trend. It is just the reverse approach of what we are generally used to - Desktop First.</p><p>Web Designing is almost always done on a desktop(I’m yet to encounter someone who does it on their phone). This was the main reason why we generally design websites for <strong>desktop first</strong> and then use media queries to adapt the site for smaller devices.</p><ul id="markdown-toc"> <li><a href="#why-mobile-first-web-design" id="markdown-toc-why-mobile-first-web-design">Why Mobile First Web Design?</a></li> <li>
-<a href="#how-to-use-media-query" id="markdown-toc-how-to-use-media-query">How to use Media Query?</a><ul> <li><a href="#media-query-max-width" id="markdown-toc-media-query-max-width">Media Query max-width</a></li> <li><a href="#media-query-min-width" id="markdown-toc-media-query-min-width">Media Query min-width</a></li>
-</ul> </li> <li><a href="#mobile-first-web-design-examples" id="markdown-toc-mobile-first-web-design-examples">Mobile First Web Design Examples</a></li> <li>
-<a href="#advantages-of-mobile-first-approach" id="markdown-toc-advantages-of-mobile-first-approach">Advantages of Mobile First Approach</a><ul> <li><a href="#responsive-by-default" id="markdown-toc-responsive-by-default">Responsive by default</a></li> <li><a href="#better-navigation" id="markdown-toc-better-navigation">Better Navigation</a></li> <li><a href="#mobile-first-websites-load-faster" id="markdown-toc-mobile-first-websites-load-faster">Mobile First websites load faster</a></li> <li><a href="#mobile-first-websites-make-no-media-query" id="markdown-toc-mobile-first-websites-make-no-media-query">Mobile First websites make no media query</a></li> <li><a href="#better-design" id="markdown-toc-better-design">Better Design</a></li>
-</ul> </li> <li><a href="#drawbacks-of-mobile-first-web-designing" id="markdown-toc-drawbacks-of-mobile-first-web-designing">Drawbacks of Mobile First Web Designing</a></li> <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-</ul><p>This approach has some drawbacks. We get a lot of screen real estate in a desktop to fit in menus, logo, header text, slider, sidebar, widgets etc., When it comes to writing media query for smaller screens, we get stuck at whether to display all those features or not.</p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="why-mobile-first-web-design">Why Mobile First Web Design?</h2><p>Mobile First Web Design is a necessity considering the sheer number of smartphone users.</p><blockquote> <p>Around 2 billion people are using smartphones in 2017.</p>
-</blockquote><p>A statistical analysis predicts that there will be around 3 billion smartphone users by 2020. That is a huge market. What these statistics imply is that <strong>your content on the internet should be easily consumable through smartphones</strong>.</p><p>Google has taken steps to make sure designers give importance to responsive web designing. They did it by adding website’s responsiveness as a parameter to rank on their search engine. That one step pushed many website owners to consider responsive web designing.</p><p>They want to convey that they are serious about smartphone users. A smartphone is a computer that you carry with you all the time and is always on!</p><p>Designing a website only for smartphones is actually ok because even desktop users can consume the content. Don’t you believe me? Then in Chrome, open an article on this website, hold <strong>ctrl</strong> and hit <strong>+</strong> 5 times. You will see the article exactly how it will be shown on a smartphone. It is still readable.</p><h2 id="how-to-use-media-query">How to use Media Query?</h2><p>Media Query is basically an if condition used by a browser to determine the screen-width. If satisfactory conditions are met, the CSS inside it will be applied.</p><p>Though it seems simple, I had a hard time using it. I needed clarifications on <code class="highlighter-rouge">max-width</code> and <code class="highlighter-rouge">min-width</code>. What are they? Why are they called so?</p><p>For the first few design projects, I never bothered finding out what they meant. Don’t do the same mistake. I have an easy way to remember what they exactly mean. I hope it will also help you remember media queries easily.</p><h3 id="media-query-max-width">Media Query max-width</h3><p>It means that if the screen width changes below max-width, then the CSS inside it will be applied.</p><p>Let’s say we have a media query like the following,</p><figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">600px</span><span class="p">)</span> <span class="p">{</span><span class="nc">.xyz</span> <span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span><span class="p">}</span><span class="p">}</span></code></pre></figure><p>The color changes to blue if the screen width is below 600 pixels.</p><p>I remember it this way,</p><p><strong>1. The maximum width of the screen is 600px(Not really but it will be easier to understand this way).</strong></p><p><strong>2. If you decrease the width, the CSS inside media query will be applied.(when maximum width itself is 600px, you cannot increase it anymore. Can you?)</strong></p><div class="xyz"></div><p>Consider the box above. It changes color when the size is decreased below 600px. If you are already reading this article on a smartphone then use landscape mode to see the green box. It also changes the content. This can be achieved using <code class="highlighter-rouge">:after</code>.</p><h3 id="media-query-min-width">Media Query min-width</h3><p>It means that if the screen width changes above the min-width then the CSS defined inside the media query will be applied.</p><p>The media query for the box above can be written like this,</p><figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.xyz</span> <span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span><span class="p">}</span><span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">600px</span><span class="p">)</span> <span class="p">{</span><span class="nc">.xyz</span> <span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span><span class="p">}</span><span class="p">}</span></code></pre></figure><p>This will have the same effect as the one with <code class="highlighter-rouge">max-width</code>.</p><p>I remember it this way,</p><p><strong>1. The minimum width of the screen is 600px(Not really).</strong></p><p><strong>2. If the screen size increases then the CSS inside media query will be applied.</strong></p><p>I’m not sure if that is what they mean but it helps me understand the “Media Query syntax”. I used to go refer to media query articles every time I needed to implement them. Not anymore!</p><p><code class="highlighter-rouge">min-width</code> media query is the one we will be using for Mobile First Web Design.</p><p>Refer: <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank" rel="nofollow">w3schools media query</a></p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="mobile-first-web-design-examples">Mobile First Web Design Examples</h2><p>Here is one such design where the CSS is written for mobile devices first, then media query is written for bigger screens.</p><p><code class="highlighter-rouge">http://2017.uxlondon.com/</code></p><p><amp-img src="/images/mobile-first-web-design-tutorial.png" alt="mobile first web design example" width="800" height="399" layout="responsive"><noscript><img src="/images/mobile-first-web-design-tutorial.png" alt="mobile first web design example" width="800" height="399"></noscript></amp-img></p><p>The image depicts the design flow. The header was first designed for mobile, then for tablets and finally for desktops.</p><p>Another great example is <a href="https://jekyll-themes.com/hyde/" target="_blank">Hyde</a> by Mark Otto.</p><p>This is how it was designed first.</p><p><amp-img src="/images/mobile-first-web-design-example-2.png" alt="mobile first web design example" class="border" width="535" height="566" layout="responsive"><noscript><img src="/images/mobile-first-web-design-example-2.png" alt="mobile first web design example" class="border" width="535" height="566"></noscript></amp-img></p><p>Then it was designed to adjust for bigger screens. When the screen-size increases, the header becomes the sidebar.</p><p><amp-img src="/images/mobile-first-web-design-example-3.png" alt="mobile first web design example" class="border" width="800" height="528" layout="responsive"><noscript><img src="/images/mobile-first-web-design-example-3.png" alt="mobile first web design example" class="border" width="800" height="528"></noscript></amp-img></p><p>Now that we have seen some examples, let’s see what are some of the advantages of mobile first web designing,</p><h2 id="advantages-of-mobile-first-approach">Advantages of Mobile First Approach</h2><h3 id="responsive-by-default">Responsive by default</h3><p>By using mobile first approach, you are designing the website suitable for almost all the devices. The main content will be accessible even if you do not have a desktop website. Check out <a href="https://m.facebook.com/" target="_blank" rel="nofollow">Mobile Facebook</a>.</p><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><p>By making the website responsive, you are now targeting all those 2 billion(yet to reach) users.</p><h3 id="better-navigation">Better Navigation</h3><p>In a desktop site it is easy to put too many menu items but when it comes to mobile site you do not have the screen real estate to do so. Mobile First approach will restrict you to use only essential menus and items on the screen. Usually, designers restrict themselves to minimal design which is good considering User Experience.</p><p><amp-img src="/images/mobile-first-web-design-responsive.png" alt="Mobile First Web Designing Minimal" class="border" width="510" height="60" layout="responsive"><noscript><img src="/images/mobile-first-web-design-responsive.png" alt="Mobile First Web Designing Minimal" class="border" width="510" height="60"></noscript></amp-img></p><p>A header from <strong>Lanyon</strong> designed by Mark Otto.</p><h3 id="mobile-first-websites-load-faster">Mobile First websites load faster</h3><p>Mobile First websites are built from the ground up with smartphones in mind. Thus suitable, small and only essential assets are used for the mobile website. Heavy assets are loaded only for bigger screen devices. This makes a huge difference in loading speed even on a bad data connection. This is also called <strong>Progressive Enhancement</strong>.</p><h3 id="mobile-first-websites-make-no-media-query">Mobile First websites make no media query</h3><p>Mobile First website - since they are built first for mobile and then for desktops - make no media query request if browsed through a smartphone. This saves some time in making the query and then applying CSS inside the query. This is not so significant but it still makes sense for bigger CSS files.</p><h3 id="better-design">Better Design</h3><p>Since the website is designed first for mobile, the design will be better than a desktop first website which is squeezed to fit inside a smaller screen. In this approach, you are most likely to place the elements carefully and consciously.</p><h2 id="drawbacks-of-mobile-first-web-designing">Drawbacks of Mobile First Web Designing</h2><p>Even though you are using Mobile First approach, you will have to <strong>imagine the desktop site first</strong> and make your way down to smaller screens. But you have to design the mobile site first and then for tablets and finally for desktops.</p><p>It may seem like a small issue but only when you sit down to design a real website you will know the pain. I’m not sure if we can ever avoid this problem.</p><p>With majority of browsers supporting <a href="/css-grid-framework/" target="_blank">Grid CSS</a> we can find a hassle free solution. In grid CSS, it becomes easier to place any element anywhere you want in the website.</p><p>I might sound like a hypocrite now as this website - webjeda blog - is not mobile first. I have changed the layout of the site several times. This is not the final design. I’m definitely going to implement it in the next design.</p><h2 id="conclusion">Conclusion</h2><p>A decade ago there were no concerns for designing websites for hand held devices. But now looking at the technological progress, designers should be prepared to change over time. In the near future, they should be ready to build web interfaces for <strong>smart watches</strong> or <strong>Virtual Reality</strong>!</p>
+<p>Mobile First Web Design is fairly new trend in responsive web designing. Unlike covfefe, <strong>mobile first</strong> is a meaningful trend. It is just the reverse approach of what we are generally used to - Desktop First.</p>
+
+<p>Web Designing is almost always done on a desktop(I’m yet to encounter someone who does it on their phone). This was the main reason why we generally design websites for <strong>desktop first</strong> and then use media queries to adapt the site for smaller devices.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-mobile-first-web-design" id="markdown-toc-why-mobile-first-web-design">Why Mobile First Web Design?</a></li>
+  <li>
+<a href="#how-to-use-media-query" id="markdown-toc-how-to-use-media-query">How to use Media Query?</a>    <ul>
+      <li><a href="#media-query-max-width" id="markdown-toc-media-query-max-width">Media Query max-width</a></li>
+      <li><a href="#media-query-min-width" id="markdown-toc-media-query-min-width">Media Query min-width</a></li>
+    </ul>
+  </li>
+  <li><a href="#mobile-first-web-design-examples" id="markdown-toc-mobile-first-web-design-examples">Mobile First Web Design Examples</a></li>
+  <li>
+<a href="#advantages-of-mobile-first-approach" id="markdown-toc-advantages-of-mobile-first-approach">Advantages of Mobile First Approach</a>    <ul>
+      <li><a href="#responsive-by-default" id="markdown-toc-responsive-by-default">Responsive by default</a></li>
+      <li><a href="#better-navigation" id="markdown-toc-better-navigation">Better Navigation</a></li>
+      <li><a href="#mobile-first-websites-load-faster" id="markdown-toc-mobile-first-websites-load-faster">Mobile First websites load faster</a></li>
+      <li><a href="#mobile-first-websites-make-no-media-query" id="markdown-toc-mobile-first-websites-make-no-media-query">Mobile First websites make no media query</a></li>
+      <li><a href="#better-design" id="markdown-toc-better-design">Better Design</a></li>
+    </ul>
+  </li>
+  <li><a href="#drawbacks-of-mobile-first-web-designing" id="markdown-toc-drawbacks-of-mobile-first-web-designing">Drawbacks of Mobile First Web Designing</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<p>This approach has some drawbacks. We get a lot of screen real estate in a desktop to fit in menus, logo, header text, slider, sidebar, widgets etc., When it comes to writing media query for smaller screens, we get stuck at whether to display all those features or not.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<h2 id="why-mobile-first-web-design">Why Mobile First Web Design?</h2>
+<p>Mobile First Web Design is a necessity considering the sheer number of smartphone users.</p>
+
+<blockquote>
+  <p>Around 2 billion people are using smartphones in 2017.</p>
+</blockquote>
+
+<p>A statistical analysis predicts that there will be around 3 billion smartphone users by 2020. That is a huge market. What these statistics imply is that <strong>your content on the internet should be easily consumable through smartphones</strong>.</p>
+
+<p>Google has taken steps to make sure designers give importance to responsive web designing. They did it by adding website’s responsiveness as a parameter to rank on their search engine. That one step pushed many website owners to consider responsive web designing.</p>
+
+<p>They want to convey that they are serious about smartphone users. A smartphone is a computer that you carry with you all the time and is always on!</p>
+
+<p>Designing a website only for smartphones is actually ok because even desktop users can consume the content. Don’t you believe me? Then in Chrome, open an article on this website, hold <strong>ctrl</strong> and hit <strong>+</strong> 5 times. You will see the article exactly how it will be shown on a smartphone. It is still readable.</p>
+
+<h2 id="how-to-use-media-query">How to use Media Query?</h2>
+<p>Media Query is basically an if condition used by a browser to determine the screen-width. If satisfactory conditions are met, the CSS inside it will be applied.</p>
+
+<p>Though it seems simple, I had a hard time using it. I needed clarifications on <code class="highlighter-rouge">max-width</code> and <code class="highlighter-rouge">min-width</code>. What are they? Why are they called so?</p>
+
+<p>For the first few design projects, I never bothered finding out what they meant. Don’t do the same mistake. I have an easy way to remember what they exactly mean. I hope it will also help you remember media queries easily.</p>
+
+<h3 id="media-query-max-width">Media Query max-width</h3>
+<p>It means that if the screen width changes below max-width, then the CSS inside it will be applied.</p>
+
+<p>Let’s say we have a media query like the following,</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">600px</span><span class="p">)</span>  <span class="p">{</span>
+        <span class="nc">.xyz</span> <span class="p">{</span>
+            <span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The color changes to blue if the screen width is below 600 pixels.</p>
+
+<p>I remember it this way,</p>
+
+<p><strong>1. The maximum width of the screen is 600px(Not really but it will be easier to understand this way).</strong></p>
+
+<p><strong>2. If you decrease the width, the CSS inside media query will be applied.(when maximum width itself is 600px, you cannot increase it anymore. Can you?)</strong></p>
+
+<div class="xyz"></div>
+
+<p>Consider the box above. It changes color when the size is decreased below 600px. If you are already reading this article on a smartphone then use landscape mode to see the green box. It also changes the content. This can be achieved using <code class="highlighter-rouge">:after</code>.</p>
+
+<h3 id="media-query-min-width">Media Query min-width</h3>
+<p>It means that if the screen width changes above the min-width then the CSS defined inside the media query will be applied.</p>
+
+<p>The media query for the box above can be written like this,</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.xyz</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">600px</span><span class="p">)</span>  <span class="p">{</span>
+        <span class="nc">.xyz</span> <span class="p">{</span>
+            <span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This will have the same effect as the one with <code class="highlighter-rouge">max-width</code>.</p>
+
+<p>I remember it this way,</p>
+
+<p><strong>1. The minimum width of the screen is 600px(Not really).</strong></p>
+
+<p><strong>2. If the screen size increases then the CSS inside media query will be applied.</strong></p>
+
+<p>I’m not sure if that is what they mean but it helps me understand the “Media Query syntax”. I used to go refer to media query articles every time I needed to implement them. Not anymore!</p>
+
+<p><code class="highlighter-rouge">min-width</code> media query is the one we will be using for Mobile First Web Design.</p>
+
+<p>Refer: <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank" rel="nofollow">w3schools media query</a></p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<h2 id="mobile-first-web-design-examples">Mobile First Web Design Examples</h2>
+
+<p>Here is one such design where the CSS is written for mobile devices first, then media query is written for bigger screens.</p>
+
+<p><code class="highlighter-rouge">http://2017.uxlondon.com/</code></p>
+
+<p><amp-img src="/images/mobile-first-web-design-tutorial.png" alt="mobile first web design example" width="800" height="399" layout="responsive"><noscript><img src="/images/mobile-first-web-design-tutorial.png" alt="mobile first web design example" width="800" height="399"></noscript></amp-img></p>
+
+<p>The image depicts the design flow. The header was first designed for mobile, then for tablets and finally for desktops.</p>
+
+<p>Another great example is <a href="https://jekyll-themes.com/hyde/" target="_blank">Hyde</a> by Mark Otto.</p>
+
+<p>This is how it was designed first.</p>
+
+<p><amp-img src="/images/mobile-first-web-design-example-2.png" alt="mobile first web design example" class="border" width="535" height="566" layout="responsive"><noscript><img src="/images/mobile-first-web-design-example-2.png" alt="mobile first web design example" class="border" width="535" height="566"></noscript></amp-img></p>
+
+<p>Then it was designed to adjust for bigger screens. When the screen-size increases, the header becomes the sidebar.</p>
+
+<p><amp-img src="/images/mobile-first-web-design-example-3.png" alt="mobile first web design example" class="border" width="800" height="528" layout="responsive"><noscript><img src="/images/mobile-first-web-design-example-3.png" alt="mobile first web design example" class="border" width="800" height="528"></noscript></amp-img></p>
+
+<p>Now that we have seen some examples, let’s see what are some of the advantages of mobile first web designing,</p>
+
+<h2 id="advantages-of-mobile-first-approach">Advantages of Mobile First Approach</h2>
+
+<h3 id="responsive-by-default">Responsive by default</h3>
+<p>By using mobile first approach, you are designing the website suitable for almost all the devices. The main content will be accessible even if you do not have a desktop website. Check out <a href="https://m.facebook.com/" target="_blank" rel="nofollow">Mobile Facebook</a>.</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
+
+<p>By making the website responsive, you are now targeting all those 2 billion(yet to reach) users.</p>
+
+<h3 id="better-navigation">Better Navigation</h3>
+<p>In a desktop site it is easy to put too many menu items but when it comes to mobile site you do not have the screen real estate to do so. Mobile First approach will restrict you to use only essential menus and items on the screen. Usually, designers restrict themselves to minimal design which is good considering User Experience.</p>
+
+<p><amp-img src="/images/mobile-first-web-design-responsive.png" alt="Mobile First Web Designing Minimal" class="border" width="510" height="60" layout="responsive"><noscript><img src="/images/mobile-first-web-design-responsive.png" alt="Mobile First Web Designing Minimal" class="border" width="510" height="60"></noscript></amp-img></p>
+
+<p>A header from <strong>Lanyon</strong> designed by Mark Otto.</p>
+
+<h3 id="mobile-first-websites-load-faster">Mobile First websites load faster</h3>
+<p>Mobile First websites are built from the ground up with smartphones in mind. Thus suitable, small and only essential assets are used for the mobile website. Heavy assets are loaded only for bigger screen devices. This makes a huge difference in loading speed even on a bad data connection. This is also called <strong>Progressive Enhancement</strong>.</p>
+
+<h3 id="mobile-first-websites-make-no-media-query">Mobile First websites make no media query</h3>
+<p>Mobile First website - since they are built first for mobile and then for desktops - make no media query request if browsed through a smartphone. This saves some time in making the query and then applying CSS inside the query. This is not so significant but it still makes sense for bigger CSS files.</p>
+
+<h3 id="better-design">Better Design</h3>
+<p>Since the website is designed first for mobile, the design will be better than a desktop first website which is squeezed to fit inside a smaller screen. In this approach, you are most likely to place the elements carefully and consciously.</p>
+
+<h2 id="drawbacks-of-mobile-first-web-designing">Drawbacks of Mobile First Web Designing</h2>
+<p>Even though you are using Mobile First approach, you will have to <strong>imagine the desktop site first</strong> and make your way down to smaller screens. But you have to design the mobile site first and then for tablets and finally for desktops.</p>
+
+<p>It may seem like a small issue but only when you sit down to design a real website you will know the pain. I’m not sure if we can ever avoid this problem.</p>
+
+<p>With majority of browsers supporting <a href="/css-grid-framework/" target="_blank">Grid CSS</a> we can find a hassle free solution. In grid CSS, it becomes easier to place any element anywhere you want in the website.</p>
+
+<p>I might sound like a hypocrite now as this website - webjeda blog - is not mobile first. I have changed the layout of the site several times. This is not the final design. I’m definitely going to implement it in the next design.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>A decade ago there were no concerns for designing websites for hand held devices. But now looking at the technological progress, designers should be prepared to change over time. In the near future, they should be ready to build web interfaces for <strong>smart watches</strong> or <strong>Virtual Reality</strong>!</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/mobile-first-web-design/#disqus_thread"><button class="btn">View/Add comments</button></a>

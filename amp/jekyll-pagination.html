@@ -70,10 +70,137 @@
 
 <p class="intro">Jekyll pagination can be easily implemented if correct methods are followed. I often get asked by people that why do they see a blank page when pagination is implemented. I will be discussing those issues in this article.</p>
 
-<p>Pagination is the sequence of numbers assigned to pages in a book. In Jekyll however, each page can have multiple articles. This is a good way of organizing blog posts.</p><ul id="markdown-toc"> <li><a href="#why-pagination" id="markdown-toc-why-pagination">Why pagination?</a></li> <li><a href="#pagination-can-be-used-only-for-posts" id="markdown-toc-pagination-can-be-used-only-for-posts">Pagination can be used only for Posts</a></li> <li><a href="#pagination-can-be-done-only-on-indexhtml" id="markdown-toc-pagination-can-be-done-only-on-indexhtml">Pagination can be done only on index.html</a></li> <li>
-<a href="#how-to-use-pagination-in-jekyll" id="markdown-toc-how-to-use-pagination-in-jekyll">How to use Pagination in Jekyll?</a><ul> <li><a href="#define-pagination-gem-in-configuration" id="markdown-toc-define-pagination-gem-in-configuration">Define Pagination gem in configuration</a></li> <li><a href="#define-pagination-in-configuration" id="markdown-toc-define-pagination-in-configuration">Define Pagination in configuration</a></li>
-</ul> </li> <li><a href="#use-paginatiorposts" id="markdown-toc-use-paginatiorposts">Use paginatior.posts</a></li>
-</ul><h2 id="why-pagination">Why pagination?</h2><p>The application is similar to how books do not have one long single page like a toilet paper. Books have pages. That makes it handy. Having all the pages in one page may be ok if you have few number of posts. But, if you have hundreds of posts, then it is not a good idea to show all those posts in a single page</p><amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad><h2 id="pagination-can-be-used-only-for-posts">Pagination can be used only for Posts</h2><p>Though Jekyll has different items like pages and collections, only Posts can have pagination. This might change in the future.</p><h2 id="pagination-can-be-done-only-on-indexhtml">Pagination can be done only on index.html</h2><p>Jekyll recognizes pagination defined on <code class="highlighter-rouge">index.html</code>. So if you want pagination on <code class="highlighter-rouge">domain.com/blog/</code> then you should create a folder with the name <code class="highlighter-rouge">blog</code> and create an <code class="highlighter-rouge">index.html</code> file inside it where you can define pagination. This is not enough, you should also define pagination path in configuration file as <code class="highlighter-rouge">paginate_path: "/blog/page:num/"</code>.</p><p class="r">For pagination on <code class="highlighter-rouge">/blog/</code>, use <code class="highlighter-rouge">paginate_path: "/blog/page:num/"</code> in the configuration.</p><h2 id="how-to-use-pagination-in-jekyll">How to use Pagination in Jekyll?</h2><p>Adding pagination is not easy when compared to WordPress. WordPress usually paginates by default. Jekyll doesn’t offer that. But Jekyll provides a code snippet that you can use in your blog. This snippet can be modified for our use.</p><p>Read: <a href="https://jekyllrb.com/docs/pagination/" target="_blank">Pagination</a></p><p>But just a copying the code will not work. There are some things to be taken care of before that.</p><h3 id="define-pagination-gem-in-configuration">Define Pagination gem in configuration</h3><p>Pagination used to be innate for Jekyll. But, then it was removed and made into a gem which can be used if required.</p><p>So define the gem in <strong>_config.yml</strong> as shown,</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">plugins</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">jekyll-paginate</span><span class="pi">]</span> </code></pre></figure><h3 id="define-pagination-in-configuration">Define Pagination in configuration</h3><p>In the configuration file <code class="highlighter-rouge">_config.yml</code>, copy the following,</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">paginate</span><span class="pi">:</span> <span class="s">6</span><span class="s">paginate_path</span><span class="pi">:</span> <span class="s">/page:num/</span></code></pre></figure><p>The above statement says that one page will have 6 posts and the naming of consecutive pages will be <code class="highlighter-rouge">/page2/</code>, <code class="highlighter-rouge">/page3/</code> and so on.</p><p class="r">paginate_path should be defined as <code class="highlighter-rouge">/blog/page:num/</code> if you are trying to paginates posts in a page <code class="highlighter-rouge">/blog/</code>. <a href="#pagination-can-be-done-only-on-indexhtml">Go here</a> for more details.</p><p>Click on the below link to see a sample <a href="https://raw.githubusercontent.com/sharu725/bare-minimum/master/_config.yml" target="_blank" rel="nofollow">_config.yml</a> file which is setup for pagination on every 5 posts.</p><h2 id="use-paginatiorposts">Use paginatior.posts</h2><p>Now, open <code class="highlighter-rouge">index.html</code> file. If you have <code class="highlighter-rouge">index.md</code> instead, then rename it to <code class="highlighter-rouge">index.html</code>. Pagination works only on HTML pages.</p><p>While listing the posts, <code class="highlighter-rouge">paginator.posts</code> should be used instead of <code class="highlighter-rouge">site.posts</code>.</p><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- post list --&gt;</span>{% for post in paginator.posts %}<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"{{post.url | prepend: site.baseurl}}"</span><span class="nt">&gt;&lt;h3&gt;</span>{{post.title}}<span class="nt">&lt;/h3&gt;&lt;/a&gt;&lt;/li&gt;</span>{% endfor %}<span class="c">&lt;!-- pagination --&gt;</span>{% if paginator.total_pages &gt; 1 %}<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span>  {% if paginator.previous_page %}<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span> Prev<span class="nt">&lt;/a&gt;</span> {% else %}<span class="nt">&lt;span&gt;</span><span class="ni">&amp;laquo;</span> Prev<span class="nt">&lt;/span&gt;</span> {% endif %} {% for page in (1..paginator.total_pages) %}{% if page == paginator.page %} <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"webjeda"</span><span class="nt">&gt;</span>{{ page }}<span class="nt">&lt;/span&gt;</span>{% elsif page == 1 %} <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>{{ page }}<span class="nt">&lt;/a&gt;</span>{% else %} <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"</span><span class="nt">&gt;</span>{{ page }}<span class="nt">&lt;/a&gt;</span>{% endif %} {% endfor %} {% if paginator.next_page %}<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"</span><span class="nt">&gt;</span>Next <span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span> {% else %}<span class="nt">&lt;span&gt;</span>Next <span class="ni">&amp;raquo;</span><span class="nt">&lt;/span&gt;</span> {% endif %}<span class="nt">&lt;/div&gt;</span>{% endif %}</code></pre></figure><p>Also, add some style so that the pagination looks good.</p><figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.pagination</span> <span class="nt">a</span><span class="o">,</span> <span class="nc">.pagination</span> <span class="nt">span</span> <span class="p">{</span><span class="nl">padding</span><span class="p">:</span> <span class="m">7px</span> <span class="m">18px</span><span class="p">;</span><span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#eee</span><span class="p">;</span><span class="nl">margin-left</span><span class="p">:</span> <span class="m">-2px</span><span class="p">;</span><span class="nl">margin-right</span><span class="p">:</span> <span class="m">-2px</span><span class="p">;</span><span class="nl">background-color</span><span class="p">:</span> <span class="m">#ffffff</span><span class="p">;</span><span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span><span class="nc">.pagination</span> <span class="nt">a</span> <span class="p">{</span><span class="err">&amp;:hover</span> <span class="err">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="m">#f1f1f1</span><span class="p">;</span><span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span><span class="p">}</span> <span class="err">}</span><span class="nc">.pagination</span> <span class="p">{</span><span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span> <span class="p">}</span></code></pre></figure><p>That should render something like this,</p><p><amp-img src="/images/jekyll-pagination-example.png" alt="Jekyll Pagination Example" width="408" height="69" layout="responsive"><noscript><img src="/images/jekyll-pagination-example.png" alt="Jekyll Pagination Example" width="408" height="69"></noscript></amp-img></p><p>If you are looking for simple post suggestions at the end of every post, then please refer to these articles.</p><p>Read: <a href="/related-post-jekyll/" target="_blank">How to add previous next posts</a></p><p>Read: <a href="/jekyll-related-posts/" target="_blank">How to add related posts</a></p><amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad><p>If you observe a blank page after implementing Jekyll pagination, then you must have missed one or more steps I have mentioned here.</p><p>Let me know if you could successfully implement pagination on your blog. If not please comment and let me know the issue.</p>
+<p>Pagination is the sequence of numbers assigned to pages in a book. In Jekyll however, each page can have multiple articles. This is a good way of organizing blog posts.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-pagination" id="markdown-toc-why-pagination">Why pagination?</a></li>
+  <li><a href="#pagination-can-be-used-only-for-posts" id="markdown-toc-pagination-can-be-used-only-for-posts">Pagination can be used only for Posts</a></li>
+  <li><a href="#pagination-can-be-done-only-on-indexhtml" id="markdown-toc-pagination-can-be-done-only-on-indexhtml">Pagination can be done only on index.html</a></li>
+  <li>
+<a href="#how-to-use-pagination-in-jekyll" id="markdown-toc-how-to-use-pagination-in-jekyll">How to use Pagination in Jekyll?</a>    <ul>
+      <li><a href="#define-pagination-gem-in-configuration" id="markdown-toc-define-pagination-gem-in-configuration">Define Pagination gem in configuration</a></li>
+      <li><a href="#define-pagination-in-configuration" id="markdown-toc-define-pagination-in-configuration">Define Pagination in configuration</a></li>
+    </ul>
+  </li>
+  <li><a href="#use-paginatiorposts" id="markdown-toc-use-paginatiorposts">Use paginatior.posts</a></li>
+</ul>
+
+<h2 id="why-pagination">Why pagination?</h2>
+
+<p>The application is similar to how books do not have one long single page like a toilet paper. Books have pages. That makes it handy. Having all the pages in one page may be ok if you have few number of posts. But, if you have hundreds of posts, then it is not a good idea to show all those posts in a single page</p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<h2 id="pagination-can-be-used-only-for-posts">Pagination can be used only for Posts</h2>
+<p>Though Jekyll has different items like pages and collections, only Posts can have pagination. This might change in the future.</p>
+
+<h2 id="pagination-can-be-done-only-on-indexhtml">Pagination can be done only on index.html</h2>
+<p>Jekyll recognizes pagination defined on <code class="highlighter-rouge">index.html</code>. So if you want pagination on <code class="highlighter-rouge">domain.com/blog/</code> then you should create a folder with the name <code class="highlighter-rouge">blog</code> and create an <code class="highlighter-rouge">index.html</code> file inside it where you can define pagination. This is not enough, you should also define pagination path in configuration file as <code class="highlighter-rouge">paginate_path: "/blog/page:num/"</code>.</p>
+
+<p class="r">For pagination on <code class="highlighter-rouge">/blog/</code>, use <code class="highlighter-rouge">paginate_path: "/blog/page:num/"</code> in the configuration.</p>
+
+<h2 id="how-to-use-pagination-in-jekyll">How to use Pagination in Jekyll?</h2>
+<p>Adding pagination is not easy when compared to WordPress. WordPress usually paginates by default. Jekyll doesn’t offer that. But Jekyll provides a code snippet that you can use in your blog. This snippet can be modified for our use.</p>
+
+<p>Read: <a href="https://jekyllrb.com/docs/pagination/" target="_blank">Pagination</a></p>
+
+<p>But just a copying the code will not work. There are some things to be taken care of before that.</p>
+
+<h3 id="define-pagination-gem-in-configuration">Define Pagination gem in configuration</h3>
+<p>Pagination used to be innate for Jekyll. But, then it was removed and made into a gem which can be used if required.</p>
+
+<p>So define the gem in <strong>_config.yml</strong> as shown,</p>
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">plugins</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">jekyll-paginate</span><span class="pi">]</span> </code></pre></figure>
+
+<h3 id="define-pagination-in-configuration">Define Pagination in configuration</h3>
+<p>In the configuration file <code class="highlighter-rouge">_config.yml</code>, copy the following,</p>
+
+<figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">paginate</span><span class="pi">:</span> <span class="s">6</span>
+<span class="s">paginate_path</span><span class="pi">:</span> <span class="s">/page:num/</span></code></pre></figure>
+
+<p>The above statement says that one page will have 6 posts and the naming of consecutive pages will be <code class="highlighter-rouge">/page2/</code>, <code class="highlighter-rouge">/page3/</code> and so on.</p>
+
+<p class="r">paginate_path should be defined as <code class="highlighter-rouge">/blog/page:num/</code> if you are trying to paginates posts in a page <code class="highlighter-rouge">/blog/</code>. <a href="#pagination-can-be-done-only-on-indexhtml">Go here</a> for more details.</p>
+
+<p>Click on the below link to see a sample <a href="https://raw.githubusercontent.com/sharu725/bare-minimum/master/_config.yml" target="_blank" rel="nofollow">_config.yml</a> file which is setup for pagination on every 5 posts.</p>
+
+<h2 id="use-paginatiorposts">Use paginatior.posts</h2>
+
+<p>Now, open <code class="highlighter-rouge">index.html</code> file. If you have <code class="highlighter-rouge">index.md</code> instead, then rename it to <code class="highlighter-rouge">index.html</code>. Pagination works only on HTML pages.</p>
+
+<p>While listing the posts, <code class="highlighter-rouge">paginator.posts</code> should be used instead of <code class="highlighter-rouge">site.posts</code>.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- post list --&gt;</span>
+{% for post in paginator.posts %}
+<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"{{post.url | prepend: site.baseurl}}"</span><span class="nt">&gt;&lt;h3&gt;</span>{{post.title}}<span class="nt">&lt;/h3&gt;&lt;/a&gt;&lt;/li&gt;</span>
+{% endfor %}
+
+
+<span class="c">&lt;!-- pagination --&gt;</span>
+{% if paginator.total_pages &gt; 1 %}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pagination"</span><span class="nt">&gt;</span> 
+  {% if paginator.previous_page %}
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"</span><span class="nt">&gt;</span><span class="ni">&amp;laquo;</span> Prev<span class="nt">&lt;/a&gt;</span>
+  {% else %}
+    <span class="nt">&lt;span&gt;</span><span class="ni">&amp;laquo;</span> Prev<span class="nt">&lt;/span&gt;</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"webjeda"</span><span class="nt">&gt;</span>{{ page }}<span class="nt">&lt;/span&gt;</span>
+    {% elsif page == 1 %}
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>{{ page }}<span class="nt">&lt;/a&gt;</span>
+    {% else %}
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"</span><span class="nt">&gt;</span>{{ page }}<span class="nt">&lt;/a&gt;</span>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"</span><span class="nt">&gt;</span>Next <span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
+  {% else %}
+    <span class="nt">&lt;span&gt;</span>Next <span class="ni">&amp;raquo;</span><span class="nt">&lt;/span&gt;</span>
+  {% endif %}
+<span class="nt">&lt;/div&gt;</span>
+{% endif %}</code></pre></figure>
+
+<p>Also, add some style so that the pagination looks good.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.pagination</span> <span class="nt">a</span><span class="o">,</span> <span class="nc">.pagination</span> <span class="nt">span</span> <span class="p">{</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">7px</span> <span class="m">18px</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="m">#eee</span><span class="p">;</span>
+    <span class="nl">margin-left</span><span class="p">:</span> <span class="m">-2px</span><span class="p">;</span>
+    <span class="nl">margin-right</span><span class="p">:</span> <span class="m">-2px</span><span class="p">;</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#ffffff</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="nc">.pagination</span> <span class="nt">a</span> <span class="p">{</span>    
+    <span class="err">&amp;:hover</span> <span class="err">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f1f1f1</span><span class="p">;</span>
+        <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="err">}</span>
+
+<span class="nc">.pagination</span> <span class="p">{</span>
+    <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+ <span class="p">}</span></code></pre></figure>
+
+<p>That should render something like this,</p>
+
+<p><amp-img src="/images/jekyll-pagination-example.png" alt="Jekyll Pagination Example" width="408" height="69" layout="responsive"><noscript><img src="/images/jekyll-pagination-example.png" alt="Jekyll Pagination Example" width="408" height="69"></noscript></amp-img></p>
+
+<p>If you are looking for simple post suggestions at the end of every post, then please refer to these articles.</p>
+
+<p>Read: <a href="/related-post-jekyll/" target="_blank">How to add previous next posts</a></p>
+
+<p>Read: <a href="/jekyll-related-posts/" target="_blank">How to add related posts</a></p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass2 adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041"></amp-ad>
+
+<p>If you observe a blank page after implementing Jekyll pagination, then you must have missed one or more steps I have mentioned here.</p>
+
+<p>Let me know if you could successfully implement pagination on your blog. If not please comment and let me know the issue.</p>
+
 
 <p class="text-center">
 <a href="https://blog.webjeda.com/jekyll-pagination/#disqus_thread"><button class="btn">View/Add comments</button></a>
