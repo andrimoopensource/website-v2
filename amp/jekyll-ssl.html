@@ -108,7 +108,7 @@
 <p>On August 06 2014 Google announced that <a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html" rel="nofollow" target="_blank">https will be considered for ranking signal</a>. They took this measure to keep everybody safe over the web. So by using SSL you can improve your website ranking and your users will feel safe and trust the product or service you are providing.</p>
 
 <h2 class="clear" id="why-im-not-using-ssl-on-this-jekyll-blog">Why I’m not using SSL on this Jekyll blog?</h2>
-<p class="right"><amp-img src="/images/nallikayi-articles-github-pages-ssl.jpg" alt="Jekyll and GitHub pages https" layout="responsive"><noscript><img src="/images/nallikayi-articles-github-pages-ssl.jpg" alt="Jekyll and GitHub pages https"></noscript></amp-img></p>
+<p class="right"><amp-img src="/images/nallikayi-articles-github-pages-ssl.jpg" alt="Jekyll and GitHub pages https" width="381" height="75" layout="responsive"><noscript><img src="/images/nallikayi-articles-github-pages-ssl.jpg" alt="Jekyll and GitHub pages https" width="381" height="75"></noscript></amp-img></p>
 
 <p><strong>Update: I did not use SSL for some reasons that I have mentioned below. Currently I’m using SSL.</strong></p>
 
@@ -138,7 +138,7 @@
 <h3 id="enforce-https">Enforce https</h3>
 <p>If you are not using a custom domain name then you can use the <strong>Enforce HTTPS</strong> option found in settings page. It redirects the website to https from server side which is better than doing it from client side.</p>
 
-<p><amp-img src="/images/github-pages-enforce-https.png" alt="Github Pages enforce https" layout="responsive"><noscript><img src="/images/github-pages-enforce-https.png" alt="Github Pages enforce https"></noscript></amp-img></p>
+<p><amp-img src="/images/github-pages-enforce-https.png" alt="Github Pages enforce https" width="742" height="108" layout="responsive"><noscript><img src="/images/github-pages-enforce-https.png" alt="Github Pages enforce https" width="742" height="108"></noscript></amp-img></p>
 
 <p>If you are using a custom doamin then this option will not be available. You have to skip to this <a href="#ssl-on-custom-domain">step</a>.</p>
 
@@ -173,7 +173,7 @@
 
 <p>It also has other advantages like handling DNS, analytics, providing SSL certificate - flexible and paid, firewall, speed optimization, caching etc., Watch the video on their website to know how it works. And it doesn’t matter where you have bought your domain and where you are hosting your website.</p>
 
-<p><amp-img src="/images/add-site-cloudflare-jekyll-ssl.jpg" alt="Add a site cloudflare jekyll ssl" layout="responsive"><noscript><img src="/images/add-site-cloudflare-jekyll-ssl.jpg" alt="Add a site cloudflare jekyll ssl"></noscript></amp-img></p>
+<p><amp-img src="/images/add-site-cloudflare-jekyll-ssl.jpg" alt="Add a site cloudflare jekyll ssl" width="700" height="236" layout="responsive"><noscript><img src="/images/add-site-cloudflare-jekyll-ssl.jpg" alt="Add a site cloudflare jekyll ssl" width="700" height="236"></noscript></amp-img></p>
 
 <p>Among these, we are concentrating only on DNS handling. So create an account in CloudFlare. Now select <strong>Add site</strong> option, enter your domain and click on <strong>Begin scan</strong>.</p>
 
@@ -181,7 +181,7 @@
 
 <p class="clear">Now select a package that suits your requirement. I would suggest you to try the free version first and then upgrade if you like their service.</p>
 
-<p class="right half"><amp-img src="/images/change-dns-cloudflare-jekyll-github-ssl.jpg" alt="change DNS CloudFlare Jekyll GitHub ssl" layout="responsive"><noscript><img src="/images/change-dns-cloudflare-jekyll-github-ssl.jpg" alt="change DNS CloudFlare Jekyll GitHub ssl"></noscript></amp-img></p>
+<p class="right half"><amp-img src="/images/change-dns-cloudflare-jekyll-github-ssl.jpg" alt="change DNS CloudFlare Jekyll GitHub ssl" width="399" height="422" layout="responsive"><noscript><img src="/images/change-dns-cloudflare-jekyll-github-ssl.jpg" alt="change DNS CloudFlare Jekyll GitHub ssl" width="399" height="422"></noscript></amp-img></p>
 
 <p>Now is the crucial part where you have to change the name servers (NS31.DOMAINCONTROL.COM) in your domain registrar to the following or whichever is provided to you by CloudFlare.</p>
 
@@ -193,13 +193,13 @@
 
 <h3 class="clear" id="step-2-use-flexible-ssl">Step 2: Use ‘Flexible SSL’</h3>
 
-<p><amp-img src="/images/cloudflare-flexible-ssl-jekyll.jpg" alt="cloudflare flexible ssl jekyll" layout="responsive"><noscript><img src="/images/cloudflare-flexible-ssl-jekyll.jpg" alt="cloudflare flexible ssl jekyll"></noscript></amp-img></p>
+<p><amp-img src="/images/cloudflare-flexible-ssl-jekyll.jpg" alt="cloudflare flexible ssl jekyll" width="700" height="320" layout="responsive"><noscript><img src="/images/cloudflare-flexible-ssl-jekyll.jpg" alt="cloudflare flexible ssl jekyll" width="700" height="320"></noscript></amp-img></p>
 
 <p>Now navigate to <strong>Crypto</strong> option in CloudFlare. You should see an option called <strong>SSL</strong>. In the drop-down menu select <strong>Flexible</strong>. This is all the changes we need to do in the server end.</p>
 
 <h3 class="clear" id="step-3-changes-to-be-made-in-cloudflare">Step 3: Changes to be made in CloudFlare</h3>
 
-<p><amp-img src="/images/cloudflare-https-redirect-page-rule-jekyll-ssl.png" alt="cloudflare https redirect page rule jekyll ssl" layout="responsive"><noscript><img src="/images/cloudflare-https-redirect-page-rule-jekyll-ssl.png" alt="cloudflare https redirect page rule jekyll ssl"></noscript></amp-img></p>
+<p><amp-img src="/images/cloudflare-https-redirect-page-rule-jekyll-ssl.png" alt="cloudflare https redirect page rule jekyll ssl" width="600" height="346" layout="responsive"><noscript><img src="/images/cloudflare-https-redirect-page-rule-jekyll-ssl.png" alt="cloudflare https redirect page rule jekyll ssl" width="600" height="346"></noscript></amp-img></p>
 
 <p>Use <strong>Page-rule</strong> to redirect http to https. Use * symbol to create dynamic patterns that match many URLs.</p>
 <div class="clear"></div>
