@@ -1,0 +1,8 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="296px" height="255px"
+	 viewBox="0 0 296 255" enable-background="new 0 0 296 255" xml:space="preserve">
+<text transform="matrix(1 0 0 1 16 36)"><tspan x="0" y="0" font-size="27">Name</tspan><tspan x="0" y="97.2" font-size="27">Email</tspan></text>
+<rect x="18" y="50" fill="none" stroke="#58595B" stroke-miterlimit="10" width="265" height="40"/>
+<rect x="18" y="143" fill="none" stroke="#58595B" stroke-miterlimit="10" width="265" height="40"/>
+<path fill="#939598" stroke="#939598" stroke-miterlimit="10" d="M119,234c0,2.209-1.791,4-4,4H23c-2.209,0-4-1.791-4-4v-25 c0-2.209,1.791-4,4-4h92c2.209,0,4,1.791,4,4V234z"/>
+<text transform="matrix(1 0 0 1 38 231)" font-size="27">Send</text>
+</svg>

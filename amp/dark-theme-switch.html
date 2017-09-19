@@ -1,0 +1,253 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Night Mode Toggle Across the Website!</title>
+    <link rel="canonical" href="https://blog.webjeda.com/dark-theme-switch/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        
+          .container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7)}.main-content{margin:0 10px}amp-img{max-width:100%}footer{text-align:center;padding:1em;background:#000;color:#eee}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7)}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#4747f5}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#4747f5}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#5e5ee6}.highlight .nv{color:#4747f5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#4747f5}.highlight .vg{color:#4747f5}.highlight .vi{color:#4747f5}.highlight .il{color:#099}
+
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    
+  
+    <!-- Open Graph -->
+    <meta property="fb:app_id" content="549480635219583">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Night Mode Toggle Across the Website!">
+    <meta property="og:url" content="https://blog.webjeda.comamp/dark-theme-switch">
+    <meta property="og:site_name" content="WebJeda Blog">
+    <meta property="og:description" content="Changing background color to a darker one helps reading under low light. This can be achieved easily with JS. But making it to remember the change across the site is a little tricky. Here is a way to do it.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://blog.webjeda.com/thumbs/toggle-night-mode.png" />
+    <meta property="og:image:alt" content="Night Mode Toggle Across the Website!" />
+    <meta property="article:publisher" content="http://www.facebook.com/webjeda" />
+    <meta property="article:author" content="https://www.facebook.com/sharu725" />
+    <meta property="article:published_time" content="2016-11-12 00:00:00 +0530" />
+
+
+   <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Night Mode Toggle Across the Website!">
+    <meta name="twitter:description" content="Changing background color to a darker one helps reading under low light. This can be achieved easily with JS. But making it to remember the change across the site is a little tricky. Here is a way to do it.">
+    <meta name="twitter:site" content="@webjeda" />
+    <meta name="twitter:creator" content="@sharathdt">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "name": "Night Mode Toggle Across the Website!",
+        "headline": "Night Mode Toggle Across the Website!",
+        "image": "https://blog.webjeda.com/thumbs/toggle-night-mode.png",
+        "description": "Changing background color to a darker one helps reading under low light. This can be achieved easily with JS. But making it to remember the change across the site is a little tricky. Here is a way to do it.",
+        "url": "https://blog.webjeda.comamp/dark-theme-switch",
+        "datePublished": "2016-11-12",
+         "author": {
+          "@type": "Person",
+          "name": "sharath.dt"
+        }
+      }
+    </script>
+    
+    <!-- Disqus comments -->
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+    
+  </head>
+  
+<body>
+<div class="container">
+<div class="main-content">
+<h1 class="post-title">Night Mode Toggle Across the Website!</h1>
+<p class="date"><small>12 Nov 2016 - sharathdt</small></p>    
+<amp-img src="https://blog.webjeda.com/thumbs/toggle-night-mode.png" alt="Night Mode Toggle Across the Website!" width="600" height="375" layout="responsive"><noscript><img src="https://blog.webjeda.com/thumbs/toggle-night-mode.png" alt="Night Mode Toggle Across the Website!" width="600" height="375"></noscript></amp-img>
+
+<p class="intro">Changing background color to a darker one helps reading under low light. This can be achieved easily with JS. But making it to remember the change across the site is a little tricky. Here is a way to do it.</p>
+
+<p>I’m not proud of using smartphone to read articles on the bed. But this is a habit many people have. Reading in low light is bad for your eyes if the phone emits a lot of bright light.</p>
+
+<p><amp-img src="/images/reading-at-night-on-smartphone-dark-mode.jpg" alt="Dark mode" width="900" height="400" layout="responsive"><noscript><img src="/images/reading-at-night-on-smartphone-dark-mode.jpg" alt="Dark mode" width="900" height="400"></noscript></amp-img></p>
+
+<p>There are <a href="https://play.google.com/store/apps/details?id=com.urbandroid.lux&amp;hl=en" target="_blank" rel="nofollow">apps</a> that you can use to reduce the light. A better option is to have a dark theme. Reddit already has this option. Maybe they’re aware of their users being nocturnal!</p>
+
+<ul id="markdown-toc">
+  <li><a href="#how-to-create-a-dark-mode" id="markdown-toc-how-to-create-a-dark-mode">How to create a dark mode?</a></li>
+  <li><a href="#store-value-across-the-domain" id="markdown-toc-store-value-across-the-domain">Store value across the domain</a></li>
+  <li><a href="#sessionstorage-to-switch-theme" id="markdown-toc-sessionstorage-to-switch-theme">sessionStorage to switch theme</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<h2 id="how-to-create-a-dark-mode">How to create a dark mode?</h2>
+<p>When I thought of this problem, I knew JavaScript can do it but <a href="https://js.webjeda.com" target="_blank">I’m a noob in JS</a>. I don’t really create my own script. I copy from some pre-existing script and make changes as I like.</p>
+
+<p>But this seemed very easy and I gave it a try. I wrote something on my own which was a horrible code.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body</span> <span class="na">style=</span><span class="s">"background-color: rgb(255, 255, 255)"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>The button below will switch background color!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"dark()"</span><span class="nt">&gt;</span>Switch color<span class="nt">&lt;/button&gt;</span>
+    
+    
+    <span class="nt">&lt;script&gt;</span>
+    <span class="kd">function</span> <span class="nx">dark</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">==</span> <span class="s1">'rgb(255, 255, 255)'</span><span class="p">)</span> <span class="p">{</span>
+
+                <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">'#333'</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+                <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">'rgb(255, 255, 255)'</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nt">&lt;/script&gt;</span>
+    
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>Copy the code, save as HTML file and open in a browser to see how this works. It is pretty much like the below box.</p>
+
+<div class="dark-div" id="dark-div" style="background-color: rgb(255, 255, 255)" onclick="dark()">
+    <p>Click me</p>
+</div>
+
+<p>This one works as expected. But I tell you this wasn’t easy. First thing is that the JS recognized only RGB code and not HEX. It took me a while to figure that out. It switches background color inline only. Also if you refresh the browser, background color goes back to default.</p>
+
+<h2 id="store-value-across-the-domain">Store value across the domain</h2>
+
+<p>The problem with this approach is that it is specific to a page. If you switch the theme to dark and navigate to another page in the same domain then it will go back to its normal light theme.</p>
+
+<p>We want it to remember the last switch and keep it across the domain. So if a user switches the theme once then it should remain switched unless he restarts the browser.</p>
+
+<p>Using cookies is one option but it is so yesterday. Europeans know the headache of using cookies on a website.</p>
+
+<p>A better way is to use either <code class="highlighter-rouge">localStorage</code> or <code class="highlighter-rouge">sessionStorage</code>. HTML5 has these options to store up to 5MB of data until you close the browser(sessionStorage) or clear the cache(localStorage).</p>
+
+<p>After searching through StackOverflow and MDN, I came up with a working code.</p>
+
+<h2 id="sessionstorage-to-switch-theme">sessionStorage to switch theme</h2>
+
+<p>Here is the same box which not only switches its color but also retains it even if you refresh the page!</p>
+
+<p>Try navigating to some other page and come back. This box will still be dark!</p>
+
+<div class="dark-div" id="dark-div-2" style="background-color: rgb(255, 255, 255)" onclick="darker()">
+    <p>Switch</p>
+</div>
+<style>
+.dark-div {
+    padding:30px 60px; 
+    border: 1px dashed #000; 
+    width: 300px;
+    text-align:center;
+    margin: 10px;
+    cursor: pointer;
+
+}
+</style>
+
+<amp-ad layout="responsive" width="300" height="250" class="adclass adsbygoogle" style="display:block" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645" data-ad-format="auto"></amp-ad>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>This uses sessionStorage. If you close the browser and open this link again, you’ll see that the box goes back to default background.</p>
+
+<p>I have used this in my new theme <a href="http://webjeda.com/hagura/" target="_blank">Hagura</a>.</p>
+
+<p>Here is the code I have used to make this happen.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'bg'</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'cc'</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">darker</span><span class="p">()</span> <span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span> <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'bg'</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'rgb(255, 255, 255)'</span><span class="p">)</span> <span class="p">{</span>
+         
+            <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'bg'</span><span class="p">,</span> <span class="s1">'rgb(6, 23, 37)'</span><span class="p">);</span>
+            <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'cc'</span><span class="p">,</span> <span class="s1">'#777'</span><span class="p">);</span>
+            
+         
+     <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'bg'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'bg'</span><span class="p">,</span> <span class="s1">'rgb(6, 23, 37)'</span><span class="p">);</span>
+        <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'cc'</span><span class="p">,</span> <span class="s1">'#777'</span><span class="p">);</span>
+        
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span><span class="p">(</span> <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'bg'</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'rgb(6, 23, 37)'</span><span class="p">)</span> <span class="p">{</span>
+        
+        <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'bg'</span><span class="p">,</span> <span class="s1">'rgb(255, 255, 255)'</span><span class="p">);</span>
+        <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">'cc'</span><span class="p">,</span> <span class="s1">'#333'</span><span class="p">);</span>
+        
+  
+    <span class="p">}</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'bg'</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'cc'</span><span class="p">);</span>
+
+<span class="p">}</span></code></pre></figure>
+
+<p>This for me looks way too long to do such a simple job. But as I told before I’m a novice JavaScript coder. I coded it to get the work done. I think it can be improved.</p>
+
+<p><strong>1.</strong> It needs to be simple. If you observe the code, there is a lot of repetitive values which can be minimized.</p>
+
+<p><strong>2.</strong> <strike>It should not refresh. The changed color will not apply unless the page is refreshed. This is an inconvenience. I hope this can be solved by someone who knows JS.</strike></p>
+
+<p>I figured it out. Now the color switches without refresh!</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Though it isn’t perfect yet, I think it can be used to implement theme switching or any other change that is supposed to happen across the website.</p>
+
+<p>Let me know if you have successfully implemented this on your website.</p>
+
+<p>Thanks for reading!</p>
+
+<script>function dark(){"rgb(255, 255, 255)"==document.getElementById("dark-div").style.backgroundColor?(document.getElementById("dark-div").style.backgroundColor="rgb(6, 23, 37)",document.getElementById("dark-div").style.color="rgb(255, 255, 255)"):(document.getElementById("dark-div").style.backgroundColor="rgb(255, 255, 255)",document.getElementById("dark-div").style.color="rgb(6, 23, 37)")};</script>
+
+<script>
+document.getElementById("dark-div-2").style.backgroundColor=sessionStorage.getItem("bg");document.getElementById("dark-div-2").style.color=sessionStorage.getItem("cc");function darker(){"rgb(255, 255, 255)"===sessionStorage.getItem("bg")?(sessionStorage.setItem("bg","rgb(6, 23, 37)"),sessionStorage.setItem("cc","#777")):null==sessionStorage.getItem("bg")?(sessionStorage.setItem("bg","rgb(6, 23, 37)"),sessionStorage.setItem("cc","#777")):"rgb(6, 23, 37)"===sessionStorage.getItem("bg")&&(sessionStorage.setItem("bg","rgb(255, 255, 255)"),sessionStorage.setItem("cc","#333"));document.getElementById("dark-div-2").style.backgroundColor=sessionStorage.getItem("bg");document.getElementById("dark-div-2").style.color=sessionStorage.getItem("cc")}
+;
+</script>
+
+
+
+<amp-iframe width="600" height="300"
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+            resizable
+            src="https://jekyll-themes.com/disqus-for-wj.html">
+            <div overflow></div>
+</amp-iframe>
+
+</div>
+</div>
+<footer>
+    © copyrights by <a href="http://webjeda.com">webjeda</a>
+</footer>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-71358787-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+</body>
+
+</html>

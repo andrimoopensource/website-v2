@@ -1,0 +1,188 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Crunch your Jekyll HTML to negligible size!</title>
+    <link rel="canonical" href="https://blog.webjeda.com/compress-html-jekyll/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        
+          .container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7)}.main-content{margin:0 10px}amp-img{max-width:100%}footer{text-align:center;padding:1em;background:#000;color:#eee}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7)}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#4747f5}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#4747f5}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#5e5ee6}.highlight .nv{color:#4747f5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#4747f5}.highlight .vg{color:#4747f5}.highlight .vi{color:#4747f5}.highlight .il{color:#099}
+
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    
+  
+    <!-- Open Graph -->
+    <meta property="fb:app_id" content="549480635219583">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Crunch your Jekyll HTML to negligible size!">
+    <meta property="og:url" content="https://blog.webjeda.comamp/compress-html-jekyll">
+    <meta property="og:site_name" content="WebJeda Blog">
+    <meta property="og:description" content="Jekyll minify html using liquid! Minifying CSS and JS is already in practice but compressing html is not practiced by everyone. Since Jekyll posts and pages are in markdown and you may not be able to minify all of them using a task runner. Learn how to minify Jekyll html using this method.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://blog.webjeda.com/thumbs/how-to-minify-jekyll-html.png" />
+    <meta property="og:image:alt" content="Crunch your Jekyll HTML to negligible size!" />
+    <meta property="article:publisher" content="http://www.facebook.com/webjeda" />
+    <meta property="article:author" content="https://www.facebook.com/sharu725" />
+    <meta property="article:published_time" content="2016-02-02 00:00:00 +0530" />
+
+
+   <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Crunch your Jekyll HTML to negligible size!">
+    <meta name="twitter:description" content="Jekyll minify html using liquid! Minifying CSS and JS is already in practice but compressing html is not practiced by everyone. Since Jekyll posts and pages are in markdown and you may not be able to minify all of them using a task runner. Learn how to minify Jekyll html using this method.">
+    <meta name="twitter:site" content="@webjeda" />
+    <meta name="twitter:creator" content="@sharathdt">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "name": "Crunch your Jekyll HTML to negligible size!",
+        "headline": "Crunch your Jekyll HTML to negligible size!",
+        "image": "https://blog.webjeda.com/thumbs/how-to-minify-jekyll-html.png",
+        "description": "Jekyll minify html using liquid! Minifying CSS and JS is already in practice but compressing html is not practiced by everyone. Since Jekyll posts and pages are in markdown and you may not be able to minify all of them using a task runner. Learn how to minify Jekyll html using this method.",
+        "url": "https://blog.webjeda.comamp/compress-html-jekyll",
+        "datePublished": "2016-02-02",
+         "author": {
+          "@type": "Person",
+          "name": "sharath.dt"
+        }
+      }
+    </script>
+    
+    <!-- Disqus comments -->
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+    
+  </head>
+  
+<body>
+<div class="container">
+<div class="main-content">
+<h1 class="post-title">Crunch your Jekyll HTML to negligible size!</h1>
+<p class="date"><small>02 Feb 2016 - sharathdt</small></p>    
+<amp-img src="https://blog.webjeda.com/thumbs/how-to-minify-jekyll-html.png" alt="Crunch your Jekyll HTML to negligible size!" width="600" height="375" layout="responsive"><noscript><img src="https://blog.webjeda.com/thumbs/how-to-minify-jekyll-html.png" alt="Crunch your Jekyll HTML to negligible size!" width="600" height="375"></noscript></amp-img>
+
+<p class="intro">Jekyll minify html using liquid! Minifying CSS and JS is already in practice but compressing html is not practiced by everyone. Since Jekyll posts and pages are in markdown and you may not be able to minify all of them using a task runner. Learn how to minify Jekyll html using this method.</p>
+
+<h2 id="why-do-we-have-to-minify-html">Why do we have to minify HTML?</h2>
+<p>Speed is a factor to rank high in Google search page. Minifying HTML can lead to an increase in speeds around 5% or more. Lighter the website easier to load even on a slow connection. Usually, html file consists of a lot of empty spaces, comments in between <!-- and -->, new lines, blank spaces etc., It is good to keep what really matters and omit the rest.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-do-we-have-to-minify-html" id="markdown-toc-why-do-we-have-to-minify-html">Why do we have to minify HTML?</a></li>
+  <li>
+<a href="#how-to-minify-jekyll-html" id="markdown-toc-how-to-minify-jekyll-html">How to minify Jekyll html?</a>    <ul>
+      <li><a href="#step-1-download-compress-html" id="markdown-toc-step-1-download-compress-html">Step 1: Download Compress html</a></li>
+      <li><a href="#step-2-place-compress-in-layouts" id="markdown-toc-step-2-place-compress-in-layouts">Step 2: Place Compress in layouts</a></li>
+      <li><a href="#step-3-add-front-matter-to-default-layout" id="markdown-toc-step-3-add-front-matter-to-default-layout">Step 3: Add front matter to default layout</a></li>
+      <li><a href="#step-4-save-changes" id="markdown-toc-step-4-save-changes">Step 4: Save changes</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Though minifying CSS and JS is largely practiced, minifying HTML is not given such an importance. Maybe because there is not much to minify compared to static files like CSS and JS. But it does help loading your website at a better speed even on 2G connections. Moreover, <a href="https://developers.google.com/speed/pagespeed/insights/" rel="nofollow" target="_blank">PageSpeed</a> recommends minifying HTML.</p>
+
+<p>I have seen huge benefits by minifying my Jekyll blog. What if I tell you that minifying reduces the file size by more than 20%! May be because I have a lot of blank spaces and new lines in the un-minified version. And that’s an improvement I shouldn’t be missing.</p>
+
+<amp-ad layout="responsive" width="300" height="250" class="adclass adsbygoogle" style="display:block" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645" data-ad-format="auto"></amp-ad>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<h2 id="how-to-minify-jekyll-html">How to minify Jekyll html?</h2>
+
+<p>So far in my tutorials, I have never used command line interface. Not that I hate it but I think it’s difficult for beginners to comprehend. Likewise, you can minify html using <code class="highlighter-rouge">Grunt</code> or <code class="highlighter-rouge">Gulp</code> task runners but for a beginner they might seem alien technologies. And when we are using an automatic minifier that takes care of everything then why do we need a task runner?! And also I prefer solutions that does not involve plugins.</p>
+
+<p>Now to minify Jekyll blog,</p>
+
+<h3 id="step-1-download-compress-html">Step 1: Download Compress html</h3>
+<p>Go to <a href="http://jch.penibelst.de/" rel="nofollow" target="_blank">this link</a> and download the <code class="highlighter-rouge">compress.html</code> file. It should be under the <strong>Installation</strong> heading.</p>
+
+<h3 id="step-2-place-compress-in-layouts">Step 2: Place Compress in layouts</h3>
+<p>Place this html file inside your <code class="highlighter-rouge">_layout</code> folder.</p>
+
+<h3 id="step-3-add-front-matter-to-default-layout">Step 3: Add front matter to default layout</h3>
+<p>Open <code class="highlighter-rouge">default.html</code> in <code class="highlighter-rouge">_layouts</code> folder and copy the below front matter at the top of the page. If you do not have <code class="highlighter-rouge">default.html</code> then use a top level layout which is used in all pages.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: compress
+---</code></pre></figure>
+
+<p>The <code class="highlighter-rouge">default.html</code> should look something like this after copying the code</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">---
+layout: compress
+---
+
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+.
+.
+.
+
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<h3 id="step-4-save-changes">Step 4: Save changes</h3>
+<p>Save and commit the changes. By default the <code class="highlighter-rouge">compress</code> layout replaces contiguous whitespace with a single whitespace character. But if you want additional options then you can use this snippet inside your <code class="highlighter-rouge">_config.yml</code> file.</p>
+
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">compress_html</span><span class="pi">:</span>
+    <span class="s">clippings</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="s">comments</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="s">endings</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="s">ignore</span><span class="pi">:</span>
+    <span class="s">envs</span><span class="pi">:</span> <span class="pi">[]</span>
+    <span class="s">blanklines</span><span class="pi">:</span> <span class="s">false</span>
+    <span class="s">profile</span><span class="pi">:</span> <span class="s">false</span>
+    <span class="s">startings</span><span class="pi">:</span> <span class="pi">[]</span></code></pre></figure>
+
+<p>Read all about these settings in the <a href="http://jch.penibelst.de/" rel="nofollow" target="_blank">documentation</a>.</p>
+
+<p>Now all your web-pages that directly or indirectly uses the layout <code class="highlighter-rouge">default</code> will be minified. You can exclusively mention for certain pages to minify by adding the front matter given above.</p>
+
+<p>So I hope this tutorial helped you minify your Jekyll blog. If there is a better way to do this, then please let me know in the comment section.</p>
+
+<p class="r">My disqus comment stopped loading after using this method. So for the time being I’m not using it. If you are using disqus then do not use this method (for now).</p>
+
+<p class="g">Disqus started to work after cleaning up unnecessary comments inside disqus.html. Here is the <a href="https://raw.githubusercontent.com/sharu725/emerald/gh-pages/_includes/disqus.html">raw file</a></p>
+
+<p>Thanks for reading!</p>
+
+
+<amp-iframe width="600" height="300"
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+            resizable
+            src="https://jekyll-themes.com/disqus-for-wj.html">
+            <div overflow></div>
+</amp-iframe>
+
+</div>
+</div>
+<footer>
+    © copyrights by <a href="http://webjeda.com">webjeda</a>
+</footer>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-71358787-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+</body>
+
+</html>

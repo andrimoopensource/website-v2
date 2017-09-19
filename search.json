@@ -1,0 +1,575 @@
+[
+  
+    {
+  
+      "title"    : "Let&#39;s Design Mobile First",
+      "url"      : "/mobile-first-web-design/",
+      "tags"     : "Web-Design",
+    "description": "Mobile First is the best approach for web designing because of ever increasing number of smartphone users. What are the advantages and drawbacks of this approach? Is this the future of web design?",
+      "image"    : "/thumbs-small/mobile-first-web-design.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Snippets - Just Copy Paste!",
+      "url"      : "/jekyll-snippets/",
+      "tags"     : "Jekyll, Web-Design",
+    "description": "Jekyll Snippets are available in the official website but the styling is not. I&#39;m trying to create jekyll snippets that you can copy it to your jekyll website and it starts working.",
+      "image"    : "/thumbs-small/jekyll-snippets.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Lightweight CSS Grid Framework",
+      "url"      : "/css-grid-framework/",
+      "tags"     : "Web-Design, Opinion",
+    "description": "CSS Grid is being supported by most of the browsers. I have created a framework built around this for my next websites. The CSS weighs only around a Kilobyte! I hope other frameworks migrate to CSS Grid soon.",
+      "image"    : "/thumbs-small/css-grid-framework.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Google Form Customization for Static Websites!",
+      "url"      : "/google-form-customize/",
+      "tags"     : "Web-Design",
+    "description": "Google Form customization is done to remove the branding that is present at the end of Google Forms. This way we can have our own style for a form. We can also use these forms on static websites!",
+      "image"    : "/thumbs-small/customize-google-forms.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Redirect 301",
+      "url"      : "/jekyll-redirect/",
+      "tags"     : "Jekyll, Plugins",
+    "description": "Jekyll 301 permanent redirection has become easy with the plugin jekyll-redirect-from which is now supported by Github Pages. Learn how to redirect 404 error pages that might help improve your SEO score.",
+      "image"    : "/thumbs-small/jekyll-redirect-301.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Pagination",
+      "url"      : "/jekyll-pagination/",
+      "tags"     : "Jekyll, Plugins",
+    "description": "Jekyll pagination can be easily implemented if correct methods are followed. I often get asked by people that why do they see a blank page when pagination is implemented. I will be discussing those issues in this article.",
+      "image"    : "/thumbs-small/jekyll-pagination.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Increase Jekyll Build Speed",
+      "url"      : "/jekyll-build-speed/",
+      "tags"     : "Jekyll",
+    "description": "Jekyll build speed slows down with the increase in the number of files, posts, images etc.. Jekyll community is trying hard to mitigate the high build time. I will be discussing a few methods on how to increase jekyll build speed.",
+      "image"    : "/thumbs-small/jekyll-build-speed.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Instant Search in 3 simple steps!",
+      "url"      : "/instant-jekyll-search/",
+      "tags"     : "Jekyll, Plugins",
+    "description": "Adding an instant search to jekyll website can be easily achieved with this method. Instant Jekyll search also gives a feel that the website is live and is using a database even though it isn&#39;t. Also, we are not using JQuery here!",
+      "image"    : "/thumbs-small/jekyll-search-instant.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Filters - Where and Group_By",
+      "url"      : "/jekyll-filters/",
+      "tags"     : "Jekyll, Liquid",
+    "description": "Jekyll filters like sort and group-by are used to modify the output in a certain fashion for our convenience. I have described a few methods to sort Jekyll posts by categories, tags and other front matter values.",
+      "image"    : "/thumbs-small/jekyll-sort-filter.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Most commonly used Jekyll Liquid Tags",
+      "url"      : "/common-jekyll-tags/",
+      "tags"     : "Jekyll, Liquid",
+    "description": "Jekyll Liquid tags like Jekyll date, time and variables like site.pages, page.content etc., are some of the most commonly used Jekyll variables. Here is a searchable list for those who are looking for such tags, site and page variables.",
+      "image"    : "/thumbs-small/jekyll-frequently-used-variables.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Night Mode Toggle Across the Website!",
+      "url"      : "/dark-theme-switch/",
+      "tags"     : "Web-Design",
+    "description": "Changing background color to a darker one helps reading under low light. This can be achieved easily with JS. But making it to remember the change across the site is a little tricky. Here is a way to do it.",
+      "image"    : "/thumbs-small/toggle-night-mode.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "How to use Liquid Syntax in Jekyll?",
+      "url"      : "/jekyll-liquid/",
+      "tags"     : "Jekyll, Liquid",
+    "description": "Liquid is an open-source templating language. Jekyll makes the best use of Liquid to implement conditional logics, outputs and filters. It may look weird for first timers but it is one of the reasons I&#39;m still using Jekyll. I have discussed how to use Liquid in Jekyll.",
+      "image"    : "/thumbs-small/jekyll-liquid.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "14 Ways to Customize your Company Website",
+      "url"      : "/customize-company-website/",
+      "tags"     : "Web-Design",
+    "description": "A website developer must understand that he needs to create a website for a company that compliments the companies overall brand and at the same time, the website must be very user friendly.",
+      "image"    : "/thumbs-small/web-designer-tips.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Admin - A new GUI for Jekyll local editing!",
+      "url"      : "/jekyll-admin/",
+      "tags"     : "Jekyll, Plugins",
+    "description": "Jekyll-admin is a GUI for editing Jekyll website or blog. It has its ups and downs. It is still in the early stages of its development. I have tried the initial release and here is my review.",
+      "image"    : "/thumbs-small/jekyll-admin-tutorial.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Issues aren&#39;t as Bad as You Think",
+      "url"      : "/jekyll-issues/",
+      "tags"     : "Jekyll",
+    "description": "For a beginner, Jekyll may seem like a hypersensitive platform. A little deviation in the code will lead to an error or will not output the desired result. I have discussed some common issues that occur.",
+      "image"    : "/thumbs-small/common-jekyll-issues.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Page Build Errors on Jekyll?! - Solve them!",
+      "url"      : "/page-build-error/",
+      "tags"     : "Github-Pages, Jekyll",
+    "description": "Page build errors are very common even for an experienced developer because there are many things that can go wrong with Jekyll or Github Pages. I have discussed a better way to deal with those errors here.",
+      "image"    : "/thumbs-small/jekyll-build-error-troubleshooting.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Making Jekyll related posts really related!",
+      "url"      : "/jekyll-related-posts/",
+      "tags"     : "Jekyll",
+    "description": "Jekyll related posts only shows recent posts by default. There is a better way to do this where we can filter posts with similar topics. This method will ensure that related posts are actually related.",
+      "image"    : "/thumbs-small/jekyll-related-posts.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "The easiest search option for Jekyll",
+      "url"      : "/jekyll-search/",
+      "tags"     : "Jekyll, Web-Design",
+    "description": "A robust search bar can be installed for a Jekyll site using many ways. But I&#39;m discussing the easiest one here. We are using Google&#39;s custom search engine which doesn&#39;t add any overhead to our website.",
+      "image"    : "/thumbs-small/jekyll-search-option.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Why did I choose Jekyll over WordPress?!",
+      "url"      : "/why-jekyll-over-wordpress/",
+      "tags"     : "Opinion, Jekyll",
+    "description": "Jekyll will be taking over a significant share among all the blogging platforms. I chose a simple static CMS - Jekyll over world&#39;s most famous CMS - WordPress! There are reasons why I made this choice and I have tried to put them before you.",
+      "image"    : "/thumbs-small/why-jekyll-over-wordpress.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "3 Simple steps to setup Jekyll Categories and Tags",
+      "url"      : "/jekyll-categories/",
+      "tags"     : "Jekyll",
+    "description": "Implementing Jekyll categories without using any plugin is tricky. But here is a simple step by step guide to do it. You can implement Jekyll categories or Jekyll tags on your blog by following these simple steps.",
+      "image"    : "/thumbs-small/jekyll-categories.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Optimize Font Awesome to ridiculously low size of 10KB!",
+      "url"      : "/optimize-fontawesome/",
+      "tags"     : "Web-Design",
+    "description": "Font Awesome is a huge css file. We can optimize it for only used cases and trim it down to just 10KB! Use this method to reduce the size of font awesome.",
+      "image"    : "/thumbs-small/optimize-fontawesome-icons.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "3 Easy Steps to Implement Jekyll Collections!",
+      "url"      : "/jekyll-collections/",
+      "tags"     : "Jekyll",
+    "description": "Jekyll collections is something that isn&#39;t understood by many. For example, a collection of stamps, books, cakes etc. It is very easy to create and organize multiple collections on a Jekyll blog.",
+      "image"    : "/thumbs-small/jekyll-collection.svg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "14 Tested ways to Speed up Jekyll Blog",
+      "url"      : "/jekyll-speed/",
+      "tags"     : "Jekyll, Web-Design, SEO",
+    "description": "Page speed is one of the factors in Google&#39;s search ranking algorithm. Learn how to speed up Jekyll blog by various methods that help website load faster on a mobile device even on a 2g connection!",
+      "image"    : "/thumbs-small/jekyll-speed-optimization.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Table of Contents - Wikipedia Look!",
+      "url"      : "/jekyll-toc/",
+      "tags"     : "Jekyll",
+    "description": "Table of contents on Jekyll is easy to implement. TOC provides a quick look at what the article is all about. Also, users can skip to any topic they like just by clicking on it. Learn how to add Table of Contents (TOC) to your Jekyll blog.",
+      "image"    : "/thumbs-small/jekyll-toc.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "SSL certificate (https) for Jekyll",
+      "url"      : "/jekyll-ssl/",
+      "tags"     : "Jekyll, SEO, Github-Pages",
+    "description": "Https has an advantage in SEO over http. It is easy to set up SSL for Jekyll using CloudFlare. Learn how to get a free SSL certificate for your Jekyll blog. Also, find out the advantages and disadvantages of using SSL on your website.",
+      "image"    : "/thumbs-small/ssl-jekyll.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Subscribe button using Feedburner?",
+      "url"      : "/jekyll-subscribe-feedburner/",
+      "tags"     : "Jekyll, Web-Design",
+    "description": "Feedburner is the best option available for Jekyll to automate user subscription and send email updates to subscribers. Once you set it up, there is no need to change anything. All you need is a button for users to subscribe.",
+      "image"    : "/thumbs-small/jekyll-rss-feedburner.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "A Jekyll Subscribe Form that Actually Works!",
+      "url"      : "/jekyll-subscribe-form/",
+      "tags"     : "Jekyll",
+    "description": "Jekyll subscribe form is not readily available because forms usually work with php code to send emails. But with this method, we can add a mailchimp subscribe form on any Jekyll blog which will work out of the box.",
+      "image"    : "/thumbs-small/jekyll-subscribe-form.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "9 Must do Jekyll SEO optimizations",
+      "url"      : "/optimize-jekyll-seo/",
+      "tags"     : "SEO, Jekyll",
+    "description": "Jekyll SEO (Search Engine Optimization) is something I struggled hard to figure out since I moved from WordPress. Initially,it was hard but gradually I found out that we can do a lot of things using liquid syntax.",
+      "image"    : "/thumbs-small/Jekyll-SEO.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "10+1 Step to get free domain email using ZOHO",
+      "url"      : "/free-domain-email-zoho/",
+      "tags"     : "Web-Design",
+    "description": "Owning a domain is easy but owning a custom email account in the domain name is not. Now with ZOHO it is easy to obtain a free domain email. Learn how to setup a domain email free with ZOHO.",
+      "image"    : "/thumbs-small/domain-email-free.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "How to Add Related or Previous Next Pagination in Jekyll?",
+      "url"      : "/related-post-jekyll/",
+      "tags"     : "Jekyll",
+    "description": "Giving a link to next and previous posts at the bottom of the article helps to keep your users hooked to checkout more content on your website. If they like your current article, then there is a good chance that they would like to browse more articles.",
+      "image"    : "/thumbs-small/adding-related-previous-next-link-to-jekyll.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Github Upload Option",
+      "url"      : "/github-upload/",
+      "tags"     : "Github-Pages",
+    "description": "For years Github users had a hard time uploading files to GitHub repositories but now GitHub has provided an option to upload files and folders directly into repositories! Jekyll bloggers are also happy with this update. Now they can write a complete blog post with media directly in a browser!",
+      "image"    : "/thumbs-small/upload-option-github.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Comments by Disqus, Google and Facebook",
+      "url"      : "/jekyll-comments/",
+      "tags"     : "Jekyll, SEO",
+    "description": "Jekyll comments is not available by default. Unlike WordPress, We have to integrate third party commenting tools like disqus, facebook, google to Jekyll blog.",
+      "image"    : "/thumbs-small/how-to-add-comment-box-to-jekyll-blog.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Lazy Loading Css to drastically Improve Page Speed",
+      "url"      : "/lazy-load-css/",
+      "tags"     : "Web-Design, Jekyll, SEO",
+    "description": "Loading big CSS file at the end of the document makes sense because some times CSS takes up a lot of time to load. Learn how to defer CSS loading which makes your website super-fast. PageSpeed is a tool by Google where you can find the website speed.",
+      "image"    : "/thumbs-small/lazy-load-css-for-fast-website.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Crunch your Jekyll HTML to negligible size!",
+      "url"      : "/compress-html-jekyll/",
+      "tags"     : "Jekyll, SEO, Liquid",
+    "description": "Jekyll minify html using liquid! Minifying CSS and JS is already in practice but compressing html is not practiced by everyone. Since Jekyll posts and pages are in markdown and you may not be able to minify all of them using a task runner. Learn how to minify Jekyll html using this method.",
+      "image"    : "/thumbs-small/how-to-minify-jekyll-html.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Grab Images from Jekyll Post",
+      "url"      : "/fetch-image-jekyll/",
+      "tags"     : "Jekyll",
+    "description": "Featured images in WordPress is something I always wanted for my Jekyll blog. I liked how images to show up on the index page automatically. But I had no idea how to fetch images from Jekyll posts. Jekyll post images can be fetched using this tutorial.",
+      "image"    : "/thumbs-small/how-to-fetch-images-from-jekyll-post.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Tutorial for Beginners",
+      "url"      : "/jekyll-guide/",
+      "tags"     : "Jekyll",
+    "description": "Jekyll is really simple once you know how it works. You can make your blog do wonders if you know how to play with templates, layouts, curly braces et al. Create yourself a clean, minimal and beautiful Jekyll blog.",
+      "image"    : "/thumbs-small/jekyll-tutorial-screenshot.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Add or Edit Jekyll Posts through a Browser",
+      "url"      : "/edit-posts-jekyll/",
+      "tags"     : "Jekyll, Web-Design",
+    "description": "For beginners an easy online editing option is beneficial. Learn how to add posts, edit posts, and other Jekyll files online through prose.io in this tutorial. Also, find out how to upload images using prose.io!",
+      "image"    : "/thumbs-small/how-to-edit-add-posts-in-jekyll.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "How I added Adsense on Jekyll Subdomain",
+      "url"      : "/adsense-jekyll-subdomain/",
+      "tags"     : "Adsense, Jekyll",
+    "description": "Adsense was successfully implemented on this Jekyll blog only after a deep research on Adsense policies. It is indeed possible to have ads on subdomain but you should know what you are doing. Just placing Adsense ads will not work.",
+      "image"    : "/thumbs-small/adsense-on-subdomain-adsense-on-Jekyll.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Best Way to Add or Create New Pages in Jekyll",
+      "url"      : "/new-page-jekyll/",
+      "tags"     : "Jekyll",
+    "description": "Adding a new page in Jekyll is really easy. You can use HTML or Markdown for markup. Learn how to create a page in Jekyll and how to manipulate the URL. We will be creating a blank layout for plain html pages. Create contact page, about page, archive page and more on Jekyll using this method.",
+      "image"    : "/thumbs-small/how-to-add-pages-in-jekyll.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Adding Facebook Like Button to Jekyll Blog",
+      "url"      : "/facebook-like-button-jekyll/",
+      "tags"     : "Jekyll, SEO",
+    "description": "Adding facebook button on a Jekyll blog site is different compared to HTML sites. This is because Jekyll blogs have the advantage of including html files which are inside _includes folder. We are taking advantage of this option!",
+      "image"    : "/thumbs-small/adding-facebook-like-button-to-jekyll.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Simple Share Bar for Jekyll without JS!",
+      "url"      : "/jekyll-share-buttons/",
+      "tags"     : "Jekyll, SEO",
+    "description": "Reducing the use of JavaScript results in a faster loading speed. Here is a guide on how to add a social share bar to Jekyll blog. You can copy paste the code and it should work! Many Jekyll themes do not offer a good share bar. So I thought of making one for myself!",
+      "image"    : "/thumbs-small/share-bar-to-jekyll.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Multiple Authors for Guest Posting.",
+      "url"      : "/author-box-jekyll/",
+      "tags"     : "Jekyll",
+    "description": "Adding multiple authors to a Jekyll blog was hard. But not anymore. Learn how to add an author box to your Jekyll blog with these easy steps. You can also create a nice author section for your Jekyll blog using this method.",
+      "image"    : "/thumbs-small/author-box-jekyll.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Adding Sitemap to Jekyll Blog",
+      "url"      : "/jekyll-sitemap/",
+      "tags"     : "Jekyll, SEO",
+    "description": "Submitting sitemap to major search engines is important to get indexed and rank better. Jekyll blogs will not have sitemap by default but we can create one using this method.",
+      "image"    : "/thumbs-small/add-sitemap-to-Jekyll-github-pages.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Sync Files and Folders with Github Pages",
+      "url"      : "/sync-files-folders-github/",
+      "tags"     : "Github-Pages, Web-Design",
+    "description": "Uploading files and folders to github repo was hard. Now, with this method you can sync files and folders to a github repository efficiently. In this tutorial I&#39;m uploading a complete website into Github Pages.",
+      "image"    : "/thumbs-small/sync-local-folders-with-github.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Jekyll Contact Form Creation with Added Security!",
+      "url"      : "/jekyll-contact-form/",
+      "tags"     : "Jekyll, Web-Design",
+    "description": "Jekyll hosted on Github Pages or any static hosting service will not execute normal php forms. Jekyll blog is static, so we should use forms that work for static sites. Here is a simple form that works on any Jekyll blog.",
+      "image"    : "/thumbs-small/how-to-add-form-option-for-jekyll-websites.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Adding Top Progress Bar to Websites",
+      "url"      : "/top-bar-website/",
+      "tags"     : "Web-Design, Github-Pages",
+    "description": "Top bars are beautiful looking lines at the top of a website. A colored top bar would not do any harm. Instead, it increases the beauty of your website (if used correctly). Read to know how I have implemented it in my websites.",
+      "image"    : "/thumbs-small/top-bar-on-websites.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "How to Create a Beautiful Jekyll Blog?",
+      "url"      : "/create-jekyll-blog/",
+      "tags"     : "Jekyll, Web-Design",
+    "description": "I created this beautiful looking Jekyll blog using default Jekyll template. You can also host your blog on github using Jekyll. Jekyll is a simple blog generator. Jekyll blogs creation is easy, simple and efficient. Learn how to create Jekyll blog.",
+      "image"    : "/thumbs-small/create-jekyll-blog.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Polymer Integration with Jekyll",
+      "url"      : "/integrate-polymer-jekyll/",
+      "tags"     : "Web-Design, Github-Pages",
+    "description": "Integrating Polymer in Jekyll is very simple. Polymer elements are the future of web design. I have a tutorial to include Polymer elements in Jekyll blog with simple steps. Polymer is an ambitious project by Google which might take off a lot of burden on web designers and developers.",
+      "image"    : "/thumbs-small/jekyll-polymer.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Adding Custom Domain to Github Pages Website",
+      "url"      : "/custom-domain-github/",
+      "tags"     : "Github-Pages, SEO",
+    "description": "By using a custom domain, you can change ugly looking username.github.io URL into your own yourdomain.com URL. Learn how to add a custom domain to github pages. You can also use this method for Jekyll blogs.",
+      "image"    : "/thumbs-small/custom-domain-to-github.png"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Hosting Websites on Github for Free!",
+      "url"      : "/create-host-website-github-pages/",
+      "tags"     : "Github-Pages, Web-Design",
+    "description": "Learn how to create and host a website on Github and host it for free using Github Pages. This can be used to host your projects and portfolio websites easily without spending a dime. You can also use this to host personal website on github.",
+      "image"    : "/thumbs-small/webjeda2.svg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Coding and more on Github and Github Pages",
+      "url"      : "/coding-and-more/",
+      "tags"     : "Opinion, Github-Pages",
+    "description": "I have started teaching how to make websites for budding web designers. I have posted the playlist here. Take a look. I have started off with topics like &#39;hosting websites on Github&#39; &#39;how to use github&#39; &#39;github web hosting&#39; etc.,",
+      "image"    : "/thumbs-small/webjeda-channel-art.jpg"
+
+      
+    } ,
+  
+    {
+  
+      "title"    : "Why did I start WebJeda?",
+      "url"      : "/why-webjeda/",
+      "tags"     : "Opinion, Github-Pages, Jekyll",
+    "description": "While I was working in Cognizant Technology Solutions I always used to have a tab open on my internet browser - github.com. I had a learning period of two months in which I googled a lot and learned a lot about Github Pages.",
+      "image"    : "/thumbs-small/webjeda-logo-big.jpg"
+
+      
+    } 
+  
+]

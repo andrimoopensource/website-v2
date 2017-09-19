@@ -1,0 +1,11 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" created-by="webjeda" viewBox="0 0 573.016 244.444" enable-background="new 0 0 573.016 244.444" xml:space="preserve">
+<rect x="35.942" y="42.857" fill="#FFFFFF" stroke="#595859" stroke-miterlimit="10" width="504.762" height="42.857"/>
+<rect x="53.968" y="68.254" fill="#FFFFFF" stroke="#595859" stroke-miterlimit="10" width="138.889" height="107.936"/>
+<rect x="219.047" y="68.254" fill="#FFFFFF" stroke="#595859" stroke-miterlimit="10" width="138.89" height="107.936"/>
+<rect x="384.126" y="68.253" fill="#FFFFFF" stroke="#595859" stroke-miterlimit="10" width="138.89" height="107.936"/>
+<text transform="matrix(1 0 0 1 250.248 37.3013)" fill="#595859" font-family="sans-serif" font-size="12">Parent Element</text>
+<text transform="matrix(1 0 0 1 250.248 199.2065)" fill="#595859" font-family="sans-serif" font-size="12">Child Elements</text>
+<text transform="matrix(1 0 0 1 98.9683 148.8745)" fill="#595859" font-family="sans-serif" font-size="12">float: left</text>
+<text transform="matrix(1 0 0 1 264.0474 148.8745)" fill="#595859" font-family="sans-serif" font-size="12">float: left</text>
+<text transform="matrix(1 0 0 1 429.1274 148.8745)" fill="#595859" font-family="sans-serif" font-size="12">float: left</text>
+</svg>

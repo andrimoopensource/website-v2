@@ -1,0 +1,38 @@
+[
+  
+    {
+      "title"    : "Let&#39;s Design Mobile First",
+      "tags"     : "Web-Design",
+      "url"      : "/mobile-first-web-design/",
+      "date"     : "2017-09-04 00:00:00 +0530"
+    } ,
+  
+    {
+      "title"    : "Jekyll Snippets - Just Copy Paste!",
+      "tags"     : "Jekyll, Web-Design",
+      "url"      : "/jekyll-snippets/",
+      "date"     : "2017-08-18 00:00:00 +0530"
+    } ,
+  
+    {
+      "title"    : "Lightweight CSS Grid Framework",
+      "tags"     : "Web-Design, Opinion",
+      "url"      : "/css-grid-framework/",
+      "date"     : "2017-08-07 00:00:00 +0530"
+    } ,
+  
+    {
+      "title"    : "Google Form Customization for Static Websites!",
+      "tags"     : "Web-Design",
+      "url"      : "/google-form-customize/",
+      "date"     : "2017-07-09 00:00:00 +0530"
+    } ,
+  
+    {
+      "title"    : "Jekyll Redirect 301",
+      "tags"     : "Jekyll, Plugins",
+      "url"      : "/jekyll-redirect/",
+      "date"     : "2017-06-20 00:00:00 +0530"
+    } 
+  
+]

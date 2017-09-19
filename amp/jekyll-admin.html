@@ -1,0 +1,221 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Jekyll Admin - A new GUI for Jekyll local editing!</title>
+    <link rel="canonical" href="https://blog.webjeda.com/jekyll-admin/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        
+          .container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7)}.main-content{margin:0 10px}amp-img{max-width:100%}footer{text-align:center;padding:1em;background:#000;color:#eee}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7)}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#4747f5}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#4747f5}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#5e5ee6}.highlight .nv{color:#4747f5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#4747f5}.highlight .vg{color:#4747f5}.highlight .vi{color:#4747f5}.highlight .il{color:#099}
+
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    
+  
+    <!-- Open Graph -->
+    <meta property="fb:app_id" content="549480635219583">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Jekyll Admin - A new GUI for Jekyll local editing!">
+    <meta property="og:url" content="https://blog.webjeda.comamp/jekyll-admin">
+    <meta property="og:site_name" content="WebJeda Blog">
+    <meta property="og:description" content="Jekyll-admin is a GUI for editing Jekyll website or blog. It has its ups and downs. It is still in the early stages of its development. I have tried the initial release and here is my review.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://blog.webjeda.com/thumbs/jekyll-admin-tutorial.png" />
+    <meta property="og:image:alt" content="Jekyll Admin - A new GUI for Jekyll local editing!" />
+    <meta property="article:publisher" content="http://www.facebook.com/webjeda" />
+    <meta property="article:author" content="https://www.facebook.com/sharu725" />
+    <meta property="article:published_time" content="2016-08-30 00:00:00 +0530" />
+
+
+   <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Jekyll Admin - A new GUI for Jekyll local editing!">
+    <meta name="twitter:description" content="Jekyll-admin is a GUI for editing Jekyll website or blog. It has its ups and downs. It is still in the early stages of its development. I have tried the initial release and here is my review.">
+    <meta name="twitter:site" content="@webjeda" />
+    <meta name="twitter:creator" content="@sharathdt">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "name": "Jekyll Admin - A new GUI for Jekyll local editing!",
+        "headline": "Jekyll Admin - A new GUI for Jekyll local editing!",
+        "image": "https://blog.webjeda.com/thumbs/jekyll-admin-tutorial.png",
+        "description": "Jekyll-admin is a GUI for editing Jekyll website or blog. It has its ups and downs. It is still in the early stages of its development. I have tried the initial release and here is my review.",
+        "url": "https://blog.webjeda.comamp/jekyll-admin",
+        "datePublished": "2016-08-30",
+         "author": {
+          "@type": "Person",
+          "name": "sharath.dt"
+        }
+      }
+    </script>
+    
+    <!-- Disqus comments -->
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+    
+  </head>
+  
+<body>
+<div class="container">
+<div class="main-content">
+<h1 class="post-title">Jekyll Admin - A new GUI for Jekyll local editing!</h1>
+<p class="date"><small>30 Aug 2016 - sharathdt</small></p>    
+<amp-img src="https://blog.webjeda.com/thumbs/jekyll-admin-tutorial.png" alt="Jekyll Admin - A new GUI for Jekyll local editing!" width="600" height="375" layout="responsive"><noscript><img src="https://blog.webjeda.com/thumbs/jekyll-admin-tutorial.png" alt="Jekyll Admin - A new GUI for Jekyll local editing!" width="600" height="375"></noscript></amp-img>
+
+<p class="intro">Jekyll-admin is a GUI for editing Jekyll website or blog. It has its ups and downs. It is still in the early stages of its development. I have tried the initial release and here is my review.</p>
+
+<h2 id="what-is-jekyll-admin">What is jekyll-admin</h2>
+<p><a href="https://github.com/jekyll/jekyll-admin" target="_blank">Jekyll admin</a> is a Ruby gem for Jekyll which provides a local user interface for editing posts and pages. By the time of writing this article, the version is 0.1.0.</p>
+
+<p>If you have <a href="/why-jekyll-over-wordpress/" target="_blank">ever used WordPress</a> then you may have noticed that editing post was a little easier than Jekyll because of the user interface(UI). You can drop in images, html code blocks, you see the changes right away with preview option etc.. WYSIWYG kind of editors are good for a non-coder because he/she knows what will be the output.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#what-is-jekyll-admin" id="markdown-toc-what-is-jekyll-admin">What is jekyll-admin</a></li>
+  <li><a href="#why-jekyll-admin" id="markdown-toc-why-jekyll-admin">Why Jekyll-admin?</a></li>
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#features" id="markdown-toc-features">Features</a></li>
+  <li>
+<a href="#what-is-missing" id="markdown-toc-what-is-missing">What is missing?</a>    <ul>
+      <li><a href="#autosave" id="markdown-toc-autosave">Autosave</a></li>
+      <li><a href="#drag-and-drop-image-upload" id="markdown-toc-drag-and-drop-image-upload">Drag and drop image upload</a></li>
+      <li><a href="#multiple-options-in-metadata" id="markdown-toc-multiple-options-in-metadata">Multiple options in metadata</a></li>
+      <li><a href="#default-metadata-for-new-posts-and-pages" id="markdown-toc-default-metadata-for-new-posts-and-pages">Default metadata for new posts and pages</a></li>
+      <li><a href="#code-insert-option" id="markdown-toc-code-insert-option">Code insert option</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+</ul>
+
+<p>Jekyll is trying to fill that gap of not having a UI by jekyll-admin. But it has a long way to go. With the current build, it is nowhere close to usable.</p>
+
+<h2 class="clear" id="why-jekyll-admin">Why Jekyll-admin?</h2>
+<p>Jekyll was considered to be not so non-coder friendly. Because to take advantage of the features of a Jekyll blog, one should have some basic coding knowledge or at least knows how to manipulate the present code.</p>
+
+<p>I think Jekyll is trying to solve this problem. But to run Jekyll locally you need to install Ruby and then install Jekyll. For a non-coder, even this process could be tough. Making things simpler is important to reach more people. That’s what worked out for Apple in the case of iPhones.</p>
+
+<p>In <a href="https://www.youtube.com/c/webjeda?sub_confirmation=1" target="_blank">my videos</a>, so far I haven’t discussed anything about CLI. If you do not want use Jekyll locally then you can make use of these videos and use an online editor like <a href="http://prose.io">Prose</a> to edit your posts and pages.</p>
+
+<p>But if you are already using Jekyll locally and pushing changes to remote host(Github Pages or another service) then this could be a better option to edit your posts.</p>
+
+<p>An added advantage is that when I edit posts using jekyll-admin, I can make use of browser add-ons like Grammarly to check my spelling which is not possible while editing posts on an IDE.</p>
+
+<h2 id="usage">Usage</h2>
+<p>The first thing you should be doing is to install the jekyll-admin gem in your project. Open command line interface, navigate to your project and then enter these commands.</p>
+
+<p>Install jekyll-admin. This will take a while.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span><span class="o">-</span><span class="n">admin</span></code></pre></figure>
+
+<p>Mention the gem in your configuration file <strong>_config.yml</strong>.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">gem: </span><span class="p">[</span><span class="n">jekyll</span><span class="o">-</span><span class="n">admin</span><span class="p">]</span></code></pre></figure>
+
+<p>Now serve Jekyll locally as usual.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">jekyll</span> <span class="n">serve</span></code></pre></figure>
+
+<p>Now, your admin page should be available at the below URL</p>
+
+<p><code class="highlighter-rouge">http://127.0.0.1:4000/admin</code></p>
+
+<amp-ad layout="responsive" width="300" height="250" class="adclass adsbygoogle" style="display:block" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645" data-ad-format="auto"></amp-ad>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>You should see something like this.</p>
+
+<p><amp-img src="/images/jekyll-admin.png" alt="jekyll admin" class="noborder" width="816" height="435" layout="responsive"><noscript><img src="/images/jekyll-admin.png" alt="jekyll admin" class="noborder" width="816" height="435"></noscript></amp-img></p>
+
+<h2 id="features">Features</h2>
+<p>Most of the basic features are available in this initial release. I’m hoping to see more in the next versions.</p>
+
+<ol>
+  <li>Post</li>
+  <li>Page</li>
+  <li>Collections</li>
+  <li>Data files</li>
+  <li>Static files</li>
+  <li>Configuration</li>
+</ol>
+
+<p>All these things can be edited. That means you can edit post and pages directly here without opening the whole project with an IDE like Brackets.</p>
+
+<p>Posts and pages can be edited and previewed while editing. This is very handy for new Jekyll users.</p>
+
+<p><amp-img src="/images/jekyll-admin-edit-post.png" alt="jekyll admin edit post page" class="noborder" width="816" height="416" layout="responsive"><noscript><img src="/images/jekyll-admin-edit-post.png" alt="jekyll admin edit post page" class="noborder" width="816" height="416"></noscript></amp-img></p>
+
+<p>Here you can write the post, style it, insert images, links, blockquotes etc.. You can also add Front Matter using metadata field. There is an option to split the screen while editing to see the preview.</p>
+
+<p><amp-img src="/images/jekyll-admin-preview-post.png" alt="jekyll admin preview post page" width="800" height="320" layout="responsive"><noscript><img src="/images/jekyll-admin-preview-post.png" alt="jekyll admin preview post page" width="800" height="320"></noscript></amp-img></p>
+
+<p>Along with posts and pages, you can also edit collections. I wasn’t expecting it to detect the collection I had but it did which is really cool. The <strong>static files</strong> directory will have all the images, css, and js. The <strong>configuration</strong> option is nothing but your _config.yml file.</p>
+
+<h2 id="what-is-missing">What is missing?</h2>
+
+<h3 id="autosave">Autosave</h3>
+<p>I tried to edit this post using jekyll-admin but I got frustrated because when I navigate to some other tab and come back to the particular post I was editing, all I wrote is gone! This happened twice and I gave up. An auto-save option is a must at least for me to use it.</p>
+
+<h3 id="drag-and-drop-image-upload">Drag and drop image upload</h3>
+<p>This feature will appear sooner or later. Currently, when I click on image icon it shows markdown code where I can enter the image path. But what I(and most users) want is an option where I can drop an image from anywhere on my local drive to the post and it should automatically upload it to images folder of my project and insert it into the post.</p>
+
+<p>I like how WordPress handles image upload. You can drag and drop an image anywhere inside a post and it will take care of the rest.</p>
+
+<h3 id="multiple-options-in-metadata">Multiple options in metadata</h3>
+<p>Currently, metadata is an empty field where we have to fill ‘title’, ‘layout’ and other front matter and give it a value. It would be great if Jekyll can offer some basic metadata options by default which can be edited.</p>
+
+<amp-ad layout="responsive" width="300" height="250" class="adclass2 adsbygoogle" style="display:block" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041" data-ad-format="auto"></amp-ad>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<h3 id="default-metadata-for-new-posts-and-pages">Default metadata for new posts and pages</h3>
+<p>Here metadata is nothing but front matter. I have so many of them. Title, description, layout, tags, permalink etc.. So I want to see an option where I can choose the default metadata values that automatically appear in every new post.</p>
+
+<p class="g">Even better if it can detect the metadata fields from previous posts!</p>
+
+<h3 id="code-insert-option">Code insert option</h3>
+<p>I don’t know why they haven’t included code insert option. I want an option similar to the one in StackOverflow. Maybe in the future versions, it can have an options to let me choose which programming language I want to highlight.</p>
+
+<p>One last thing I want to mention is that when I upload a static file, say an image, it says that it was uploaded successfully but when I check inside the project the file is nowhere to be found. This probably is a bug which will be fixed in the coming release.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Even though the initial version lacks so many things, I really appreciate the initiative from Jekyll team. Contributors will definitely improve its performance and usability. I will definitely suggest my clients to use it once it is stable and can be run from a desktop icon instead of a command line!</p>
+
+
+<amp-iframe width="600" height="300"
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+            resizable
+            src="https://jekyll-themes.com/disqus-for-wj.html">
+            <div overflow></div>
+</amp-iframe>
+
+</div>
+</div>
+<footer>
+    © copyrights by <a href="http://webjeda.com">webjeda</a>
+</footer>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-71358787-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+</body>
+
+</html>

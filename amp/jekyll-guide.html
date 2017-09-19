@@ -1,0 +1,251 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Jekyll Tutorial for Beginners</title>
+    <link rel="canonical" href="https://blog.webjeda.com/jekyll-guide/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        
+          .container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7)}.main-content{margin:0 10px}amp-img{max-width:100%}footer{text-align:center;padding:1em;background:#000;color:#eee}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7)}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#4747f5}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#4747f5}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#5e5ee6}.highlight .nv{color:#4747f5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#4747f5}.highlight .vg{color:#4747f5}.highlight .vi{color:#4747f5}.highlight .il{color:#099}
+
+    </style>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    
+  
+    <!-- Open Graph -->
+    <meta property="fb:app_id" content="549480635219583">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Jekyll Tutorial for Beginners">
+    <meta property="og:url" content="https://blog.webjeda.comamp/jekyll-guide">
+    <meta property="og:site_name" content="WebJeda Blog">
+    <meta property="og:description" content="Jekyll is really simple once you know how it works. You can make your blog do wonders if you know how to play with templates, layouts, curly braces et al. Create yourself a clean, minimal and beautiful Jekyll blog.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://blog.webjeda.com/thumbs/jekyll-tutorial-screenshot.png" />
+    <meta property="og:image:alt" content="Jekyll Tutorial for Beginners" />
+    <meta property="article:publisher" content="http://www.facebook.com/webjeda" />
+    <meta property="article:author" content="https://www.facebook.com/sharu725" />
+    <meta property="article:published_time" content="2016-01-26 00:00:00 +0530" />
+
+
+   <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Jekyll Tutorial for Beginners">
+    <meta name="twitter:description" content="Jekyll is really simple once you know how it works. You can make your blog do wonders if you know how to play with templates, layouts, curly braces et al. Create yourself a clean, minimal and beautiful Jekyll blog.">
+    <meta name="twitter:site" content="@webjeda" />
+    <meta name="twitter:creator" content="@sharathdt">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "name": "Jekyll Tutorial for Beginners",
+        "headline": "Jekyll Tutorial for Beginners",
+        "image": "https://blog.webjeda.com/thumbs/jekyll-tutorial-screenshot.png",
+        "description": "Jekyll is really simple once you know how it works. You can make your blog do wonders if you know how to play with templates, layouts, curly braces et al. Create yourself a clean, minimal and beautiful Jekyll blog.",
+        "url": "https://blog.webjeda.comamp/jekyll-guide",
+        "datePublished": "2016-01-26",
+         "author": {
+          "@type": "Person",
+          "name": "sharath.dt"
+        }
+      }
+    </script>
+    
+    <!-- Disqus comments -->
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
+    
+  </head>
+  
+<body>
+<div class="container">
+<div class="main-content">
+<h1 class="post-title">Jekyll Tutorial for Beginners</h1>
+<p class="date"><small>26 Jan 2016 - sharathdt</small></p>    
+<amp-img src="https://blog.webjeda.com/thumbs/jekyll-tutorial-screenshot.png" alt="Jekyll Tutorial for Beginners" width="600" height="375" layout="responsive"><noscript><img src="https://blog.webjeda.com/thumbs/jekyll-tutorial-screenshot.png" alt="Jekyll Tutorial for Beginners" width="600" height="375"></noscript></amp-img>
+
+<p class="intro">Jekyll is really simple once you know how it works. You can make your blog do wonders if you know how to play with templates, layouts, curly braces et al. Create yourself a clean, minimal and beautiful Jekyll blog.</p>
+
+<h2 id="why-learn-jekyll-the-right-way">Why learn Jekyll the right way?</h2>
+<p>When I had to make some changes in my Jekyll blog, I used to write dirty code in respective templates and somehow made it work for a while.</p>
+
+<p>But if I wanted to make any further changes to it then I have to search for the code, see how it used to work, edit or add some more dirty code and make it work again!</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-learn-jekyll-the-right-way" id="markdown-toc-why-learn-jekyll-the-right-way">Why learn Jekyll the right way?</a></li>
+  <li><a href="#how-to-use-jekyll" id="markdown-toc-how-to-use-jekyll">How to use Jekyll?</a></li>
+  <li><a href="#what-jekyll-does-better" id="markdown-toc-what-jekyll-does-better">What Jekyll does better?</a></li>
+  <li><a href="#understand-the-structure-of-jekyll" id="markdown-toc-understand-the-structure-of-jekyll">Understand the structure of Jekyll</a></li>
+  <li><a href="#files-inside-a-jekyll-site" id="markdown-toc-files-inside-a-jekyll-site">Files inside a Jekyll site</a></li>
+  <li><a href="#folders-inside-a-jekyll-site" id="markdown-toc-folders-inside-a-jekyll-site">Folders inside a Jekyll site</a></li>
+</ul>
+
+<p>These dirty code blocks would break my site, leading to undesirable results. Sometimes I wouldn’t know what exactly went wrong.</p>
+
+<p>I never used to add comments while committing the changes (big mistake). I can always revert back, but I would lose all the changes and posts :(</p>
+
+<p class="g">This is what I used to do years ago. <em>Half knowledge is worse than no knowledge</em> was completely true in my case.</p>
+
+<p>My point is, don’t do it like me. Do it the right way. You don’t have to master this overnight. Take time. Read more about Jekyll. Not just my articles, any good piece you can get online. Practice with a simple website or blog.</p>
+
+<h2 id="how-to-use-jekyll">How to use Jekyll?</h2>
+<p>When I started using Jekyll, I used to get a lot of <strong>404 errors</strong>, <strong>page build errors</strong>, <strong>liquid tag errors</strong>, <strong>page rendering errors</strong> and what not. The horrible mistake I did was not spending a little time to know how Jekyll works. I was over enthusiastic may be. But it did hurt me in the long run.</p>
+
+<p>If you are just starting off with Jekyll or you do not know how to use Jekyll then please start with the <a href="http://jekyllrb.com/docs/home/" target="_blank">official documentation provided by Jekyll</a>. This will set you on the right track. It has a lot of information (and a lot of pages as well).</p>
+
+<p>So I thought I would summarize it in this post so that anyone can make use of it for a basic Jekyll blog designing.</p>
+
+<p>But once you finish reading this post, I suggest you to check the documentation. It will give you a rather deep insight than just a brief introduction like this one.</p>
+
+<h2 id="what-jekyll-does-better">What Jekyll does better?</h2>
+<p><amp-img src="/images/jekyll-transforms-text-to-hypertext.png" alt="Jekyll transforms text to html" width="700" height="438" layout="responsive"><noscript><img src="/images/jekyll-transforms-text-to-hypertext.png" alt="Jekyll transforms text to html" width="700" height="438"></noscript></amp-img></p>
+
+<p>As depicted in the image(pardon my photoshop skills), Jekyll does magic on text files converting them into html files - which is technically called as <strong>“</strong>text transformation<strong>“</strong>. This is not the only thing Jekyll does. Jekyll actually does some more magic like templating, pagination, syntax highlighting,  etc.,</p>
+
+<p>And also, Jekyll posts and pages can be written in easily readable markups like <a href="https://daringfireball.net/projects/markdown/basics" rel="nofollow" target="_blank">markdown</a>, <strike>textile</strike> (not supported anymore after Jekyll 3.0 update) etc.,</p>
+
+<h2 id="understand-the-structure-of-jekyll">Understand the structure of Jekyll</h2>
+
+<p>Jekyll is simple if you understand what feature is for what purpose. Let us look at the folder structure of Jekyll. The below tree is taken directly from Jekyll documentation.</p>
+
+<pre>
+<code>
+.
+.
+├── _config.yml
+├── _drafts
+|   ├── begin-with-the-crazy-ideas.textile
+|   └── on-simplicity-in-technology.markdown
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   └── 2009-04-26-barcamp-boston-4-roundup.textile
+├── _data
+|   └── members.yml
+├── _site
+├── .jekyll-metadata
+└── index.html
+</code>
+</pre>
+
+<p>Keep this <a href="https://github.com/KingFelix/emerald" rel="nofollow" target="_blank">sample Jekyll repository</a> tab open while reading the below points. You should be able to see the following files and folders.</p>
+
+<h2 class="clear" id="files-inside-a-jekyll-site">Files inside a Jekyll site</h2>
+<h3>1. _config.yml:</h3>
+<p>Master configuration file <strong>_config.yml</strong> is the DNA of a Jekyll project. You can define your site configurations inside this file. From simple things such as title, URL, author, pagination etc., to complex things such as SSL certificates, increments etc., can be defined inside this file.</p>
+
+<p>Here is a <a href="https://raw.githubusercontent.com/Redgadget/emerald/gh-pages/_config.yml" rel="nofollow" target="_blank">sample _config.yml file</a> for Emerald Jekyll theme. You can use all the parameters in this file using <code class="highlighter-rouge">site</code> variable.</p>
+
+<p>For instance, using <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">site.url</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code> anywhere on the page, post, template will fetch the url variable defined in <code class="highlighter-rouge">_config.yml</code>. <a href="http://jekyllrb.com/docs/configuration/" rel="nofollow" target="_blank">Read More</a>.</p>
+
+<p>This is also the  first file you should edit when you fork(copy) a new theme. In order to make your blog work, you should mention the <code class="highlighter-rouge">baseurl</code>. Read: <a href="/create-jekyll-blog/" target="_blank">How to create a Jekyll blog</a> for more.</p>
+
+<amp-ad layout="responsive" width="300" height="250" class="adclass adsbygoogle" style="display:block" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645" data-ad-format="auto"></amp-ad>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<h3>2. index.html:</h3>
+<p>This is your homepage in most cases. It can also be in the format <code class="highlighter-rouge">index.md</code>. It usually has a <em>for</em> loop to load all the posts. You can make changes to this file and design your index of posts like how I have done the card layout for my blog.</p>
+
+<p>Index file may also call <code class="highlighter-rouge">default</code> layout which will be inside <code class="highlighter-rouge">_layout</code> folder. You can also remove the whole loop thing and have a simple introduction page like the <a href="http://jekyllrb.com" rel="nofollow" target="_blank">Jekyll official site</a>.</p>
+
+<h3>3. atom.xml/sitemap.xml:</h3>
+<p>This can be your feeds file or a sitemap. If you do not have one, you can always <a href="/jekyll-sitemap/" target="_blank">create a sitemap</a> or a feeds file.</p>
+
+<h3>4. readme.md:</h3>
+<p>This is a file where you can describe your project. This will be rendered as a html file and displayed by default when someone visits your repository on Github. In <a href="https://github.com/KingFelix/emerald" rel="nofollow" target="_blank">this link</a>, observe the page displayed.</p>
+
+<p>At the bottom of the repository, you will see a description of the theme with a screenshot. This file is not mandatory.</p>
+
+<h2 id="folders-inside-a-jekyll-site">Folders inside a Jekyll site</h2>
+
+<h3>1. _includes:</h3>
+<p>This folder is kind of like libraries that are called using <code class="highlighter-rouge">#include</code> in C-programming. You can include files which are inside this folder into any post or page just by adding this line of code - <code class="highlighter-rouge"><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">filename.html</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code> replace the <code class="highlighter-rouge">filename</code> to a file inside your <code class="highlighter-rouge">_includes</code> folder.</p>
+
+<p>Usually, <strong>header</strong> and <strong>footer</strong> files are put inside this folder and called inside default layout (or any page or post).</p>
+
+<h3>2. _layouts:</h3>
+<p>As the name says this folder contains your website layouts. It will have <code class="highlighter-rouge">default</code>, <code class="highlighter-rouge">page</code> and <code class="highlighter-rouge">post</code> layouts by default. You can also create other layouts such as two column, single column etc.,</p>
+
+<p>This is where you can change the looks of your post and pages. If you look at this website for example, posts look different from pages. The reason is that they use different layouts.</p>
+
+<p>There can also be a layouts for redirecting, <a href="https://blog.webjeda.com/compress-html-jekyll/" target="_blank">compressing</a> etc.,. I will talk about these in a different post.</p>
+
+<h3>3. _posts:</h3>
+<p>All your blog posts reside here. The naming should be in the format <strong>YYYY-MM-DD-title.md</strong>.</p>
+
+<h3>4. _sass:</h3>
+<p>Jekyll supports <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html" rel="nofollow" target="_blank">Sass preprocessor</a>. Sass files are included in this folder can be imported to main stylesheet. <a href="/jekyll-speed/#4-minify-jekyll-html-css-and-js/" target="_blank">Read for a brief section on sass</a>.</p>
+
+<h3>5. _site:</h3>
+<p>This is a folder created by Jekyll to host your website. It will have files only compatible for a browser - HTML, CSS, JS, XML etc., This conversion happens by default. You don’t have to create this or edit anything inside this folder.</p>
+
+<p>This folder gets generated only when you are using Jekyll locally. If you are hosting your website using Github Pages then you don’t see this folder in your repository because Github Pages does it for you in the background.</p>
+
+<h3>6. css, images, js:</h3>
+<p>You can create folders and name them as per your needs. These are some of the common folders that we use to keep stylesheets, images, and JavaScript files.</p>
+
+<h3>7. Other folders:</h3>
+<p>There can be other folders as well. The one used for plugins is <code class="highlighter-rouge">_plugins</code>. You can add any arbitrary folder. You can name it anything, say <code class="highlighter-rouge">project</code> and keep a html or a markdown file inside it. These files will get a URL <code class="highlighter-rouge">http://yourdomain/project/filename.html</code>. You can change that to <code class="highlighter-rouge">http://yourdomain/project/filename/</code> by using <a href="https://jekyllrb.com/docs/permalinks/" target="_blank">permalinks</a>.</p>
+
+<p>Here is a video on how Jekyll works</p>
+
+<iframe class="left video" src="https://www.youtube.com/embed/gI-FcrkDveA?rel=0" frameborder="0" allowfullscreen=""></iframe>
+
+<amp-ad layout="responsive" width="300" height="250" class="adclass2 adsbygoogle" style="display:block" data-ad-client="ca-pub-4146856286076977" data-ad-slot="8755205041" data-ad-format="auto"></amp-ad>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>I hope that gives you an insight into the structure of Jekyll files and folders. It looked strange for me in the beginning but once I understood the logic used behind, it all made sense. And since a Jekyll site is made up of a lot of different parts, debugging is very easy.</p>
+
+<p>When something starts acting up, you’ll know exactly where to look for. In this blog, I have written a <a href="/archive/">lot of things</a> I did using Jekyll. Make use of it.</p>
+
+<p>If you get frustrated about something that is not working then just ask the community. Google things with the suffix <strong>jekyll</strong>. You will find an answer. You can always ask me here, in the comment section. I will try my best to help you out.</p>
+
+<p>Thanks for reading!</p>
+
+
+<amp-iframe width="600" height="300"
+            layout="responsive"
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+            resizable
+            src="https://jekyll-themes.com/disqus-for-wj.html">
+            <div overflow></div>
+</amp-iframe>
+
+</div>
+</div>
+<footer>
+    © copyrights by <a href="http://webjeda.com">webjeda</a>
+</footer>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-71358787-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+</body>
+
+</html>
