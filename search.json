@@ -443,7 +443,7 @@
     {
   
       "title"    : "Simple Share Bar for Jekyll without JS!",
-      "url"      : "/jekyll-share-buttons/",
+      "url"      : "/share-buttons-jekyll/",
       "tags"     : "Jekyll, SEO",
     "description": "Reducing the use of JavaScript results in a faster loading speed. Here is a guide on how to add a social share bar to Jekyll blog. You can copy paste the code and it should work! Many Jekyll themes do not offer a good share bar. So I thought of making one for myself!",
       "image"    : "/thumbs-small/share-bar-to-jekyll.png"
