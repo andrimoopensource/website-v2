@@ -88,6 +88,10 @@
 
 <p>Jekyll is super fast when it comes to sites with a few pages. It tends to slow down when the number of files increases and when complex Liquid conditions are executed frequently. The files usually cause this delay are posts, images, collections etc..</p>
 
+<p>But remember that it is only the build speed I’m talking about not the site speed. Even if the build speed is slow, the output jekyll site is as fast as before on the internet. You can speed up the output jekyll site as well.</p>
+
+<p>Read: <a href="/jekyll-speed/" target="_blank">Jekyll Speed</a></p>
+
 <ul id="markdown-toc">
   <li><a href="#exclude-files-that-are-not-required" id="markdown-toc-exclude-files-that-are-not-required">Exclude files that are not required</a></li>
   <li><a href="#keep_files-that-are-required-as-is" id="markdown-toc-keep_files-that-are-required-as-is">Keep_files that are required as-is</a></li>
@@ -153,7 +157,7 @@
 <h2 id="use-jekyll-incremental-build">Use Jekyll incremental build</h2>
 <p>Building the site from the scratch everytime is not practical. This is why Jekyll provides an option for an incremental build which converts only the files that are changed. This way the jekyll build speed can be increased in multiple folds.</p>
 
-<p><a href="https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/">Incremental build</a></p>
+<p><a href="https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/" target="_blank">Incremental build</a></p>
 
 <p>The initial release of the incremental build was not so efficient, but recent releases work fairly good. Jekyll is making a lot of improvements. Maybe some day it can compete with the build speeds of Hugo(very optimistic!)</p>
 
@@ -168,7 +172,7 @@
 <p>Compare the incremental build speed with normal build speed check if it has improved anything. Many times, I had no luck with this method. If none of that works then follow the last method.</p>
 
 <h2 id="let-jekyll-build-only-the-necessary-posts">Let Jekyll build only the necessary posts</h2>
-<p>If your site has too many articles, you may find this method very useful. Some people with 100s of posts have a hard time building their Jekyll site locally. In those situations, you can build only the last post! This can be used even while editing the site layout or pages.</p>
+<p>If your site has too many articles, you may find this method very useful. Some people with 100s of posts have a hard time building their Jekyll site locally. In those situations, you can build only the last post! This can be used even while editing the latest post, site layout or any pages.</p>
 
 <figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="s">jekyll serve --watch --limit_posts 1</span></code></pre></figure>
 
