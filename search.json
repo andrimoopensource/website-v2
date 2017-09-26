@@ -2,6 +2,17 @@
   
     {
   
+      "title"    : "Jekyll Site Scoring 100/100 on Pagespeed!",
+      "url"      : "/pagespeed-insights-100/",
+      "tags"     : "Jekyll, Web-Design",
+    "description": "Scroring 100 out of 100 on Google PageSpeedInsights is not easy. But there are ways where you can make sure your site score a perfect century. Here is how you can do it.",
+      "image"    : "/thumbs-small/pagespeed-score-100-jekyll-blog.png"
+
+      
+    } ,
+  
+    {
+  
       "title"    : "Let&#39;s Design Mobile First",
       "url"      : "/mobile-first-web-design/",
       "tags"     : "Web-Design",

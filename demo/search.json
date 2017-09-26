@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Jekyll Site Scoring 100/100 on Pagespeed!",
+      "tags"     : "Jekyll, Web-Design",
+      "url"      : "/pagespeed-insights-100/",
+      "date"     : "2017-09-26 00:00:00 +0530"
+    } ,
+  
+    {
       "title"    : "Let&#39;s Design Mobile First",
       "tags"     : "Web-Design",
       "url"      : "/mobile-first-web-design/",
@@ -26,13 +33,6 @@
       "tags"     : "Web-Design",
       "url"      : "/google-form-customize/",
       "date"     : "2017-07-09 00:00:00 +0530"
-    } ,
-  
-    {
-      "title"    : "Jekyll Redirect 301",
-      "tags"     : "Jekyll, Plugins",
-      "url"      : "/jekyll-redirect/",
-      "date"     : "2017-06-20 00:00:00 +0530"
     } 
   
 ]
