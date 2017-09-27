@@ -2,7 +2,7 @@
 # different config blocks for different sections of your site.
 # For example, you can have one property to handle comment submission and
 # another one to handle posts.
-comments: Webjeda Comments
+comments: 
   # (*) REQUIRED
   #
   # Names of the fields the form is allowed to submit. If a field that is
@@ -43,7 +43,7 @@ comments: Webjeda Comments
   moderation: true
 
   # Name of the site. Used in notification emails.
-  name: "webjeda"
+  name: "webjeda.com"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
