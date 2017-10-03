@@ -1,0 +1,199 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Polymer Integration with Jekyll</title>
+    <link rel="canonical" href="https://blog.webjeda.com/integrate-polymer-jekyll/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        
+        a{color:#00953e}a:hover{color:#eee;background-color:#00953e;text-decoration:none}a:focus,a:active{color:#eee;background-color:#ea2626;text-decoration:none}.container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7);line-height:1.5}.main-content{margin:0 10px}amp-img{max-width:100%}header{padding:1em 0em 0em 0em}header img{height:50px}header a{text-decoration:none}header a:hover,header a:focus,header a:active{text-decoration:none;border:none;background-color:transparent}footer{text-align:center;padding:1em;background:#000;color:#eee;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}.text-center{text-align:center}.btn{background-color:transparent;border:1px solid #0a5;border-radius:2px;padding:10px 25px;cursor:pointer;text-decoration:none}.btn:hover{background-color:#0a5;color:#eee}blockquote{border-left:5px solid #00953e;padding-left:1em;font-style:italic;font-size:1.8em}@media screen and (max-width: 800px){blockquote{padding-left:0.5em;margin-left:0.5em}}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7);background-color:transparent}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#CF8E80}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#CF8E80}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#CF8E80}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#C4E7D4}.highlight .s{color:#CF8E80}.highlight .na{color:#9297C4}.highlight .nb{color:#9297C4}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#9297C4}.highlight .ni{color:#7880B5}.highlight .ne{color:#CF8E80;font-weight:bold}.highlight .nf{color:#CF8E80;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#7880B5}.highlight .nv{color:#7880B5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#ACDDE7}.highlight .mh{color:#ACDDE7}.highlight .mi{color:#ACDDE7}.highlight .mo{color:#ACDDE7}.highlight .sb{color:#CF8E80}.highlight .sc{color:#CF8E80}.highlight .sd{color:#CF8E80}.highlight .s2{color:#CF8E80}.highlight .se{color:#CF8E80}.highlight .sh{color:#CF8E80}.highlight .si{color:#CF8E80}.highlight .sx{color:#CF8E80}.highlight .sr{color:#9AD5CA}.highlight .s1{color:#CF8E80}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#7880B5}.highlight .vg{color:#7880B5}.highlight .vi{color:#7880B5}.highlight .il{color:#9AD5CA}
+
+        
+        
+      </style>
+    
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    
+  
+    <!-- Open Graph -->
+    <meta property="fb:app_id" content="549480635219583">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Polymer Integration with Jekyll">
+    <meta property="og:url" content="https://blog.webjeda.com/integrate-polymer-jekyll/">
+    <meta property="og:site_name" content="WebJeda Blog">
+    <meta property="og:description" content="Integrating Polymer in Jekyll is very simple. Polymer elements are the future of web design.  Polymer is an ambitious project by Google which might take off a lot of burden on web designers and developers.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://blog.webjeda.com/thumbs/jekyll-polymer.png" />
+    <meta property="og:image:alt" content="Polymer Integration with Jekyll" />
+    <meta property="article:publisher" content="http://www.facebook.com/webjeda" />
+    <meta property="article:author" content="https://www.facebook.com/sharu725" />
+    <meta property="article:published_time" content="2015-12-23 00:00:00 +0530" />
+
+
+   <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Polymer Integration with Jekyll">
+    <meta name="twitter:description" content="Integrating Polymer in Jekyll is very simple. Polymer elements are the future of web design.  Polymer is an ambitious project by Google which might take off a lot of burden on web designers and developers.">
+    <meta name="twitter:site" content="@webjeda" />
+    <meta name="twitter:creator" content="@sharathdt">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "name": "Polymer Integration with Jekyll",
+        "headline": "Polymer Integration with Jekyll",
+        "image": "https://blog.webjeda.com/thumbs/jekyll-polymer.png",
+        "description": "Integrating Polymer in Jekyll is very simple. Polymer elements are the future of web design.  Polymer is an ambitious project by Google which might take off a lot of burden on web designers and developers.",
+        "url": "https://blog.webjeda.com/integrate-polymer-jekyll/",
+        "datePublished": "2015-12-23",
+         "author": {
+          "@type": "Person",
+          "name": "sharath.dt"
+        }
+      }
+    </script>
+    
+    <!-- Disqus comments -->
+    
+    
+    
+    
+    
+  </head>
+  
+<body>
+<div class="container">
+<div class="main-content">
+
+<header>
+    <a href="https://blog.webjeda.com"><amp-img width="580" height="90" layout="responsive" src="/img/webjeda-logo-x50.svg" alt="WebJeda Blog | A modern web development blog"></amp-img></a>
+</header>
+
+<h1 class="post-title">Polymer Integration with Jekyll</h1>
+<p class="date"><small>23 Dec 2015 - sharathdt</small></p>    
+<amp-img src="https://blog.webjeda.com/thumbs/jekyll-polymer.png" alt="Polymer Integration with Jekyll" width="600" height="375" layout="responsive"><noscript><img src="https://blog.webjeda.com/thumbs/jekyll-polymer.png" alt="Polymer Integration with Jekyll" width="600" height="375"></noscript></amp-img>
+
+<p class="intro">Integrating Polymer in Jekyll is very simple. Polymer elements are the future of web design.  Polymer is an ambitious project by Google which might take off a lot of burden on web designers and developers.</p>
+
+<h2 id="why-polymer">Why Polymer?</h2>
+
+<p>Polymer cards are getting used in every single application Google is developing. It is in a way very convenient to use one custom element and call it as many times you want to. It saves a lot of time for developer and designer and also the page loads fast.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-polymer" id="markdown-toc-why-polymer">Why Polymer?</a></li>
+  <li><a href="#how-did-i-do-it" id="markdown-toc-how-did-i-do-it">How did I do it?</a></li>
+  <li><a href="#color-to-polymer-buttons" id="markdown-toc-color-to-polymer-buttons">Color to Polymer buttons</a></li>
+</ul>
+
+<p><amp-img src="/images/blog-webjeda-com-website-speed-test.JPG" alt="blog.webjeda.com speed test" width="655" height="235" layout="responsive"><noscript><img src="/images/blog-webjeda-com-website-speed-test.JPG" alt="blog.webjeda.com speed test" width="655" height="235"></noscript></amp-img></p>
+
+<p>Faster than 99% of all websites checked on Pingdom tools!</p>
+
+<p>If you observe the applications by Google, almost all of them are using paper-cards.</p>
+
+<p><amp-img src="/images/applications-using-polymer-cards-screenshot.jpg" alt="Applications that are using polymer" width="800" height="284" layout="responsive"><noscript><img src="/images/applications-using-polymer-cards-screenshot.jpg" alt="Applications that are using polymer" width="800" height="284"></noscript></amp-img></p>
+
+<p>Above screenshot shows few applications using card interface. Youtube (I know, it is a new channel), Playstore, Google Keep, Gmail and even Play music is using card interface.</p>
+
+<p>I wanted something similar. I did it only using CDN. Usually, you have to include Polymer elements in the project if you want to use those elements extensively. But I was using just three elements - paper-card, paper-ripple, and paper-button.</p>
+
+<p>Check out the demo to see how the cards will look like.</p>
+
+<p><a target="_blank" href="/demo/integrate-polymer-jekyll" class="btn">Demo</a></p>
+
+<p>You can customize the cards as you like. Add an image, description or a button. Polymer Ripple effect is also cool!</p>
+
+<h2 id="how-did-i-do-it">How did I do it?</h2>
+
+<p>First thing is to import the Polymer elements. Paste these lines to your <strong>head</strong> tag.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"import"</span> <span class="na">href=</span><span class="s">"https://cdn.rawgit.com/download/polymer-cdn/1.1.4/lib/paper-card/paper-card.html"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"import"</span> <span class="na">href=</span><span class="s">"https://cdn.rawgit.com/download/polymer-cdn/1.1.4/lib/paper-button/paper-button.html"</span><span class="nt">/&gt;</span></code></pre></figure>
+
+<p class="r">This method is not recomended. I’m using this as an example. For greater response time you should be using a local copy of these files rather importing from an URL. Remember, importing more files lead to a slow loading website</p>
+
+<p>And that’s about it. If you want some other element, say <strong>paper-toggle-button</strong></p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<p>then just replace the <strong>paper-card</strong> with <strong>paper-toggle-button</strong> which would be,</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"import"</span> <span class="na">href=</span><span class="s">"https://cdn.rawgit.com/download/polymer-cdn/1.1.4/lib/paper-toggle-button/paper-toggle-button.html"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>Now you can call the elements inside the body tag and they will be downloaded.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;paper-button&gt;</span>Click Me<span class="nt">&lt;/paper-button&gt;</span></code></pre></figure>
+
+<p>So what about my jekyll blog index page?</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;paper-card</span> <span class="na">heading=</span><span class="s">"{{post.title}}"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">"post.date | date_to_xmlschema"</span><span class="nt">&gt;</span>{{post.date | date_to_string}}<span class="nt">&lt;/time&gt;</span>
+ <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-content"</span><span class="nt">&gt;</span>{{post.content | strip_html | truncatewords:50}}<span class="nt">&lt;/div&gt;</span>
+ <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-actions"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{% if site.baseurl == "</span><span class="err">/"</span> <span class="err">%}{{</span> <span class="na">post</span><span class="err">.</span><span class="na">url</span> <span class="err">}}{%</span> <span class="na">else</span> <span class="err">%}{{</span> <span class="na">post</span><span class="err">.</span><span class="na">url</span> <span class="err">|</span> <span class="na">prepend:</span> <span class="na">site</span><span class="err">.</span><span class="na">baseurl</span> <span class="err">}}{%</span> <span class="na">endif</span> <span class="err">%}"</span><span class="nt">&gt;</span>                        
+ <span class="nt">&lt;paper-button</span> <span class="na">class=</span><span class="s">"colored"</span> <span class="na">raised</span><span class="nt">&gt;</span>Read<span class="nt">&lt;/paper-button&gt;&lt;/a&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+ <span class="nt">&lt;/paper-card&gt;</span>
+ </code></pre></figure>
+
+<p>Copy these lines to your <strong>index.html</strong> page without deleting the default code. If you like it then delete the default code and keep the polymer one.</p>
+
+<blockquote>
+  <p>I’m not using polymer cards for my blog index by the way. I have designed it on my own.</p>
+</blockquote>
+
+<p>How did I include colored paper button?</p>
+
+<h2 id="color-to-polymer-buttons">Color to Polymer buttons</h2>
+
+<p>Here is the css code for coloring the paper-button.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"> 
+ <span class="nt">paper-button</span><span class="nc">.colored</span> <span class="p">{</span>
+     <span class="nl">background-color</span><span class="p">:</span><span class="m">#26A65B</span><span class="p">;</span>
+     <span class="nl">color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+     <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+     <span class="nl">font-weight</span><span class="p">:</span> <span class="m">100</span><span class="p">;</span>     
+     <span class="p">}</span></code></pre></figure>
+
+<p class="y">Eventually I had to take it out as it started throwing JS errors. I chose to design my own cards. They look good I guess!</p>
+
+<p>Let me know if you were successful in integrating Polymer in your website. 
+Comment if you do something awesome.
+Thanks for reading!</p>
+
+
+<p class="text-center">
+<a class="btn" href="https://blog.webjeda.com/integrate-polymer-jekyll/#disqus_thread">View/Add comments</a>
+</p>
+</div>
+<footer>
+    © copyrights by <a href="https://blog.webjeda.com">webjeda</a>
+</footer>
+</div>
+
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-71358787-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+</body>
+
+</html>

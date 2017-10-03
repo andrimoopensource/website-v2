@@ -533,7 +533,7 @@
       "title"    : "Polymer Integration with Jekyll",
       "url"      : "/integrate-polymer-jekyll/",
       "tags"     : "Web-Design, Github-Pages",
-    "description": "Integrating Polymer in Jekyll is very simple. Polymer elements are the future of web design. I have a tutorial to include Polymer elements in Jekyll blog with simple steps. Polymer is an ambitious project by Google which might take off a lot of burden on web designers and developers.",
+    "description": "Integrating Polymer in Jekyll is very simple. Polymer elements are the future of web design.  Polymer is an ambitious project by Google which might take off a lot of burden on web designers and developers.",
       "image"    : "/thumbs-small/jekyll-polymer.png"
 
       

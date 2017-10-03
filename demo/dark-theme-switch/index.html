@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title></title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/demo.css">
+</head>
+<body>
+    <div class="demo-container">
+        <a class="btn" href="/dark-theme-switch/">Back to article</a>
+        
+        <style>
+.dark-div {
+    padding:30px 60px; 
+    border: 1px dashed #000; 
+    width: 300px;
+    text-align:center;
+    margin: 10px;
+    cursor: pointer;
+
+}
+</style>
+
+<h2 id="dark-mode-switch">Dark Mode Switch</h2>
+<p>This box changes color on click but does not retain the state after refresh.</p>
+
+<div class="dark-div" id="dark-div" style="background-color: rgb(255, 255, 255)" onclick="dark()">
+    <p>Click me</p>
+</div>
+
+<h2 id="dark-mode-across-the-domin">Dark Mode Across the Domin</h2>
+<p>This box not only changes color on click but also retains the state even after refresh.</p>
+
+<div class="dark-div" id="dark-div-2" style="background-color: rgb(255, 255, 255)" onclick="darker()">
+    <p>Switch</p>
+</div>
+
+<script>function dark(){"rgb(255, 255, 255)"==document.getElementById("dark-div").style.backgroundColor?(document.getElementById("dark-div").style.backgroundColor="rgb(6, 23, 37)",document.getElementById("dark-div").style.color="rgb(255, 255, 255)"):(document.getElementById("dark-div").style.backgroundColor="rgb(255, 255, 255)",document.getElementById("dark-div").style.color="rgb(6, 23, 37)")};</script>
+
+<script>
+document.getElementById("dark-div-2").style.backgroundColor=sessionStorage.getItem("bg");document.getElementById("dark-div-2").style.color=sessionStorage.getItem("cc");function darker(){"rgb(255, 255, 255)"===sessionStorage.getItem("bg")?(sessionStorage.setItem("bg","rgb(6, 23, 37)"),sessionStorage.setItem("cc","#eee")):null==sessionStorage.getItem("bg")?(sessionStorage.setItem("bg","rgb(6, 23, 37)"),sessionStorage.setItem("cc","#eee")):"rgb(6, 23, 37)"===sessionStorage.getItem("bg")&&(sessionStorage.setItem("bg","rgb(255, 255, 255)"),sessionStorage.setItem("cc","#333"));document.getElementById("dark-div-2").style.backgroundColor=sessionStorage.getItem("bg");document.getElementById("dark-div-2").style.color=sessionStorage.getItem("cc")}
+;
+</script>
+
+
+       
+    </div>
+    
+</body>
+</html>
