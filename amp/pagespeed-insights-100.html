@@ -193,6 +193,12 @@
 
 <p>That should solve the <em>Eliminate render-blocking JavaScript and CSS in above-the-fold content</em> warning for google fonts.</p>
 
+<p class="r">This method has some serious flaws. Google may change the address of the font files based on Browser sniffing.</p>
+
+<p>A better way would be downloading the font files and using it locally. But that will be counter-productive because Google font loads faster if it is hosted on a CDN. If you download it and host it on your own server then it will be a little slower than the normal Google Font load by link.</p>
+
+<p>Use <a href="https://google-webfonts-helper.herokuapp.com/fonts" target="_blank" rel="nofollow">Webfont Helper</a> to download any Google Font and host it on your server.</p>
+
 <h3 id="analytics">Analytics</h3>
 <p>It is funny how Google services are the main hurdles for scoring 100 out 100 on PageSpeedInsights. But I like their honesty in flagging everything that causes the delay in loading a website.</p>
 
