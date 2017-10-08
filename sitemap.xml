@@ -3,6 +3,21 @@
   
     
     <url>
+      <loc>https://blog.webjeda.com/wordpress-jekyll-migration/</loc>
+      
+        <lastmod>2017-10-03T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>https://blog.webjeda.com/pagespeed-insights-100/</loc>
       
         <lastmod>2017-09-26T00:00:00+05:30</lastmod>
@@ -801,7 +816,7 @@
     <url>
       <loc>https://blog.webjeda.com/404.html</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -816,7 +831,7 @@
     <url>
       <loc>https://blog.webjeda.com/about/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -831,7 +846,7 @@
     <url>
       <loc>https://blog.webjeda.com/archive/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -846,7 +861,7 @@
     <url>
       <loc>https://blog.webjeda.com/contact/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -861,7 +876,7 @@
     <url>
       <loc>https://blog.webjeda.com/css/demo.css</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -876,7 +891,7 @@
     <url>
       <loc>https://blog.webjeda.com/donate/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -891,7 +906,7 @@
     <url>
       <loc>https://blog.webjeda.com/css/error.css</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -906,7 +921,7 @@
     <url>
       <loc>https://blog.webjeda.com/feed.xml</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -921,7 +936,7 @@
     <url>
       <loc>https://blog.webjeda.com/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -936,7 +951,7 @@
     <url>
       <loc>https://blog.webjeda.com/jekyll-themes/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -951,7 +966,7 @@
     <url>
       <loc>https://blog.webjeda.com/jekyll-tutorials/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -966,7 +981,7 @@
     <url>
       <loc>https://blog.webjeda.com/css/main.css</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -981,7 +996,7 @@
     <url>
       <loc>https://blog.webjeda.com/search.json</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -996,7 +1011,7 @@
     <url>
       <loc>https://blog.webjeda.com/demo/search.json</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1011,7 +1026,7 @@
     <url>
       <loc>https://blog.webjeda.com/search/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1028,7 +1043,7 @@
     <url>
       <loc>https://blog.webjeda.com/tags/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1043,7 +1058,7 @@
     <url>
       <loc>https://blog.webjeda.com/videos/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1058,7 +1073,7 @@
     <url>
       <loc>https://blog.webjeda.com/wordpress-to-jekyll-migration/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1073,7 +1088,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-create-and</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1088,7 +1103,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-create-and-host-a-website</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1103,7 +1118,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-create-and-host-a-website-on-github-pages/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1118,7 +1133,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-create-and-host-a-website-on-github-pages</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1133,7 +1148,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-create-and-host-a-website-on-github</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1148,7 +1163,7 @@
     <url>
       <loc>https://blog.webjeda.com/create-host-website-github-p</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1163,7 +1178,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-custom-domain-to-github</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1178,7 +1193,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-custom-domain-to-github/Github</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1193,7 +1208,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-custom-domain-to-github/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1208,7 +1223,7 @@
     <url>
       <loc>https://blog.webjeda.com/custom</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1223,7 +1238,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-I-manged-to-integrate-polymer-with-github/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1238,7 +1253,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-I-manged-to-integrate-polymer-with-github</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1253,7 +1268,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-create-a-jekyll-blog/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1268,7 +1283,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-I-created-webjeda-blog/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1283,7 +1298,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-I-created-webjeda-blog</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1298,7 +1313,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-create-a-jekyll-blog</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1313,7 +1328,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-crate-a-jekyll-blog</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1328,7 +1343,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-top-bar-to-website/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1343,7 +1358,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-form-option-to-jekyll-websites/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1358,7 +1373,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-form-option-to-jekyll-websites</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1373,7 +1388,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-sync-files-folders-with-github/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1388,7 +1403,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-sync-files-folders-with-github</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1403,7 +1418,7 @@
     <url>
       <loc>https://blog.webjeda.com/sync-file</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1418,7 +1433,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-a-sitemap-to-jekyll-blog/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1433,7 +1448,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-a-sitemap-to-jekyll-blog</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1448,7 +1463,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-author-box-to-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1463,7 +1478,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-author-box-to-jekyll</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1478,7 +1493,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-share-buttons-to-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1493,7 +1508,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-share-buttons-to-jekyll</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1508,7 +1523,7 @@
     <url>
       <loc>https://blog.webjeda.com/jekyll-share-buttons/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1523,7 +1538,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-facebook-like-button-to-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1538,7 +1553,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-facebook-like-button-to-jekyll</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1553,7 +1568,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-make-a-new-page-in-jekyll</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1568,7 +1583,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-make-a-new-page-in-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1583,7 +1598,7 @@
     <url>
       <loc>https://blog.webjeda.com/adsense-on-jekyll-and-adsense-on-subdomain/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1598,7 +1613,7 @@
     <url>
       <loc>https://blog.webjeda.com/adsense-on-jekyll-and-adsense-on-subdomain</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1613,7 +1628,7 @@
     <url>
       <loc>https://blog.webjeda.com/an-easy-way-to-edit-posts-in-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1628,7 +1643,7 @@
     <url>
       <loc>https://blog.webjeda.com/an-easy-way-to-edit-posts-in-jekyll</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1643,7 +1658,7 @@
     <url>
       <loc>https://blog.webjeda.com/a-laymans-guide-to-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1658,7 +1673,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-fetch-first-image-from-jekyll-post/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1673,7 +1688,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-fetch-first-image-from-jekyll-post</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1688,7 +1703,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-compress-html-in-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1703,7 +1718,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-compress-html-in-jekyll</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1718,7 +1733,7 @@
     <url>
       <loc>https://blog.webjeda.com/lazy-loading-large-css-to-speed-up-website/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1733,7 +1748,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-comments-to-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1748,7 +1763,7 @@
     <url>
       <loc>https://blog.webjeda.com/github-upload-file-option/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1763,7 +1778,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-add-related-posts-in-jekyll/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1778,7 +1793,7 @@
     <url>
       <loc>https://blog.webjeda.com/optimize-jekyll-blog-seo/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1793,7 +1808,7 @@
     <url>
       <loc>https://blog.webjeda.com/how-to-optimize-jekyll-blog-for-seo/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1808,7 +1823,7 @@
     <url>
       <loc>https://blog.webjeda.com/jekyll-subscribe-option-feedburner/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1823,7 +1838,7 @@
     <url>
       <loc>https://blog.webjeda.com/better-related-posts/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1838,7 +1853,7 @@
     <url>
       <loc>https://blog.webjeda.com/common-jekyll-tags/src/parse</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1853,7 +1868,7 @@
     <url>
       <loc>https://blog.webjeda.com/about.html</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1868,7 +1883,7 @@
     <url>
       <loc>https://blog.webjeda.com/thank-you/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1883,7 +1898,7 @@
     <url>
       <loc>https://blog.webjeda.com/thank-you.html</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1898,7 +1913,7 @@
     <url>
       <loc>https://blog.webjeda.com/test.html</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1913,7 +1928,7 @@
     <url>
       <loc>https://blog.webjeda.com/atom.xml</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1928,7 +1943,7 @@
     <url>
       <loc>https://blog.webjeda.com/how</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1943,7 +1958,7 @@
     <url>
       <loc>https://blog.webjeda.com/jekyll</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1958,7 +1973,7 @@
     <url>
       <loc>https://blog.webjeda.com/jekyll-guide/Jekyll</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -1973,7 +1988,7 @@
     <url>
       <loc>https://blog.webjeda.com/user-sitemap/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2751,9 +2766,24 @@
   
     
     <url>
+      <loc>https://blog.webjeda.comamp/wordpress-jekyll-migration</loc>
+      
+        <lastmod>2017-10-03T00:00:00+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>https://blog.webjeda.com/page2/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2768,7 +2798,7 @@
     <url>
       <loc>https://blog.webjeda.com/page3/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2783,7 +2813,7 @@
     <url>
       <loc>https://blog.webjeda.com/page4/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2798,7 +2828,7 @@
     <url>
       <loc>https://blog.webjeda.com/page5/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2813,7 +2843,7 @@
     <url>
       <loc>https://blog.webjeda.com/page6/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2828,7 +2858,7 @@
     <url>
       <loc>https://blog.webjeda.com/page7/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2843,7 +2873,7 @@
     <url>
       <loc>https://blog.webjeda.com/page8/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -2858,7 +2888,7 @@
     <url>
       <loc>https://blog.webjeda.com/page9/</loc>
       
-        <lastmod>2017-10-06T21:58:02+05:30</lastmod>
+        <lastmod>2017-10-08T14:18:32+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>

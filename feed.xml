@@ -12,6 +12,23 @@
 		<atom:link href="https://blog.webjeda.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>2 Steps to Migrate from WordPress to Jekyll</title>
+				        
+				
+					<description>WordPress to Jekyll migration is simple if you have a small website. If your site is huge with many posts, you may have to go through some extra steps.</description>
+				
+
+				<image>
+                    <url>https://blog.webjeda.com/thumbs/wordpress-to-jekyll-migration-tutorial.png</url>
+                    <title>2 Steps to Migrate from WordPress to Jekyll</title>
+                </image>
+				
+				<pubDate>Tue, 03 Oct 2017 00:00:00 +0530</pubDate>
+				<link>https://blog.webjeda.com/wordpress-jekyll-migration/</link>
+				<guid isPermaLink="true">https://blog.webjeda.com/wordpress-jekyll-migration/</guid>
+			</item>
+		
+			<item>
 				<title>Jekyll Site Scoring 100/100 on Pagespeed!</title>
 				        
 				

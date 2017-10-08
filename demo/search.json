@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "2 Steps to Migrate from WordPress to Jekyll",
+      "tags"     : "Jekyll",
+      "url"      : "/wordpress-jekyll-migration/",
+      "date"     : "2017-10-03 00:00:00 +0530"
+    } ,
+  
+    {
       "title"    : "Jekyll Site Scoring 100/100 on Pagespeed!",
       "tags"     : "Jekyll, Web-Design",
       "url"      : "/pagespeed-insights-100/",
@@ -26,13 +33,6 @@
       "tags"     : "Web-Design, Opinion",
       "url"      : "/css-grid-framework/",
       "date"     : "2017-08-07 00:00:00 +0530"
-    } ,
-  
-    {
-      "title"    : "Google Form Customization for Static Websites!",
-      "tags"     : "Web-Design",
-      "url"      : "/google-form-customize/",
-      "date"     : "2017-07-09 00:00:00 +0530"
     } 
   
 ]

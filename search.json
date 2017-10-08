@@ -2,6 +2,17 @@
   
     {
   
+      "title"    : "2 Steps to Migrate from WordPress to Jekyll",
+      "url"      : "/wordpress-jekyll-migration/",
+      "tags"     : "Jekyll",
+    "description": "WordPress to Jekyll migration is simple if you have a small website. If your site is huge with many posts, you may have to go through some extra steps.",
+      "image"    : "/thumbs-small/wordpress-to-jekyll-migration-tutorial.png"
+
+      
+    } ,
+  
+    {
+  
       "title"    : "Jekyll Site Scoring 100/100 on Pagespeed!",
       "url"      : "/pagespeed-insights-100/",
       "tags"     : "Jekyll, Web-Design",
