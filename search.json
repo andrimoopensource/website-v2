@@ -445,7 +445,7 @@
       "title"    : "Best Way to Add or Create New Pages in Jekyll",
       "url"      : "/new-page-jekyll/",
       "tags"     : "Jekyll",
-    "description": "Adding a new page in Jekyll is really easy. You can use HTML or Markdown for markup. Learn how to create a page in Jekyll and how to manipulate the URL. We will be creating a blank layout for plain html pages. Create contact page, about page, archive page and more on Jekyll using this method.",
+    "description": "Adding a new page in Jekyll is easy. You can either use HTML or Markdown. Learn how to create a page in Jekyll and how to manipulate the URL. We will be creating a contact page, about page, archive page and more on Jekyll using this method.",
       "image"    : "/thumbs-small/how-to-add-pages-in-jekyll.png"
 
       
