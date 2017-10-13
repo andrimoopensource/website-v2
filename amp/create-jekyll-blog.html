@@ -97,17 +97,13 @@
   </li>
   <li><a href="#why-not-wordpress" id="markdown-toc-why-not-wordpress">Why not WordPress?</a></li>
   <li><a href="#prerequisites" id="markdown-toc-prerequisites">Prerequisites</a></li>
-  <li><a href="#step-1-find-a-theme-that-suits-your-requirement" id="markdown-toc-step-1-find-a-theme-that-suits-your-requirement">Step 1: Find a theme that suits your requirement</a></li>
-  <li>
-<a href="#step-2-fork---a-new-way-of-copy-pasting" id="markdown-toc-step-2-fork---a-new-way-of-copy-pasting">Step 2: Fork - A new way of copy pasting!</a>    <ul>
-      <li><a href="#update" id="markdown-toc-update">Update</a></li>
-    </ul>
-  </li>
+  <li><a href="#step-1-find-a-jekyll-theme" id="markdown-toc-step-1-find-a-jekyll-theme">Step 1: Find a Jekyll theme</a></li>
+  <li><a href="#step-2-fork---kind-of-copy-pasting" id="markdown-toc-step-2-fork---kind-of-copy-pasting">Step 2: Fork - Kind of copy pasting!</a></li>
   <li><a href="#step-21-check-if-a-source-branch-is-selected" id="markdown-toc-step-21-check-if-a-source-branch-is-selected">Step 2.1 Check if a source branch is selected</a></li>
   <li><a href="#step-3-check-whether-you-are-on-the-right-branchnot-required" id="markdown-toc-step-3-check-whether-you-are-on-the-right-branchnot-required">Step 3: Check whether you are on the right branch(not required)</a></li>
-  <li><a href="#step-4-check-for-redirection" id="markdown-toc-step-4-check-for-redirection">Step 4: Check for redirection</a></li>
-  <li><a href="#step-5-check-for-baseurl" id="markdown-toc-step-5-check-for-baseurl">Step 5: Check for baseurl</a></li>
-  <li><a href="#step-6-make-changes-to-your-website" id="markdown-toc-step-6-make-changes-to-your-website">Step 6: Make changes to your website</a></li>
+  <li><a href="#step-4-redirection" id="markdown-toc-step-4-redirection">Step 4: Redirection</a></li>
+  <li><a href="#step-5-baseurl" id="markdown-toc-step-5-baseurl">Step 5: Baseurl</a></li>
+  <li><a href="#step-6-edit-jekyll-blog" id="markdown-toc-step-6-edit-jekyll-blog">Step 6: Edit Jekyll Blog</a></li>
   <li>
 <a href="#step-7-publish-your-new-post" id="markdown-toc-step-7-publish-your-new-post">Step 7: Publish your new post!</a>    <ul>
       <li><a href="#front-matter" id="markdown-toc-front-matter">Front Matter</a></li>
@@ -176,7 +172,7 @@
 
 <p>Github documentation is good but it uses technical terms that a normal user is not aware of. If you want a guide for github then here it is - <a href="https://guides.github.com/" target="_blank"><strong>Github Guide</strong></a>. Let’s begin creating a Jekyll blog.</p>
 
-<h2 id="step-1-find-a-theme-that-suits-your-requirement">Step 1: Find a theme that suits your requirement</h2>
+<h2 id="step-1-find-a-jekyll-theme">Step 1: Find a Jekyll theme</h2>
 
 <p>A theme is important for a good looking blog. Otherwise, you can go with the basic Jekyll theme if you would like to design it all by yourself. But if you are looking for a pre-designed layout then you should search for Jekyll Themes. You will find  a lot of themes but, what I suggest for starters is to go with these Jekyll themes.</p>
 
@@ -204,7 +200,7 @@
 
 <amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
 
-<h2 id="step-2-fork---a-new-way-of-copy-pasting">Step 2: Fork - A new way of copy pasting!</h2>
+<h2 id="step-2-fork---kind-of-copy-pasting">Step 2: Fork - Kind of copy pasting!</h2>
 
 <p>First thing is logging into Github account and forking the whole <a href="https://github.com/KingFelix/emerald" rel="nofollow" target="_blank">theme repository</a></p>
 
@@ -212,8 +208,7 @@
 
 <p>What <strong>fork</strong> does is that it copies the whole repository as a new repository inside your Github account. You can rename the repository to anything you like in the <strong>Settings</strong> option.</p>
 
-<h3 id="update">Update</h3>
-<p class="g">Latest Github update minimizes a step here. You do not have to create a <code class="highlighter-rouge">gh-pages</code> branch. Use any branch as source for the Github Pages.</p>
+<p class="g">Latest Github update minimizes a step here. You do not have to create a <code class="highlighter-rouge">gh-pages</code> branch. Use any branch as source for the Github Pages. Settings » Github pages » Select branch to use.</p>
 
 <h2 id="step-21-check-if-a-source-branch-is-selected">Step 2.1 Check if a source branch is selected</h2>
 <p>After forking the theme repository, go to settings and find <strong>Github Pages</strong> section. Here you will have to select which branch you would like to use as website source.</p>
@@ -230,7 +225,7 @@
 <p>So once you fork the repository, make sure you are in the gh-pages branch. If not then create a branch with the name <code class="highlighter-rouge">gh-pages</code>. Many themes tend to have only the <code class="highlighter-rouge">master</code> branch. So it is necessary to create a gh-pages branch to host the blog as a Project Page</p>
 
 <div id="step4"></div>
-<h2 id="step-4-check-for-redirection">Step 4: Check for redirection</h2>
+<h2 id="step-4-redirection">Step 4: Redirection</h2>
 
 <p>Once you hit the fork button, all the files in the remote repository will be copied to a new repository in your Github account.</p>
 
@@ -244,7 +239,7 @@
 
 <p>Your blog should be up and running by now. But give it some time. A maximum of 10 minutes. Jekyll builds a static blog in the meanwhile. If the blog is not up, then take the next step.</p>
 
-<h2 id="step-5-check-for-baseurl">Step 5: Check for baseurl</h2>
+<h2 id="step-5-baseurl">Step 5: Baseurl</h2>
 
 <p><amp-img src="/images/config.yml-in-repository.jpg" alt="_config.yml in repository" width="382" height="231" layout="responsive"><noscript><img src="/images/config.yml-in-repository.jpg" alt="_config.yml in repository" width="382" height="231"></noscript></amp-img></p>
 
@@ -267,7 +262,7 @@ Jekyll blog configuration is found inside <strong>_config.yml</strong> file.</p>
 
 <p>So that’s all there is to set up a new Jekyll blog. Some things like <strong>CNAME</strong> and <strong>baseurl</strong> may vary from theme to theme. But once you have a good knowledge on why they are used, you can configure them as you like.</p>
 
-<h2 id="step-6-make-changes-to-your-website">Step 6: Make changes to your website</h2>
+<h2 id="step-6-edit-jekyll-blog">Step 6: Edit Jekyll Blog</h2>
 
 <p>The theme you forked will have default values that you can change at different places of the repository files. But most of the configuration will be present inside <strong>_config.yml</strong> file. Edit the file as per your requirement.</p>
 
