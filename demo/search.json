@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Why I Switched to Google Domains?",
+      "tags"     : "Web-Design, Opinion",
+      "url"      : "/google-domains-review/",
+      "date"     : "2017-11-16 00:00:00 +0530"
+    } ,
+  
+    {
       "title"    : "4 Steps to Migrate from WordPress to Jekyll",
       "tags"     : "Jekyll",
       "url"      : "/wordpress-to-jekyll-migration/",
@@ -26,13 +33,6 @@
       "tags"     : "Jekyll, Web-Design",
       "url"      : "/jekyll-snippets/",
       "date"     : "2017-08-18 00:00:00 +0530"
-    } ,
-  
-    {
-      "title"    : "Lightweight CSS Grid Framework",
-      "tags"     : "Web-Design, Opinion",
-      "url"      : "/css-grid-framework/",
-      "date"     : "2017-08-07 00:00:00 +0530"
     } 
   
 ]
