@@ -193,52 +193,9 @@
 
 <p>That should solve the <em>Eliminate render-blocking JavaScript and CSS in above-the-fold content</em> warning for google fonts.</p>
 
-<p class="y">This method has some serious flaws. Google may change the address of the font files based on Browser sniffing. But there is a solution!</p>
+<p class="r">This method has some serious flaws. Google may change the address of the font files based on Browser sniffing.</p>
 
-<p>A better way would be downloading the font files and using it locally. But that will be counter-productive because Google font loads faster if it is hosted on a CDN. If you download it and host it on your own server then it will be a little slower than the normal Google Font load by link.</p>
-
-<p>I have found a method that might resolve this issue. It is a little time consuming but works as expected.</p>
-
-<p>First download all the fonts into a local folder in the project, say <code class="highlighter-rouge">fonts</code>. In the above Google Fonts css, make a little change by adding source as your local font files as well.</p>
-
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* cyrillic-ext */</span>
-<span class="k">@font-face</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Open Sans'</span><span class="p">;</span>
-  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
-  <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Open Sans Regular'</span><span class="p">),</span> <span class="n">local</span><span class="p">(</span><span class="s2">'OpenSans-Regular'</span><span class="p">),</span> <span class="sx">url(/fonts/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2)</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">);</span>
-  <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Open Sans Regular'</span><span class="p">),</span> <span class="n">local</span><span class="p">(</span><span class="s2">'OpenSans-Regular'</span><span class="p">),</span> <span class="sx">url(https://fonts.gstatic.com/s/opensans/v14/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2)</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">);</span>
-  <span class="py">unicode-range</span><span class="p">:</span> <span class="n">U</span><span class="err">+</span><span class="m">0460-052</span><span class="n">F</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">20</span><span class="n">B4</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">2</span><span class="n">DE0-2DFF</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="n">A640-A69F</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c">/* cyrillic */</span>
-<span class="k">@font-face</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Open Sans'</span><span class="p">;</span>
-  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">400</span><span class="p">;</span>
-  <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Open Sans Regular'</span><span class="p">),</span> <span class="n">local</span><span class="p">(</span><span class="s2">'OpenSans-Regular'</span><span class="p">),</span> <span class="sx">url(/fonts/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2)</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">);</span>
-  <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Open Sans Regular'</span><span class="p">),</span> <span class="n">local</span><span class="p">(</span><span class="s2">'OpenSans-Regular'</span><span class="p">),</span> <span class="sx">url(https://fonts.gstatic.com/s/opensans/v14/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2)</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">);</span>
-  <span class="py">unicode-range</span><span class="p">:</span> <span class="n">U</span><span class="err">+</span><span class="m">0400-045</span><span class="n">F</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">0490-0491</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">04</span><span class="n">B0-04B1</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">2116</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c">/* cyrillic-ext */</span>
-<span class="k">@font-face</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Roboto'</span><span class="p">;</span>
-  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">900</span><span class="p">;</span>
-  <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Roboto Black'</span><span class="p">),</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Roboto-Black'</span><span class="p">),</span> <span class="sx">url(/fonts/s7gftie1JANC-QmDJvMWZhJtnKITppOI_IvcXXDNrsc.woff2)</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">);</span>
-  <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Roboto Black'</span><span class="p">),</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Roboto-Black'</span><span class="p">),</span> <span class="sx">url(https://fonts.gstatic.com/s/roboto/v16/s7gftie1JANC-QmDJvMWZhJtnKITppOI_IvcXXDNrsc.woff2)</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">);</span>
-  <span class="py">unicode-range</span><span class="p">:</span> <span class="n">U</span><span class="err">+</span><span class="m">0460-052</span><span class="n">F</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">20</span><span class="n">B4</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">2</span><span class="n">DE0-2DFF</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="n">A640-A69F</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="c">/* cyrillic */</span>
-<span class="k">@font-face</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Roboto'</span><span class="p">;</span>
-  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">900</span><span class="p">;</span>
-  <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Roboto Black'</span><span class="p">),</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Roboto-Black'</span><span class="p">),</span> <span class="sx">url(/fonts/3Y_xCyt7TNunMGg0Et2pnhJtnKITppOI_IvcXXDNrsc.woff2)</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">);</span>
-  <span class="nl">src</span><span class="p">:</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Roboto Black'</span><span class="p">),</span> <span class="n">local</span><span class="p">(</span><span class="s2">'Roboto-Black'</span><span class="p">),</span> <span class="sx">url(https://fonts.gstatic.com/s/roboto/v16/3Y_xCyt7TNunMGg0Et2pnhJtnKITppOI_IvcXXDNrsc.woff2)</span> <span class="n">format</span><span class="p">(</span><span class="s2">'woff2'</span><span class="p">);</span>
-  <span class="py">unicode-range</span><span class="p">:</span> <span class="n">U</span><span class="err">+</span><span class="m">0400-045</span><span class="n">F</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">0490-0491</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">04</span><span class="n">B0-04B1</span><span class="p">,</span> <span class="n">U</span><span class="err">+</span><span class="m">2116</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>Now, even if Google changes the URL of the remote font files, the backup files will be used instead.</p>
+<p>A better way would be downloading the font files and using it locally. But that will be counter-productive because Google Fonts load faster when it is downloaded from a CDN. If you download it and host it on your own server, then it will be a little slower than the normal Google Font load by link.</p>
 
 <p>Use <a href="https://google-webfonts-helper.herokuapp.com/fonts" target="_blank" rel="nofollow">Webfont Helper</a> to download any Google Font and host it on your server.</p>
 
