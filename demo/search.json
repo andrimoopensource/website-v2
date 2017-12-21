@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "Image Optimization",
+      "tags"     : "Web-Design",
+      "url"      : "/image-optimization/",
+      "date"     : "2017-12-20 00:00:00 +0530"
+    } ,
+  
+    {
       "title"    : "Why I Switched to Google Domains?",
       "tags"     : "Web-Design, Opinion",
       "url"      : "/google-domains-review/",
@@ -26,13 +33,6 @@
       "tags"     : "Web-Design",
       "url"      : "/mobile-first-web-design/",
       "date"     : "2017-09-04 00:00:00 +0530"
-    } ,
-  
-    {
-      "title"    : "Jekyll Snippets - Just Copy Paste!",
-      "tags"     : "Jekyll, Web-Design",
-      "url"      : "/jekyll-snippets/",
-      "date"     : "2017-08-18 00:00:00 +0530"
     } 
   
 ]

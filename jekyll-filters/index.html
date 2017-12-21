@@ -10,6 +10,8 @@
 <span class="nt">&lt;/ul&gt;</span>
 {% endfor %}</code></pre></figure><p>I’m limiting the number of posts to only 5.</p><pre><code>
 
+<li>Image Optimization - 20 Dec 2017</li>
+
 <li>Why I Switched to Google Domains? - 16 Nov 2017</li>
 
 <li>4 Steps to Migrate from WordPress to Jekyll - 03 Oct 2017</li>
@@ -17,8 +19,6 @@
 <li>Jekyll Site Scoring 100/100 on Pagespeed! - 26 Sep 2017</li>
 
 <li>Let's Design Mobile First - 04 Sep 2017</li>
-
-<li>Jekyll Snippets - Just Copy Paste! - 18 Aug 2017</li>
 
 </code></pre><p>What we observe here is that the posts are arranged by date. The latest one being at the top.</p><p>Consider this example where I have sorted posts by their title.</p><h3 id="sort-jekyll-posts-by-title">Sort Jekyll posts by title</h3><p>We will be sorting the list first and then give it to the for loop for output.</p><figure class="highlight"><pre><code class="language-html" data-lang="html">{% assign sorted-posts = site.posts | sort: 'title' %}
 {% for post in sorted-posts limit: 5 %}
@@ -58,6 +58,8 @@
 {% endfor %}</code></pre></figure><h4 id="output-2">Output</h4><pre><code>
 
 
+<li>Image Optimization</li>
+
 <li>Why I Switched to Google Domains?</li>
 
 <li>Jekyll Site Scoring 100/100 on Pagespeed!</li>
@@ -65,8 +67,6 @@
 <li>Let's Design Mobile First</li>
 
 <li>Jekyll Snippets - Just Copy Paste!</li>
-
-<li>Lightweight CSS Grid Framework</li>
 
 </code></pre><h3 id="sort-jekyll-posts-by-type">Sort Jekyll posts by type</h3><p>Jekyll posts now can be sorted by any Front Matter. It doesn’t have to be tags or categories. Let’s consider the value <code class="highlighter-rouge">author</code>. I have author mentioned in almost all my posts like below.</p><figure class="highlight"><pre><code class="language-yml" data-lang="yml"><span class="nn">---</span>
 <span class="s">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Webjeda</span><span class="nv"> </span><span class="s">Jekyll</span><span class="nv"> </span><span class="s">Blog"</span>

@@ -2,6 +2,17 @@
   
     {
   
+      "title"    : "Image Optimization",
+      "url"      : "/image-optimization/",
+      "tags"     : "Web-Design",
+    "description": "Image Optimization, the Holy Grail of web design. Striking a balance between image and video quality and online performance is a tricky quest.",
+      "image"    : "/thumbs-small/image-optimization.png"
+
+      
+    } ,
+  
+    {
+  
       "title"    : "Why I Switched to Google Domains?",
       "url"      : "/google-domains-review/",
       "tags"     : "Web-Design, Opinion",
