@@ -208,7 +208,9 @@ title: Categories
 
 <p>This can also be done using a simple piece of code if you just want to show categories without any link.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">    {{page.tags | capitalize | join: ', '}}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{{page.categories | capitalize | join: ', '}}</code></pre></figure>
+<p>or</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{{page.tags | capitalize | join: ', '}}</code></pre></figure>
 
 <p>This is how we can implement categories. If we want tags instead of categories then we should replace <strong>category</strong> with <strong>tag</strong> and <strong>categories</strong> with <strong>tags</strong> everywhere.</p>
 
