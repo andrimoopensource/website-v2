@@ -82,34 +82,70 @@
 
 <p class="intro">For beginners an easy online editing option is beneficial. Learn how to add posts, edit posts, and other Jekyll files online through prose.io in this tutorial. Also, find out how to upload images using prose.io!</p>
 
-<h2 id="unable-to-upload-images-to-github">Unable to upload images to Github!</h2>
-
-<p>As I was unable to upload images to Github I used to upload images to my Google drive, then get the URL of the image and put that as a source in the blog. One of those examples here
-<a href="https://lh3.googleusercontent.com/-j3S-KX7DwQ0/VDi4p2xTzVI/AAAAAAAAAGo/_PP4-udRS4c/s550-no/moto-hint-story-pairit-us.jpg" rel="nofollow" target="_blank">Image from google drive</a>.
-There is another way to do this by creating an issue on Github where you can drag and drop an image, get the URL and use it as a source. But I doubt its reliability.</p>
-
-<h3 id="update">Update</h3>
-<p class="y">Github finally has a direct upload option where you can upload files and folders just by drag-and-drop! Read <a href="/github-upload/"><strong>Github Upload Option</strong></a></p>
-
-<div class="clear"></div>
+<p>Blogging on the go is possible in Jekyll using tools like Prose or Apps like Mr Hyde.</p>
 
 <ul id="markdown-toc">
+  <li><a href="#add-or-edit-jekyll-posts" id="markdown-toc-add-or-edit-jekyll-posts">Add or edit Jekyll posts</a></li>
   <li>
 <a href="#unable-to-upload-images-to-github" id="markdown-toc-unable-to-upload-images-to-github">Unable to upload images to Github!</a>    <ul>
       <li><a href="#update" id="markdown-toc-update">Update</a></li>
     </ul>
   </li>
-  <li><a href="#a-nice-tool-to-upload-images-to-github" id="markdown-toc-a-nice-tool-to-upload-images-to-github">A nice tool to upload images to Github</a></li>
+  <li><a href="#upload-images-on-prose" id="markdown-toc-upload-images-on-prose">Upload images on Prose</a></li>
   <li><a href="#why-proseio" id="markdown-toc-why-proseio">Why prose.io?</a></li>
 </ul>
 
+<p>You can easily edit and commit posts through github.com but the UI is not so friendly for this task. A better option is to use Prose.io.</p>
+
+<h2 id="add-or-edit-jekyll-posts">Add or edit Jekyll posts</h2>
+
+<p><a href="http://prose.io" rel="nofollow" target="_blank">Prose.io</a> is a reliable tool for editing Jekyll posts. It is good, the interface, functionality and even the animations are nice! I wanted something that can also upload images to Github. Prose was the Saviour.</p>
+
+<p>When you login to prose, you should see something like this. You have to authorize prose to make changes in your GitHub repository.</p>
+
+<p><amp-img src="/images/how-to-use-prose-io-with-jekyll.png" alt="Prose.io jekyll editor screenshot" width="307" height="366" layout="responsive"><noscript><img src="/images/how-to-use-prose-io-with-jekyll.png" alt="Prose.io jekyll editor screenshot" width="307" height="366"></noscript></amp-img></p>
+
+<p>Once you authorize prose, it will show you all the repositories that you own and contribute to.</p>
+
+<p><amp-img src="/images/how-to-use-prose-io-with-jekyll-2.png" alt="Prose.io jekyll editor screenshot" width="877" height="635" layout="responsive"><noscript><img src="/images/how-to-use-prose-io-with-jekyll-2.png" alt="Prose.io jekyll editor screenshot" width="877" height="635"></noscript></amp-img></p>
+
+<p>Now select your blog repository, navigate to <code class="highlighter-rouge">_posts</code> directory and you should see a list of posts that you have already posted.</p>
+
+<p><amp-img src="/images/how-to-use-prose-io-with-jekyll-3.png" alt="Prose.io jekyll editor screenshot" width="855" height="664" layout="responsive"><noscript><img src="/images/how-to-use-prose-io-with-jekyll-3.png" alt="Prose.io jekyll editor screenshot" width="855" height="664"></noscript></amp-img></p>
+
+<p>Now you can either click on <strong>Edit</strong> to make changes to an existing post or click on <strong>NEW FILE</strong> to create a new post.</p>
+
+<p>You should see something like this when you click on New File.</p>
+
+<p><amp-img src="/images/how-to-use-prose-io-with-jekyll-4.png" alt="Prose.io jekyll editor screenshot" width="858" height="226" layout="responsive"><noscript><img src="/images/how-to-use-prose-io-with-jekyll-4.png" alt="Prose.io jekyll editor screenshot" width="858" height="226"></noscript></amp-img></p>
+
+<p>You can give the file a new name and write the content of the post in Markdown.</p>
+
+<p>You can see some buttons on the right side of the screen.</p>
+
+<p><amp-img src="/images/how-to-use-prose-io-with-jekyll-5.png" alt="Prose.io jekyll editor screenshot" width="56" height="204" layout="responsive"><noscript><img src="/images/how-to-use-prose-io-with-jekyll-5.png" alt="Prose.io jekyll editor screenshot" width="56" height="204"></noscript></amp-img></p>
+
+<p>These are <strong>Edit</strong>, <strong>Preview</strong>, <strong>Meta Data</strong> and <strong>Save</strong>.</p>
+
+<p>Meta Data is to define Jekyll front matter where you can change the title, date, author, permalink etc.</p>
+
+<p>Most important attribute in Meta Data is <strong>published: false</strong>. It is declared in the app by default. You have to add <strong>published: true</strong> to make your post visible to the general public.</p>
+
+<p><amp-img src="/images/how-to-use-prose-io-with-jekyll-6.png" alt="Prose.io jekyll editor screenshot" width="857" height="262" layout="responsive"><noscript><img src="/images/how-to-use-prose-io-with-jekyll-6.png" alt="Prose.io jekyll editor screenshot" width="857" height="262"></noscript></amp-img></p>
+
+<h2 id="unable-to-upload-images-to-github">Unable to upload images to Github!</h2>
+<p>As I was unable to upload images to Github I used to upload images to my Google drive, then get the URL of the image and put that as a source in the blog. One of those examples here
+<a href="https://lh3.googleusercontent.com/-j3S-KX7DwQ0/VDi4p2xTzVI/AAAAAAAAAGo/_PP4-udRS4c/s550-no/moto-hint-story-pairit-us.jpg" rel="nofollow" target="_blank">Image from google drive</a>.
+There is another way to do this by creating an issue on Github where you can drag and drop an image, get the URL and use it as a source. But I doubt its reliability.</p>
+
 <p>And also, this is not practical. Since you are making a http request, it would take a longer time to load the page. I was not aware of these things. But, that was my workaround for not being able to upload files to Github.</p>
 
-<h2 class="clear" id="a-nice-tool-to-upload-images-to-github">A nice tool to upload images to Github</h2>
-<p class="right half"><amp-img src="/images/how-to-use-prose-io-with-jekyll.jpg" alt="Prose.io jekyll editor screenshot" width="527" height="394" layout="responsive"><noscript><img src="/images/how-to-use-prose-io-with-jekyll.jpg" alt="Prose.io jekyll editor screenshot" width="527" height="394"></noscript></amp-img></p>
-<p>Eventually I found a tool called <a href="http://prose.io" rel="nofollow" target="_blank">prose.io</a>. It is good, the interface, functionality and even the animations! I wanted something that can upload images to Github. Prose was the Saviour.</p>
+<h3 class="clear" id="update">Update</h3>
+<p class="y">Github finally has a direct upload option where you can upload files and folders just by drag-and-drop! Read <a href="/github-upload/"><strong>Github Upload Option</strong></a></p>
 
-<p>I was really impressed with this web app with a feature to upload images. But it will not upload images by default. To make it work, you need to add these lines of code given below inside <code class="highlighter-rouge">_config.yml</code>. This will solve the problem of prose.io not uploading images!</p>
+<h2 id="upload-images-on-prose">Upload images on Prose</h2>
+
+<p>I was really impressed with this web-app with a feature to upload images. But it will not upload images by default. To make it work, you need to add these lines of code given below inside <code class="highlighter-rouge">_config.yml</code>. This will solve the problem of prose.io not uploading images!</p>
 
 <div class="clear"></div>
 
@@ -152,7 +188,10 @@ There is another way to do this by creating an issue on Github where you can dra
 
 <amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
 
+<p>Define where your images should be uploaded to. In this case the images are uploaded to a directory named <code class="highlighter-rouge">media</code>.</p>
+
 <p class="right large"><amp-img src="/images/upload-image-to-github-using-prose.jpg" alt="Upload images to github using prose" width="697" height="392" layout="responsive"><noscript><img src="/images/upload-image-to-github-using-prose.jpg" alt="Upload images to github using prose" width="697" height="392"></noscript></amp-img></p>
+
 <p>Image upload window on prose.io</p>
 
 <p>Let’s say you have a non-jekyll website hosted on Github Pages. Prose.io can be used to edit that as well! But you have to create a <code class="highlighter-rouge">_prose.yml</code> file in the root of your repo and copy paste the same code!</p>
