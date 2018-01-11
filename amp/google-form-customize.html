@@ -193,7 +193,7 @@
 
 <p><amp-img src="/images/google-form-customization-5.png" alt="Customize Google Forms" width="600" height="173" layout="responsive"><noscript><img src="/images/google-form-customization-5.png" alt="Customize Google Forms" width="600" height="173"></noscript></amp-img></p>
 
-<p>But if you don’t want it to be redirected back to your page, then please use this code instead.</p>
+<p>But if you don’t want to redirect the users to a custom URL, then use the code below and change the parameters wherever it is necessary.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span><span class="kd">var</span> <span class="nx">submitted</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span><span class="nt">&lt;/script&gt;</span>
  <span class="nt">&lt;iframe</span> <span class="na">name=</span><span class="s">"hidden_iframe"</span> <span class="na">id=</span><span class="s">"hidden_iframe"</span> <span class="na">style=</span><span class="s">"display:none;"</span> <span class="na">onload=</span><span class="s">"if(submitted)  {window.location='THE REDIRECT LINK HERE';}"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
@@ -209,6 +209,8 @@
       <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Send"</span> <span class="nt">/&gt;</span>
 
 <span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
+<p>Source: <a href="https://stackoverflow.com/a/8558731" target="_blank">StackOverflow</a></p>
 
 <h2 id="google-form-notification">Google Form Notification</h2>
 <p>Another cool feature is to get notifications to your email upon every entry. You can activate this feature in the spreadsheet by going to <strong>Tools » Notification Rules…</strong>. Set rules on when to receive notifications and you’re good to go.</p>
@@ -226,7 +228,7 @@
 
 <p>I don’t mind it because I’m using the service for free. But I’m concerned about the entries by my users. I’m pretty sure that their emails will also be collected and sold. I don’t want my users’ inboxes to be cluttered with spam. At least with Google Forms, I did not face that issue.</p>
 
-<p>Try this and let me know - in the comment section - if it has worked for you. Any suggestions to improve the article is welcome.</p>
+<p>Try this and let me know - in the comment section - if it has worked for you. Any suggestions to improve the article is appreciated.</p>
 
 
 <p class="text-center">
