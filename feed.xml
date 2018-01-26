@@ -12,6 +12,23 @@
 		<atom:link href="https://blog.webjeda.com/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>CSS Grid Layout - Try it Now!</title>
+				        
+				
+					<description>CSS Grid Layout is not yet supported by any browser. But if you want to get a head start and get used to the syntax, then try this method which is supported by almost all browsers.</description>
+				
+
+				<image>
+                    <url>https://blog.webjeda.com/thumbs/css-grid-layout-polyfill.png</url>
+                    <title>CSS Grid Layout - Try it Now!</title>
+                </image>
+				
+				<pubDate>Thu, 25 Jan 2018 00:00:00 +0530</pubDate>
+				<link>https://blog.webjeda.com/css-grid/</link>
+				<guid isPermaLink="true">https://blog.webjeda.com/css-grid/</guid>
+			</item>
+		
+			<item>
 				<title>Image Optimization</title>
 				        
 				

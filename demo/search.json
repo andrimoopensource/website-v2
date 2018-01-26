@@ -1,6 +1,13 @@
 [
   
     {
+      "title"    : "CSS Grid Layout - Try it Now!",
+      "tags"     : "Web-Design",
+      "url"      : "/css-grid/",
+      "date"     : "2018-01-25 00:00:00 +0530"
+    } ,
+  
+    {
       "title"    : "Image Optimization",
       "tags"     : "Web-Design",
       "url"      : "/image-optimization/",
@@ -26,13 +33,6 @@
       "tags"     : "Jekyll, Web-Design",
       "url"      : "/pagespeed-insights-100/",
       "date"     : "2017-09-26 00:00:00 +0530"
-    } ,
-  
-    {
-      "title"    : "Let&#39;s Design Mobile First",
-      "tags"     : "Web-Design",
-      "url"      : "/mobile-first-web-design/",
-      "date"     : "2017-09-04 00:00:00 +0530"
     } 
   
 ]

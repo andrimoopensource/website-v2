@@ -1,0 +1,247 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>CSS Grid Layout - Try it Now!</title>
+    <link rel="canonical" href="https://blog.webjeda.com/css-grid/" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        
+        a{color:#00953e}a:hover{color:#eee;background-color:#00953e;text-decoration:none}a:focus,a:active{color:#eee;background-color:#ea2626;text-decoration:none}.container{max-width:600px;margin:0 auto;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;color:rgba(0,0,0,0.7);line-height:1.5}.main-content{margin:0 10px}amp-img{max-width:100%}header{padding:1em 0em 0em 0em}header img{height:50px}header a{text-decoration:none}header a:hover,header a:focus,header a:active{text-decoration:none;border:none;background-color:transparent}footer{text-align:center;padding:1em;background:#000;color:#eee;font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif}footer a{color:#eee}.date{color:#828282}.video{width:100%;height:515px}@media screen and (max-width: 600px){.video{height:250px}}.text-center{text-align:center}.btn{background-color:transparent;border:1px solid #0a5;border-radius:2px;padding:10px 25px;cursor:pointer;text-decoration:none}.btn:hover{background-color:#0a5;color:#eee}blockquote{border-left:5px solid #00953e;padding-left:1em;font-style:italic;font-size:1.8em}@media screen and (max-width: 800px){blockquote{padding-left:0.5em;margin-left:0.5em}}#markdown-toc::before{content:"Contents";font-weight:bold;line-height:1.8;font-size:20px}#markdown-toc ul{list-style:decimal}#markdown-toc{font-family:-apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;font-size:15.5px;border:1px solid #757575;padding:1.5em;padding-left:2em;list-style:decimal;display:inline-block;margin-right:2em}#markdown-toc a{text-decoration:none;border:none;color:cornflowerblue}#markdown-toc a:hover{color:rgba(0,0,0,0.7);background-color:transparent}@media screen and (max-width: 600px){#markdown-toc{float:none;margin-right:0}}.highlighter-rouge{font-size:15.5px;border:1px solid #e8e8e8;border-radius:4px;padding:2px 10px}@media screen and (max-width: 600px){.highlighter-rouge{font-size:10.85px}}.highlight{background:#fff;padding:5px 20px;border-radius:5px;box-shadow:inset 0 0 10px #f9f9f9, inset 0 0 15px #eaeaea;margin:0;font-size:15.5px}@media screen and (max-width: 600px){.highlight{font-size:10.85px;padding:5px 10px}}.highlight code,.highlight pre{border:none;box-shadow:none;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#CF8E80}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#555}.highlight .gd .x{color:#555}.highlight .ge{font-style:italic}.highlight .gr{color:#CF8E80}.highlight .gh{color:#999}.highlight .gi{color:#555}.highlight .gi .x{color:#555}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#CF8E80}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#C4E7D4}.highlight .s{color:#CF8E80}.highlight .na{color:#9297C4}.highlight .nb{color:#9297C4}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#9297C4}.highlight .ni{color:#7880B5}.highlight .ne{color:#CF8E80;font-weight:bold}.highlight .nf{color:#CF8E80;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#7880B5}.highlight .nv{color:#7880B5}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#ACDDE7}.highlight .mh{color:#ACDDE7}.highlight .mi{color:#ACDDE7}.highlight .mo{color:#ACDDE7}.highlight .sb{color:#CF8E80}.highlight .sc{color:#CF8E80}.highlight .sd{color:#CF8E80}.highlight .s2{color:#CF8E80}.highlight .se{color:#CF8E80}.highlight .sh{color:#CF8E80}.highlight .si{color:#CF8E80}.highlight .sx{color:#CF8E80}.highlight .sr{color:#9AD5CA}.highlight .s1{color:#CF8E80}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#7880B5}.highlight .vg{color:#7880B5}.highlight .vi{color:#7880B5}.highlight .il{color:#9AD5CA}
+
+        
+        
+      </style>
+    
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    
+  
+    <!-- Open Graph -->
+    <meta property="fb:app_id" content="549480635219583">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="CSS Grid Layout - Try it Now!">
+    <meta property="og:url" content="https://blog.webjeda.com/css-grid/">
+    <meta property="og:site_name" content="WebJeda Blog">
+    <meta property="og:description" content="CSS Grid Layout is not yet supported by any browser. But if you want to get a head start and get used to the syntax, then try this method which is supported by almost all browsers.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://blog.webjeda.com/thumbs/css-grid-layout-polyfill.png" />
+    <meta property="og:image:alt" content="CSS Grid Layout - Try it Now!" />
+    <meta property="article:publisher" content="http://www.facebook.com/webjeda" />
+    <meta property="article:author" content="https://www.facebook.com/sharu725" />
+    <meta property="article:published_time" content="2018-01-25 00:00:00 +0530" />
+
+
+   <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="CSS Grid Layout - Try it Now!">
+    <meta name="twitter:description" content="CSS Grid Layout is not yet supported by any browser. But if you want to get a head start and get used to the syntax, then try this method which is supported by almost all browsers.">
+    <meta name="twitter:site" content="@webjeda" />
+    <meta name="twitter:creator" content="@sharathdt">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "TechArticle",
+        "name": "CSS Grid Layout - Try it Now!",
+        "headline": "CSS Grid Layout - Try it Now!",
+        "image": "https://blog.webjeda.com/thumbs/css-grid-layout-polyfill.png",
+        "description": "CSS Grid Layout is not yet supported by any browser. But if you want to get a head start and get used to the syntax, then try this method which is supported by almost all browsers.",
+        "url": "https://blog.webjeda.com/css-grid/",
+        "datePublished": "2018-01-25",
+         "author": {
+          "@type": "Person",
+          "name": "sharath.dt"
+        }
+      }
+    </script>
+    
+    <!-- Disqus comments -->
+    
+    
+    
+    
+    
+  </head>
+  
+<body>
+<div class="container">
+<div class="main-content">
+
+<header>
+    <a href="https://blog.webjeda.com"><amp-img width="580" height="90" layout="responsive" src="/img/webjeda-logo-x50.svg" alt="WebJeda Blog | A modern web development blog"></amp-img></a>
+</header>
+
+<h1 class="post-title">CSS Grid Layout - Try it Now!</h1>
+<p class="date"><small>25 Jan 2018 - sharathdt</small></p>    
+<amp-img src="https://blog.webjeda.com/thumbs/css-grid-layout-polyfill.png" alt="CSS Grid Layout - Try it Now!" width="600" height="375" layout="responsive"><noscript><img src="https://blog.webjeda.com/thumbs/css-grid-layout-polyfill.png" alt="CSS Grid Layout - Try it Now!" width="600" height="375"></noscript></amp-img>
+
+<p class="intro">CSS Grid Layout is not yet supported by any browser. But if you want to get a head start and get used to the syntax, then try this method which is supported by almost all browsers.</p>
+
+<p>I was fascinated when I heard about this wonderful CSS feature called <strong>CSS Grid</strong>. It was in a way an answer to all my web design issues with the current <strong>floats</strong> and <strong>flex-boxes</strong>.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#why-css-grid-layout" id="markdown-toc-why-css-grid-layout">Why CSS Grid Layout?</a></li>
+  <li><a href="#how-useful-is-css-grid-layout" id="markdown-toc-how-useful-is-css-grid-layout">How useful is CSS Grid Layout?</a></li>
+  <li><a href="#css-grid-layout-polyfill" id="markdown-toc-css-grid-layout-polyfill">CSS Grid Layout Polyfill</a></li>
+</ul>
+
+<p>And then I realized that none of the browsers support this feature yet. It is a pity that such a game changer is still taking time.</p>
+
+<p>I tried designing some websites and Jekyll themes(of course) using CSS Grid layout. I had to change few things in my chrome browser to make it support CSS Grids.  It was a great experience.</p>
+
+<p>Here is an <a href="https://www.w3schools.com/css/css_grid.asp" target="_blank" rel="nofollow">article</a> to start off with CSS Grids. When you start designing your websites with CSS Grids, you will realize that you can control which element goes where without bothering about the order they are defined.</p>
+
+<h2 id="why-css-grid-layout">Why CSS Grid Layout?</h2>
+<p>Grid CSS is by far the best CSS out there(not yet) to divide a web page into defined regions with full control on their re-positions. Previously when we start designing a website, we had to carefully write the HTML elements in an order. After CSS Grid Layout, this will not be necessary. Order of the elements inside a Grid Layout can be changed as we wish.</p>
+
+<p>This feature is what I think is the game changer. There are other wonderful features that you can look up <a href="https://gridbyexample.com/examples/" target="_blank" rel="nofollow">here</a>.</p>
+
+<h2 id="how-useful-is-css-grid-layout">How useful is CSS Grid Layout?</h2>
+<p>CSS Grid solves a lot of existing problems. I can show you one such problems we often face in web designing. It is better to show it with an example. Consider this typical website for example.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Webjeda<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;header&gt;&lt;/header&gt;</span>
+    <span class="nt">&lt;article&gt;&lt;/article&gt;</span>
+    <span class="nt">&lt;aside&gt;&lt;/aside&gt;</span>
+    <span class="nt">&lt;footer&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>Which should look like this on a desktop.</p>
+
+<p><amp-img src="https://blog.webjeda.com/images/css-grid-example-1.png" alt="css-grid-example-1" width="1161" height="1024" layout="responsive"><noscript><img src="https://blog.webjeda.com/images/css-grid-example-1.png" alt="css-grid-example-1" width="1161" height="1024"></noscript></amp-img></p>
+
+<p>On the laptop, it should look like this.</p>
+
+<p><amp-img src="https://blog.webjeda.com/images/css-grid-example-2.png" alt="css-grid-example-2" width="581" height="512" layout="responsive"><noscript><img src="https://blog.webjeda.com/images/css-grid-example-2.png" alt="css-grid-example-2" width="581" height="512"></noscript></amp-img></p>
+
+<amp-ad type="adsense" width="336" height="280" class="adclass adsbygoogle" data-ad-client="ca-pub-4146856286076977" data-ad-slot="9695384645"></amp-ad>
+
+<p>Finally, on mobile devices, the site should look like this.</p>
+
+<p><amp-img src="https://blog.webjeda.com/images/css-grid-example-3.png" alt="css-grid-example-3" width="280" height="311" layout="responsive"><noscript><img src="https://blog.webjeda.com/images/css-grid-example-3.png" alt="css-grid-example-3" width="280" height="311"></noscript></amp-img></p>
+
+<p>If you observe the website layout, the <code class="highlighter-rouge">&lt;aside&gt;</code> has changed positions in desktop, laptop, and mobile devices. If you want to implement this using float or flex-box then good luck with that. But with CSS Grid layout, it is a cakewalk.</p>
+
+<p>Here is how you can do it.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"> <span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+    <span class="py">grid-gap</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span> <span class="c">/* Dividing website into columns of 3 equal fractions */</span>    
+ <span class="p">}</span>
+ 
+<span class="c">/* For mobile devices */</span>
+<span class="c">/* All direct elements of body should span across 3 fractions */</span>
+
+<span class="nt">header</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">article</span><span class="o">,</span> <span class="nt">footer</span> <span class="p">{</span>
+    <span class="nl">grid-column</span><span class="p">:</span> <span class="n">span</span> <span class="m">4</span><span class="p">;</span>
+    <span class="nl">min-height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span> 
+
+<span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">600px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c">/* For laptop/tablets */</span>
+    
+    <span class="nt">header</span> <span class="p">{</span>
+        <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+        <span class="nl">grid-row</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">aside</span> <span class="p">{</span>
+        <span class="nl">grid-column</span><span class="p">:</span> <span class="m">3</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+        <span class="err">grid</span> <span class="py">row</span><span class="p">:</span> <span class="m">2</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">article</span> <span class="p">{</span>
+        <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">3</span><span class="p">;</span>
+        <span class="err">grid</span> <span class="py">row</span><span class="p">:</span> <span class="m">2</span> <span class="p">/</span> <span class="m">3</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">footer</span> <span class="p">{</span>
+        <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">3</span><span class="p">;</span>
+        <span class="err">grid</span> <span class="py">row</span><span class="p">:</span> <span class="m">3</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    
+<span class="p">}</span>
+
+<span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">768px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c">/* For desktops */</span>
+    
+    <span class="nt">header</span> <span class="p">{</span>
+        <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+        <span class="nl">grid-row</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">aside</span> <span class="p">{</span>
+        <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">2</span><span class="p">;</span>
+        <span class="err">grid</span> <span class="py">row</span><span class="p">:</span> <span class="m">2</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">article</span> <span class="p">{</span>
+        <span class="nl">grid-column</span><span class="p">:</span> <span class="m">2</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+        <span class="err">grid</span> <span class="py">row</span><span class="p">:</span> <span class="m">2</span> <span class="p">/</span> <span class="m">3</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nt">footer</span> <span class="p">{</span>
+        <span class="nl">grid-column</span><span class="p">:</span> <span class="m">2</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+        <span class="err">grid</span> <span class="py">row</span><span class="p">:</span> <span class="m">3</span> <span class="p">/</span> <span class="m">4</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span></code></pre></figure>
+
+<p>Check out the demo here.</p>
+
+<p><a target="_blank" href="/demo/css-grid" class="btn">Demo</a></p>
+
+<p>The demo is supported by your browser. How’s that possible?</p>
+
+<h2 id="css-grid-layout-polyfill">CSS Grid Layout Polyfill</h2>
+<p>Polyfill is a code that implements a feature on web browsers that do not support the feature. There is a polyfill for CSS Grid Layout that we can use in our projects to make all the browsers support CSS Grid.</p>
+
+<p>Here is the <a href="https://github.com/FremyCompany/css-grid-polyfill" target="_blank" rel="nofollow">repository</a> where you can get the code. Just use the JavaScript <code class="highlighter-rouge">css-polyfills.min.js</code> at the bottom of your project and it should work fine. I would like to thank François REMY for this awesome code. Make sure you star his repository if it helps you in any way.</p>
+
+<p class="r">This Polyfill will not work on a browser which does not run any JavaScript.</p>
+
+<p>This polyfill will be redundant in the coming years when CSS Grid gets official support in all the browsers but until then we can use this and practice developing websites using Grid CSS.</p>
+
+<p>Let me know if you have successfully created something using this feature.</p>
+
+<p>Thanks for reading!</p>
+
+
+<p class="text-center">
+<a class="btn" href="https://blog.webjeda.com/css-grid/#disqus-button">View/Add comments</a>
+</p>
+</div>
+<footer>
+    © copyrights by <a href="https://blog.webjeda.com">webjeda</a>
+</footer>
+</div>
+
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-71358787-1"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+</body>
+
+</html>
