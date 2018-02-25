@@ -8,36 +8,56 @@
     <link rel="stylesheet" href="/css/demo.css">
 </head>
 <body>
-    <div class="demo-container">
-        <a class="btn" href="/google-form-customize/">Back to article</a>
-        
-        <p>Here is a working form that you can check. I have restricted the entries to 18 characters so as to avoid long spams.</p>
-
+<div class="demo-container">
+<a class="btn" href="/google-form-customize/">Back to article</a>
+<p>Here is a working form that you can check. I have restricted the entries to 18 characters so as to avoid long spams.</p>
 <style>
-input {
-    padding: 5px 10px;
-    margin-bottom: 10px;
-}
+    input {
+        padding: 5px 10px;
+        margin-bottom: 10px;
+    }
+        p.tabled {
+            display: table-cell;
+            width: 150px;
+            padding: 10px;
+            border: 1px solid #eee;
+            color: white;
+        }
+        
+        p.tabled:first-child {
+            background-color: mediumseagreen;
+        }
+        p.tabled:last-child {
+            background-color: #4e4e4e;
+        }
+        
+        
+    ul {
+    transform: rotate(180deg);
+    }
+    ul > div {
+    transform: rotate(-180deg);
+        }
+        
+
 </style>
 
 <script type="text/javascript">var submitted=false;</script>
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://blog.webjeda.com/demo/google-form-customize/';}"></iframe>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSdqGYth5-G2cP8SILJwjOcJ38vit-Rv8E9SXmtnJUu4ifMcGw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-      <label>Name</label>
-      <input name="entry.742532386" type="text" maxlength="18" placeholder=" John Doe" />
-      <br />
-      <label>Email</label>
-      <input name="entry.1558941179" type="email" required="" maxlength="18" placeholder=" john@email.com" />
-      <br />
-      <input type="submit" value="Send" />
-
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdqGYth5-G2cP8SILJwjOcJ38vit-Rv8E9SXmtnJUu4ifMcGw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+          <label>Name</label>
+          <input name="entry.742532386" type="text" maxlength="18" placeholder=" John Doe" />
+          <br />
+          <label>Email</label>
+          <input name="entry.1558941179" type="email" required="" maxlength="18" placeholder=" john@email.com" />
+          <br />
+          <input type="submit" value="Send" />
 </form>
 
-<p>You can check the entries <a href="https://docs.google.com/spreadsheets/d/1_vt8il8LpxEi8_DmX0yxxRambpw700cdMC2yMIGWqbk/edit?usp=sharing" target="_blank">here</a>.</p>
+<p>You can check the entries <a href="https://docs.google.com/spreadsheets/d/1_vt8il8LpxEi8_DmX0yxxRambpw700cdMC2yMIGWqbk/edit?usp=sharing" target="_blank">here</a> or refresh the page.</p>
 
-       
-    </div>
+<p>Are you impressed by the form and thinking of using Google sheet as a database? I can teach you how to set up a form, manage spreadsheet, get notification on every entry and fetch data from Google Sheets to your website for $20.<a href="https://www.paypal.me/webjeda/20"> Let me know</a></p>    
     
-</body>
+    <ul></ul></div><script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script>function importGSS(json){$.each(json.feed.entry, function(){$("ul").addClass('flex-container').append("<div><p class='tabled'>"+this.gsx$name.$t+"</p> <p class='tabled'>"+this.gsx$email.$t+"</p></div>"); }); $("ul").addClass('flex-container').append("<div><p class='tabled'><strong>Name</strong></p> <p class='tabled'><strong>Email</strong></p></div>");}</script><script async src="https://spreadsheets.google.com/feeds/list/1_vt8il8LpxEi8_DmX0yxxRambpw700cdMC2yMIGWqbk/1/public/values?alt=json-in-script&amp;callback=importGSS"></script> </body>
 </html>
