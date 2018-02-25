@@ -16,31 +16,30 @@
         padding: 5px 10px;
         margin-bottom: 10px;
     }
-        p.tabled {
-            display: table-cell;
-            width: 150px;
-            padding: 10px;
-            border: 1px solid #eee;
-            color: white;
-        }
-   
-   strong {
-         color: white !important;
-   }
-   
-   
-        p.tabled:first-child {
-            background-color: mediumseagreen;
-        }
-        p.tabled:last-child {
-            background-color: #4e4e4e;
-        }
+      
+    table {
+        text-align: left;
         
-        
-    ul {
-    transform: rotate(180deg);
+
     }
-    ul > div {
+        
+    td, th {
+        padding: 10px;
+    }
+    
+    td:first-child, th:first-child {
+        background-color: mediumseagreen;
+        color: white;
+    }
+    td:last-child, th:last-child {
+        background-color: #444;
+        color: white;
+    }
+    
+    table {
+        transform: rotate(180deg);
+    }
+    table > tr {
     transform: rotate(-180deg);
         }
         
@@ -64,5 +63,5 @@
 
 <p>Are you impressed by the form and thinking of using Google sheet as a database? I can teach you how to set up a form, manage spreadsheet, get notification on every entry and fetch data from Google Sheets to your website for $20.<a href="https://www.paypal.me/webjeda/20"> Let me know</a></p>    
     
-    <ul></ul></div><script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script>function importGSS(json){$.each(json.feed.entry, function(){$("ul").addClass('flex-container').append("<div><p class='tabled'>"+this.gsx$name.$t+"</p> <p class='tabled'>"+this.gsx$email.$t+"</p></div>"); }); $("ul").addClass('flex-container').append("<div><p class='tabled'><strong>Name</strong></p> <p class='tabled'><strong>Email</strong></p></div>");}</script><script async src="https://spreadsheets.google.com/feeds/list/1_vt8il8LpxEi8_DmX0yxxRambpw700cdMC2yMIGWqbk/1/public/values?alt=json-in-script&amp;callback=importGSS"></script> </body>
+    <table></table></div><script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script>function importGSS(json){$.each(json.feed.entry, function(){$("table").addClass('flex-container').append("<tr><td>"+this.gsx$name.$t+"</td><td>"+this.gsx$email.$t+"</td></tr>"); }); $("table").addClass('flex-container').append("<tr><th>Name</th><th>Email</th></tr>");}</script><script async src="https://spreadsheets.google.com/feeds/list/1_vt8il8LpxEi8_DmX0yxxRambpw700cdMC2yMIGWqbk/1/public/values?alt=json-in-script&amp;callback=importGSS"></script> </body>
 </html>
